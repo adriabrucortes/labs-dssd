@@ -1,0 +1,8 @@
+C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p2/tb/tb_shiftreg.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p2/tb/tb_shiftreg.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_shiftreg
+
+Top level modules:
+	tb_shiftreg
+
+} {} {}}

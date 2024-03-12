@@ -1,0 +1,80 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p2/sim
+vi2c_bit_timer
+Z0 !s110 1710247087
+!i10b 1
+!s100 0Q81i66IM8T8IdGaH`H3<0
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ih=[zF>Mmhf09;f`MZHDI:0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/sim
+w1710245216
+8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/rtl/i2c_bit_timer.v
+FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/rtl/i2c_bit_timer.v
+!i122 42
+L0 1 33
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1710247087.000000
+!s107 C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/rtl/i2c_bit_timer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/rtl/i2c_bit_timer.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+vtb_shiftreg
+!s110 1710244998
+!i10b 1
+!s100 67MXI8Men^8JMI0;F]4L:1
+R1
+I_h^SozeamR98H8eRfd4LA1
+R2
+R3
+w1710244926
+Z8 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v
+Z9 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v
+!i122 0
+L0 7 192
+R4
+r1
+!s85 0
+31
+!s108 1710244998.000000
+!s107 ../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v|
+Z10 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v|
+!i113 1
+R6
+R7
+vtb_timer
+R0
+!i10b 1
+!s100 C_^Im:9fZCUlzAVV7c9:O1
+R1
+I=F95TXJn:?CDOn_8RcAGP0
+R2
+R3
+w1710247076
+R8
+R9
+!i122 43
+L0 7 186
+R4
+r1
+!s85 0
+31
+R5
+Z11 !s107 ../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v|
+R10
+!i113 1
+R6
+R7

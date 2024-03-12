@@ -1,0 +1,348 @@
+# Compile of i2c_bit_timer.v failed with 1 errors.
+# Compile of tb_timer.v was successful.
+# 2 compiles, 1 failed with 1 error.
+# Compile of i2c_bit_timer.v failed with 1 errors.
+# Compile of tb_timer.v was successful.
+# 2 compiles, 1 failed with 1 error.
+# Error opening C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/sim/(vlog-13038) C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/rtl/i2c_bit_timer.v
+# Path name 'C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/sim/(vlog-13038) C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/rtl/i2c_bit_timer.v' doesn't exist.
+# Compile of i2c_bit_timer.v failed with 1 errors.
+# Compile of tb_timer.v was successful.
+# 2 compiles, 1 failed with 1 error.
+# Compile of i2c_bit_timer.v failed with 1 errors.
+# Compile of tb_timer.v was successful.
+# 2 compiles, 1 failed with 1 error.
+# Compile of i2c_bit_timer.v was successful.
+# Compile of tb_timer.v was successful.
+# 2 compiles, 0 failed with no errors.
+# Compile of i2c_bit_timer.v was successful.
+# Compile of tb_timer.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.tb_timer
+# vsim -gui work.tb_timer 
+# Start time: 13:08:08 on Mar 12,2024
+# Loading work.tb_timer
+# Loading work.i2c_bit_timer
+# ** Error: (vsim-3043) Unresolved reference to 'dataIn'.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_timer File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v Line: 194
+# ** Error: (vsim-3043) Unresolved reference to 'dataOut'.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_timer File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v Line: 194
+# ** Error: (vsim-3043) Unresolved reference to 'serIn'.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_timer File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v Line: 194
+# ** Error: (vsim-3043) Unresolved reference to 'serOut'.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_timer File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v Line: 194
+# ** Error: (vsim-3043) Unresolved reference to 'shift'.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_timer File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v Line: 194
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'Out'.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_timer/DUT File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v Line: 29
+# Error loading design
+# End time: 13:08:09 on Mar 12,2024, Elapsed time: 0:00:01
+# Errors: 6, Warnings: 11
+# Compile of i2c_bit_timer.v was successful.
+# Compile of tb_timer.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.tb_timer
+# vsim -gui work.tb_timer 
+# Start time: 13:08:55 on Mar 12,2024
+# Loading work.tb_timer
+# Loading work.i2c_bit_timer
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'Out'.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_timer/DUT File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v Line: 29
+# Error loading design
+# End time: 13:08:55 on Mar 12,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 2
+# Compile of i2c_bit_timer.v was successful.
+# Compile of tb_timer.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.tb_timer
+# vsim -gui work.tb_timer 
+# Start time: 13:10:22 on Mar 12,2024
+# Loading work.tb_timer
+# Loading work.i2c_bit_timer
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint  \
+sim:/tb_timer/SIZE \
+sim:/tb_timer/clk \
+sim:/tb_timer/rst_n \
+sim:/tb_timer/start \
+sim:/tb_timer/stop \
+sim:/tb_timer/ticks \
+sim:/tb_timer/timerOut \
+sim:/tb_timer/errors \
+sim:/tb_timer/bitCntr \
+sim:/tb_timer/parades \
+sim:/tb_timer/cicles \
+sim:/tb_timer/data2load \
+sim:/tb_timer/vExpected \
+sim:/tb_timer/vObtained
+run -all
+# [Info-    0.00 ns] Reset
+# [Info-   77.00 ns] Test counter
+# ********** TEST PASSED **********
+# ** Note: $stop    : C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v(189)
+#    Time: 147 ns  Iteration: 0  Instance: /tb_timer
+# Break in Module tb_timer at C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v line 189
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+add wave -position insertpoint  \
+sim:/tb_timer/SIZE \
+sim:/tb_timer/clk \
+sim:/tb_timer/rst_n \
+sim:/tb_timer/start \
+sim:/tb_timer/stop \
+sim:/tb_timer/ticks \
+sim:/tb_timer/timerOut \
+sim:/tb_timer/errors \
+sim:/tb_timer/bitCntr \
+sim:/tb_timer/parades \
+sim:/tb_timer/cicles \
+sim:/tb_timer/data2load \
+sim:/tb_timer/vExpected \
+sim:/tb_timer/vObtained
+run -all
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+# [Info-    0.00 ns] Reset
+# [Info-   77.00 ns] Test counter
+# ********** TEST PASSED **********
+# ** Note: $stop    : C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v(189)
+#    Time: 147 ns  Iteration: 0  Instance: /tb_timer
+# Break in Module tb_timer at C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v line 189
+# Compile of i2c_bit_timer.v was successful.
+# Compile of tb_timer.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_timer
+# Loading work.i2c_bit_timer
+add wave -position insertpoint  \
+sim:/tb_timer/SIZE \
+sim:/tb_timer/clk \
+sim:/tb_timer/rst_n \
+sim:/tb_timer/start \
+sim:/tb_timer/stop \
+sim:/tb_timer/ticks \
+sim:/tb_timer/timerOut \
+sim:/tb_timer/errors \
+sim:/tb_timer/bitCntr \
+sim:/tb_timer/parades \
+sim:/tb_timer/cicles \
+sim:/tb_timer/data2load \
+sim:/tb_timer/vExpected \
+sim:/tb_timer/vObtained
+run -all
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+# [Info-    0.00 ns] Reset
+# [Info-   77.00 ns] Test counter
+# ********** TEST PASSED **********
+# ** Note: $stop    : C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v(189)
+#    Time: 147 ns  Iteration: 0  Instance: /tb_timer
+# Break in Module tb_timer at C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v line 189
+# Compile of i2c_bit_timer.v was successful.
+# Compile of tb_timer.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_timer
+# Loading work.i2c_bit_timer
+add wave -position insertpoint  \
+sim:/tb_timer/SIZE \
+sim:/tb_timer/clk \
+sim:/tb_timer/rst_n \
+sim:/tb_timer/start \
+sim:/tb_timer/stop \
+sim:/tb_timer/ticks \
+sim:/tb_timer/timerOut \
+sim:/tb_timer/errors \
+sim:/tb_timer/bitCntr \
+sim:/tb_timer/parades \
+sim:/tb_timer/cicles \
+sim:/tb_timer/data2load \
+sim:/tb_timer/vExpected \
+sim:/tb_timer/vObtained
+run -all
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+# [Info-    0.00 ns] Reset
+# [Info-   77.00 ns] Test counter
+# ********** TEST PASSED **********
+# ** Note: $stop    : C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v(188)
+#    Time: 147 ns  Iteration: 0  Instance: /tb_timer
+# Break in Module tb_timer at C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v line 188
+# Compile of i2c_bit_timer.v was successful.
+# Compile of tb_timer.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_timer
+# Loading work.i2c_bit_timer
+add wave -position insertpoint  \
+sim:/tb_timer/SIZE \
+sim:/tb_timer/clk \
+sim:/tb_timer/rst_n \
+sim:/tb_timer/start \
+sim:/tb_timer/stop \
+sim:/tb_timer/ticks \
+sim:/tb_timer/timerOut \
+sim:/tb_timer/errors \
+sim:/tb_timer/bitCntr \
+sim:/tb_timer/parades \
+sim:/tb_timer/cicles \
+sim:/tb_timer/data2load \
+sim:/tb_timer/vExpected \
+sim:/tb_timer/vObtained
+run -all
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+# [Info-    0.00 ns] Reset
+# [Info-   77.00 ns] Test counter
+# ********** TEST PASSED **********
+# ** Note: $stop    : C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v(188)
+#    Time: 147 ns  Iteration: 0  Instance: /tb_timer
+# Break in Module tb_timer at C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v line 188
+# Compile of i2c_bit_timer.v was successful.
+# Compile of tb_timer.v was successful.
+# 2 compiles, 0 failed with no errors.
+# Load canceled
+# Compile of i2c_bit_timer.v was successful.
+# Compile of tb_timer.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_timer
+# Loading work.i2c_bit_timer
+run -all
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+# [Info-    0.00 ns] Reset
+# [Info-   77.00 ns] Test counter
+# ********** TEST PASSED **********
+# ** Note: $stop    : C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v(189)
+#    Time: 157 ns  Iteration: 0  Instance: /tb_timer
+# Break in Module tb_timer at C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v line 189
+add wave -position insertpoint  \
+sim:/tb_timer/SIZE \
+sim:/tb_timer/clk \
+sim:/tb_timer/rst_n \
+sim:/tb_timer/start \
+sim:/tb_timer/stop \
+sim:/tb_timer/ticks \
+sim:/tb_timer/timerOut \
+sim:/tb_timer/errors \
+sim:/tb_timer/bitCntr \
+sim:/tb_timer/parades \
+sim:/tb_timer/cicles \
+sim:/tb_timer/data2load \
+sim:/tb_timer/vExpected \
+sim:/tb_timer/vObtained
+restart -f
+# Compile of i2c_bit_timer.v was successful.
+# Compile of tb_timer.v was successful.
+# 2 compiles, 0 failed with no errors.
+# Compile of i2c_bit_timer.v was successful.
+# Compile of i2c_bit_timer.v was successful.
+# Compile of tb_timer.v was successful.
+# 2 compiles, 0 failed with no errors.
+# Compile of tb_timer.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_timer
+# Loading work.i2c_bit_timer
+run -all
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+# [Info-    0.00 ns] Reset
+# [Info-   77.00 ns] Test counter
+# ********** TEST PASSED **********
+# ** Note: $stop    : C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v(189)
+#    Time: 157 ns  Iteration: 0  Instance: /tb_timer
+# Break in Module tb_timer at C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v line 189
+restart -f
+add wave -position insertpoint  \
+sim:/tb_timer/SIZE \
+sim:/tb_timer/clk \
+sim:/tb_timer/rst_n \
+sim:/tb_timer/start \
+sim:/tb_timer/stop \
+sim:/tb_timer/ticks \
+sim:/tb_timer/timerOut \
+sim:/tb_timer/errors \
+sim:/tb_timer/bitCntr \
+sim:/tb_timer/parades \
+sim:/tb_timer/cicles \
+sim:/tb_timer/data2load \
+sim:/tb_timer/vExpected \
+sim:/tb_timer/vObtained
+run -all
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+# [Info-    0.00 ns] Reset
+# [Info-   77.00 ns] Test counter
+# ********** TEST PASSED **********
+# ** Note: $stop    : C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v(189)
+#    Time: 157 ns  Iteration: 0  Instance: /tb_timer
+# Break in Module tb_timer at C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v line 189
+# Compile of i2c_bit_timer.v was successful.
+# Compile of tb_timer.v was successful.
+# 2 compiles, 0 failed with no errors.
+# Compile of i2c_bit_timer.v was successful.
+# Compile of tb_timer.v was successful.
+# 2 compiles, 0 failed with no errors.
+# Compile of i2c_bit_timer.v was successful.
+# Compile of tb_timer.v was successful.
+# 2 compiles, 0 failed with no errors.
+# Compile of i2c_bit_timer.v was successful.
+# Compile of tb_timer.v was successful.
+# 2 compiles, 0 failed with no errors.
+# Compile of i2c_bit_timer.v was successful.
+# Compile of i2c_bit_timer.v was successful.
+# Compile of tb_timer.v was successful.
+# 2 compiles, 0 failed with no errors.
+# Compile of tb_timer.v was successful.
+# 2 compiles, 0 failed with no errors.
+# Compile of i2c_bit_timer.v was successful.
+# Compile of i2c_bit_timer.v was successful.
+# Compile of tb_timer.v was successful.
+# 2 compiles, 0 failed with no errors.
+# Compile of tb_timer.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_timer
+# Loading work.i2c_bit_timer
+add wave -position insertpoint  \
+sim:/tb_timer/SIZE \
+sim:/tb_timer/clk \
+sim:/tb_timer/rst_n \
+sim:/tb_timer/start \
+sim:/tb_timer/stop \
+sim:/tb_timer/ticks \
+sim:/tb_timer/timerOut \
+sim:/tb_timer/errors \
+sim:/tb_timer/bitCntr \
+sim:/tb_timer/parades \
+sim:/tb_timer/cicles \
+sim:/tb_timer/data2load \
+sim:/tb_timer/vExpected \
+sim:/tb_timer/vObtained
+run -all
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+# [Info-    0.00 ns] Reset
+# [Info-   77.00 ns] Test counter
+# ********** TEST PASSED **********
+# ** Note: $stop    : C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v(74)
+#    Time: 157 ns  Iteration: 0  Instance: /tb_timer
+# Break in Module tb_timer at C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v line 74
+# End time: 14:12:36 on Mar 12,2024, Elapsed time: 1:02:14
+# Errors: 0, Warnings: 1

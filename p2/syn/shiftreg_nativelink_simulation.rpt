@@ -1,0 +1,75 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  cyclonev
+Quartus root          :  c:/intelfpga_lite/20.1/quartus/bin64/
+Quartus sim root      :  c:/intelfpga_lite/20.1/quartus/eda/sim_lib
+Simulation Tool       :  modelsim-altera
+Simulation Language   :  verilog
+Simulation Mode       :  GUI
+Sim Output File       :  shiftreg.vo
+Sim SDF file          :  shiftreg__verilog.sdo
+Sim dir               :  simulation\modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim-Altera software
+Sourced NativeLink script c:/intelfpga_lite/20.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File shiftreg_run_msim_gate_verilog.do already exists - backing up current file as shiftreg_run_msim_gate_verilog.do.bak1
+Probing transcript
+ModelSim-Altera Info: # Reading pref.tcl
+ModelSim-Altera Info: # ERROR: No extended dataflow license exists
+ModelSim-Altera Info: # do shiftreg_run_msim_gate_verilog.do
+ModelSim-Altera Info: # if {[file exists gate_work]} {
+ModelSim-Altera Info: # 	vdel -lib gate_work -all
+ModelSim-Altera Info: # }
+ModelSim-Altera Info: # vlib gate_work
+ModelSim-Altera Info: # vmap work gate_work
+ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+ModelSim-Altera Info: # vmap work gate_work 
+ModelSim-Altera Info: # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+ModelSim-Altera Info: # Modifying modelsim.ini
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+. {shiftreg.vo}
+ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim-Altera Info: # Start time: 21:23:24 on Mar 11,2024
+ModelSim-Altera Info: # vlog -reportprogress 300 -vlog01compat -work work "+incdir+." shiftreg.vo 
+ModelSim-Altera Info: # -- Compiling module shiftreg
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	shiftreg
+ModelSim-Altera Info: # End time: 21:23:24 on Mar 11,2024, Elapsed time: 0:00:00
+ModelSim-Altera Info: # Errors: 0, Warnings: 0
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p2/syn/../tb {C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p2/syn/../tb/tb_shiftreg.v}
+ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim-Altera Info: # Start time: 21:23:24 on Mar 11,2024
+ModelSim-Altera Info: # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p2/syn/../tb" C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p2/syn/../tb/tb_shiftreg.v 
+ModelSim-Altera Info: # -- Compiling module tb_shiftreg
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	tb_shiftreg
+ModelSim-Altera Info: # End time: 21:23:24 on Mar 11,2024, Elapsed time: 0:00:00
+ModelSim-Altera Info: # Errors: 0, Warnings: 0
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work -voptargs="+acc"  tb_shiftreg
+ModelSim-Altera Info: # vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work -voptargs=""+acc"" tb_shiftreg 
+ModelSim-Altera Info: # Start time: 21:23:24 on Mar 11,2024
+ModelSim-Altera Info: # Loading work.tb_shiftreg
+ModelSim-Altera Info: # Loading work.shiftreg
+ModelSim-Altera Info: # Loading cyclonev_ver.cyclonev_io_obuf
+ModelSim-Altera Info: # Loading cyclonev_ver.cyclonev_io_ibuf
+ModelSim-Altera Info: # Loading cyclonev_ver.cyclonev_clkena
+ModelSim-Altera Info: # Loading cyclonev_ver.cyclonev_lcell_comb
+ModelSim-Altera Info: # Loading altera_ver.dffeas
+ModelSim-Altera Info: # ** Error (suppressible): (vsim-3584) C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p2/syn/../tb/tb_shiftreg.v(51): Module parameter 'SIZE' not found for override.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /tb_shiftreg File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p2/syn/../tb/tb_shiftreg.v
+ModelSim-Altera Info: # Error loading design
+ModelSim-Altera Info: # Error: Error loading design
+ModelSim-Altera Info: #        Pausing macro execution
+ModelSim-Altera Info: # MACRO ./shiftreg_run_msim_gate_verilog.do PAUSED at line 12
+ModelSim-Altera Info: # End time: 21:23:30 on Mar 11,2024, Elapsed time: 0:00:06
+ModelSim-Altera Info: # Errors: 1, Warnings: 0
+Info: NativeLink simulation flow was successful
