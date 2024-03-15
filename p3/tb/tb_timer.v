@@ -20,7 +20,9 @@ wire            timerOut;   // pols de sortida del comptador
 integer         errors;     // Accumulated errors during the simulation
 integer         bitCntr;    // used to count bits
 integer         parades;
-integer         cicles;
+integer         n_tests;
+integer         mod;
+integer         step;
 reg  [SIZE-1:0] data2load;  // data to load in the shift register
 reg             vExpected;  // expected value
 reg             vObtained;  // obtained value
@@ -58,17 +60,19 @@ initial begin
     $timeformat(-9, 2, " ns", 10); // format for the time print
     errors = 0;                    // initialize the errors counter
     reset;                         // puts the DUT in a known stage
-    wait_cycles(5);                // waits 5 clock cicles
+    wait_cycles(5);                // waits 5 clock cycles
 
     // Test
     $display("[Info- %t] Test counter", $time);
     data2load = 8'hAA;
     parades = 4;
-    cicles = 8;
+    n_tests = 8;
     stop = 1'b1;
 
-    test_counter(data2load, parades, cicles);
-    check_errors;
+    repeat(n_tests) begin
+        test_counter(data2load, parades);
+        check_errors;
+    end
 
     wait_cycles(5); // for easy visualization of the end
     $stop;
@@ -149,43 +153,53 @@ task load_ticks;
 endtask
 
 task test_counter;
-    input ticks_in, ndiv, Ncycles;
+    input [SIZE-1:0] ticks_in, n_stop;
     begin
-        bitCntr = ticks_in; // dafuq
+        bitCntr = ticks_in;
+        mod = 1;
+
         vExpected = 0;
+        vObtained = 0;
         load_ticks(ticks_in);
         stop = 1'b0;
         wait_cycles(1);
 
-        repeat(Ncycles) begin
+        // Cada "step" cicles fem una parada
+        if (n_stop == 0)
+            step = 1;
+        else
+            step = (ticks_in / n_stop);
 
-            // Això representa un "Cicle" de comptador (una sola pujada)
-            repeat(ndiv+1) begin
+        // Residu
+        mod = bitCntr % (ticks_in / n_stop);
 
-                // S'aturarà cada Ncycles
-                repeat(ticks_in/(ndiv+1)) begin
-                    wait_cycles(1);
+        repeat(ticks_in) begin
 
-                    // Comptador artificial
-                    if (bitCntr == 0) begin
-                        vExpected = 1;
-                        bitCntr = ticks_in;
-
-                    end else begin
-                        vExpected = 0;
-                        bitCntr = bitCntr - 1;
-                    end
-
-                    vObtained = timerOut;
-                    async_check;
-                end
-
-                // Parada
+            // Es para el comptador durant un cicle de clock
+            if (mod == 0) begin
                 stop = 1'b1;
+
+                vExpected = 0;
+                bitCntr = bitCntr;
+                mod = 1;
+
                 wait_cycles(1);
                 stop = 1'b0;
+
+            end else begin
+                mod = bitCntr % (ticks_in / n_stop);
+                vExpected = 0;
+                vObtained = timerOut;
             end
+
+            bitCntr = bitCntr - 1;
+            wait_cycles(1);
         end
+
+        vExpected = 1;
+        vObtained = timerOut;
+        async_check;
+        stop = 1'b1;
     end
 endtask
 

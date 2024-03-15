@@ -10,71 +10,71 @@ z2
 cModel Technology
 dC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p2/sim
 vi2c_bit_timer
-Z0 !s110 1710247087
+!s110 1710525877
 !i10b 1
 !s100 0Q81i66IM8T8IdGaH`H3<0
-Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
 Ih=[zF>Mmhf09;f`MZHDI:0
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-Z3 dC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/sim
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/sim
 w1710245216
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/rtl/i2c_bit_timer.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/rtl/i2c_bit_timer.v
-!i122 42
+!i122 135
 L0 1 33
-Z4 OV;L;2020.1;71
+Z3 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1710247087.000000
+!s108 1710525877.000000
 !s107 C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/rtl/i2c_bit_timer.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/rtl/i2c_bit_timer.v|
 !i113 1
-Z6 o-work work
-Z7 tCvgOpt 0
+Z4 o-work work
+Z5 tCvgOpt 0
 vtb_shiftreg
 !s110 1710244998
 !i10b 1
 !s100 67MXI8Men^8JMI0;F]4L:1
-R1
+R0
 I_h^SozeamR98H8eRfd4LA1
+R1
 R2
-R3
 w1710244926
-Z8 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v
-Z9 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v
+Z6 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v
+Z7 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v
 !i122 0
 L0 7 192
-R4
+R3
 r1
 !s85 0
 31
 !s108 1710244998.000000
 !s107 ../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v|
-Z10 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v|
+Z8 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v|
 !i113 1
+R4
+R5
+vtb_timer
+!s110 1710525878
+!i10b 1
+!s100 em;4f6o483Pn2^5=m68g40
+R0
+IR_nV_;fke0D]c?If3=1=f1
+R1
+R2
+w1710525854
 R6
 R7
-vtb_timer
-R0
-!i10b 1
-!s100 C_^Im:9fZCUlzAVV7c9:O1
-R1
-I=F95TXJn:?CDOn_8RcAGP0
-R2
+!i122 137
+L0 7 200
 R3
-w1710247076
-R8
-R9
-!i122 43
-L0 7 186
-R4
 r1
 !s85 0
 31
-R5
-Z11 !s107 ../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v|
-R10
+!s108 1710525878.000000
+Z9 !s107 ../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v|
+R8
 !i113 1
-R6
-R7
+R4
+R5
