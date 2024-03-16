@@ -1,10 +1,6 @@
-# 0 compiles, 2 failed with no errors.
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
 vsim -gui work.tb_timer
 # vsim -gui work.tb_timer 
-# Start time: 19:08:23 on Mar 16,2024
+# Start time: 00:06:50 on Mar 17,2024
 # Loading work.tb_timer
 # Loading work.i2c_bit_timer
 add wave -position insertpoint  \
@@ -17,81 +13,7 @@ sim:/tb_timer/ticks \
 sim:/tb_timer/timerOut \
 sim:/tb_timer/errors \
 sim:/tb_timer/bitCntr \
-sim:/tb_timer/parades \
-sim:/tb_timer/n_tests \
-sim:/tb_timer/mod \
-sim:/tb_timer/step \
-sim:/tb_timer/data2load \
-sim:/tb_timer/vExpected \
-sim:/tb_timer/vObtained
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: HP  Hostname: ELITEBOOK-QCOMM  ProcessID: 24968
-#           Attempting to use alternate WLF file "./wlft552hr0".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft552hr0
-run -all
-# [Info-    0.00 ns] Reset
-# [Info-   77.00 ns] Test counter
-# [Info- 1849.00 ns] Successful check at time
-# ********** TEST PASSED **********
-# [Info- 3619.00 ns] Successful check at time
-# ********** TEST PASSED **********
-# [Info- 5389.00 ns] Successful check at time
-# ********** TEST PASSED **********
-# [Info- 7159.00 ns] Successful check at time
-# ********** TEST PASSED **********
-# [Info- 8929.00 ns] Successful check at time
-# ********** TEST PASSED **********
-# [Info- 10699.00 ns] Successful check at time
-# ********** TEST PASSED **********
-# [Info- 12469.00 ns] Successful check at time
-# ********** TEST PASSED **********
-# [Info- 14239.00 ns] Successful check at time
-# ********** TEST PASSED **********
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/sim/tb_timer.v(78)
-#    Time: 14287 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/sim/tb_timer.v line 78
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v failed with 1 errors.
-# 2 compiles, 1 failed with 1 error.
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v failed with 1 errors.
-# 2 compiles, 1 failed with 1 error.
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# [Info-    0.00 ns] Reset
-# [Info-   77.00 ns] Test counter
-# [Error! 1839.00 ns] The value is 0 and should be 1
-# [Error! 3579.00 ns] The value is 0 and should be 1
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(87)
-#    Time: 3627 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 87
-add wave -position insertpoint  \
-sim:/tb_timer/SIZE \
-sim:/tb_timer/clk \
-sim:/tb_timer/rst_n \
-sim:/tb_timer/start \
-sim:/tb_timer/stop \
-sim:/tb_timer/ticks \
-sim:/tb_timer/timerOut \
-sim:/tb_timer/errors \
-sim:/tb_timer/bitCntr \
-sim:/tb_timer/parades \
+sim:/tb_timer/stop_cycles \
 sim:/tb_timer/n_tests \
 sim:/tb_timer/mod \
 sim:/tb_timer/step \
@@ -99,410 +21,58 @@ sim:/tb_timer/data2load \
 sim:/tb_timer/vExpected \
 sim:/tb_timer/vObtained \
 sim:/tb_timer/time_mark \
-sim:/tb_timer/time_diff \
+sim:/tb_timer/diff_time \
 sim:/tb_timer/diff_cnt \
 sim:/tb_timer/first
-restart -f
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: HP  Hostname: ELITEBOOK-QCOMM  ProcessID: 24968
+#           Attempting to use alternate WLF file "./wlftjsw3d0".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftjsw3d0
 run -all
-# [Info-    0.00 ns] Reset
-# [Info-   77.00 ns] Test counter
-# [Error! 1839.00 ns] The value is 0 and should be 1
-# [Error! 3579.00 ns] The value is 0 and should be 1
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(87)
-#    Time: 3627 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 87
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v failed with 1 errors.
-# 2 compiles, 1 failed with 1 error.
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-# Warning in wave window restart: (vish-4014) No objects found matching '/tb_timer/time_diff'. 
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# [Info-    0.00 ns] Reset
-# [Info-   77.00 ns] Test counter
-# [Error! 1839.00 ns] The value is 0 and should be 1
-# [Error! 3579.00 ns] The value is 0 and should be 1
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(87)
-#    Time: 3627 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 87
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# [Info-    0.00 ns] Reset
-# [Info-   77.00 ns] Test counter
-# [Error! 1839.00 ns] The value is 0 and should be 1
-# [Error! 3579.00 ns] The value is 0 and should be 1
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(87)
-#    Time: 3627 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 87
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# [Info-    0.00 ns] Reset
-# [Info-   77.00 ns] Test counter
-# [Error! 4349.00 ns] The value is 0 and should be 1
-# [Error! 8599.00 ns] The value is 0 and should be 1
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(87)
-#    Time: 8647 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 87
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# [Info-    0.00 ns] Reset
-# [Info-   77.00 ns] Test counter
-# [Error! 1849.00 ns] The value is 0 and should be 1
-# [Error! 3599.00 ns] The value is 0 and should be 1
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(87)
-#    Time: 3647 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 87
-# Load canceled
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# [Info-    0.00 ns] Reset
-# [Info-   77.00 ns] Test counter
-# [Error! 1839.00 ns] The value is 0 and should be 1
-# [Error! 3579.00 ns] The value is 0 and should be 1
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(87)
-#    Time: 3627 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 87
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# [Info-    0.00 ns] Reset
-# [Info-   77.00 ns] Test counter
-# [Error! 1839.00 ns] The value is 0 and should be 1
-# [Error! 3579.00 ns] The value is 0 and should be 1
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(87)
-#    Time: 3627 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 87
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# [Info-    0.00 ns] Reset
-# [Info-   77.00 ns] Test counter
-# [Error! 1839.00 ns] The value is 0 and should be 1
-# [Error! 3589.00 ns] The value is 0 and should be 1
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(87)
-#    Time: 3647 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 87
-restart -f
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# [Info-    0.00 ns] Reset
-# [Info-   77.00 ns] Test counter
-# [Error! 1839.00 ns] The value is 0 and should be 1
-# [Error! 3589.00 ns] The value is 0 and should be 1
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(87)
-#    Time: 3647 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 87
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# [Info-    0.00 ns] Reset
-# [Info-   77.00 ns] Test counter
-# [Error! 1839.00 ns] The value is 0 and should be 1
-# [Error! 3589.00 ns] The value is 0 and should be 1
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(87)
-#    Time: 3647 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 87
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# [Info-    0.00 ns] Reset
-# [Info-   77.00 ns] Test counter
-# [Info- 1849.00 ns] Successful check at time
-# [Error! 3609.00 ns] The value is 0 and should be 1
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(87)
-#    Time: 3667 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 87
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# [Info-    0.00 ns] Reset
-# [Info-   77.00 ns] Test counter
-# [Error! 1839.00 ns] The value is 0 and should be 1
-# [Error! 3589.00 ns] The value is 0 and should be 1
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(87)
-#    Time: 3647 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 87
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v failed with 3 errors.
-# 2 compiles, 1 failed with 3 errors.
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# [Info-    0.00 ns] Reset
-# [Info-   77.00 ns] Test counter
-# [Info- 1849.00 ns] Successful check at time
-# [Info- 3599.00 ns] Successful check at time
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(87)
-#    Time: 3647 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 87
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# [Info-    0.00 ns] Reset
-# [Info-   77.00 ns] Test counter
-# [Info- 1849.00 ns] Successful check at time
-# [Info- 3599.00 ns] Successful check at time
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(87)
-#    Time: 3647 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 87
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# [Info-    0.00 ns] Reset
-# [Info-   77.00 ns] Test counter
-# [Info- 1849.00 ns] Successful check at time
-# [Info- 3599.00 ns] Successful check at time
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(89)
-#    Time: 3647 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 89
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# [Info-    0.00 ns] Reset
-# [Info-   77.00 ns] Test counter
-# [Info- 1849.00 ns] Successful check at time
-# [Info- 3599.00 ns] Successful check at time
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(89)
-#    Time: 3647 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 89
-add wave -position insertpoint  \
-sim:/tb_timer/diff_time
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# [Info-    0.00 ns] Reset
-# [Info-   77.00 ns] Test counter
-# [Info- 1849.00 ns] Successful check at time
-# [Info- 3599.00 ns] Successful check at time
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(89)
-#    Time: 3647 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 89
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v failed with 1 errors.
-# 2 compiles, 1 failed with 1 error.
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v failed with 1 errors.
-# 2 compiles, 1 failed with 1 error.
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# [Info-    0.00 ns] Reset
-# [Info-   77.00 ns] Test counter
-# [Info- 1849.00 ns] Successful check at time
-# [Info- 3599.00 ns] Successful check at time
-# [Results @ 3599.00 ns] Errors =           0 | TimeGap = 1750.00 ns | CyclesGap =         174
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(90)
-#    Time: 3647 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 90
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# [Info-    0.00 ns] Reset
-# [Info-   77.00 ns] Test counter
-# [Info- 1849.00 ns] Successful check at time
-# [Info- 3599.00 ns] Successful check at time
-# [Results @ 3599.00 ns] Errors =          0 | TimeGap =1750.00 ns | CyclesGap =        174
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(90)
-#    Time: 3647 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 90
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# [Info-    0.00 ns] Reset
-# [Info-   77.00 ns] Test counter
-# [Info- 1849.00 ns] Successful check at time
-# [Info- 3599.00 ns] Successful check at time
-# [Results @ 3599.00 ns] Errors =          0 | TimeGap = 1750.00 ns | CyclesGap =         174
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(90)
-#    Time: 3647 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 90
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# [Info-    0.00 ns] Reset
-# [Info-   77.00 ns] Test counter
-# [Info- 1849.00 ns] Successful check at time
-# [Info- 3599.00 ns] Successful check at time
-# ----------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @ 3599.00 ns] Errors =          0 | TimeGap = 1750.00 ns | CyclesGap =         174
-# ----------------------------------------------------------------------------------------
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(100)
-#    Time: 3647 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 100
-restart -f
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# [Info-    0.00 ns] Reset
-# [Info-   77.00 ns] Test counter
-# [Info- 1849.00 ns] Successful check at time
-# [Info- 3599.00 ns] Successful check at time
-# -------------------------------------------------------------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @ 3599.00 ns] Errors =          0 | TimeGap = 1750.00 ns | CyclesGap =         174
-# -------------------------------------------------------------------------------------------------------------------------------------------------
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(100)
-#    Time: 3647 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 100
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# [Info-    0.00 ns] Reset
-# [Info-   77.00 ns] Test counter
-# [Info- 1849.00 ns] Successful check at time
-# [Info- 3599.00 ns] Successful check at time
-# -------------------------------------------------------------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @ 3599.00 ns] Errors =          0 | TimeGap = 1750.00 ns | CyclesGap =         174
-# ---------------------------------------------------------------------------------------------------
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(100)
-#    Time: 3647 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 100
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# [Info-    0.00 ns] Reset
-# [Info-   77.00 ns] Test counter
-# [Info- 1849.00 ns] Successful check at time
-# [Info- 3599.00 ns] Successful check at time
-# -------------------------------------------------------------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @ 3599.00 ns] Errors =          0 | TimeGap = 1750.00 ns | CyclesGap =         174
+# [Info-   47.00 ns] Test counter
+#  
 # ---------------------------------------------------------------------------------------------
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(100)
-#    Time: 3647 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 100
+# [Info-   47.00 ns] Reset
+# No ticks!
+# ---------------------------------------------------------------------------------------------
+# ** TEST PASSED **
+# [Results @   0] Errors =           0 | TimeGap =    0.00 ns | CyclesGap =           0
+# ---------------------------------------------------------------------------------------------
+#  
+#  
+# ---------------------------------------------------------------------------------------------
+# [Info-   97.00 ns] Reset
+# [Error!  167.00 ns] The value is 0 and should be 1
+# [Error!  187.00 ns] The value is 0 and should be 1
+# ---------------------------------------------------------------------------------------------
+# ** TEST FAILED **
+# [Results @   1] Errors =           2 | TimeGap =  187.00 ns | CyclesGap =           0
+# ---------------------------------------------------------------------------------------------
+#  
+#  
+# ---------------------------------------------------------------------------------------------
+# [Info-  187.00 ns] Reset
+# [Info-  327.00 ns] Successful check at time
+# [Info-  417.00 ns] Successful check at time
+# ---------------------------------------------------------------------------------------------
+# ** TEST PASSED **
+# [Results @   8] Errors =           0 | TimeGap =   90.00 ns | CyclesGap =           8
+# ---------------------------------------------------------------------------------------------
+#  
+#  
+# ---------------------------------------------------------------------------------------------
+# [Info-  417.00 ns] Reset
+# [Info-  627.00 ns] Successful check at time
+# [Info-  787.00 ns] Successful check at time
+# ---------------------------------------------------------------------------------------------
+# ** TEST PASSED **
+# [Results @  15] Errors =           0 | TimeGap =  160.00 ns | CyclesGap =          15
+# ---------------------------------------------------------------------------------------------
+#  
+# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(93)
+#    Time: 837 ns  Iteration: 0  Instance: /tb_timer
+# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 93
 # Compile of i2c_bit_timer.v was successful.
 # Compile of tb_timer.v was successful.
 # 2 compiles, 0 failed with no errors.
@@ -511,35 +81,46 @@ restart -f
 # Loading work.tb_timer
 # Loading work.i2c_bit_timer
 run -all
-# [Info-    0.00 ns] Reset
-# [Info-   77.00 ns] Test counter
-# [Info- 1849.00 ns] Successful check at time
-# [Info- 3599.00 ns] Successful check at time
-# -------------------------------------------------------------------------------------------------------------------------------------------------
+# [Info-   47.00 ns] Test counter
+#  
+# ---------------------------------------------------------------------------------------------
+# [Info-   47.00 ns] Reset
+# No ticks!
+# ---------------------------------------------------------------------------------------------
 # ** TEST PASSED **
-# [Results @ 3599.00 ns] Errors =          0 | TimeGap = 1750.00 ns | CyclesGap =         174
-# --------------------------------------------------------------------------------------------
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(100)
-#    Time: 3647 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 100
-# Compile of i2c_bit_timer.v was successful.
-# Compile of tb_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# [Info-    0.00 ns] Reset
-# [Info-   77.00 ns] Test counter
-# [Info- 1849.00 ns] Successful check at time
-# [Info- 3599.00 ns] Successful check at time
-# --------------------------------------------------------------------------------------------
+# [Results @   0] Errors =           0 | TimeGap =    0.00 ns | CyclesGap =           0
+# ---------------------------------------------------------------------------------------------
+#  
+#  
+# ---------------------------------------------------------------------------------------------
+# [Info-   97.00 ns] Reset
+# [Info-  167.00 ns] Successful check at time
+# [Info-  187.00 ns] Successful check at time
+# ---------------------------------------------------------------------------------------------
 # ** TEST PASSED **
-# [Results @ 3599.00 ns] Errors =          0 | TimeGap = 1750.00 ns | CyclesGap =         174
-# --------------------------------------------------------------------------------------------
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(100)
-#    Time: 3647 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 100
-# End time: 22:24:24 on Mar 16,2024, Elapsed time: 3:16:01
-# Errors: 0, Warnings: 1
+# [Results @   1] Errors =           0 | TimeGap =  187.00 ns | CyclesGap =           0
+# ---------------------------------------------------------------------------------------------
+#  
+#  
+# ---------------------------------------------------------------------------------------------
+# [Info-  187.00 ns] Reset
+# [Error!  327.00 ns] The value is 0 and should be 1
+# [Error!  417.00 ns] The value is 0 and should be 1
+# ---------------------------------------------------------------------------------------------
+# ** TEST FAILED **
+# [Results @   8] Errors =           2 | TimeGap =   90.00 ns | CyclesGap =           8
+# ---------------------------------------------------------------------------------------------
+#  
+#  
+# ---------------------------------------------------------------------------------------------
+# [Info-  417.00 ns] Reset
+# [Error!  627.00 ns] The value is 0 and should be 1
+# [Error!  787.00 ns] The value is 0 and should be 1
+# ---------------------------------------------------------------------------------------------
+# ** TEST FAILED **
+# [Results @  15] Errors =           2 | TimeGap =  160.00 ns | CyclesGap =          15
+# ---------------------------------------------------------------------------------------------
+#  
+# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(93)
+#    Time: 837 ns  Iteration: 0  Instance: /tb_timer
+# Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 93

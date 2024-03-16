@@ -19,7 +19,7 @@ wire            timerOut;   // pols de sortida del comptador
 // test signals
 integer         errors;     // Accumulated errors during the simulation
 integer         bitCntr;    // used to count bits
-integer         parades;
+integer         stop_cycles;
 integer         n_tests;
 integer         mod;
 integer         step;
@@ -62,39 +62,32 @@ initial begin
 end
 
 //___________________________________________________________________________
+// Static logic for test
+always @(bitCntr) begin
+    if (!bitCntr)
+        vExpected = 1;
+    else
+        vExpected = 0;
+end
+
+//assign vObtained = timerOut;
+
+
+//___________________________________________________________________________
 // Test
 initial begin
-    $timeformat(-9, 2, " ns", 10); // format for the time print
-    errors = 0;                    // initialize the errors counter
-    reset;                         // puts the DUT in a known stage
+    $timeformat(-9, 2, " ns", 10); // format for the time print                      // puts the DUT in a known stage
     wait_cycles(5);                // waits 5 clock cycles
 
     // Test
     $display("[Info- %t] Test counter", $time);
-    data2load = 8'hAA;
-    parades = 4;
-    n_tests = 8;
+    stop_cycles = 0;
     stop = 1'b1;
 
-    /*
-    repeat(n_tests) begin
-        test_counter(data2load, parades);
-        check_errors;
-    end
-    */
-
-    test_hold(data2load, parades);
-
-    $display("--------------------------------------------------------------------------------------------");
-
-    if (errors == 0) begin
-        $display("** TEST PASSED **");
-    end else begin
-        $display("** TEST FAILED **");
-    end
-
-    $display("[Results @ %t] Errors =%d | TimeGap = %t | CyclesGap = %d", $time, errors, diff_time, diff_cnt);
-    $display("--------------------------------------------------------------------------------------------");
+    test_and_result(0,  stop_cycles);
+    test_and_result(1,  stop_cycles);
+    test_and_result(8,  stop_cycles);
+    test_and_result(15, stop_cycles);
 
     wait_cycles(5); // for easy visualization of the end
     $stop;
@@ -139,12 +132,11 @@ endtask
 task async_check;
     // asynchronous output check
     begin
-        #`DELAY;
         if (vExpected != vObtained) begin
-        $display("[Error! %t] The value is %h and should be %h", $time, vObtained, vExpected);
-        errors = errors + 1;
+            $display("[Error! %t] The value is %h and should be %h", $time, vObtained, vExpected);
+            errors = errors + 1;
         end else begin
-        $display("[Info- %t] Successful check at time", $time);
+            $display("[Info- %t] Successful check at time", $time);
         end
     end
 endtask
@@ -157,6 +149,29 @@ task check_errors;
         end else begin
         $display("********** TEST FAILED **********");
         end
+    end
+endtask
+
+task test_and_result;
+    input [SIZE-1:0] ticks_in, stop_cycles;
+    begin
+        $display();
+        $display("---------------------------------------------------------------------------------------------");
+        errors = 0;                    // initialize the errors counter
+        reset;
+        test_hold(ticks_in, stop_cycles);
+
+        $display("---------------------------------------------------------------------------------------------");
+
+        if (errors == 0) begin
+            $display("** TEST PASSED **");
+        end else begin
+            $display("** TEST FAILED **");
+        end
+
+        $display("[Results @ %d] Errors = %d | TimeGap = %t | CyclesGap = %d", ticks_in, errors, diff_time, diff_cnt);
+        $display("---------------------------------------------------------------------------------------------");
+        $display();
     end
 endtask
 
@@ -174,9 +189,11 @@ task load_ticks;
     end
 endtask
 
+/*
 task test_spread;
     input [SIZE-1:0] ticks_in, n_stop;
     begin
+        stop = 1'b1;
         bitCntr = ticks_in;
         mod = 1;
 
@@ -184,7 +201,6 @@ task test_spread;
         vObtained = 0;
         load_ticks(ticks_in);
         stop = 1'b0;
-        wait_cycles(1);
 
         // Cada "step" cicles fem una parada
         if (n_stop == 0)
@@ -214,16 +230,17 @@ task test_spread;
                 vObtained = timerOut;
             end
 
-            bitCntr = bitCntr - 1;
             wait_cycles(1);
+            bitCntr = bitCntr - 1;
         end
 
-        vExpected = 1;
+        //vExpected = 1;
         vObtained = timerOut;
         async_check;
         stop = 1'b1;
     end
 endtask
+*/
 
 task test_hold;
     input [SIZE-1:0] ticks_in, n_cycles;
@@ -233,49 +250,48 @@ task test_hold;
         diff_cnt = 0;
         stop = 1'b0;
 
-        repeat(2) begin
-            vExpected = 0;
-            vObtained = 0;
+        if (ticks_in == 0) begin
+            $display("No ticks!");
 
-            bitCntr = ticks_in;
-            wait_cycles(1);
+        end else begin
+            repeat(2) begin
+                bitCntr = ticks_in;
+                wait_cycles(1);
 
-            repeat(ticks_in) begin
-                // Es para el comptador durant tants cicles de clock a la meitat del comptatge
-                if (bitCntr == (ticks_in / 2)) begin
-                    stop = 1'b1;                    
-                    wait_cycles(n_cycles);
+                repeat(ticks_in) begin
+                    // Es para el comptador durant tants cicles de clock a la meitat del comptatge
+                    if (bitCntr == (ticks_in / 2)) begin
+                        stop = 1'b1;                    
+                        wait_cycles(n_cycles);
 
-                    if (!(first)) begin
-                        diff_cnt = diff_cnt + n_cycles;
+                        if (!(first)) begin
+                            diff_cnt = diff_cnt + n_cycles;
+                        end
+
+                        stop = 1'b0; 
                     end
 
-                    stop = 1'b0; 
+                    if (!(first)) begin
+                        diff_cnt = diff_cnt + 1;
+                    end
+
+                    bitCntr = bitCntr - 1;
+                    vObtained = timerOut;
+                    wait_cycles(1);
                 end
 
-                vExpected = 0;
+                async_check;
                 vObtained = timerOut;
 
-                if (!(first)) begin
-                    diff_cnt = diff_cnt + 1;
+                if ((vObtained) && (first)) begin
+                    time_mark = $realtime;
+                    first = 0;
+                end else begin
+                    diff_time = $realtime - time_mark;
+                    stop = 1'b1;
                 end
-
-                wait_cycles(1);
-                bitCntr = bitCntr - 1;
-            end
-
-            vObtained = timerOut;
-            vExpected = 1;
-            async_check;
-
-            if ((vObtained) && (first)) begin
-                time_mark = $realtime;
-                first = 0;
             end
         end
-
-        diff_time = $realtime - time_mark;
-        stop = 1'b1;
     end
 endtask
 

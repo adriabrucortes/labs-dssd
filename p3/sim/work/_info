@@ -10,7 +10,7 @@ z2
 cModel Technology
 dC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p2/sim
 vi2c_bit_timer
-!s110 1710624220
+!s110 1710630604
 !i10b 1
 !s100 0Q81i66IM8T8IdGaH`H3<0
 Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -20,13 +20,13 @@ Z2 dC:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/sim
 w1710612228
 8C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/sim/i2c_bit_timer.v
 FC:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/sim/i2c_bit_timer.v
-!i122 208
+!i122 283
 L0 1 33
 Z3 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z4 !s108 1710624220.000000
+Z4 !s108 1710630604.000000
 !s107 C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/sim/i2c_bit_timer.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/sim/i2c_bit_timer.v|
 !i113 1
@@ -56,18 +56,18 @@ r1
 R5
 R6
 vtb_timer
-!s110 1710624221
+!s110 1710630605
 !i10b 1
-!s100 RUN;kg]MFzh7MaJ?DRVIi1
+!s100 2bWJ`ZBzCDHk_2HoRe?Dk0
 R0
-IMW?5?hOoO6AEO>ckeKA^`2
+IMBYbFm];LPaAb?:z0L20:2
 R1
 R2
-w1710624216
+w1710630602
 8C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v
 FC:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v
-!i122 209
-L0 7 276
+!i122 284
+L0 7 292
 R3
 r1
 !s85 0
