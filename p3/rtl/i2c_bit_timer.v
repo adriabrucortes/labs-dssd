@@ -13,9 +13,10 @@ always @(posedge Clk or negedge Rst_n) begin
     // Reset
     if (!Rst_n)                 cnt <= {SIZE{1'b0}};
 
-    else 
-        if (Start || ~|cnt)     cnt <= Ticks; // Renici forçat o auto-reinici
+    else
+        if (Start)              cnt <= Ticks; // Renici forçat o auto-reinici
         else if (Stop)          cnt <= cnt;   // Parada
+        else if (~|cnt)         cnt <= Ticks; // Start i Stop tenen prioritat respecte això
         else                    cnt <= cnt - 1'b1; // Compta cap avall
 end
 
