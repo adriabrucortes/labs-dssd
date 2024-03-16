@@ -26,10 +26,8 @@ integer         step;
 reg  [SIZE-1:0] data2load;  // data to load in the shift register
 reg             vExpected;  // expected value
 reg             vObtained;  // obtained value
-
 realtime        time_mark;
-realtime        diff_time;
-
+realtime        time_diff;
 integer         diff_cnt;
 integer         first;
 
@@ -83,18 +81,7 @@ initial begin
     end
     */
 
-    test_hold(data2load, parades);
-
-    $display("--------------------------------------------------------------------------------------------");
-
-    if (errors == 0) begin
-        $display("** TEST PASSED **");
-    end else begin
-        $display("** TEST FAILED **");
-    end
-
-    $display("[Results @ %t] Errors =%d | TimeGap = %t | CyclesGap = %d", $time, errors, diff_time, diff_cnt);
-    $display("--------------------------------------------------------------------------------------------");
+    test_hold(data2load, parades):
 
     wait_cycles(5); // for easy visualization of the end
     $stop;
@@ -232,40 +219,42 @@ task test_hold;
         first = 1;
         diff_cnt = 0;
         stop = 1'b0;
+        //wait_cycles(1);
 
         repeat(2) begin
             vExpected = 0;
             vObtained = 0;
 
             bitCntr = ticks_in;
-            wait_cycles(1);
 
             repeat(ticks_in) begin
                 // Es para el comptador durant tants cicles de clock a la meitat del comptatge
                 if (bitCntr == (ticks_in / 2)) begin
-                    stop = 1'b1;                    
-                    wait_cycles(n_cycles);
+                    repeat(n_cycles) begin
+                        stop = 1'b1;
 
-                    if (!(first)) begin
-                        diff_cnt = diff_cnt + n_cycles;
+                        vExpected = 0;
+                        bitCntr = bitCntr;
+
+                        wait_cycles(1);
+                        stop = 1'b0; 
                     end
-
-                    stop = 1'b0; 
                 end
 
                 vExpected = 0;
                 vObtained = timerOut;
+
+                bitCntr = bitCntr - 1;
 
                 if (!(first)) begin
                     diff_cnt = diff_cnt + 1;
                 end
 
                 wait_cycles(1);
-                bitCntr = bitCntr - 1;
             end
 
-            vObtained = timerOut;
             vExpected = 1;
+            vObtained = timerOut;
             async_check;
 
             if ((vObtained) && (first)) begin
@@ -274,7 +263,7 @@ task test_hold;
             end
         end
 
-        diff_time = $realtime - time_mark;
+        time_diff = $realtime - time_mark;
         stop = 1'b1;
     end
 endtask
