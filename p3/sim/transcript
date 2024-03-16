@@ -541,3 +541,5 @@ run -all
 # ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v(100)
 #    Time: 3647 ns  Iteration: 0  Instance: /tb_timer
 # Break in Module tb_timer at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v line 100
+# End time: 22:24:24 on Mar 16,2024, Elapsed time: 3:16:01
+# Errors: 0, Warnings: 1

@@ -1,4 +1,11 @@
-C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/sim/i2c_bit_timer.v {1 {vlog -work work -stats=none C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/sim/i2c_bit_timer.v
+C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v {1 {vlog -work work -stats=none C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_timer
+
+Top level modules:
+	tb_timer
+
+} {} {}} C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/sim/i2c_bit_timer.v {1 {vlog -work work -stats=none C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/sim/i2c_bit_timer.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module i2c_bit_timer
 
