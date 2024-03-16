@@ -10,42 +10,42 @@ z2
 cModel Technology
 dC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p2/sim
 vi2c_bit_timer
-!s110 1710630604
+Z0 !s110 1710631719
 !i10b 1
-!s100 0Q81i66IM8T8IdGaH`H3<0
-Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
-Il?:FmLIMMVHS;Z6N[j[9<2
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 dC:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/sim
-w1710612228
-8C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/sim/i2c_bit_timer.v
-FC:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/sim/i2c_bit_timer.v
-!i122 283
-L0 1 33
-Z3 OV;L;2020.1;71
+!s100 ej0TK;M4T53XdYVSb<X2l3
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IjgcQW9DfnkH7@M4m5R<lR3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/sim
+w1710631675
+8C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/rtl/i2c_bit_timer.v
+FC:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/rtl/i2c_bit_timer.v
+!i122 302
+L0 1 35
+Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z4 !s108 1710630604.000000
-!s107 C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/sim/i2c_bit_timer.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/sim/i2c_bit_timer.v|
+Z5 !s108 1710631719.000000
+!s107 C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/rtl/i2c_bit_timer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/rtl/i2c_bit_timer.v|
 !i113 1
-Z5 o-work work
-Z6 tCvgOpt 0
+Z6 o-work work
+Z7 tCvgOpt 0
 vtb_shiftreg
 !s110 1710244998
 !i10b 1
 !s100 67MXI8Men^8JMI0;F]4L:1
-R0
-I_h^SozeamR98H8eRfd4LA1
 R1
+I_h^SozeamR98H8eRfd4LA1
+R2
 dC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/sim
 w1710244926
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v
 !i122 0
 L0 7 192
-R3
+R4
 r1
 !s85 0
 31
@@ -53,28 +53,28 @@ r1
 !s107 ../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v|
 !i113 1
-R5
 R6
+R7
 vtb_timer
-!s110 1710630605
-!i10b 1
-!s100 2bWJ`ZBzCDHk_2HoRe?Dk0
 R0
-IMBYbFm];LPaAb?:z0L20:2
+!i10b 1
+!s100 cBZ<I]_iWWMi=OR3[fRmi1
 R1
+I=jKDf]Qo0zm`I<eF1QDOc2
 R2
-w1710630602
+R3
+w1710631409
 8C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v
 FC:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v
-!i122 284
-L0 7 292
-R3
+!i122 301
+L0 7 296
+R4
 r1
 !s85 0
 31
-R4
+R5
 !s107 ../misc/timescale.v|C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3/tb/tb_timer.v|
 !i113 1
-R5
 R6
+R7

@@ -63,11 +63,11 @@ end
 
 //___________________________________________________________________________
 // Static logic for test
-always @(bitCntr) begin
+always @(posedge clk) begin
     if (!bitCntr)
-        vExpected = 1;
+        vExpected <= 1;
     else
-        vExpected = 0;
+        vExpected <= 0;
 end
 
 //assign vObtained = timerOut;
@@ -255,6 +255,7 @@ task test_hold;
 
         end else begin
             repeat(2) begin
+                vExpected = 0;
                 bitCntr = ticks_in;
                 wait_cycles(1);
 
@@ -280,8 +281,11 @@ task test_hold;
                     wait_cycles(1);
                 end
 
-                async_check;
+                //vExpected = 1;
+                stop = 1'b1;
                 vObtained = timerOut;
+                async_check;
+                stop = 1'b0;
 
                 if ((vObtained) && (first)) begin
                     time_mark = $realtime;
