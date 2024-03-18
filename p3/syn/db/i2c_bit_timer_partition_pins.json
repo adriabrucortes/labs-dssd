@@ -1,0 +1,61 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Out",
+					"strict" : false
+				},
+				{
+					"name" : "Start",
+					"strict" : false
+				},
+				{
+					"name" : "Clk",
+					"strict" : false
+				},
+				{
+					"name" : "Rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "Ticks[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Stop",
+					"strict" : false
+				},
+				{
+					"name" : "Ticks[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Ticks[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Ticks[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Ticks[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Ticks[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Ticks[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Ticks[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

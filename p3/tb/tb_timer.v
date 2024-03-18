@@ -159,12 +159,12 @@ task test_and_result;
     input [SIZE-1:0] ticks_in, stop_cycles;
     begin
         $display();
-        $display("---------------------------------------------------------------------------------------------");
+        $display("----------------------------------------------------------------------------------------------------------------------");
         errors = 0;                    // initialize the errors counter
         reset;
         test_hold(ticks_in, stop_cycles);
 
-        $display("---------------------------------------------------------------------------------------------");
+        $display("----------------------------------------------------------------------------------------------------------------------");
 
         if (errors == 0) begin
             $display("** TEST PASSED **");
@@ -172,8 +172,8 @@ task test_and_result;
             $display("** TEST FAILED **");
         end
 
-        $display("[Results @ %d] Errors = %d | TimeGap = %t | CyclesGap = %d", ticks_in, errors, diff_time, diff_cnt);
-        $display("---------------------------------------------------------------------------------------------");
+        $display("[Results @ n = %d, StopCycles = %d] Errors = %d | TimeGap = %t | CyclesGap = %d", ticks_in, stop_cycles, errors, diff_time, diff_cnt);
+        $display("----------------------------------------------------------------------------------------------------------------------");
         $display();
     end
 endtask

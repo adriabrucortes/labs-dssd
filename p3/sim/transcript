@@ -3,108 +3,10 @@
 # 2 compiles, 0 failed with no errors.
 vsim -gui work.tb_timer
 # vsim -gui work.tb_timer 
-# Start time: 10:12:03 on Mar 18,2024
+# Start time: 13:20:10 on Mar 18,2024
 # Loading work.tb_timer
 # Loading work.i2c_bit_timer
 # WARNING: No extended dataflow license exists
-run -all
-# [Info-   47.00 ns] Test counter
-#  
-# ---------------------------------------------------------------------------------------------
-# [Info-   47.00 ns] Reset
-# No ticks!
-# ---------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @   0] Errors =           0 | TimeGap =    0.00 ns | CyclesGap =           0
-# ---------------------------------------------------------------------------------------------
-#  
-#  
-# ---------------------------------------------------------------------------------------------
-# [Info-   97.00 ns] Reset
-# [Info-  167.00 ns] Successful check at time
-# [Info-  187.00 ns] Successful check at time
-# ---------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @   1] Errors =           0 | TimeGap =   20.00 ns | CyclesGap =           1
-# ---------------------------------------------------------------------------------------------
-#  
-#  
-# ---------------------------------------------------------------------------------------------
-# [Info-  187.00 ns] Reset
-# [Info-  327.00 ns] Successful check at time
-# [Info-  417.00 ns] Successful check at time
-# ---------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @   8] Errors =           0 | TimeGap =   90.00 ns | CyclesGap =           8
-# ---------------------------------------------------------------------------------------------
-#  
-#  
-# ---------------------------------------------------------------------------------------------
-# [Info-  417.00 ns] Reset
-# [Info-  627.00 ns] Successful check at time
-# [Info-  787.00 ns] Successful check at time
-# ---------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @  15] Errors =           0 | TimeGap =  160.00 ns | CyclesGap =          15
-# ---------------------------------------------------------------------------------------------
-#  
-# ** Note: $stop    : C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v(95)
-#    Time: 837 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v line 95
-# Compile of tb_timer.v was successful.
-# Compile of i2c_bit_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# GetModuleFileName: No se puede encontrar el módulo especificado.
-# 
-# 
-# [Info-   47.00 ns] Test counter
-#  
-# ---------------------------------------------------------------------------------------------
-# [Info-   47.00 ns] Reset
-# No ticks!
-# ---------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @   0] Errors =           0 | TimeGap =    0.00 ns | CyclesGap =           0
-# ---------------------------------------------------------------------------------------------
-#  
-#  
-# ---------------------------------------------------------------------------------------------
-# [Info-   97.00 ns] Reset
-# [Info-  167.00 ns] Successful check at time
-# [Info-  187.00 ns] Successful check at time
-# ---------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @   1] Errors =           0 | TimeGap =   20.00 ns | CyclesGap =           1
-# ---------------------------------------------------------------------------------------------
-#  
-#  
-# ---------------------------------------------------------------------------------------------
-# [Info-  187.00 ns] Reset
-# [Info-  407.00 ns] Successful check at time
-# [Info-  577.00 ns] Successful check at time
-# ---------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @   8] Errors =           0 | TimeGap =  170.00 ns | CyclesGap =          16
-# ---------------------------------------------------------------------------------------------
-#  
-#  
-# ---------------------------------------------------------------------------------------------
-# [Info-  577.00 ns] Reset
-# [Info-  867.00 ns] Successful check at time
-# [Info- 1107.00 ns] Successful check at time
-# ---------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @  15] Errors =           0 | TimeGap =  240.00 ns | CyclesGap =          23
-# ---------------------------------------------------------------------------------------------
-#  
-# ** Note: $stop    : C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v(94)
-#    Time: 1157 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v line 94
 add wave -position insertpoint  \
 sim:/tb_timer/SIZE \
 sim:/tb_timer/clk \
@@ -116,26 +18,17 @@ sim:/tb_timer/timerOut \
 sim:/tb_timer/errors \
 sim:/tb_timer/bitCntr \
 sim:/tb_timer/stop_cycles \
-sim:/tb_timer/n_tests \
-sim:/tb_timer/mod \
-sim:/tb_timer/step \
 sim:/tb_timer/vExpected \
 sim:/tb_timer/vObtained \
 sim:/tb_timer/time_mark \
 sim:/tb_timer/diff_time \
-sim:/tb_timer/diff_cnt \
-sim:/tb_timer/first
+sim:/tb_timer/diff_cnt
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: HP  Hostname: ELITEBOOK-QCOMM  ProcessID: 24968
-#           Attempting to use alternate WLF file "./wlftzyzwxw".
+#           Attempting to use alternate WLF file "./wlftw37sde".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftzyzwxw
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+#           Using alternate file: ./wlftw37sde
 run -all
-# GetModuleFileName: No se puede encontrar el módulo especificado.
-# 
-# 
 # [Info-   47.00 ns] Test counter
 #  
 # ---------------------------------------------------------------------------------------------
@@ -143,259 +36,7 @@ run -all
 # No ticks!
 # ---------------------------------------------------------------------------------------------
 # ** TEST PASSED **
-# [Results @   0] Errors =           0 | TimeGap =    0.00 ns | CyclesGap =           0
-# ---------------------------------------------------------------------------------------------
-#  
-#  
-# ---------------------------------------------------------------------------------------------
-# [Info-   97.00 ns] Reset
-# [Info-  167.00 ns] Successful check at time
-# [Info-  187.00 ns] Successful check at time
-# ---------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @   1] Errors =           0 | TimeGap =   20.00 ns | CyclesGap =           1
-# ---------------------------------------------------------------------------------------------
-#  
-#  
-# ---------------------------------------------------------------------------------------------
-# [Info-  187.00 ns] Reset
-# [Info-  407.00 ns] Successful check at time
-# [Info-  577.00 ns] Successful check at time
-# ---------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @   8] Errors =           0 | TimeGap =  170.00 ns | CyclesGap =          16
-# ---------------------------------------------------------------------------------------------
-#  
-#  
-# ---------------------------------------------------------------------------------------------
-# [Info-  577.00 ns] Reset
-# [Info-  867.00 ns] Successful check at time
-# [Info- 1107.00 ns] Successful check at time
-# ---------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @  15] Errors =           0 | TimeGap =  240.00 ns | CyclesGap =          23
-# ---------------------------------------------------------------------------------------------
-#  
-# ** Note: $stop    : C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v(94)
-#    Time: 1157 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v line 94
-restart -f
-run -all
-# GetModuleFileName: No se puede encontrar el módulo especificado.
-# 
-# 
-# [Info-   47.00 ns] Test counter
-#  
-# ---------------------------------------------------------------------------------------------
-# [Info-   47.00 ns] Reset
-# No ticks!
-# ---------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @   0] Errors =           0 | TimeGap =    0.00 ns | CyclesGap =           0
-# ---------------------------------------------------------------------------------------------
-#  
-#  
-# ---------------------------------------------------------------------------------------------
-# [Info-   97.00 ns] Reset
-# [Info-  167.00 ns] Successful check at time
-# [Info-  187.00 ns] Successful check at time
-# ---------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @   1] Errors =           0 | TimeGap =   20.00 ns | CyclesGap =           1
-# ---------------------------------------------------------------------------------------------
-#  
-#  
-# ---------------------------------------------------------------------------------------------
-# [Info-  187.00 ns] Reset
-# [Info-  407.00 ns] Successful check at time
-# [Info-  577.00 ns] Successful check at time
-# ---------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @   8] Errors =           0 | TimeGap =  170.00 ns | CyclesGap =          16
-# ---------------------------------------------------------------------------------------------
-#  
-#  
-# ---------------------------------------------------------------------------------------------
-# [Info-  577.00 ns] Reset
-# [Info-  867.00 ns] Successful check at time
-# [Info- 1107.00 ns] Successful check at time
-# ---------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @  15] Errors =           0 | TimeGap =  240.00 ns | CyclesGap =          23
-# ---------------------------------------------------------------------------------------------
-#  
-# ** Note: $stop    : C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v(94)
-#    Time: 1157 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v line 94
-# Compile of tb_timer.v was successful.
-# Compile of i2c_bit_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# GetModuleFileName: No se puede encontrar el módulo especificado.
-# 
-# 
-# [Info-   47.00 ns] Test counter
-#  
-# ---------------------------------------------------------------------------------------------
-# [Info-   47.00 ns] Reset
-# No ticks!
-# ---------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @   0] Errors =           0 | TimeGap =    0.00 ns | CyclesGap =           0
-# ---------------------------------------------------------------------------------------------
-#  
-#  
-# ---------------------------------------------------------------------------------------------
-# [Info-   97.00 ns] Reset
-# [Info-  167.00 ns] Successful check at time
-# [Info-  187.00 ns] Successful check at time
-# ---------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @   1] Errors =           0 | TimeGap =   20.00 ns | CyclesGap =           1
-# ---------------------------------------------------------------------------------------------
-#  
-#  
-# ---------------------------------------------------------------------------------------------
-# [Info-  187.00 ns] Reset
-# [Info-  407.00 ns] Successful check at time
-# [Info-  577.00 ns] Successful check at time
-# ---------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @   8] Errors =           0 | TimeGap =  170.00 ns | CyclesGap =          16
-# ---------------------------------------------------------------------------------------------
-#  
-#  
-# ---------------------------------------------------------------------------------------------
-# [Info-  577.00 ns] Reset
-# [Info-  867.00 ns] Successful check at time
-# [Info- 1107.00 ns] Successful check at time
-# ---------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @  15] Errors =           0 | TimeGap =  240.00 ns | CyclesGap =          23
-# ---------------------------------------------------------------------------------------------
-#  
-# ** Note: $stop    : C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v(94)
-#    Time: 1157 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v line 94
-# Compile of tb_timer.v was successful.
-# Compile of i2c_bit_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# GetModuleFileName: No se puede encontrar el módulo especificado.
-# 
-# 
-# [Info-   47.00 ns] Test counter
-#  
-# ---------------------------------------------------------------------------------------------
-# [Info-   47.00 ns] Reset
-# No ticks!
-# ---------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @   0] Errors =           0 | TimeGap =    0.00 ns | CyclesGap =           0
-# ---------------------------------------------------------------------------------------------
-#  
-#  
-# ---------------------------------------------------------------------------------------------
-# [Info-   97.00 ns] Reset
-# [Info-  167.00 ns] Successful check at time
-# [Info-  187.00 ns] Successful check at time
-# ---------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @   1] Errors =           0 | TimeGap =   20.00 ns | CyclesGap =           1
-# ---------------------------------------------------------------------------------------------
-#  
-#  
-# ---------------------------------------------------------------------------------------------
-# [Info-  187.00 ns] Reset
-# [Info-  257.00 ns] Successful check at time
-# [Info-  267.00 ns] Successful check at time
-# [Info-  277.00 ns] Successful check at time
-# [Info-  287.00 ns] Successful check at time
-# [Info-  377.00 ns] Successful check at time
-# [Info-  387.00 ns] Successful check at time
-# [Info-  397.00 ns] Successful check at time
-# [Info-  407.00 ns] Successful check at time
-# [Info-  427.00 ns] Successful check at time
-# [Info-  437.00 ns] Successful check at time
-# [Info-  447.00 ns] Successful check at time
-# [Info-  457.00 ns] Successful check at time
-# [Info-  547.00 ns] Successful check at time
-# [Info-  557.00 ns] Successful check at time
-# [Info-  567.00 ns] Successful check at time
-# [Info-  577.00 ns] Successful check at time
-# ---------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @   8] Errors =           0 | TimeGap =  170.00 ns | CyclesGap =          16
-# ---------------------------------------------------------------------------------------------
-#  
-#  
-# ---------------------------------------------------------------------------------------------
-# [Info-  577.00 ns] Reset
-# [Info-  647.00 ns] Successful check at time
-# [Info-  657.00 ns] Successful check at time
-# [Info-  667.00 ns] Successful check at time
-# [Info-  677.00 ns] Successful check at time
-# [Info-  687.00 ns] Successful check at time
-# [Info-  697.00 ns] Successful check at time
-# [Info-  707.00 ns] Successful check at time
-# [Info-  717.00 ns] Successful check at time
-# [Info-  807.00 ns] Successful check at time
-# [Info-  817.00 ns] Successful check at time
-# [Info-  827.00 ns] Successful check at time
-# [Info-  837.00 ns] Successful check at time
-# [Info-  847.00 ns] Successful check at time
-# [Info-  857.00 ns] Successful check at time
-# [Info-  867.00 ns] Successful check at time
-# [Info-  887.00 ns] Successful check at time
-# [Info-  897.00 ns] Successful check at time
-# [Info-  907.00 ns] Successful check at time
-# [Info-  917.00 ns] Successful check at time
-# [Info-  927.00 ns] Successful check at time
-# [Info-  937.00 ns] Successful check at time
-# [Info-  947.00 ns] Successful check at time
-# [Info-  957.00 ns] Successful check at time
-# [Info- 1047.00 ns] Successful check at time
-# [Info- 1057.00 ns] Successful check at time
-# [Info- 1067.00 ns] Successful check at time
-# [Info- 1077.00 ns] Successful check at time
-# [Info- 1087.00 ns] Successful check at time
-# [Info- 1097.00 ns] Successful check at time
-# [Info- 1107.00 ns] Successful check at time
-# ---------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @  15] Errors =           0 | TimeGap =  240.00 ns | CyclesGap =          23
-# ---------------------------------------------------------------------------------------------
-#  
-# ** Note: $stop    : C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v(94)
-#    Time: 1157 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v line 94
-# Compile of tb_timer.v was successful.
-# Compile of i2c_bit_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-run -all
-# GetModuleFileName: No se puede encontrar el módulo especificado.
-# 
-# 
-# [Info-   47.00 ns] Test counter
-#  
-# ---------------------------------------------------------------------------------------------
-# [Info-   47.00 ns] Reset
-# No ticks!
-# ---------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @   0] Errors =           0 | TimeGap =    0.00 ns | CyclesGap =           0
+# [Results @ n =   0, StopCycles =   8] Errors =           0 | TimeGap =    0.00 ns | CyclesGap =           0
 # ---------------------------------------------------------------------------------------------
 #  
 #  
@@ -407,7 +48,7 @@ run -all
 # [Info-  187.00 ns] Successful check at time
 # ---------------------------------------------------------------------------------------------
 # ** TEST PASSED **
-# [Results @   1] Errors =           0 | TimeGap =   20.00 ns | CyclesGap =           1
+# [Results @ n =   1, StopCycles =   8] Errors =           0 | TimeGap =   20.00 ns | CyclesGap =           1
 # ---------------------------------------------------------------------------------------------
 #  
 #  
@@ -433,7 +74,7 @@ run -all
 # [Info-  577.00 ns] Successful check at time
 # ---------------------------------------------------------------------------------------------
 # ** TEST PASSED **
-# [Results @   8] Errors =           0 | TimeGap =  170.00 ns | CyclesGap =          16
+# [Results @ n =   8, StopCycles =   8] Errors =           0 | TimeGap =  170.00 ns | CyclesGap =          16
 # ---------------------------------------------------------------------------------------------
 #  
 #  
@@ -473,118 +114,113 @@ run -all
 # [Info- 1107.00 ns] Successful check at time
 # ---------------------------------------------------------------------------------------------
 # ** TEST PASSED **
-# [Results @  15] Errors =           0 | TimeGap =  240.00 ns | CyclesGap =          23
-# ---------------------------------------------------------------------------------------------
-#  
-# ** Note: $stop    : C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v(94)
-#    Time: 1157 ns  Iteration: 0  Instance: /tb_timer
-# Break in Module tb_timer at C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v line 94
-# Compile of tb_timer.v was successful.
-# Compile of i2c_bit_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-# Compile of tb_timer.v was successful.
-# Compile of i2c_bit_timer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_timer
-# Loading work.i2c_bit_timer
-# Warning in wave window restart: (vish-4014) No objects found matching '/tb_timer/mod'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/tb_timer/step'. 
-run -all
-# GetModuleFileName: No se puede encontrar el módulo especificado.
-# 
-# 
-# [Info-   47.00 ns] Test counter
-#  
-# ---------------------------------------------------------------------------------------------
-# [Info-   47.00 ns] Reset
-# No ticks!
-# ---------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @   0] Errors =           0 | TimeGap =    0.00 ns | CyclesGap =           0
-# ---------------------------------------------------------------------------------------------
-#  
-#  
-# ---------------------------------------------------------------------------------------------
-# [Info-   97.00 ns] Reset
-# [Info-  167.00 ns] Successful check at time
-# [Info-  167.00 ns] Successful check at time
-# [Info-  187.00 ns] Successful check at time
-# [Info-  187.00 ns] Successful check at time
-# ---------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @   1] Errors =           0 | TimeGap =   20.00 ns | CyclesGap =           1
-# ---------------------------------------------------------------------------------------------
-#  
-#  
-# ---------------------------------------------------------------------------------------------
-# [Info-  187.00 ns] Reset
-# [Info-  257.00 ns] Successful check at time
-# [Info-  267.00 ns] Successful check at time
-# [Info-  277.00 ns] Successful check at time
-# [Info-  287.00 ns] Successful check at time
-# [Info-  377.00 ns] Successful check at time
-# [Info-  387.00 ns] Successful check at time
-# [Info-  397.00 ns] Successful check at time
-# [Info-  407.00 ns] Successful check at time
-# [Info-  407.00 ns] Successful check at time
-# [Info-  427.00 ns] Successful check at time
-# [Info-  437.00 ns] Successful check at time
-# [Info-  447.00 ns] Successful check at time
-# [Info-  457.00 ns] Successful check at time
-# [Info-  547.00 ns] Successful check at time
-# [Info-  557.00 ns] Successful check at time
-# [Info-  567.00 ns] Successful check at time
-# [Info-  577.00 ns] Successful check at time
-# [Info-  577.00 ns] Successful check at time
-# ---------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @   8] Errors =           0 | TimeGap =  170.00 ns | CyclesGap =          16
-# ---------------------------------------------------------------------------------------------
-#  
-#  
-# ---------------------------------------------------------------------------------------------
-# [Info-  577.00 ns] Reset
-# [Info-  647.00 ns] Successful check at time
-# [Info-  657.00 ns] Successful check at time
-# [Info-  667.00 ns] Successful check at time
-# [Info-  677.00 ns] Successful check at time
-# [Info-  687.00 ns] Successful check at time
-# [Info-  697.00 ns] Successful check at time
-# [Info-  707.00 ns] Successful check at time
-# [Info-  717.00 ns] Successful check at time
-# [Info-  807.00 ns] Successful check at time
-# [Info-  817.00 ns] Successful check at time
-# [Info-  827.00 ns] Successful check at time
-# [Info-  837.00 ns] Successful check at time
-# [Info-  847.00 ns] Successful check at time
-# [Info-  857.00 ns] Successful check at time
-# [Info-  867.00 ns] Successful check at time
-# [Info-  867.00 ns] Successful check at time
-# [Info-  887.00 ns] Successful check at time
-# [Info-  897.00 ns] Successful check at time
-# [Info-  907.00 ns] Successful check at time
-# [Info-  917.00 ns] Successful check at time
-# [Info-  927.00 ns] Successful check at time
-# [Info-  937.00 ns] Successful check at time
-# [Info-  947.00 ns] Successful check at time
-# [Info-  957.00 ns] Successful check at time
-# [Info- 1047.00 ns] Successful check at time
-# [Info- 1057.00 ns] Successful check at time
-# [Info- 1067.00 ns] Successful check at time
-# [Info- 1077.00 ns] Successful check at time
-# [Info- 1087.00 ns] Successful check at time
-# [Info- 1097.00 ns] Successful check at time
-# [Info- 1107.00 ns] Successful check at time
-# [Info- 1107.00 ns] Successful check at time
-# ---------------------------------------------------------------------------------------------
-# ** TEST PASSED **
-# [Results @  15] Errors =           0 | TimeGap =  240.00 ns | CyclesGap =          23
+# [Results @ n =  15, StopCycles =   8] Errors =           0 | TimeGap =  240.00 ns | CyclesGap =          23
 # ---------------------------------------------------------------------------------------------
 #  
 # ** Note: $stop    : C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v(96)
 #    Time: 1157 ns  Iteration: 0  Instance: /tb_timer
 # Break in Module tb_timer at C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v line 96
-# End time: 10:36:41 on Mar 18,2024, Elapsed time: 0:24:38
+# Compile of tb_timer.v was successful.
+# Compile of i2c_bit_timer.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_timer
+# Loading work.i2c_bit_timer
+run -all
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+# [Info-   47.00 ns] Test counter
+#  
+# ----------------------------------------------------------------------------------------------------------------------
+# [Info-   47.00 ns] Reset
+# No ticks!
+# ----------------------------------------------------------------------------------------------------------------------
+# ** TEST PASSED **
+# [Results @ n =   0, StopCycles =   8] Errors =           0 | TimeGap =    0.00 ns | CyclesGap =           0
+# ----------------------------------------------------------------------------------------------------------------------
+#  
+#  
+# ----------------------------------------------------------------------------------------------------------------------
+# [Info-   97.00 ns] Reset
+# [Info-  167.00 ns] Successful check at time
+# [Info-  167.00 ns] Successful check at time
+# [Info-  187.00 ns] Successful check at time
+# [Info-  187.00 ns] Successful check at time
+# ----------------------------------------------------------------------------------------------------------------------
+# ** TEST PASSED **
+# [Results @ n =   1, StopCycles =   8] Errors =           0 | TimeGap =   20.00 ns | CyclesGap =           1
+# ----------------------------------------------------------------------------------------------------------------------
+#  
+#  
+# ----------------------------------------------------------------------------------------------------------------------
+# [Info-  187.00 ns] Reset
+# [Info-  257.00 ns] Successful check at time
+# [Info-  267.00 ns] Successful check at time
+# [Info-  277.00 ns] Successful check at time
+# [Info-  287.00 ns] Successful check at time
+# [Info-  377.00 ns] Successful check at time
+# [Info-  387.00 ns] Successful check at time
+# [Info-  397.00 ns] Successful check at time
+# [Info-  407.00 ns] Successful check at time
+# [Info-  407.00 ns] Successful check at time
+# [Info-  427.00 ns] Successful check at time
+# [Info-  437.00 ns] Successful check at time
+# [Info-  447.00 ns] Successful check at time
+# [Info-  457.00 ns] Successful check at time
+# [Info-  547.00 ns] Successful check at time
+# [Info-  557.00 ns] Successful check at time
+# [Info-  567.00 ns] Successful check at time
+# [Info-  577.00 ns] Successful check at time
+# [Info-  577.00 ns] Successful check at time
+# ----------------------------------------------------------------------------------------------------------------------
+# ** TEST PASSED **
+# [Results @ n =   8, StopCycles =   8] Errors =           0 | TimeGap =  170.00 ns | CyclesGap =          16
+# ----------------------------------------------------------------------------------------------------------------------
+#  
+#  
+# ----------------------------------------------------------------------------------------------------------------------
+# [Info-  577.00 ns] Reset
+# [Info-  647.00 ns] Successful check at time
+# [Info-  657.00 ns] Successful check at time
+# [Info-  667.00 ns] Successful check at time
+# [Info-  677.00 ns] Successful check at time
+# [Info-  687.00 ns] Successful check at time
+# [Info-  697.00 ns] Successful check at time
+# [Info-  707.00 ns] Successful check at time
+# [Info-  717.00 ns] Successful check at time
+# [Info-  807.00 ns] Successful check at time
+# [Info-  817.00 ns] Successful check at time
+# [Info-  827.00 ns] Successful check at time
+# [Info-  837.00 ns] Successful check at time
+# [Info-  847.00 ns] Successful check at time
+# [Info-  857.00 ns] Successful check at time
+# [Info-  867.00 ns] Successful check at time
+# [Info-  867.00 ns] Successful check at time
+# [Info-  887.00 ns] Successful check at time
+# [Info-  897.00 ns] Successful check at time
+# [Info-  907.00 ns] Successful check at time
+# [Info-  917.00 ns] Successful check at time
+# [Info-  927.00 ns] Successful check at time
+# [Info-  937.00 ns] Successful check at time
+# [Info-  947.00 ns] Successful check at time
+# [Info-  957.00 ns] Successful check at time
+# [Info- 1047.00 ns] Successful check at time
+# [Info- 1057.00 ns] Successful check at time
+# [Info- 1067.00 ns] Successful check at time
+# [Info- 1077.00 ns] Successful check at time
+# [Info- 1087.00 ns] Successful check at time
+# [Info- 1097.00 ns] Successful check at time
+# [Info- 1107.00 ns] Successful check at time
+# [Info- 1107.00 ns] Successful check at time
+# ----------------------------------------------------------------------------------------------------------------------
+# ** TEST PASSED **
+# [Results @ n =  15, StopCycles =   8] Errors =           0 | TimeGap =  240.00 ns | CyclesGap =          23
+# ----------------------------------------------------------------------------------------------------------------------
+#  
+# ** Note: $stop    : C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v(96)
+#    Time: 1157 ns  Iteration: 0  Instance: /tb_timer
+# Break in Module tb_timer at C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/tb/tb_timer.v line 96
+# End time: 13:55:50 on Mar 18,2024, Elapsed time: 0:35:40
 # Errors: 0, Warnings: 1
