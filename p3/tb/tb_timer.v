@@ -64,13 +64,15 @@ end
 //___________________________________________________________________________
 // Static logic for test
 always @(posedge clk) begin
+    vObtained <= timerOut;
+end
+
+always @(posedge clk) begin
     if (!bitCntr)
         vExpected <= 1;
     else
         vExpected <= 0;
 end
-
-//assign vObtained = timerOut;
 
 
 //___________________________________________________________________________
@@ -244,18 +246,18 @@ endtask
 
 task test_hold;
     input [SIZE-1:0] ticks_in, n_cycles;
-    begin        
+    begin
+        stop = 1'b0;    
         load_ticks(ticks_in);
         first = 1;
         diff_cnt = 0;
-        stop = 1'b0;
 
         if (ticks_in == 0) begin
             $display("No ticks!");
 
         end else begin
             repeat(2) begin
-                vExpected = 0;
+                //vExpected = 0;
                 bitCntr = ticks_in;
                 wait_cycles(1);
 
@@ -277,13 +279,13 @@ task test_hold;
                     end
 
                     bitCntr = bitCntr - 1;
-                    vObtained = timerOut;
+                    //vObtained = timerOut;
                     wait_cycles(1);
                 end
 
                 //vExpected = 1;
                 stop = 1'b1;
-                vObtained = timerOut;
+                //vObtained = timerOut;
                 async_check;
                 stop = 1'b0;
 
