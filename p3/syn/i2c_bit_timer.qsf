@@ -51,4 +51,32 @@ set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH tb_timer -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME tb_timer -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME DUT -section_id tb_timer
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_timer -section_id tb_timer
+set_global_assignment -name EDA_TEST_BENCH_FILE ../tb/tb_timer.v -section_id tb_timer
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_simulation
+set_location_assignment PIN_U7 -to Clk
+set_location_assignment PIN_AA2 -to Out
+set_location_assignment PIN_W9 -to Rst_n
+set_location_assignment PIN_M7 -to Start
+set_location_assignment PIN_AA13 -to Ticks[7]
+set_location_assignment PIN_AA14 -to Ticks[6]
+set_location_assignment PIN_AB15 -to Ticks[5]
+set_location_assignment PIN_AA15 -to Ticks[4]
+set_location_assignment PIN_T12 -to Ticks[3]
+set_location_assignment PIN_T13 -to Ticks[2]
+set_location_assignment PIN_V13 -to Ticks[1]
+set_location_assignment PIN_U13 -to Ticks[0]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

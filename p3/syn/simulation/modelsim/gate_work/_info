@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/syn/simulation/modelsim
+vi2c_bit_timer
+Z1 !s110 1710796230
+!i10b 1
+!s100 3I5HZ2EaDYQ16JaT`K^gE2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ig@d=O`9;TQkd][4^@QgfM0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1710794588
+8i2c_bit_timer.vo
+Fi2c_bit_timer.vo
+!i122 0
+L0 32 706
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1710796230.000000
+!s107 i2c_bit_timer.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|i2c_bit_timer.vo|
+!i113 1
+Z6 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+.
+Z7 tCvgOpt 0
+vtb_timer
+R1
+!i10b 1
+!s100 E72R7B[YS0E431MFoHzHA1
+R2
+IMgZ9RNY=C>FHF31C3z@KO3
+R3
+R0
+w1710764489
+8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/syn/../tb/tb_timer.v
+FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/syn/../tb/tb_timer.v
+!i122 1
+L0 7 305
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/syn/../tb/../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/syn/../tb/tb_timer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/syn/../tb|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/syn/../tb/tb_timer.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/syn/../tb
+R7
