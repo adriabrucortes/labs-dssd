@@ -21,9 +21,7 @@ integer         errors;     // Accumulated errors during the simulation
 integer         bitCntr;    // used to count bits
 integer         stop_cycles;
 integer         n_tests;
-integer         mod;
-integer         step;
-reg  [SIZE-1:0] data2load;  // data to load in the shift register
+
 reg             vExpected;  // expected value
 reg             vObtained;  // obtained value
 
@@ -33,6 +31,10 @@ realtime        diff_time;
 integer         diff_cnt;
 integer         first;
 
+/* Unused vars
+integer         mod;
+integer         step;
+*/
 
 `ifdef RTL_LVL
 i2c_bit_timer #(.SIZE(8)) DUT(
@@ -74,7 +76,6 @@ always @(posedge clk) begin
         vExpected <= 0;
 end
 
-
 //___________________________________________________________________________
 // Test
 initial begin
@@ -83,7 +84,7 @@ initial begin
 
     // Test
     $display("[Info- %t] Test counter", $time);
-    stop_cycles = 0;
+    stop_cycles = 8;
     stop = 1'b1;
 
     test_and_result(0,  stop_cycles);
@@ -105,7 +106,7 @@ task reset;
         wait_cycles(3);
         rst_n = 1'b1;
     end
-    endtask
+endtask
 
 task wait_cycles;
     // wait for N clock cycles
@@ -257,20 +258,24 @@ task test_hold;
 
         end else begin
             repeat(2) begin
-                //vExpected = 0;
+                // Carreguem valor corresponent al comptador "software"
                 bitCntr = ticks_in;
                 wait_cycles(1);
 
                 repeat(ticks_in) begin
                     // Es para el comptador durant tants cicles de clock a la meitat del comptatge
                     if (bitCntr == (ticks_in / 2)) begin
+
+                        // Quan arriba a la meitat, para i espera n_cycles
                         stop = 1'b1;                    
                         wait_cycles(n_cycles);
 
+                        // Comprovem si es primer comptatge
                         if (!(first)) begin
                             diff_cnt = diff_cnt + n_cycles;
                         end
 
+                        // Torna a comptar
                         stop = 1'b0; 
                     end
 
@@ -278,20 +283,22 @@ task test_hold;
                         diff_cnt = diff_cnt + 1;
                     end
 
+                    // Evolució del comptador i comprovem si funciona correctament
+                    // Valor esperat = 0
                     bitCntr = bitCntr - 1;
-                    //vObtained = timerOut;
                     wait_cycles(1);
+                    async_check;
                 end
 
-                //vExpected = 1;
-                stop = 1'b1;
-                //vObtained = timerOut;
+                // Comprovem que funciona
+                // Valor esperat = 1
                 async_check;
-                stop = 1'b0;
 
+                // Al final del primer comptatge marquem el temps
                 if ((vObtained) && (first)) begin
                     time_mark = $realtime;
                     first = 0;
+                // Al final del segon comptatge calculem la diferència de temps
                 end else begin
                     diff_time = $realtime - time_mark;
                     stop = 1'b1;
