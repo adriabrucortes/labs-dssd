@@ -2,7 +2,7 @@
 // delay between clock posedge and check
 `define DELAY 2
 // verification level: RTL_LVL GATE_LVL
-`define RTL_LVL
+`define GATE_LVL
 
 module tb_timer(); // module name (same as the file)
 

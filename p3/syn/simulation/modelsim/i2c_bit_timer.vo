@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
-// DATE "03/18/2024 21:43:08"
+// DATE "03/19/2024 09:35:07"
 
 // 
 // Device: Altera 5CEBA4F23C7 Package FBGA484
@@ -49,7 +49,7 @@ output 	Out;
 // Clk	=>  Location: PIN_U7,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // Rst_n	=>  Location: PIN_W9,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // Ticks[2]	=>  Location: PIN_T13,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// Stop	=>  Location: PIN_AB12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Stop	=>  Location: PIN_M6,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // Ticks[1]	=>  Location: PIN_V13,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // Ticks[0]	=>  Location: PIN_U13,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // Ticks[7]	=>  Location: PIN_AA13,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -133,7 +133,7 @@ defparam \Clk~input .bus_hold = "false";
 defparam \Clk~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: CLKCTRL_G4
+// Location: CLKCTRL_G5
 cyclonev_clkena \Clk~inputCLKENA0 (
 	.inclk(\Clk~input_o ),
 	.ena(vcc),
@@ -158,7 +158,7 @@ defparam \Start~input .bus_hold = "false";
 defparam \Start~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: MLABCELL_X34_Y2_N30
+// Location: MLABCELL_X34_Y1_N30
 cyclonev_lcell_comb \Add0~9 (
 // Equation(s):
 // \Add0~9_sumout  = SUM(( cnt[0] ) + ( VCC ) + ( !VCC ))
@@ -205,7 +205,7 @@ defparam \Rst_n~input .bus_hold = "false";
 defparam \Rst_n~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X33_Y0_N75
+// Location: IOIBUF_X14_Y0_N18
 cyclonev_io_ibuf \Stop~input (
 	.i(Stop),
 	.ibar(gnd),
@@ -216,16 +216,16 @@ defparam \Stop~input .bus_hold = "false";
 defparam \Stop~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: MLABCELL_X34_Y2_N57
+// Location: MLABCELL_X34_Y1_N54
 cyclonev_lcell_comb \cnt[7]~0 (
 // Equation(s):
-// \cnt[7]~0_combout  = ( \Stop~input_o  & ( \Start~input_o  ) ) # ( !\Stop~input_o  )
+// \cnt[7]~0_combout  = ( \Start~input_o  & ( \Stop~input_o  ) ) # ( \Start~input_o  & ( !\Stop~input_o  ) ) # ( !\Start~input_o  & ( !\Stop~input_o  ) )
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(!\Start~input_o ),
+	.datac(gnd),
 	.datad(gnd),
-	.datae(gnd),
+	.datae(!\Start~input_o ),
 	.dataf(!\Stop~input_o ),
 	.datag(gnd),
 	.cin(gnd),
@@ -236,11 +236,11 @@ cyclonev_lcell_comb \cnt[7]~0 (
 	.shareout());
 // synopsys translate_off
 defparam \cnt[7]~0 .extended_lut = "off";
-defparam \cnt[7]~0 .lut_mask = 64'hFFFFFFFF0F0F0F0F;
+defparam \cnt[7]~0 .lut_mask = 64'hFFFFFFFF0000FFFF;
 defparam \cnt[7]~0 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X34_Y2_N32
+// Location: FF_X34_Y1_N32
 dffeas \cnt[0] (
 	.clk(\Clk~inputCLKENA0_outclk ),
 	.d(\Add0~9_sumout ),
@@ -259,7 +259,7 @@ defparam \cnt[0] .is_wysiwyg = "true";
 defparam \cnt[0] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X34_Y2_N33
+// Location: MLABCELL_X34_Y1_N33
 cyclonev_lcell_comb \Add0~5 (
 // Equation(s):
 // \Add0~5_sumout  = SUM(( cnt[1] ) + ( VCC ) + ( \Add0~10  ))
@@ -295,7 +295,7 @@ defparam \Ticks[1]~input .bus_hold = "false";
 defparam \Ticks[1]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: FF_X34_Y2_N35
+// Location: FF_X34_Y1_N35
 dffeas \cnt[1] (
 	.clk(\Clk~inputCLKENA0_outclk ),
 	.d(\Add0~5_sumout ),
@@ -314,7 +314,7 @@ defparam \cnt[1] .is_wysiwyg = "true";
 defparam \cnt[1] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X34_Y2_N36
+// Location: MLABCELL_X34_Y1_N36
 cyclonev_lcell_comb \Add0~1 (
 // Equation(s):
 // \Add0~1_sumout  = SUM(( cnt[2] ) + ( VCC ) + ( \Add0~6  ))
@@ -350,7 +350,7 @@ defparam \Ticks[2]~input .bus_hold = "false";
 defparam \Ticks[2]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: FF_X34_Y2_N37
+// Location: FF_X34_Y1_N37
 dffeas \cnt[2] (
 	.clk(\Clk~inputCLKENA0_outclk ),
 	.d(\Add0~1_sumout ),
@@ -369,7 +369,7 @@ defparam \cnt[2] .is_wysiwyg = "true";
 defparam \cnt[2] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X34_Y2_N39
+// Location: MLABCELL_X34_Y1_N39
 cyclonev_lcell_comb \Add0~29 (
 // Equation(s):
 // \Add0~29_sumout  = SUM(( cnt[3] ) + ( VCC ) + ( \Add0~2  ))
@@ -405,7 +405,7 @@ defparam \Ticks[3]~input .bus_hold = "false";
 defparam \Ticks[3]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: FF_X34_Y2_N41
+// Location: FF_X34_Y1_N41
 dffeas \cnt[3] (
 	.clk(\Clk~inputCLKENA0_outclk ),
 	.d(\Add0~29_sumout ),
@@ -424,7 +424,7 @@ defparam \cnt[3] .is_wysiwyg = "true";
 defparam \cnt[3] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X34_Y2_N42
+// Location: MLABCELL_X34_Y1_N42
 cyclonev_lcell_comb \Add0~25 (
 // Equation(s):
 // \Add0~25_sumout  = SUM(( cnt[4] ) + ( VCC ) + ( \Add0~30  ))
@@ -460,7 +460,7 @@ defparam \Ticks[4]~input .bus_hold = "false";
 defparam \Ticks[4]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: FF_X34_Y2_N44
+// Location: FF_X34_Y1_N44
 dffeas \cnt[4] (
 	.clk(\Clk~inputCLKENA0_outclk ),
 	.d(\Add0~25_sumout ),
@@ -479,7 +479,7 @@ defparam \cnt[4] .is_wysiwyg = "true";
 defparam \cnt[4] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X34_Y2_N45
+// Location: MLABCELL_X34_Y1_N45
 cyclonev_lcell_comb \Add0~21 (
 // Equation(s):
 // \Add0~21_sumout  = SUM(( cnt[5] ) + ( VCC ) + ( \Add0~26  ))
@@ -515,7 +515,7 @@ defparam \Ticks[5]~input .bus_hold = "false";
 defparam \Ticks[5]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: FF_X34_Y2_N47
+// Location: FF_X34_Y1_N47
 dffeas \cnt[5] (
 	.clk(\Clk~inputCLKENA0_outclk ),
 	.d(\Add0~21_sumout ),
@@ -534,7 +534,7 @@ defparam \cnt[5] .is_wysiwyg = "true";
 defparam \cnt[5] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X34_Y2_N48
+// Location: MLABCELL_X34_Y1_N48
 cyclonev_lcell_comb \Add0~17 (
 // Equation(s):
 // \Add0~17_sumout  = SUM(( cnt[6] ) + ( VCC ) + ( \Add0~22  ))
@@ -570,7 +570,7 @@ defparam \Ticks[6]~input .bus_hold = "false";
 defparam \Ticks[6]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: FF_X34_Y2_N49
+// Location: FF_X34_Y1_N49
 dffeas \cnt[6] (
 	.clk(\Clk~inputCLKENA0_outclk ),
 	.d(\Add0~17_sumout ),
@@ -589,7 +589,7 @@ defparam \cnt[6] .is_wysiwyg = "true";
 defparam \cnt[6] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X34_Y2_N51
+// Location: MLABCELL_X34_Y1_N51
 cyclonev_lcell_comb \Add0~13 (
 // Equation(s):
 // \Add0~13_sumout  = SUM(( cnt[7] ) + ( VCC ) + ( \Add0~18  ))
@@ -624,7 +624,7 @@ defparam \Ticks[7]~input .bus_hold = "false";
 defparam \Ticks[7]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: FF_X34_Y2_N53
+// Location: FF_X34_Y1_N53
 dffeas \cnt[7] (
 	.clk(\Clk~inputCLKENA0_outclk ),
 	.d(\Add0~13_sumout ),
@@ -643,7 +643,7 @@ defparam \cnt[7] .is_wysiwyg = "true";
 defparam \cnt[7] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X34_Y2_N24
+// Location: MLABCELL_X34_Y1_N24
 cyclonev_lcell_comb \WideNor0~0 (
 // Equation(s):
 // \WideNor0~0_combout  = ( !cnt[6] & ( !cnt[3] & ( (!cnt[5] & (!cnt[7] & !cnt[4])) ) ) )
@@ -667,7 +667,7 @@ defparam \WideNor0~0 .lut_mask = 64'hC000000000000000;
 defparam \WideNor0~0 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X34_Y2_N12
+// Location: MLABCELL_X34_Y1_N6
 cyclonev_lcell_comb \always1~0 (
 // Equation(s):
 // \always1~0_combout  = ( cnt[2] & ( \WideNor0~0_combout  & ( \Start~input_o  ) ) ) # ( !cnt[2] & ( \WideNor0~0_combout  & ( ((!cnt[1] & !cnt[0])) # (\Start~input_o ) ) ) ) # ( cnt[2] & ( !\WideNor0~0_combout  & ( \Start~input_o  ) ) ) # ( !cnt[2] & ( 
@@ -692,7 +692,7 @@ defparam \always1~0 .lut_mask = 64'h33333333F3333333;
 defparam \always1~0 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X34_Y2_N13
+// Location: FF_X34_Y1_N8
 dffeas \Out~reg0 (
 	.clk(\Clk~inputCLKENA0_outclk ),
 	.d(\always1~0_combout ),
@@ -711,7 +711,7 @@ defparam \Out~reg0 .is_wysiwyg = "true";
 defparam \Out~reg0 .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X50_Y2_N3
+// Location: LABCELL_X32_Y14_N0
 cyclonev_lcell_comb \~QUARTUS_CREATED_GND~I (
 // Equation(s):
 

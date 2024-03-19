@@ -9,51 +9,75 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/syn/simulation/modelsim
-vi2c_bit_timer
-Z1 !s110 1710796230
+vhard_block
+Z1 !s110 1710836697
 !i10b 1
-!s100 3I5HZ2EaDYQ16JaT`K^gE2
+!s100 5L6F`15jJU>d8zn[D?[]Z1
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-Ig@d=O`9;TQkd][4^@QgfM0
+IIC[_PYB:AB201l^^IoTQk0
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1710794588
-8i2c_bit_timer.vo
-Fi2c_bit_timer.vo
+Z4 w1710836668
+Z5 8i2c_bit_timer_min_1200mv_0c_fast.vo
+Z6 Fi2c_bit_timer_min_1200mv_0c_fast.vo
 !i122 0
-L0 32 706
-Z4 OV;L;2020.1;71
+L0 665 34
+Z7 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1710796230.000000
-!s107 i2c_bit_timer.vo|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|i2c_bit_timer.vo|
+Z8 !s108 1710836697.000000
+Z9 !s107 i2c_bit_timer_min_1200mv_0c_fast.vo|
+Z10 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|i2c_bit_timer_min_1200mv_0c_fast.vo|
 !i113 1
-Z6 o-vlog01compat -work work
-!s92 -vlog01compat -work work +incdir+.
-Z7 tCvgOpt 0
-vtb_timer
+Z11 o-vlog01compat -work work
+Z12 !s92 -vlog01compat -work work +incdir+.
+Z13 tCvgOpt 0
+vi2c_bit_timer
 R1
 !i10b 1
-!s100 E72R7B[YS0E431MFoHzHA1
+!s100 HeN<gDYfSFO:=ogJ3][A32
 R2
-IMgZ9RNY=C>FHF31C3z@KO3
+IcBoo;XU@nKXKhP>AhOd<O3
 R3
 R0
-w1710764489
+R4
+R5
+R6
+!i122 0
+L0 32 632
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+R13
+vtb_timer
+!s110 1710836698
+!i10b 1
+!s100 2GIBAVX:@ZKcFIh49nle=3
+R2
+IdSVij5G;Sbog3AQg:>D4Z0
+R3
+R0
+w1710836490
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/syn/../tb/tb_timer.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/syn/../tb/tb_timer.v
 !i122 1
 L0 7 305
-R4
+R7
 r1
 !s85 0
 31
-R5
+!s108 1710836698.000000
 !s107 C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/syn/../tb/../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/syn/../tb/tb_timer.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/syn/../tb|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/syn/../tb/tb_timer.v|
 !i113 1
-R6
+R11
 !s92 -vlog01compat -work work +incdir+C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3/syn/../tb
-R7
+R13

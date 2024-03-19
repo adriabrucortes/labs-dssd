@@ -130,7 +130,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AB8       :        :                   :      
 GND                          : AB9       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB10      :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB11      :        :                   :         : 3B        :                
-Stop                         : AB12      : input  : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB12      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB13      :        :                   :         : 4A        :                
 GND                          : AB14      : gnd    :                   :         :           :                
 Ticks[5]                     : AB15      : input  : 2.5 V             :         : 4A        : Y              
@@ -366,7 +366,7 @@ GND                          : M2        : gnd    :                   :         
 VCCA_FPLL                    : M3        : power  :                   : 2.5V    :           :                
 GND                          : M4        : gnd    :                   :         :           :                
 TDO                          : M5        : output :                   :         : 3A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : M6        :        :                   :         : 3A        :                
+Stop                         : M6        : input  : 2.5 V             :         : 3A        : Y              
 Start                        : M7        : input  : 2.5 V             :         : 3A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : M8        :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M9        :        :                   :         : 3B        :                
