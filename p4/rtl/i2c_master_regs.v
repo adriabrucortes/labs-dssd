@@ -33,7 +33,7 @@
 *    bit[5:0]: Reserved bits.
 *
 * ==============================================================================
-*  TXR  :  Transmit regster
+*  TXR  :  Transmit register
 *          (Write/Read) Default: 0x00
 *                       Addr   : 0x03
 * ------------------------------------------------------------------------------
@@ -124,7 +124,7 @@ module i2c_master_regs #(
   input  wire Rx_ack,    // received ack bit
   input  wire [7:0] Rx_data,   // data received from slave
   output wire [7:0] Tx_data,   // data to be transmitted to slave
-  output wire [7:0] Prescale,  // I2C clock presacel value
+  output wire [7:0] Prescale,  // I2C clock prescale value
   input  wire I2C_busy,  // bus busy (start signal detected)
   input  wire I2C_done,  // command completed, used to clear command register
   output wire I2C_en,    // enables the i2c core
@@ -184,7 +184,7 @@ module i2c_master_regs #(
         `I2C_PRER : prer <= DataIn;
         `I2C_CTR  : ctr  <= DataIn;
         `I2C_TXR  : txr  <= DataIn;
-          default : ;
+        default   : ;
       endcase
     // Si no fem res, mantenim els valors (realimentació als registres)
     else begin
