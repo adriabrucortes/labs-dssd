@@ -128,11 +128,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "Rx_data[0]",
-					"strict" : false
-				},
-				{
-					"name" : "Addr[2]",
+					"name" : "Addr[1]",
 					"strict" : false
 				},
 				{
@@ -140,7 +136,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "Addr[1]",
+					"name" : "Rx_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Addr[2]",
 					"strict" : false
 				},
 				{
@@ -164,11 +164,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "Rx_data[6]",
+					"name" : "I2C_busy",
 					"strict" : false
 				},
 				{
-					"name" : "I2C_busy",
+					"name" : "Rx_data[6]",
 					"strict" : false
 				},
 				{
@@ -176,11 +176,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "I2C_done",
-					"strict" : false
-				},
-				{
-					"name" : "I2C_al",
+					"name" : "DataIn[0]",
 					"strict" : false
 				},
 				{
@@ -192,11 +188,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "DataIn[0]",
+					"name" : "Wr",
 					"strict" : false
 				},
 				{
-					"name" : "Wr",
+					"name" : "I2C_done",
+					"strict" : false
+				},
+				{
+					"name" : "I2C_al",
 					"strict" : false
 				},
 				{
@@ -224,11 +224,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "Rx_ack",
+					"name" : "DataIn[7]",
 					"strict" : false
 				},
 				{
-					"name" : "DataIn[7]",
+					"name" : "Rx_ack",
 					"strict" : false
 				}
 			]

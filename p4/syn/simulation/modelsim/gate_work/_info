@@ -1,0 +1,83 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/simulation/modelsim
+vhard_block
+Z1 !s110 1711398147
+!i10b 1
+!s100 _AK0:RMQ0@0EBnledG[DW3
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Iof;h?kX87SMSZ4^;ejUHQ3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1711396678
+Z5 8i2c_master_regs_6_1200mv_85c_slow.vo
+Z6 Fi2c_master_regs_6_1200mv_85c_slow.vo
+!i122 0
+L0 2598 34
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1711398147.000000
+Z9 !s107 i2c_master_regs_6_1200mv_85c_slow.vo|
+Z10 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|i2c_master_regs_6_1200mv_85c_slow.vo|
+!i113 1
+Z11 o-vlog01compat -work work
+Z12 !s92 -vlog01compat -work work +incdir+.
+Z13 tCvgOpt 0
+vi2c_master_regs
+R1
+!i10b 1
+!s100 ^zYMjFH:;@zRAIhJJSX?Y1
+R2
+IJ1z6^OJ@T>o5:^S9Xn^SP3
+R3
+R0
+R4
+R5
+R6
+!i122 0
+L0 32 2565
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+R13
+vtb_i2c_master_regs
+!s110 1711398148
+!i10b 1
+!s100 X53KOnDe8aihSMJfgnEJV0
+R2
+I_;ORAmDE=9YA80XoUO>?h1
+R3
+R0
+w1711396386
+8C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb/tb_i2c_master_regs.v
+FC:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb/tb_i2c_master_regs.v
+!i122 1
+L0 32 468
+R7
+r1
+!s85 0
+31
+!s108 1711398148.000000
+!s107 C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb/../rtl/i2c_master_defines.v|C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb/../misc/timescale.v|C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb/tb_i2c_master_regs.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb|C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb/tb_i2c_master_regs.v|
+!i113 1
+R11
+!s92 -vlog01compat -work work +incdir+C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb
+R13

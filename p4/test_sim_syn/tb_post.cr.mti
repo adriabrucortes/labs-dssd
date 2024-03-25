@@ -1,0 +1,67 @@
+C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/simulation/modelsim/i2c_master_regs_min_1200mv_0c_fast.vo {1 {vlog -work work -stats=none C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/simulation/modelsim/i2c_master_regs_min_1200mv_0c_fast.vo
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module i2c_master_regs
+-- Compiling module hard_block
+
+Top level modules:
+	i2c_master_regs
+
+} {} {}} C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/misc/timescale.v {1 {vlog -work work -stats=none C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/misc/timescale.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+
+} {} {}} C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/misc/sys_model.v {1 {vlog -work work -stats=none C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/misc/sys_model.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module sys_model
+
+Top level modules:
+	sys_model
+
+} {} {}} C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/simulation/modelsim/i2c_master_regs_6_1200mv_0c_slow.vo {1 {vlog -work work -stats=none C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/simulation/modelsim/i2c_master_regs_6_1200mv_0c_slow.vo
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module i2c_master_regs
+-- Compiling module hard_block
+
+Top level modules:
+	i2c_master_regs
+
+} {} {}} C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/simulation/modelsim/i2c_master_regs.vo {1 {vlog -work work -stats=none C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/simulation/modelsim/i2c_master_regs.vo
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module i2c_master_regs
+-- Compiling module hard_block
+
+Top level modules:
+	i2c_master_regs
+
+} {} {}} C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/i2c_master_regs.v {1 {vlog -work work -stats=none C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/i2c_master_regs.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module i2c_master_regs
+
+Top level modules:
+	i2c_master_regs
+
+} {} {}} C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_i2c_master_regs.v {1 {vlog -work work -stats=none C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_i2c_master_regs.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_i2c_master_regs
+
+Top level modules:
+	tb_i2c_master_regs
+
+} {} {}} C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/simulation/modelsim/i2c_master_regs_6_1200mv_85c_slow.vo {1 {vlog -work work -stats=none C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/simulation/modelsim/i2c_master_regs_6_1200mv_85c_slow.vo
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module i2c_master_regs
+-- Compiling module hard_block
+
+Top level modules:
+	i2c_master_regs
+
+} {} {}} C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/i2c_master_defines.v {1 {vlog -work work -stats=none C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/i2c_master_defines.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+
+} {} {}} C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/misc/dbus_master_model.v {1 {vlog -work work -stats=none C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/misc/dbus_master_model.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module dbus_master_model
+
+Top level modules:
+	dbus_master_model
+
+} {} {}}

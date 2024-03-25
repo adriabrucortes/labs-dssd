@@ -1,0 +1,68 @@
+# Reading pref.tcl
+# do i2c_master_regs_run_msim_gate_verilog.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+. {i2c_master_regs_6_1200mv_85c_slow.vo}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:22:27 on Mar 25,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." i2c_master_regs_6_1200mv_85c_slow.vo 
+# -- Compiling module i2c_master_regs
+# -- Compiling module hard_block
+# 
+# Top level modules:
+# 	i2c_master_regs
+# End time: 21:22:28 on Mar 25,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb {C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb/tb_i2c_master_regs.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:22:28 on Mar 25,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb" C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb/tb_i2c_master_regs.v 
+# -- Compiling module tb_i2c_master_regs
+# 
+# Top level modules:
+# 	tb_i2c_master_regs
+# End time: 21:22:28 on Mar 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  tb_i2c_master_regs
+# vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" tb_i2c_master_regs 
+# Start time: 21:22:28 on Mar 25,2024
+# Loading work.tb_i2c_master_regs
+# Loading work.i2c_master_regs
+# Loading work.hard_block
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
+# ** Error: (vsim-3033) Instantiation of 'dbus_master_model' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_i2c_master_regs File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb/tb_i2c_master_regs.v Line: 100
+#         Searched libraries:
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cycloneive
+#             C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/simulation/modelsim/gate_work
+#             C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) Instantiation of 'sys_model' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_i2c_master_regs File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb/tb_i2c_master_regs.v Line: 110
+#         Searched libraries:
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cycloneive
+#             C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/simulation/modelsim/gate_work
+#             C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/simulation/modelsim/gate_work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./i2c_master_regs_run_msim_gate_verilog.do PAUSED at line 12
+# End time: 21:23:57 on Mar 25,2024, Elapsed time: 0:01:29
+# Errors: 2, Warnings: 0

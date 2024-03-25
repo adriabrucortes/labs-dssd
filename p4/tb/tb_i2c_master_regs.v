@@ -20,8 +20,12 @@
 
 `include "../misc/timescale.v"
 `include "../rtl/i2c_master_defines.v"
+//`include "../misc/sys_model.v"
+
+//`include "../misc/dbus_master_model.v"
+//`include "../sdc/i2c_master_regs.sdc"
 // verification level: RTL_LVL GATE_LVL
-`define RTL_LVL
+`define GATE_LVL
 // delay between clock posedge and check
 `define DELAY 2
 
