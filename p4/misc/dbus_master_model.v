@@ -40,21 +40,25 @@ module dbus_master_model #(
   end
 
   task write(input [ADDR_WIDTH-1:0] WrAddr, input [DATA_WIDTH-1:0] WrData);
-    Addr = WrAddr;
-    Dout = WrData;
-    wait_cycles(1);
-    Wr = 1'b1;
-    wait_cycles(1);
-    Wr = 1'b0;
-    Addr = 1'b0;
-    Dout = 1'b0;
+    begin
+      Addr = WrAddr;
+      Dout = WrData;
+      wait_cycles(1);
+      Wr = 1'b1;
+      wait_cycles(1);
+      Wr = 1'b0;
+      Addr = 1'b0;
+      Dout = 1'b0;
+    end
   endtask
 
   task read(input [ADDR_WIDTH-1:0] RdAddr, output [DATA_WIDTH-1:0] RdData);
-    Wr = 1'b0; // Optatiu
-    Addr = RdAddr;
-    wait_cycles(1);
-    Din = RdData;
+    begin
+      Wr = 1'b0; // Optatiu
+      Addr = RdAddr;
+      wait_cycles(1);
+      RdData = Din;
+    end
   endtask
 
 endmodule

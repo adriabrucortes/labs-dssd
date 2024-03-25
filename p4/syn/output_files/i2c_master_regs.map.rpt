@@ -1,5 +1,5 @@
 Analysis & Synthesis report for i2c_master_regs
-Sun Mar 24 19:22:51 2024
+Mon Mar 25 19:07:23 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -45,7 +45,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Mar 24 19:22:51 2024       ;
+; Analysis & Synthesis Status     ; Successful - Mon Mar 25 19:07:23 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; i2c_master_regs                             ;
 ; Top-level Entity Name           ; i2c_master_regs                             ;
@@ -165,7 +165,8 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.1%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processors 3-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -294,7 +295,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Mar 24 19:22:44 2024
+    Info: Processing started: Mon Mar 25 19:07:15 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off i2c_master_regs -c i2c_master_regs
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -310,9 +311,9 @@ Info (21057): Implemented 118 device resources after synthesis - the final resou
     Info (21059): Implemented 31 output pins
     Info (21061): Implemented 61 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4867 megabytes
-    Info: Processing ended: Sun Mar 24 19:22:51 2024
-    Info: Elapsed time: 00:00:07
+    Info: Peak virtual memory: 4890 megabytes
+    Info: Processing ended: Mon Mar 25 19:07:23 2024
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:08
 
 

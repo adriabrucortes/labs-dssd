@@ -80,7 +80,7 @@
 *                 0 = after STOP signal detected.
 *    bit[5]  : AL ? Arbitration lost
 *              This bit is set when the core lost arbitration. Arbitration
-*              i lost when:
+*              is lost when:
 *                 > a STOP signal is detected, but not requested.
 *                 > the master drives SDA high but SDA is low.
 *    bit[4:2]: Reserved.
