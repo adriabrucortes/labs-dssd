@@ -1,5 +1,5 @@
 Analysis & Synthesis report for i2c_master_regs
-Mon Mar 25 20:57:48 2024
+Tue Mar 26 01:03:08 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -45,7 +45,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Mar 25 20:57:48 2024       ;
+; Analysis & Synthesis Status        ; Successful - Tue Mar 26 01:03:08 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; i2c_master_regs                             ;
 ; Top-level Entity Name              ; i2c_master_regs                             ;
@@ -291,7 +291,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Mar 25 20:57:41 2024
+    Info: Processing started: Tue Mar 26 01:03:02 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off i2c_master_regs -c i2c_master_regs
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -301,7 +301,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file /users/
 Info (12021): Found 1 design units, including 1 entities, in source file /users/adria/documents/universitat/8e/dssd/labs-dssd/p4/misc/dbus_master_model.v
     Info (12023): Found entity 1: dbus_master_model File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/misc/dbus_master_model.v Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file /users/adria/documents/universitat/8e/dssd/labs-dssd/p4/tb/tb_i2c_master_regs.v
-    Info (12023): Found entity 1: tb_i2c_master_regs File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_i2c_master_regs.v Line: 32
+    Info (12023): Found entity 1: tb_i2c_master_regs File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_i2c_master_regs.v Line: 29
 Info (12021): Found 1 design units, including 1 entities, in source file /users/adria/documents/universitat/8e/dssd/labs-dssd/p4/rtl/i2c_master_regs.v
     Info (12023): Found entity 1: i2c_master_regs File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/i2c_master_regs.v Line: 106
 Info (12021): Found 0 design units, including 0 entities, in source file /users/adria/documents/universitat/8e/dssd/labs-dssd/p4/rtl/i2c_master_defines.v
@@ -314,9 +314,9 @@ Info (21057): Implemented 130 device resources after synthesis - the final resou
     Info (21059): Implemented 31 output pins
     Info (21061): Implemented 73 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4796 megabytes
-    Info: Processing ended: Mon Mar 25 20:57:48 2024
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Peak virtual memory: 4797 megabytes
+    Info: Processing ended: Tue Mar 26 01:03:08 2024
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:07
 
 
