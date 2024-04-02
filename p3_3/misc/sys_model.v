@@ -23,10 +23,10 @@
 module sys_model #(
   parameter CLK_HALFPERIOD = 5,
   parameter DELAY = 2 // delay between clock posedge and check
-)(
+  )(
   output reg Clk,
   output reg Rst_n
-);
+  );
 
   //___________________________________________________________________________
   // 100 MHz clock generation

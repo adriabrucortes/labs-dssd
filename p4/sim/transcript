@@ -1,0 +1,236 @@
+# Compile of i2c_master_defines.v was successful.
+# Compile of i2c_master_regs.v was successful.
+# Compile of tb_i2c_master_regs.v was successful.
+# Compile of dbus_master_model.v was successful.
+# Compile of sys_model.v was successful.
+# Compile of timescale.v was successful.
+# 6 compiles, 0 failed with no errors.
+vsim -gui work.tb_i2c_master_regs
+# vsim -gui work.tb_i2c_master_regs 
+# Start time: 01:12:35 on Mar 26,2024
+# Loading work.tb_i2c_master_regs
+# Loading work.i2c_master_regs
+# Loading work.dbus_master_model
+# Loading work.sys_model
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (4) for port 'Addr'. The port definition is at: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/misc/dbus_master_model.v(30).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_i2c_master_regs/u_dbus File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_i2c_master_regs.v Line: 97
+run -all
+# [Info-                    0] Initialization of signals and variables...
+# [Info-    0.00 ns] Status=00000000
+# [Info-   77.00 ns] Test Wr/Rd of registers through System Data Bus
+# [Info-   77.00 ns] Test Wr/Rd aa to Reg[2]
+# [Info-  117.00 ns] Successful check at time
+# [Info-  117.00 ns] Test Wr/Rd 55 to Reg[2]
+# [Info-  157.00 ns] Successful check at time
+# [Info-  157.00 ns] Test Wr/Rd 00 to Reg[2]
+# [Info-  197.00 ns] Successful check at time
+# [Info-  197.00 ns] New address to be written[1]
+# [Info-  197.00 ns] Test Wr/Rd aa to Reg[1]
+# [Info-  237.00 ns] Successful check at time
+# [Info-  237.00 ns] Test Wr/Rd 55 to Reg[1]
+# [Info-  277.00 ns] Successful check at time
+# [Info-  277.00 ns] Test Wr/Rd 00 to Reg[1]
+# [Info-  317.00 ns] Successful check at time
+# [Info-  317.00 ns] New address to be written[0]
+# [Info-  317.00 ns] Test Wr/Rd aa to Reg[0]
+# [Info-  357.00 ns] Successful check at time
+# [Info-  357.00 ns] Test Wr/Rd 55 to Reg[0]
+# [Info-  397.00 ns] Successful check at time
+# [Info-  397.00 ns] Test Wr/Rd 00 to Reg[0]
+# [Info-  437.00 ns] Successful check at time
+# [Info-  437.00 ns] New address to be written[f]
+# ********** TEST PASSED **********
+# 
+# [Info-  437.00 ns] Test CR autoclear after tranfer ends
+# [Info-  525.00 ns] Status=10000001
+# [Info-  537.00 ns] Successful check
+# [Info-  537.00 ns] Errors CR autoclear:           0
+# ********** TEST PASSED **********
+# 
+# [Info-  537.00 ns] Test CR autoclear after arbitration is lost
+# [Info-  537.00 ns] Status=00000000
+# [Info-  575.00 ns] Status=10000000
+# [Info-  625.00 ns] Status=10100001
+# [Info-  657.00 ns] Successful check at time
+# CR here           0
+# [Info-  715.00 ns] Status=10000001
+# [Info-  727.00 ns] Errors AL:           0
+# ********** TEST PASSED **********
+# 
+# [Info-  727.00 ns] Test TIP flag
+# [Info-  727.00 ns] Status=00000000
+# [Info-  765.00 ns] Status=10000000
+# [Info-  845.00 ns] Status=10000010
+# [Info-  857.00 ns] Successful check
+# [Info-  887.00 ns] Successful check
+# [Info-  887.00 ns] Errors TIP:           0
+# ********** TEST PASSED **********
+# 
+# [Info-  887.00 ns] Test INT request generation
+# [Info-  887.00 ns] Status=00000000
+# [Info-  925.00 ns] Status=10000000
+# [Info-  995.00 ns] Status=10000001
+# [Info- 1017.00 ns] Okay Interrupt
+# [Info- 1027.00 ns] Status=00000000
+# [Info- 1065.00 ns] Status=10000000
+# [Info- 1135.00 ns] Status=10100001
+# [Info- 1157.00 ns] Okay Interrupt
+# [Info- 1197.00 ns] Okay Interrupt
+# [Info- 1197.00 ns] Errors INT:           0
+# ********** TEST PASSED **********
+# 
+# [Info- 1197.00 ns] Test Prescale, Control, Command and Transmission registers outputs
+# Test Prescale @ 1197.00 ns
+# [Info- 1247.00 ns] Successful check at time
+# [Info- 1247.00 ns] Errors PRE           0
+# ********** TEST PASSED **********
+# Test CTR @ 1257.00 ns
+# [Info- 1307.00 ns] Successful check at time
+# [Info- 1307.00 ns] Errors CTR           0
+# ********** TEST PASSED **********
+# Test CR Outputs @ 1317.00 ns
+# [Info- 1355.00 ns] Status=10000010
+# [Info- 1357.00 ns] Errors CR Output           0
+# ********** TEST PASSED **********
+# Test TX @ 1357.00 ns
+# [Info- 1407.00 ns] Successful check at time
+# [Info- 1407.00 ns] Errors TX           0
+# ********** TEST PASSED **********
+# 
+# [Info- 1417.00 ns] Test RXR and the rx_ack flag
+# [Info- 1427.00 ns] Successful check
+# [Info- 1447.00 ns] Successful check
+# [Info- 1447.00 ns] Errors RXR:           0
+# ********** TEST PASSED **********
+# 
+# [Info- 1447.00 ns] End of test
+# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_i2c_master_regs.v(388)
+#    Time: 1447 ns  Iteration: 0  Instance: /tb_i2c_master_regs
+# Break in Module tb_i2c_master_regs at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_i2c_master_regs.v line 388
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (4) for port 'Addr'. The port definition is at: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/misc/dbus_master_model.v(30).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_i2c_master_regs/u_dbus File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_i2c_master_regs.v Line: 97
+add wave -position insertpoint  \
+sim:/tb_i2c_master_regs/AWIDTH \
+sim:/tb_i2c_master_regs/DWIDTH \
+sim:/tb_i2c_master_regs/Clk \
+sim:/tb_i2c_master_regs/Rst_n \
+sim:/tb_i2c_master_regs/Addr \
+sim:/tb_i2c_master_regs/DataIn \
+sim:/tb_i2c_master_regs/DataOut \
+sim:/tb_i2c_master_regs/Wr \
+sim:/tb_i2c_master_regs/Int \
+sim:/tb_i2c_master_regs/Start \
+sim:/tb_i2c_master_regs/Stop \
+sim:/tb_i2c_master_regs/Read \
+sim:/tb_i2c_master_regs/Write \
+sim:/tb_i2c_master_regs/Tx_ack \
+sim:/tb_i2c_master_regs/Rx_ack \
+sim:/tb_i2c_master_regs/Rx_data \
+sim:/tb_i2c_master_regs/Tx_data \
+sim:/tb_i2c_master_regs/Prescale \
+sim:/tb_i2c_master_regs/I2C_busy \
+sim:/tb_i2c_master_regs/I2C_done \
+sim:/tb_i2c_master_regs/I2C_en \
+sim:/tb_i2c_master_regs/I2C_al \
+sim:/tb_i2c_master_regs/errors \
+sim:/tb_i2c_master_regs/vExpected \
+sim:/tb_i2c_master_regs/vObtained \
+sim:/tb_i2c_master_regs/data2write \
+sim:/tb_i2c_master_regs/addr2write
+run -all
+# [Info-                    0] Initialization of signals and variables...
+# [Info-    0.00 ns] Status=00000000
+# [Info-   77.00 ns] Test Wr/Rd of registers through System Data Bus
+# [Info-   77.00 ns] Test Wr/Rd aa to Reg[2]
+# [Info-  117.00 ns] Successful check at time
+# [Info-  117.00 ns] Test Wr/Rd 55 to Reg[2]
+# [Info-  157.00 ns] Successful check at time
+# [Info-  157.00 ns] Test Wr/Rd 00 to Reg[2]
+# [Info-  197.00 ns] Successful check at time
+# [Info-  197.00 ns] New address to be written[1]
+# [Info-  197.00 ns] Test Wr/Rd aa to Reg[1]
+# [Info-  237.00 ns] Successful check at time
+# [Info-  237.00 ns] Test Wr/Rd 55 to Reg[1]
+# [Info-  277.00 ns] Successful check at time
+# [Info-  277.00 ns] Test Wr/Rd 00 to Reg[1]
+# [Info-  317.00 ns] Successful check at time
+# [Info-  317.00 ns] New address to be written[0]
+# [Info-  317.00 ns] Test Wr/Rd aa to Reg[0]
+# [Info-  357.00 ns] Successful check at time
+# [Info-  357.00 ns] Test Wr/Rd 55 to Reg[0]
+# [Info-  397.00 ns] Successful check at time
+# [Info-  397.00 ns] Test Wr/Rd 00 to Reg[0]
+# [Info-  437.00 ns] Successful check at time
+# [Info-  437.00 ns] New address to be written[f]
+# ********** TEST PASSED **********
+# 
+# [Info-  437.00 ns] Test CR autoclear after tranfer ends
+# [Info-  525.00 ns] Status=10000001
+# [Info-  537.00 ns] Successful check
+# [Info-  537.00 ns] Errors CR autoclear:           0
+# ********** TEST PASSED **********
+# 
+# [Info-  537.00 ns] Test CR autoclear after arbitration is lost
+# [Info-  537.00 ns] Status=00000000
+# [Info-  575.00 ns] Status=10000000
+# [Info-  625.00 ns] Status=10100001
+# [Info-  657.00 ns] Successful check at time
+# CR here           0
+# [Info-  715.00 ns] Status=10000001
+# [Info-  727.00 ns] Errors AL:           0
+# ********** TEST PASSED **********
+# 
+# [Info-  727.00 ns] Test TIP flag
+# [Info-  727.00 ns] Status=00000000
+# [Info-  765.00 ns] Status=10000000
+# [Info-  845.00 ns] Status=10000010
+# [Info-  857.00 ns] Successful check
+# [Info-  887.00 ns] Successful check
+# [Info-  887.00 ns] Errors TIP:           0
+# ********** TEST PASSED **********
+# 
+# [Info-  887.00 ns] Test INT request generation
+# [Info-  887.00 ns] Status=00000000
+# [Info-  925.00 ns] Status=10000000
+# [Info-  995.00 ns] Status=10000001
+# [Info- 1017.00 ns] Okay Interrupt
+# [Info- 1027.00 ns] Status=00000000
+# [Info- 1065.00 ns] Status=10000000
+# [Info- 1135.00 ns] Status=10100001
+# [Info- 1157.00 ns] Okay Interrupt
+# [Info- 1197.00 ns] Okay Interrupt
+# [Info- 1197.00 ns] Errors INT:           0
+# ********** TEST PASSED **********
+# 
+# [Info- 1197.00 ns] Test Prescale, Control, Command and Transmission registers outputs
+# Test Prescale @ 1197.00 ns
+# [Info- 1247.00 ns] Successful check at time
+# [Info- 1247.00 ns] Errors PRE           0
+# ********** TEST PASSED **********
+# Test CTR @ 1257.00 ns
+# [Info- 1307.00 ns] Successful check at time
+# [Info- 1307.00 ns] Errors CTR           0
+# ********** TEST PASSED **********
+# Test CR Outputs @ 1317.00 ns
+# [Info- 1355.00 ns] Status=10000010
+# [Info- 1357.00 ns] Errors CR Output           0
+# ********** TEST PASSED **********
+# Test TX @ 1357.00 ns
+# [Info- 1407.00 ns] Successful check at time
+# [Info- 1407.00 ns] Errors TX           0
+# ********** TEST PASSED **********
+# 
+# [Info- 1417.00 ns] Test RXR and the rx_ack flag
+# [Info- 1427.00 ns] Successful check
+# [Info- 1447.00 ns] Successful check
+# [Info- 1447.00 ns] Errors RXR:           0
+# ********** TEST PASSED **********
+# 
+# [Info- 1447.00 ns] End of test
+# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_i2c_master_regs.v(388)
+#    Time: 1447 ns  Iteration: 0  Instance: /tb_i2c_master_regs
+# Break in Module tb_i2c_master_regs at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_i2c_master_regs.v line 388
+# End time: 01:18:28 on Mar 26,2024, Elapsed time: 0:05:53
+# Errors: 0, Warnings: 2

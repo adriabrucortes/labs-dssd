@@ -1,0 +1,131 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/simulation/modelsim
+vdbus_master_model
+Z1 !s110 1711411530
+!i10b 1
+!s100 foQJ0MkYTN`^iFU`UGVL20
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IjZA2Z1QE2Of@VFZaY=dS[2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1711411497
+Z5 8C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb/tb_i2c_master_regs_gate.v
+Z6 FC:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb/tb_i2c_master_regs_gate.v
+!i122 1
+L0 499 41
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1711411530.000000
+!s107 C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb/../rtl/i2c_master_defines.v|C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb/../misc/timescale.v|C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb/tb_i2c_master_regs_gate.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb|C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb/tb_i2c_master_regs_gate.v|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb
+Z12 tCvgOpt 0
+vhard_block
+R1
+!i10b 1
+!s100 _AK0:RMQ0@0EBnledG[DW3
+R2
+Iof;h?kX87SMSZ4^;ejUHQ3
+R3
+R0
+Z13 w1711411399
+Z14 8i2c_master_regs_6_1200mv_85c_slow.vo
+Z15 Fi2c_master_regs_6_1200mv_85c_slow.vo
+!i122 0
+L0 2598 34
+R7
+r1
+!s85 0
+31
+R8
+Z16 !s107 i2c_master_regs_6_1200mv_85c_slow.vo|
+Z17 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|i2c_master_regs_6_1200mv_85c_slow.vo|
+!i113 1
+R10
+Z18 !s92 -vlog01compat -work work +incdir+.
+R12
+vi2c_master_regs
+R1
+!i10b 1
+!s100 ^zYMjFH:;@zRAIhJJSX?Y1
+R2
+IJ1z6^OJ@T>o5:^S9Xn^SP3
+R3
+R0
+R13
+R14
+R15
+!i122 0
+L0 32 2565
+R7
+r1
+!s85 0
+31
+R8
+R16
+R17
+!i113 1
+R10
+R18
+R12
+vsys_model
+R1
+!i10b 1
+!s100 `4VZPDQWDC6_Ub:n_e4?Z0
+R2
+ImcG?hR^mcYPUdgXcIf[V00
+R3
+R0
+R4
+R5
+R6
+!i122 1
+L0 541 38
+R7
+r1
+!s85 0
+31
+R8
+Z19 !s107 C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb/../rtl/i2c_master_defines.v|C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb/../misc/timescale.v|C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb/tb_i2c_master_regs_gate.v|
+R9
+!i113 1
+R10
+R11
+R12
+vtb_i2c_master_regs
+R1
+!i10b 1
+!s100 Mab45KjAZXffz<iSG=jV33
+R2
+I]YfKjTz6c8E2z608A08S]3
+R3
+R0
+R4
+R5
+R6
+!i122 1
+L0 29 469
+R7
+r1
+!s85 0
+31
+R8
+R19
+R9
+!i113 1
+R10
+R11
+R12

@@ -1,0 +1,210 @@
+# Reading pref.tcl
+# do i2c_master_regs_run_msim_gate_verilog.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+. {i2c_master_regs_6_1200mv_85c_slow.vo}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:05:30 on Mar 26,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." i2c_master_regs_6_1200mv_85c_slow.vo 
+# -- Compiling module i2c_master_regs
+# -- Compiling module hard_block
+# 
+# Top level modules:
+# 	i2c_master_regs
+# End time: 01:05:30 on Mar 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb {C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb/tb_i2c_master_regs_gate.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:05:30 on Mar 26,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb" C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb/tb_i2c_master_regs_gate.v 
+# -- Compiling module tb_i2c_master_regs
+# -- Compiling module dbus_master_model
+# -- Compiling module sys_model
+# 
+# Top level modules:
+# 	tb_i2c_master_regs
+# End time: 01:05:30 on Mar 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  tb_i2c_master_regs
+# vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" tb_i2c_master_regs 
+# Start time: 01:05:30 on Mar 26,2024
+# Loading work.tb_i2c_master_regs
+# Loading work.i2c_master_regs
+# Loading work.hard_block
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
+# Loading work.dbus_master_model
+# Loading work.sys_model
+# Loading instances from i2c_master_regs_6_1200mv_85c_v_slow.sdo
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'Addr'. The port definition is at: i2c_master_regs_6_1200mv_85c_slow.vo(35).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_i2c_master_regs/u_dut File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb/tb_i2c_master_regs_gate.v Line: 71
+# Loading altera_ver.PRIM_GDFF_LOW
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (4) for port 'Addr'. The port definition is at: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb/tb_i2c_master_regs_gate.v(505).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_i2c_master_regs/u_dbus File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb/tb_i2c_master_regs_gate.v Line: 97
+# Loading timing data from i2c_master_regs_6_1200mv_85c_v_slow.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_i2c_master_regs File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb/tb_i2c_master_regs_gate.v
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# [Info-                    0] Initialization of signals and variables...
+# [Info-   77.00 ns] Test Wr/Rd of registers through System Data Bus
+# [Info-   77.00 ns] Test Wr/Rd aa to Reg[2]
+# [Info-  117.00 ns] Successful check at time
+# [Info-  117.00 ns] Test Wr/Rd 55 to Reg[2]
+# [Info-  157.00 ns] Successful check at time
+# [Info-  157.00 ns] Test Wr/Rd 00 to Reg[2]
+# [Info-  197.00 ns] Successful check at time
+# [Info-  197.00 ns] New address to be written[1]
+# [Info-  197.00 ns] Test Wr/Rd aa to Reg[1]
+# [Info-  237.00 ns] Successful check at time
+# [Info-  237.00 ns] Test Wr/Rd 55 to Reg[1]
+# [Info-  277.00 ns] Successful check at time
+# [Info-  277.00 ns] Test Wr/Rd 00 to Reg[1]
+# [Info-  317.00 ns] Successful check at time
+# [Info-  317.00 ns] New address to be written[0]
+# [Info-  317.00 ns] Test Wr/Rd aa to Reg[0]
+# [Info-  357.00 ns] Successful check at time
+# [Info-  357.00 ns] Test Wr/Rd 55 to Reg[0]
+# [Info-  397.00 ns] Successful check at time
+# [Info-  397.00 ns] Test Wr/Rd 00 to Reg[0]
+# [Info-  437.00 ns] Successful check at time
+# [Info-  437.00 ns] New address to be written[f]
+# ********** TEST PASSED **********
+# 
+# [Info-  437.00 ns] Test CR autoclear after tranfer ends
+# [Info-  537.00 ns] Successful check
+# [Info-  537.00 ns] Errors CR autoclear:           0
+# ********** TEST PASSED **********
+# 
+# [Info-  537.00 ns] Test CR autoclear after arbitration is lost
+# [Info-  657.00 ns] Successful check at time
+# CR here           0
+# [Info-  727.00 ns] Errors AL:           0
+# ********** TEST PASSED **********
+# 
+# [Info-  727.00 ns] Test TIP flag
+# [Info-  857.00 ns] Successful check
+# [Info-  887.00 ns] Successful check
+# [Info-  887.00 ns] Errors TIP:           0
+# ********** TEST PASSED **********
+# 
+# [Info-  887.00 ns] Test INT request generation
+# [Info- 1017.00 ns] Okay Interrupt
+# ** Error: $hold( posedge clk &&& reset:1022366 ps, ena:1022447 ps, 157 ps );
+#    Time: 1022447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[7] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1022366 ps, ena:1022447 ps, 157 ps );
+#    Time: 1022447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[6] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1022366 ps, ena:1022447 ps, 157 ps );
+#    Time: 1022447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[5] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1022366 ps, ena:1022447 ps, 157 ps );
+#    Time: 1022447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[4] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1022366 ps, ena:1022447 ps, 157 ps );
+#    Time: 1022447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[3] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1022366 ps, ena:1022447 ps, 157 ps );
+#    Time: 1022447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[2] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1022366 ps, ena:1022447 ps, 157 ps );
+#    Time: 1022447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[1] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1022366 ps, ena:1022447 ps, 157 ps );
+#    Time: 1022447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[0] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# [Info- 1157.00 ns] Okay Interrupt
+# ** Error: $hold( posedge clk &&& reset:1162366 ps, ena:1162447 ps, 157 ps );
+#    Time: 1162447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[7] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1162366 ps, ena:1162447 ps, 157 ps );
+#    Time: 1162447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[6] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1162366 ps, ena:1162447 ps, 157 ps );
+#    Time: 1162447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[5] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1162366 ps, ena:1162447 ps, 157 ps );
+#    Time: 1162447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[4] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1162366 ps, ena:1162447 ps, 157 ps );
+#    Time: 1162447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[3] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1162366 ps, ena:1162447 ps, 157 ps );
+#    Time: 1162447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[2] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1162366 ps, ena:1162447 ps, 157 ps );
+#    Time: 1162447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[1] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1162366 ps, ena:1162447 ps, 157 ps );
+#    Time: 1162447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[0] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1192366 ps, ena:1192447 ps, 157 ps );
+#    Time: 1192447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[7] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1192366 ps, ena:1192447 ps, 157 ps );
+#    Time: 1192447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[6] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1192366 ps, ena:1192447 ps, 157 ps );
+#    Time: 1192447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[5] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1192366 ps, ena:1192447 ps, 157 ps );
+#    Time: 1192447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[4] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1192366 ps, ena:1192447 ps, 157 ps );
+#    Time: 1192447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[3] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1192366 ps, ena:1192447 ps, 157 ps );
+#    Time: 1192447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[2] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1192366 ps, ena:1192447 ps, 157 ps );
+#    Time: 1192447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[1] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1192366 ps, ena:1192447 ps, 157 ps );
+#    Time: 1192447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[0] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# [Info- 1197.00 ns] Okay Interrupt
+# [Info- 1197.00 ns] Errors INT:           0
+# ********** TEST PASSED **********
+# 
+# [Info- 1197.00 ns] Test Prescale, Control, Command and Transmission registers outputs
+# Test Prescale @ 1197.00 ns
+# [Error! 1247.00 ns] The value is 00000000 and should be 00000001
+# [Info- 1247.00 ns] Errors PRE           1
+# ********** TEST FAILED **********
+# Test CTR @ 1257.00 ns
+# [Info- 1307.00 ns] Successful check at time
+# [Info- 1307.00 ns] Errors CTR           0
+# ********** TEST PASSED **********
+# Test CR Outputs @ 1317.00 ns
+# [Info- 1357.00 ns] Errors CR Output           1
+# ********** TEST FAILED **********
+# Test TX @ 1357.00 ns
+# ** Error: $hold( posedge clk &&& reset:1382366 ps, ena:1382447 ps, 157 ps );
+#    Time: 1382447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[7] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1382366 ps, ena:1382447 ps, 157 ps );
+#    Time: 1382447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[6] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1382366 ps, ena:1382447 ps, 157 ps );
+#    Time: 1382447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[5] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1382366 ps, ena:1382447 ps, 157 ps );
+#    Time: 1382447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[4] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1382366 ps, ena:1382447 ps, 157 ps );
+#    Time: 1382447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[3] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1382366 ps, ena:1382447 ps, 157 ps );
+#    Time: 1382447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[2] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1382366 ps, ena:1382447 ps, 157 ps );
+#    Time: 1382447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[1] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& reset:1382366 ps, ena:1382447 ps, 157 ps );
+#    Time: 1382447 ps  Iteration: 0  Process: /tb_i2c_master_regs/u_dut/\txr[0] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# [Error! 1407.00 ns] The value is 00000000 and should be 00000004
+# [Info- 1407.00 ns] Errors TX           1
+# ********** TEST FAILED **********
+# 
+# [Info- 1417.00 ns] Test RXR and the rx_ack flag
+# [Info- 1427.00 ns] Successful check
+# [Info- 1447.00 ns] Successful check
+# [Info- 1447.00 ns] Errors RXR:           0
+# ********** TEST PASSED **********
+# 
+# [Info- 1447.00 ns] End of test
+# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb/tb_i2c_master_regs_gate.v(388)
+#    Time: 1447 ns  Iteration: 0  Instance: /tb_i2c_master_regs
+# Break in Module tb_i2c_master_regs at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/../tb/tb_i2c_master_regs_gate.v line 388
+# End time: 01:11:19 on Mar 26,2024, Elapsed time: 0:05:49
+# Errors: 32, Warnings: 2

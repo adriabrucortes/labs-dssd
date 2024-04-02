@@ -22,7 +22,7 @@
 `include "../rtl/i2c_master_defines.v"
 
 // verification level: RTL_LVL GATE_LVL
-`define RTL_LVL
+`define GATE_LVL
 // delay between clock posedge and check
 `define DELAY 2
 
@@ -388,10 +388,11 @@ module tb_i2c_master_regs(); // module name (same as the file)
     $stop;
   end
 
+/*
   initial begin
     $monitor("[Info- %t] Status=%b", $time, u_dut.sr);
   end
-
+*/
   //___________________________________________________________________________
   // Test tasks and functions
 
@@ -490,6 +491,87 @@ module tb_i2c_master_regs(); // module name (same as the file)
         @(posedge Clk);
             #`DELAY;
         end
+    end
+  endtask
+
+endmodule
+
+module dbus_master_model #(
+  parameter DATA_WIDTH = 8,             // bus data size
+  parameter ADDR_WIDTH = 8              // bus addres size
+  )(
+  input  wire                  Clk,     // system clock input
+  input  wire                  Rst_n,   // system asynch reset. active low
+  output reg  [ADDR_WIDTH-1:0] Addr,    // address bits
+  output reg  [DATA_WIDTH-1:0] Dout,    // databus input
+  input  wire [DATA_WIDTH-1:0] Din,     // databus output
+  output reg                   Wr       // write enable input
+  );
+
+  initial begin
+    Addr = 1'b0;
+    Dout = 1'b0;
+    Wr = 1'b0;
+  end
+
+  task write(input [ADDR_WIDTH-1:0] WrAddr, input [DATA_WIDTH-1:0] WrData);
+    begin
+      Addr = WrAddr;
+      Dout = WrData;
+      wait_cycles(1);
+      Wr = 1'b1;
+      wait_cycles(1);
+      Wr = 1'b0;
+      Addr = 1'b0;
+      Dout = 1'b0;
+    end
+  endtask
+
+  task read(input [ADDR_WIDTH-1:0] RdAddr, output [DATA_WIDTH-1:0] RdData);
+    begin
+      Wr = 1'b0; // Optatiu
+      Addr = RdAddr;
+      wait_cycles(1);
+      RdData = Din;
+    end
+  endtask
+
+endmodule
+
+module sys_model #(
+  parameter CLK_HALFPERIOD = 5,
+  parameter DELAY = 2 // delay between clock posedge and check
+  )(
+  output reg Clk,
+  output reg Rst_n
+  );
+
+  //___________________________________________________________________________
+  // 100 MHz clock generation
+  initial Clk = 1'b0;
+  always #CLK_HALFPERIOD Clk = ~Clk;
+
+  // reset initialization
+  initial Rst_n = 1'b1;
+
+  task reset;
+  // generation of reset pulse
+    input [32-1:0] Ncycles;
+    begin
+      Rst_n = 1'b0;
+      wait_cycles(Ncycles);
+      Rst_n = 1'b1;
+    end
+  endtask
+
+  task wait_cycles;
+  // wait for N clock cycles
+    input [32-1:0] Ncycles;
+    begin
+      repeat(Ncycles) begin
+        @(posedge Clk);
+          #DELAY;
+      end
     end
   endtask
 
