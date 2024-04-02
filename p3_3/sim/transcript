@@ -360,3 +360,5 @@ run -all
 # ** Note: $stop    : C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_3/tb/tb_i2c_master_bit_ctrl.v(226)
 #    Time: 23207 ns  Iteration: 0  Instance: /tb_i2c_master_bit_ctrl
 # Break in Module tb_i2c_master_bit_ctrl at C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_3/tb/tb_i2c_master_bit_ctrl.v line 226
+# End time: 13:01:28 on Apr 02,2024, Elapsed time: 1:57:29
+# Errors: 0, Warnings: 1
