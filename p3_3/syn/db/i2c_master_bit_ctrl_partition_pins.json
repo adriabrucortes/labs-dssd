@@ -1,0 +1,85 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "TimerStart",
+					"strict" : false
+				},
+				{
+					"name" : "TimerStop",
+					"strict" : false
+				},
+				{
+					"name" : "Ack",
+					"strict" : false
+				},
+				{
+					"name" : "Rxd",
+					"strict" : false
+				},
+				{
+					"name" : "I2C_busy",
+					"strict" : false
+				},
+				{
+					"name" : "I2C_al",
+					"strict" : false
+				},
+				{
+					"name" : "Scl_oen",
+					"strict" : false
+				},
+				{
+					"name" : "Sda_oen",
+					"strict" : false
+				},
+				{
+					"name" : "Enable",
+					"strict" : false
+				},
+				{
+					"name" : "Scl_i",
+					"strict" : false
+				},
+				{
+					"name" : "Clk",
+					"strict" : false
+				},
+				{
+					"name" : "Rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "Cmd[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Cmd[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Cmd[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Cmd[3]",
+					"strict" : false
+				},
+				{
+					"name" : "TimerOut",
+					"strict" : false
+				},
+				{
+					"name" : "Txd",
+					"strict" : false
+				},
+				{
+					"name" : "Sda_i",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

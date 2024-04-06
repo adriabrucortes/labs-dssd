@@ -1,0 +1,18 @@
+
+State Machine - |i2c_master_bit_ctrl|state
+Name state.WR_D state.WR_C state.WR_B state.RD_D state.RD_C state.RD_B state.STOP_D state.STOP_C state.STOP_B state.START_F state.START_E state.START_D state.START_C state.START_B state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.START_B 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.START_C 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.START_D 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.START_E 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.START_F 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.STOP_B 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.STOP_C 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.STOP_D 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.RD_B 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.RD_C 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.RD_D 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.WR_B 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.WR_C 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.WR_D 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

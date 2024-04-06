@@ -10,7 +10,7 @@ z2
 cModel Technology
 dC:/intelFPGA_lite/20.1
 vi2c_bit_timer
-Z0 !s110 1712055488
+Z0 !s110 1712325585
 !i10b 1
 !s100 B8S@VEQ@jnGnX4gQaL3NL1
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -20,13 +20,13 @@ Z3 dC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_3/sim
 w1710750858
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_3/rtl/i2c_bit_timer.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_3/rtl/i2c_bit_timer.v
-!i122 71
+!i122 77
 L0 1 34
 Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1712055488.000000
+Z5 !s108 1712325585.000000
 !s107 C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_3/rtl/i2c_bit_timer.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_3/rtl/i2c_bit_timer.v|
 !i113 1
@@ -40,10 +40,10 @@ R1
 IQgH^UXOE[hbj4ghhI5MO32
 R2
 R3
-w1712055037
+w1712056236
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_3/rtl/i2c_master_bit_ctrl.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_3/rtl/i2c_master_bit_ctrl.v
-!i122 67
+!i122 73
 L0 24 295
 R4
 r1
@@ -56,17 +56,17 @@ R5
 R6
 R7
 vi2c_master_regs
-!s110 1712055489
+R0
 !i10b 1
 !s100 PXK=b>Ao;L]o4[FdNAJgc2
 R1
 IceM`VXZX6J]6;h>mMX1mO3
 R2
 R3
-w1710845344
+Z8 w1712055705
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_3/rtl/i2c_master_regs.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_3/rtl/i2c_master_regs.v
-!i122 72
+!i122 78
 L0 106 155
 R4
 r1
@@ -86,10 +86,10 @@ R1
 I@EeD4ioKLD1`aTVbI7Z6k1
 R2
 R3
-Z8 w1705865622
+w1705865622
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_3/misc/i2c_slave_model.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_3/misc/i2c_slave_model.v
-!i122 68
+!i122 74
 L0 4 274
 R4
 r1
@@ -112,7 +112,7 @@ R3
 R8
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_3/misc/sys_model.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_3/misc/sys_model.v
-!i122 69
+!i122 75
 L0 23 38
 R4
 r1
@@ -135,7 +135,7 @@ R3
 w1712053157
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_3/tb/tb_i2c_master_bit_ctrl.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_3/tb/tb_i2c_master_bit_ctrl.v
-!i122 70
+!i122 76
 L0 24 266
 R4
 r1
