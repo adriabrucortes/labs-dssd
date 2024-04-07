@@ -54,19 +54,19 @@ module i2c_master_bit_ctrl (
   reg sto_condition;     // stop condition detected flag
   reg cmd_stop;          // used in bus arbitration
 
-  reg [4-1:0] state, next; // state machine variable
+  reg [4-1:0] state, next; // state machine variable  // variables of 4 bits to store up to 16 states (15 are used)
 
   // whenever the slave is not ready it can delay the cycle by pulling SCL low
   // delay Scl_oen
   always @(posedge Clk or negedge Rst_n)
-    if(!Rst_n) dScl_oen <= 1'b1;      // Deactivate delayed SCL line output upon reset.
-    else       dScl_oen <= Scl_oen;   // Keep SCL line output enable as it was in previous cycle
+    if(!Rst_n) dScl_oen <= 1'b1;      // Disable delayed SCL output enable upon reset.
+    else       dScl_oen <= Scl_oen;   // Keep dSCL output enable as it was in previous cycle
 
   // slave_wait is asserted when master wants to drive SCL high, but the slave pulls it low
   // slave_wait remains asserted until the slave releases SCL
   always @(posedge Clk or negedge Rst_n)
-    if (!Rst_n) slave_wait <= 1'b0;   // No clock stretching upon reset
-    else        slave_wait <= (dScl_oen & ~sSCL) | (slave_wait & ~sSCL);
+    if (!Rst_n) slave_wait <= 1'b0;   // No clock stretching on reset
+    else        slave_wait <= (dScl_oen & ~sSCL) | (slave_wait & ~sSCL);  // Clock stretching when slave keeps SCL line low
 
   // master drives SCL high, but another master pulls it low
   // master start counting down its low cycle now (clock synchronization)
@@ -88,30 +88,30 @@ module i2c_master_bit_ctrl (
       dSCL <= 1'b1;
       dSDA <= 1'b1;
     end else begin    // LHS values update on next positive edge of Clk:
-      sSCL <= Scl_i;  // I2C clock line input stored to synchronized I2C clock line input
-      sSDA <= Sda_i;  // I2C data line input stored to synchronized I2C data line input
-      dSCL <= sSCL;   // Value of sSCL of this cycle stored to delayed version of sSCL
-      dSDA <= sSDA;   // Value of sSDA of this cycle stored to delayed version of sSDA
+      sSCL <= Scl_i;  // sSCL set to I2C clock line input
+      sSDA <= Sda_i;  // sSDA set to I2C data line input
+      dSCL <= sSCL;   // Update delayed version of sSCL
+      dSDA <= sSDA;   // Update delayed version of sSDA 
     end
 
   // detect start condition => detect falling edge on SDA while SCL is high
   // detect stop condition => detect rising edge on SDA while SCL is high
   always @(posedge Clk or negedge Rst_n)
-    if(!Rst_n) begin  // Start/Stop conditions set to known state upon reset
+    if(!Rst_n) begin  // Start/Stop conditions set to known state on reset
       sta_condition <= 1'b0;
       sto_condition <= 1'b0;
     end else begin
-      sta_condition <= ~sSDA &  dSDA &  sSCL; // SCL NEEDS TO BE HIGH, NOT LOW
-      sto_condition <=  sSDA & ~dSDA &  sSCL; // Stop condition met when SDA data line is free (comm. ended)
-    end
+      sta_condition <= ~sSDA &  dSDA &  sSCL; // SCL NEEDS TO BE HIGH, NOT LOW  // Generate start condition when incoming data (dSDA) is detected
+      sto_condition <=  sSDA & ~dSDA &  sSCL; // Generate stop condition when there is no more data to transmit (sSDA & ~dSDA)
+    end                                       // Both conditions need SCL lines to be high
 
 
   // generate i2c bus I2C_busy signal
   always @(posedge Clk or negedge Rst_n)
     if(!Rst_n) I2C_busy <= 1'b0;
     else       I2C_busy <= (sta_condition | I2C_busy) & ~sto_condition;
-    /* I2C bus is busy (I2C_busy = 1b'1) as soon as a start condition is met or it 
-    * kept busy from previous cycle and there no stop condition is met. I2C is free 
+    /* I2C bus is busy (I2C_busy = 1b'1) as soon as a start condition is met or 
+    * if it kept busy from previous cycle and no stop condition is met. I2C bus is free 
     * as soon as stop condition is met or, neither start start condition is met, nor
     * the I2C bus is busy at the moment. */
 
@@ -126,20 +126,20 @@ module i2c_master_bit_ctrl (
     else            cmd_stop <= cmd_stop;               // if not requested, keep cmd_stop as in previous cycle
 
   always @(posedge Clk or negedge Rst_n)
-    if(!Rst_n) I2C_al <= 1'b0;  // No arbitration loss upon reset
+    if(!Rst_n) I2C_al <= 1'b0;  // No arbitration loss on reset
     else       I2C_al <= (sda_chk & ~sSDA & Sda_oen) | (sto_condition & ~cmd_stop);
 
 
-  // generate Rxd signal (store SDA on rising edge of SCL)
+  // generate Rxd signal (store SDA on falling edge of SCL)
   always @(posedge Clk or negedge Rst_n)
-    if(!Rst_n)            Rxd <= 1'b1;
-    else if(sSCL & ~dSCL) Rxd <= sSDA;
-    else                  Rxd <= Rxd;
+    if(!Rst_n)            Rxd <= 1'b1;  // Set Rxd signal to know state on reset
+    else if(sSCL & ~dSCL) Rxd <= sSDA;  // Store SDA data to Rxd register on falling edge of SCL
+    else                  Rxd <= Rxd;   // Don't change Rxd if there is no trigger on SCL
 
   // state decoder
-  localparam IDLE    = 4'd0,
-             START_B = 4'd1,
-             START_C = 4'd2,
+  localparam IDLE    = 4'd0,  // States are defined as local parameters
+             START_B = 4'd1,  // defined with a decimal base, binary 
+             START_C = 4'd2,  // encoding style.
              START_D = 4'd3,
              START_E = 4'd4,
              START_F = 4'd5,
@@ -235,7 +235,7 @@ module i2c_master_bit_ctrl (
 
         START_B : begin
           Scl_oen <= 1'b1; // keep SCL high
-          Sda_oen <= 1'b1; // keep SDA high AQUI HI HAVIA ERROR
+          Sda_oen <= 1'b1; // keep SDA high // AQUI HI HAVIA ERROR
           sda_chk <= 1'b0; // don't check SDA output
         end
         START_C : begin
@@ -254,7 +254,7 @@ module i2c_master_bit_ctrl (
           sda_chk <= 1'b0; // don't check SDA output
         end
         START_F : begin
-          Ack <= 1'b1;
+          Ack <= 1'b1;     // set Ack bit to 1 (signal master to stop transmission)
           Scl_oen <= 1'b0; // set SCL low
           Sda_oen <= 1'b0; // keep SDA low
           sda_chk <= 1'b0; // don't check SDA output
@@ -271,7 +271,7 @@ module i2c_master_bit_ctrl (
           sda_chk <= 1'b0; // don't check SDA output
         end
         STOP_D : begin
-          Ack <= 1'b1;
+          Ack <= 1'b1;     // set Ack bit to 1 (signal master to stop transmission)
           Scl_oen <= 1'b1; // keep SCL high
           Sda_oen <= 1'b1; // set SDA high
           sda_chk <= 1'b0; // don't check SDA output
@@ -279,35 +279,35 @@ module i2c_master_bit_ctrl (
 
         RD_B : begin
           Scl_oen <= 1'b1; // set SCL high
-          Sda_oen <= 1'b1; // keep SDA tri-stated
+          Sda_oen <= 1'b1; // keep SDA tri-stated (driven by slave)
           sda_chk <= 1'b0; // don't check SDA output
         end
         RD_C : begin
           Scl_oen <= 1'b1; // keep SCL high
-          Sda_oen <= 1'b1; // keep SDA tri-stated
+          Sda_oen <= 1'b1; // keep SDA tri-stated (driven by slave)
           sda_chk <= 1'b0; // don't check SDA output
         end
         RD_D : begin
-          Ack <= 1'b1;
+          Ack <= 1'b1;     // set Ack bit to 1 (data frame to read ended)
           Scl_oen <= 1'b0; // set SCL low
-          Sda_oen <= 1'b1; // keep SDA tri-stated
+          Sda_oen <= 1'b1; // keep SDA tri-stated (driven by slave)
           sda_chk <= 1'b0; // don't check SDA output
         end
 
         WR_B : begin
           Scl_oen <= 1'b1; // set SCL high
-          Sda_oen <= Txd;  // keep SDA
+          Sda_oen <= Txd;  // keep SDA data stable during write cycle
           sda_chk <= 1'b0; // don't check SDA output yet
         end                // allow some time for SDA and SCL to settle
         WR_C : begin
           Scl_oen <= 1'b1; // keep SCL high
-          Sda_oen <= Txd;
+          Sda_oen <= Txd;  // keep SDA data stable during write cycle
           sda_chk <= 1'b1; // check SDA output
         end
         WR_D : begin
-          Ack <= 1'b1;
+          Ack <= 1'b1;     // set Ack bit to 1 (data write complete)
           Scl_oen <= 1'b0; // set SCL low
-          Sda_oen <= Txd;
+          Sda_oen <= Txd;  // keep SDA data stable until end of cycle
           sda_chk <= 1'b0; // don't check SDA output (SCL low)
         end
         default: ;
