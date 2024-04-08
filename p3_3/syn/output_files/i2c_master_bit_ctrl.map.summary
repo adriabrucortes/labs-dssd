@@ -1,17 +1,14 @@
-Analysis & Synthesis Status : Successful - Tue Apr 02 13:09:31 2024
+Analysis & Synthesis Status : Successful - Mon Apr  8 18:13:20 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : i2c_master_bit_ctrl
 Top-level Entity Name : i2c_master_bit_ctrl
-Family : Cyclone V
-Logic utilization (in ALMs) : N/A
+Family : Cyclone IV E
+Total logic elements : 47
+    Total combinational functions : 34
+    Dedicated logic registers : 31
 Total registers : 31
 Total pins : 21
 Total virtual pins : 0
-Total block memory bits : 0
-Total DSP Blocks : 0
-Total HSSI RX PCSs : 0
-Total HSSI PMA RX Deserializers : 0
-Total HSSI TX PCSs : 0
-Total HSSI PMA TX Serializers : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0
-Total DLLs : 0

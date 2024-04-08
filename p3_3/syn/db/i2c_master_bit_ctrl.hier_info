@@ -72,8 +72,8 @@ TimerOut => Selector12.IN2
 TimerOut => Selector13.IN1
 TimerOut => Selector14.IN1
 TimerOut => cmd_stop.ENA
-TimerStart <= TimerStart.DB_MAX_OUTPUT_PORT_TYPE
-TimerStop <= slave_wait.DB_MAX_OUTPUT_PORT_TYPE
+TimerStart << TimerStart.DB_MAX_OUTPUT_PORT_TYPE
+TimerStop << slave_wait.DB_MAX_OUTPUT_PORT_TYPE
 Cmd[0] => Decoder0.IN3
 Cmd[0] => Mux0.IN6
 Cmd[0] => Equal0.IN3
@@ -86,17 +86,17 @@ Cmd[2] => Equal0.IN2
 Cmd[3] => Decoder0.IN0
 Cmd[3] => Mux0.IN3
 Cmd[3] => Equal0.IN1
-Ack <= Ack~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Ack << Ack~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Txd => Mux0.IN7
 Txd => Selector16.IN6
-Rxd <= Rxd~reg0.DB_MAX_OUTPUT_PORT_TYPE
-I2C_busy <= I2C_busy~reg0.DB_MAX_OUTPUT_PORT_TYPE
-I2C_al <= I2C_al~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Rxd << Rxd~reg0.DB_MAX_OUTPUT_PORT_TYPE
+I2C_busy << I2C_busy~reg0.DB_MAX_OUTPUT_PORT_TYPE
+I2C_al << I2C_al~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Scl_i => sSCL.DATAIN
-Scl_o <= <GND>
-Scl_oen <= Scl_oen~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Scl_o << <GND>
+Scl_oen << Scl_oen~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Sda_i => sSDA.DATAIN
-Sda_o <= <GND>
-Sda_oen <= Sda_oen~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Sda_o << <GND>
+Sda_oen << Sda_oen~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

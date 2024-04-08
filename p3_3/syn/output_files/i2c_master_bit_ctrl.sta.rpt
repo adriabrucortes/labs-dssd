@@ -1,0 +1,1061 @@
+Timing Analyzer report for i2c_master_bit_ctrl
+Mon Apr  8 18:13:25 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Slow 1200mV 85C Model Fmax Summary
+  7. Timing Closure Recommendations
+  8. Slow 1200mV 85C Model Setup Summary
+  9. Slow 1200mV 85C Model Hold Summary
+ 10. Slow 1200mV 85C Model Recovery Summary
+ 11. Slow 1200mV 85C Model Removal Summary
+ 12. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 13. Slow 1200mV 85C Model Setup: 'clk100MHz'
+ 14. Slow 1200mV 85C Model Hold: 'clk100MHz'
+ 15. Slow 1200mV 85C Model Metastability Summary
+ 16. Slow 1200mV 0C Model Fmax Summary
+ 17. Slow 1200mV 0C Model Setup Summary
+ 18. Slow 1200mV 0C Model Hold Summary
+ 19. Slow 1200mV 0C Model Recovery Summary
+ 20. Slow 1200mV 0C Model Removal Summary
+ 21. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 22. Slow 1200mV 0C Model Setup: 'clk100MHz'
+ 23. Slow 1200mV 0C Model Hold: 'clk100MHz'
+ 24. Slow 1200mV 0C Model Metastability Summary
+ 25. Fast 1200mV 0C Model Setup Summary
+ 26. Fast 1200mV 0C Model Hold Summary
+ 27. Fast 1200mV 0C Model Recovery Summary
+ 28. Fast 1200mV 0C Model Removal Summary
+ 29. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 30. Fast 1200mV 0C Model Setup: 'clk100MHz'
+ 31. Fast 1200mV 0C Model Hold: 'clk100MHz'
+ 32. Fast 1200mV 0C Model Metastability Summary
+ 33. Multicorner Timing Analysis Summary
+ 34. Board Trace Model Assignments
+ 35. Input Transition Times
+ 36. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 37. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 38. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 39. Setup Transfers
+ 40. Hold Transfers
+ 41. Report TCCS
+ 42. Report RSKM
+ 43. Unconstrained Paths Summary
+ 44. Clock Status Summary
+ 45. Unconstrained Input Ports
+ 46. Unconstrained Output Ports
+ 47. Unconstrained Input Ports
+ 48. Unconstrained Output Ports
+ 49. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; i2c_master_bit_ctrl                                 ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE22F17C6                                        ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.3%      ;
+;     Processors 3-4         ;   0.3%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------+
+; SDC File List                                                       ;
++---------------------------------+--------+--------------------------+
+; SDC File Path                   ; Status ; Read at                  ;
++---------------------------------+--------+--------------------------+
+; ../misc/i2c_master_bit_ctrl.sdc ; OK     ; Mon Apr  8 18:13:25 2024 ;
++---------------------------------+--------+--------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                         ;
++------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk100MHz  ; Base ; 10.000 ; 100.0 MHz ; 0.000 ; 5.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Clk } ;
++------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                        ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 342.23 MHz ; 250.0 MHz       ; clk100MHz  ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-----------+-------+-----------------+
+; Clock     ; Slack ; End Point TNS   ;
++-----------+-------+-----------------+
+; clk100MHz ; 7.078 ; 0.000           ;
++-----------+-------+-----------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-----------+-------+----------------+
+; Clock     ; Slack ; End Point TNS  ;
++-----------+-------+----------------+
+; clk100MHz ; 0.358 ; 0.000          ;
++-----------+-------+----------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-----------+-------+-------------------------------+
+; Clock     ; Slack ; End Point TNS                 ;
++-----------+-------+-------------------------------+
+; clk100MHz ; 4.684 ; 0.000                         ;
++-----------+-------+-------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk100MHz'                                                                    ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+; 7.078 ; I2C_al~reg0   ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.059     ; 2.878      ;
+; 7.078 ; I2C_al~reg0   ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.059     ; 2.878      ;
+; 7.334 ; Sda_oen~reg0  ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.063     ; 2.618      ;
+; 7.435 ; state.START_F ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.065     ; 2.515      ;
+; 7.457 ; state.START_F ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.065     ; 2.493      ;
+; 7.617 ; state.RD_D    ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.065     ; 2.333      ;
+; 7.639 ; state.RD_D    ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.065     ; 2.311      ;
+; 7.747 ; state.IDLE    ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.060     ; 2.208      ;
+; 7.845 ; state.IDLE    ; state.RD_B    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.060     ; 2.110      ;
+; 7.903 ; state.WR_C    ; sda_chk       ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.066     ; 2.046      ;
+; 7.980 ; state.IDLE    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.060     ; 1.975      ;
+; 7.983 ; state.WR_B    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.060     ; 1.972      ;
+; 8.026 ; state.WR_D    ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.065     ; 1.924      ;
+; 8.048 ; state.WR_D    ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.065     ; 1.902      ;
+; 8.095 ; state.STOP_D  ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.065     ; 1.855      ;
+; 8.099 ; state.STOP_D  ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.065     ; 1.851      ;
+; 8.132 ; Scl_oen~reg0  ; dScl_oen      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.066     ; 1.817      ;
+; 8.193 ; I2C_al~reg0   ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.061     ; 1.761      ;
+; 8.221 ; state.RD_D    ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.063     ; 1.731      ;
+; 8.272 ; state.RD_B    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.063     ; 1.680      ;
+; 8.293 ; Sda_oen~reg0  ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.066     ; 1.656      ;
+; 8.329 ; state.START_B ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.060     ; 1.626      ;
+; 8.398 ; Scl_oen~reg0  ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.063     ; 1.554      ;
+; 8.410 ; state.STOP_D  ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.063     ; 1.542      ;
+; 8.538 ; state.WR_B    ; state.WR_C    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.060     ; 1.417      ;
+; 8.549 ; state.WR_D    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.063     ; 1.403      ;
+; 8.561 ; state.STOP_B  ; state.STOP_C  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.060     ; 1.394      ;
+; 8.643 ; state.WR_D    ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.063     ; 1.309      ;
+; 8.647 ; sto_condition ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.062     ; 1.306      ;
+; 8.663 ; state.START_B ; state.START_C ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.060     ; 1.292      ;
+; 8.682 ; state.START_C ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.063     ; 1.270      ;
+; 8.683 ; cmd_stop      ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.062     ; 1.270      ;
+; 8.689 ; state.START_F ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.063     ; 1.263      ;
+; 8.744 ; state.RD_C    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.063     ; 1.208      ;
+; 8.786 ; state.WR_C    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.063     ; 1.166      ;
+; 8.885 ; dSCL          ; Rxd~reg0      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.062     ; 1.068      ;
+; 8.898 ; state.IDLE    ; state.START_B ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.062     ; 1.055      ;
+; 8.907 ; sSCL          ; slave_wait    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.062     ; 1.046      ;
+; 8.933 ; sSCL          ; sta_condition ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.062     ; 1.020      ;
+; 8.957 ; sSCL          ; sto_condition ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.062     ; 0.996      ;
+; 8.962 ; sSCL          ; Rxd~reg0      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.062     ; 0.991      ;
+; 8.963 ; sSDA          ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.062     ; 0.990      ;
+; 8.964 ; sta_condition ; I2C_busy~reg0 ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.062     ; 0.989      ;
+; 8.976 ; state.RD_B    ; state.RD_C    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.063     ; 0.976      ;
+; 8.996 ; sSDA          ; Rxd~reg0      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.062     ; 0.957      ;
+; 9.011 ; state.RD_D    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.063     ; 0.941      ;
+; 9.021 ; I2C_al~reg0   ; sda_chk       ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.062     ; 0.932      ;
+; 9.064 ; sSCL          ; dSCL          ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.062     ; 0.889      ;
+; 9.077 ; sSDA          ; sta_condition ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.062     ; 0.876      ;
+; 9.078 ; sSDA          ; dSDA          ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.062     ; 0.875      ;
+; 9.116 ; sSDA          ; sto_condition ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.062     ; 0.837      ;
+; 9.119 ; state.START_E ; state.START_F ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.063     ; 0.833      ;
+; 9.120 ; state.STOP_C  ; state.STOP_D  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.063     ; 0.832      ;
+; 9.127 ; sda_chk       ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.062     ; 0.826      ;
+; 9.128 ; state.RD_C    ; state.RD_D    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.063     ; 0.824      ;
+; 9.208 ; state.IDLE    ; state.STOP_B  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.062     ; 0.745      ;
+; 9.210 ; state.IDLE    ; state.WR_B    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.062     ; 0.743      ;
+; 9.232 ; state.WR_C    ; state.WR_D    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.063     ; 0.720      ;
+; 9.250 ; dSDA          ; sta_condition ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.062     ; 0.703      ;
+; 9.253 ; dSDA          ; sto_condition ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.062     ; 0.700      ;
+; 9.253 ; sto_condition ; I2C_busy~reg0 ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.062     ; 0.700      ;
+; 9.255 ; state.START_C ; state.START_D ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.063     ; 0.697      ;
+; 9.262 ; dScl_oen      ; slave_wait    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.062     ; 0.691      ;
+; 9.266 ; state.START_D ; state.START_E ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.063     ; 0.686      ;
+; 9.316 ; state.IDLE    ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.062     ; 0.637      ;
+; 9.316 ; Rxd~reg0      ; Rxd~reg0      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.062     ; 0.637      ;
+; 9.316 ; slave_wait    ; slave_wait    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.062     ; 0.637      ;
+; 9.316 ; I2C_busy~reg0 ; I2C_busy~reg0 ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.062     ; 0.637      ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk100MHz'                                                                     ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+; 0.358 ; I2C_busy~reg0 ; I2C_busy~reg0 ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.062      ; 0.577      ;
+; 0.358 ; Rxd~reg0      ; Rxd~reg0      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.062      ; 0.577      ;
+; 0.358 ; slave_wait    ; slave_wait    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.062      ; 0.577      ;
+; 0.358 ; state.IDLE    ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.062      ; 0.577      ;
+; 0.372 ; state.START_D ; state.START_E ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.063      ; 0.592      ;
+; 0.372 ; dScl_oen      ; slave_wait    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.062      ; 0.591      ;
+; 0.378 ; sto_condition ; I2C_busy~reg0 ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.062      ; 0.597      ;
+; 0.380 ; dSDA          ; sta_condition ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.062      ; 0.599      ;
+; 0.380 ; state.START_C ; state.START_D ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.063      ; 0.600      ;
+; 0.382 ; dSDA          ; sto_condition ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.062      ; 0.601      ;
+; 0.401 ; state.WR_C    ; state.WR_D    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.063      ; 0.621      ;
+; 0.412 ; state.IDLE    ; state.WR_B    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.062      ; 0.631      ;
+; 0.414 ; state.IDLE    ; state.STOP_B  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.062      ; 0.633      ;
+; 0.480 ; sda_chk       ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.062      ; 0.699      ;
+; 0.509 ; sSDA          ; sto_condition ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.062      ; 0.728      ;
+; 0.512 ; state.RD_C    ; state.RD_D    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.063      ; 0.732      ;
+; 0.514 ; sSDA          ; sta_condition ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.062      ; 0.733      ;
+; 0.515 ; state.START_E ; state.START_F ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.063      ; 0.735      ;
+; 0.516 ; state.STOP_C  ; state.STOP_D  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.063      ; 0.736      ;
+; 0.543 ; sSDA          ; dSDA          ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.062      ; 0.762      ;
+; 0.556 ; sSCL          ; dSCL          ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.062      ; 0.775      ;
+; 0.598 ; sSCL          ; slave_wait    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.062      ; 0.817      ;
+; 0.599 ; sSDA          ; Rxd~reg0      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.062      ; 0.818      ;
+; 0.605 ; sta_condition ; I2C_busy~reg0 ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.062      ; 0.824      ;
+; 0.606 ; sSCL          ; Rxd~reg0      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.062      ; 0.825      ;
+; 0.617 ; I2C_al~reg0   ; sda_chk       ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.062      ; 0.836      ;
+; 0.620 ; sSCL          ; sto_condition ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.062      ; 0.839      ;
+; 0.630 ; state.RD_D    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.063      ; 0.850      ;
+; 0.635 ; sSDA          ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.062      ; 0.854      ;
+; 0.657 ; sSCL          ; sta_condition ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.062      ; 0.876      ;
+; 0.668 ; state.RD_B    ; state.RD_C    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.063      ; 0.888      ;
+; 0.718 ; state.IDLE    ; state.START_B ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.062      ; 0.937      ;
+; 0.751 ; dSCL          ; Rxd~reg0      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.062      ; 0.970      ;
+; 0.825 ; state.WR_C    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.063      ; 1.045      ;
+; 0.835 ; cmd_stop      ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.062      ; 1.054      ;
+; 0.853 ; sto_condition ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.062      ; 1.072      ;
+; 0.856 ; state.START_F ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.063      ; 1.076      ;
+; 0.896 ; state.WR_D    ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.063      ; 1.116      ;
+; 0.909 ; state.RD_C    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.063      ; 1.129      ;
+; 0.933 ; state.START_C ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.063      ; 1.153      ;
+; 0.975 ; state.START_B ; state.START_C ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.065      ; 1.197      ;
+; 1.042 ; state.WR_D    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.063      ; 1.262      ;
+; 1.076 ; state.STOP_B  ; state.STOP_C  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.065      ; 1.298      ;
+; 1.101 ; state.WR_B    ; state.WR_C    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.065      ; 1.323      ;
+; 1.165 ; state.STOP_D  ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.063      ; 1.385      ;
+; 1.224 ; Scl_oen~reg0  ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.063      ; 1.444      ;
+; 1.287 ; Sda_oen~reg0  ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.059      ; 1.503      ;
+; 1.294 ; state.START_B ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.065      ; 1.516      ;
+; 1.313 ; state.RD_D    ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.063      ; 1.533      ;
+; 1.318 ; state.RD_B    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.063      ; 1.538      ;
+; 1.391 ; I2C_al~reg0   ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.063      ; 1.611      ;
+; 1.445 ; state.STOP_D  ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.060      ; 1.662      ;
+; 1.462 ; Scl_oen~reg0  ; dScl_oen      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.059      ; 1.678      ;
+; 1.474 ; state.WR_D    ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.060      ; 1.691      ;
+; 1.484 ; state.STOP_D  ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.060      ; 1.701      ;
+; 1.513 ; state.WR_D    ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.060      ; 1.730      ;
+; 1.571 ; state.IDLE    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.065      ; 1.793      ;
+; 1.582 ; state.WR_C    ; sda_chk       ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.059      ; 1.798      ;
+; 1.623 ; state.WR_B    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.065      ; 1.845      ;
+; 1.668 ; state.IDLE    ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.065      ; 1.890      ;
+; 1.724 ; state.IDLE    ; state.RD_B    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.065      ; 1.946      ;
+; 1.858 ; state.RD_D    ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.060      ; 2.075      ;
+; 1.897 ; state.RD_D    ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.060      ; 2.114      ;
+; 2.035 ; state.START_F ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.060      ; 2.252      ;
+; 2.057 ; I2C_al~reg0   ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.066      ; 2.280      ;
+; 2.074 ; state.START_F ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.060      ; 2.291      ;
+; 2.263 ; Sda_oen~reg0  ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.063      ; 2.483      ;
+; 2.297 ; I2C_al~reg0   ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.066      ; 2.520      ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                         ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 377.36 MHz ; 250.0 MHz       ; clk100MHz  ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-----------+-------+----------------+
+; Clock     ; Slack ; End Point TNS  ;
++-----------+-------+----------------+
+; clk100MHz ; 7.350 ; 0.000          ;
++-----------+-------+----------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-----------+-------+---------------+
+; Clock     ; Slack ; End Point TNS ;
++-----------+-------+---------------+
+; clk100MHz ; 0.311 ; 0.000         ;
++-----------+-------+---------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-----------+-------+------------------------------+
+; Clock     ; Slack ; End Point TNS                ;
++-----------+-------+------------------------------+
+; clk100MHz ; 4.702 ; 0.000                        ;
++-----------+-------+------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk100MHz'                                                                     ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+; 7.350 ; I2C_al~reg0   ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.052     ; 2.613      ;
+; 7.350 ; I2C_al~reg0   ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.052     ; 2.613      ;
+; 7.586 ; Sda_oen~reg0  ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.056     ; 2.373      ;
+; 7.722 ; state.START_F ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.059     ; 2.234      ;
+; 7.725 ; state.START_F ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.059     ; 2.231      ;
+; 7.889 ; state.RD_D    ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.059     ; 2.067      ;
+; 7.896 ; state.RD_D    ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.059     ; 2.060      ;
+; 7.999 ; state.IDLE    ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.053     ; 1.963      ;
+; 8.040 ; state.IDLE    ; state.RD_B    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.053     ; 1.922      ;
+; 8.126 ; state.WR_C    ; sda_chk       ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.059     ; 1.830      ;
+; 8.178 ; state.IDLE    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.053     ; 1.784      ;
+; 8.185 ; state.WR_B    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.053     ; 1.777      ;
+; 8.247 ; state.WR_D    ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.059     ; 1.709      ;
+; 8.258 ; state.WR_D    ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.059     ; 1.698      ;
+; 8.280 ; state.STOP_D  ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.059     ; 1.676      ;
+; 8.311 ; state.STOP_D  ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.059     ; 1.645      ;
+; 8.313 ; Scl_oen~reg0  ; dScl_oen      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.059     ; 1.643      ;
+; 8.391 ; I2C_al~reg0   ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.055     ; 1.569      ;
+; 8.422 ; state.RD_D    ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.056     ; 1.537      ;
+; 8.467 ; state.RD_B    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.056     ; 1.492      ;
+; 8.477 ; Sda_oen~reg0  ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.059     ; 1.479      ;
+; 8.509 ; state.START_B ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.053     ; 1.453      ;
+; 8.569 ; Scl_oen~reg0  ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.056     ; 1.390      ;
+; 8.585 ; state.STOP_D  ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.056     ; 1.374      ;
+; 8.699 ; state.WR_B    ; state.WR_C    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.053     ; 1.263      ;
+; 8.705 ; state.WR_D    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.056     ; 1.254      ;
+; 8.719 ; state.STOP_B  ; state.STOP_C  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.053     ; 1.243      ;
+; 8.789 ; state.WR_D    ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.056     ; 1.170      ;
+; 8.801 ; sto_condition ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.055     ; 1.159      ;
+; 8.816 ; state.START_B ; state.START_C ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.053     ; 1.146      ;
+; 8.826 ; state.START_C ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.056     ; 1.133      ;
+; 8.834 ; state.START_F ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.056     ; 1.125      ;
+; 8.834 ; cmd_stop      ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.055     ; 1.126      ;
+; 8.880 ; state.RD_C    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.056     ; 1.079      ;
+; 8.917 ; state.WR_C    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.056     ; 1.042      ;
+; 9.006 ; state.IDLE    ; state.START_B ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.056     ; 0.953      ;
+; 9.011 ; dSCL          ; Rxd~reg0      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.055     ; 0.949      ;
+; 9.033 ; sSCL          ; slave_wait    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.055     ; 0.927      ;
+; 9.048 ; sSCL          ; sta_condition ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.055     ; 0.912      ;
+; 9.073 ; sSCL          ; sto_condition ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.055     ; 0.887      ;
+; 9.078 ; sSCL          ; Rxd~reg0      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.055     ; 0.882      ;
+; 9.084 ; sta_condition ; I2C_busy~reg0 ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.055     ; 0.876      ;
+; 9.084 ; sSDA          ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.055     ; 0.876      ;
+; 9.088 ; state.RD_B    ; state.RD_C    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.056     ; 0.871      ;
+; 9.114 ; sSDA          ; Rxd~reg0      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.055     ; 0.846      ;
+; 9.116 ; state.RD_D    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.056     ; 0.843      ;
+; 9.123 ; I2C_al~reg0   ; sda_chk       ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.055     ; 0.837      ;
+; 9.162 ; sSCL          ; dSCL          ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.055     ; 0.798      ;
+; 9.174 ; sSDA          ; dSDA          ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.055     ; 0.786      ;
+; 9.177 ; sSDA          ; sta_condition ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.055     ; 0.783      ;
+; 9.205 ; sSDA          ; sto_condition ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.055     ; 0.755      ;
+; 9.211 ; state.START_E ; state.START_F ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.056     ; 0.748      ;
+; 9.212 ; state.STOP_C  ; state.STOP_D  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.056     ; 0.747      ;
+; 9.223 ; sda_chk       ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.055     ; 0.737      ;
+; 9.230 ; state.RD_C    ; state.RD_D    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.056     ; 0.729      ;
+; 9.290 ; state.IDLE    ; state.STOP_B  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.056     ; 0.669      ;
+; 9.292 ; state.IDLE    ; state.WR_B    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.056     ; 0.667      ;
+; 9.320 ; state.WR_C    ; state.WR_D    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.056     ; 0.639      ;
+; 9.328 ; dSDA          ; sta_condition ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.055     ; 0.632      ;
+; 9.331 ; sto_condition ; I2C_busy~reg0 ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.055     ; 0.629      ;
+; 9.339 ; dScl_oen      ; slave_wait    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.055     ; 0.621      ;
+; 9.339 ; dSDA          ; sto_condition ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.055     ; 0.621      ;
+; 9.341 ; state.START_C ; state.START_D ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.056     ; 0.618      ;
+; 9.351 ; state.START_D ; state.START_E ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.056     ; 0.608      ;
+; 9.397 ; state.IDLE    ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.056     ; 0.562      ;
+; 9.398 ; Rxd~reg0      ; Rxd~reg0      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.055     ; 0.562      ;
+; 9.398 ; slave_wait    ; slave_wait    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.055     ; 0.562      ;
+; 9.398 ; I2C_busy~reg0 ; I2C_busy~reg0 ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.055     ; 0.562      ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk100MHz'                                                                      ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+; 0.311 ; state.IDLE    ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.056      ; 0.511      ;
+; 0.312 ; I2C_busy~reg0 ; I2C_busy~reg0 ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; Rxd~reg0      ; Rxd~reg0      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; slave_wait    ; slave_wait    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.055      ; 0.511      ;
+; 0.331 ; dScl_oen      ; slave_wait    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.055      ; 0.530      ;
+; 0.337 ; state.START_D ; state.START_E ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.056      ; 0.537      ;
+; 0.337 ; sto_condition ; I2C_busy~reg0 ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.055      ; 0.536      ;
+; 0.339 ; dSDA          ; sta_condition ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.055      ; 0.538      ;
+; 0.345 ; state.START_C ; state.START_D ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.056      ; 0.545      ;
+; 0.347 ; dSDA          ; sto_condition ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.055      ; 0.546      ;
+; 0.364 ; state.WR_C    ; state.WR_D    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.056      ; 0.564      ;
+; 0.365 ; state.IDLE    ; state.WR_B    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.056      ; 0.565      ;
+; 0.368 ; state.IDLE    ; state.STOP_B  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.056      ; 0.568      ;
+; 0.434 ; sda_chk       ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.055      ; 0.633      ;
+; 0.451 ; sSDA          ; sto_condition ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.055      ; 0.650      ;
+; 0.463 ; sSDA          ; sta_condition ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.055      ; 0.662      ;
+; 0.465 ; state.START_E ; state.START_F ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.056      ; 0.665      ;
+; 0.465 ; state.STOP_C  ; state.STOP_D  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.056      ; 0.665      ;
+; 0.467 ; state.RD_C    ; state.RD_D    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.056      ; 0.667      ;
+; 0.488 ; sSDA          ; dSDA          ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.055      ; 0.687      ;
+; 0.495 ; sSCL          ; dSCL          ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.055      ; 0.694      ;
+; 0.530 ; sSCL          ; slave_wait    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.055      ; 0.729      ;
+; 0.537 ; sSDA          ; Rxd~reg0      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.055      ; 0.736      ;
+; 0.540 ; sSCL          ; Rxd~reg0      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.055      ; 0.739      ;
+; 0.542 ; sta_condition ; I2C_busy~reg0 ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.055      ; 0.741      ;
+; 0.546 ; sSCL          ; sto_condition ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.055      ; 0.745      ;
+; 0.563 ; I2C_al~reg0   ; sda_chk       ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.055      ; 0.762      ;
+; 0.568 ; state.RD_D    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.056      ; 0.768      ;
+; 0.570 ; sSDA          ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.055      ; 0.769      ;
+; 0.581 ; sSCL          ; sta_condition ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.055      ; 0.780      ;
+; 0.608 ; state.RD_B    ; state.RD_C    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.056      ; 0.808      ;
+; 0.640 ; state.IDLE    ; state.START_B ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.056      ; 0.840      ;
+; 0.683 ; dSCL          ; Rxd~reg0      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.055      ; 0.882      ;
+; 0.748 ; cmd_stop      ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.055      ; 0.947      ;
+; 0.756 ; state.WR_C    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.056      ; 0.956      ;
+; 0.763 ; state.START_F ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.056      ; 0.963      ;
+; 0.772 ; sto_condition ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.055      ; 0.971      ;
+; 0.800 ; state.WR_D    ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.056      ; 1.000      ;
+; 0.809 ; state.RD_C    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.056      ; 1.009      ;
+; 0.840 ; state.START_C ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.056      ; 1.040      ;
+; 0.883 ; state.START_B ; state.START_C ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.059      ; 1.086      ;
+; 0.950 ; state.WR_D    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.056      ; 1.150      ;
+; 0.987 ; state.STOP_B  ; state.STOP_C  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.059      ; 1.190      ;
+; 1.015 ; state.WR_B    ; state.WR_C    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.059      ; 1.218      ;
+; 1.046 ; state.STOP_D  ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.056      ; 1.246      ;
+; 1.121 ; Scl_oen~reg0  ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.056      ; 1.321      ;
+; 1.178 ; Sda_oen~reg0  ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.052      ; 1.374      ;
+; 1.179 ; state.RD_D    ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.056      ; 1.379      ;
+; 1.180 ; state.START_B ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.059      ; 1.383      ;
+; 1.190 ; state.RD_B    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.056      ; 1.390      ;
+; 1.275 ; I2C_al~reg0   ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.056      ; 1.475      ;
+; 1.302 ; state.STOP_D  ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.053      ; 1.499      ;
+; 1.322 ; state.STOP_D  ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.053      ; 1.519      ;
+; 1.345 ; Scl_oen~reg0  ; dScl_oen      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.052      ; 1.541      ;
+; 1.347 ; state.WR_D    ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.053      ; 1.544      ;
+; 1.374 ; state.WR_D    ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.053      ; 1.571      ;
+; 1.394 ; state.IDLE    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.059      ; 1.597      ;
+; 1.449 ; state.WR_C    ; sda_chk       ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.052      ; 1.645      ;
+; 1.479 ; state.WR_B    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.059      ; 1.682      ;
+; 1.493 ; state.IDLE    ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.059      ; 1.696      ;
+; 1.538 ; state.IDLE    ; state.RD_B    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.059      ; 1.741      ;
+; 1.698 ; state.RD_D    ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.053      ; 1.895      ;
+; 1.725 ; state.RD_D    ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.053      ; 1.922      ;
+; 1.865 ; state.START_F ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.053      ; 2.062      ;
+; 1.892 ; state.START_F ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.053      ; 2.089      ;
+; 1.894 ; I2C_al~reg0   ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.059      ; 2.097      ;
+; 2.034 ; Sda_oen~reg0  ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.056      ; 2.234      ;
+; 2.105 ; I2C_al~reg0   ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.059      ; 2.308      ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-----------+-------+----------------+
+; Clock     ; Slack ; End Point TNS  ;
++-----------+-------+----------------+
+; clk100MHz ; 8.274 ; 0.000          ;
++-----------+-------+----------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-----------+-------+---------------+
+; Clock     ; Slack ; End Point TNS ;
++-----------+-------+---------------+
+; clk100MHz ; 0.186 ; 0.000         ;
++-----------+-------+---------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-----------+-------+------------------------------+
+; Clock     ; Slack ; End Point TNS                ;
++-----------+-------+------------------------------+
+; clk100MHz ; 4.445 ; 0.000                        ;
++-----------+-------+------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk100MHz'                                                                     ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+; 8.274 ; I2C_al~reg0   ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.034     ; 1.699      ;
+; 8.274 ; I2C_al~reg0   ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.034     ; 1.699      ;
+; 8.515 ; state.START_F ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.039     ; 1.453      ;
+; 8.525 ; state.START_F ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.039     ; 1.443      ;
+; 8.541 ; Sda_oen~reg0  ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 1.429      ;
+; 8.623 ; state.RD_D    ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.039     ; 1.345      ;
+; 8.633 ; state.RD_D    ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.039     ; 1.335      ;
+; 8.714 ; state.IDLE    ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.035     ; 1.258      ;
+; 8.749 ; state.WR_C    ; sda_chk       ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.040     ; 1.218      ;
+; 8.835 ; state.IDLE    ; state.RD_B    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.035     ; 1.137      ;
+; 8.842 ; state.WR_B    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.035     ; 1.130      ;
+; 8.858 ; state.WR_D    ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.039     ; 1.110      ;
+; 8.868 ; state.WR_D    ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.039     ; 1.100      ;
+; 8.891 ; Scl_oen~reg0  ; dScl_oen      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.040     ; 1.076      ;
+; 8.892 ; state.STOP_D  ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.039     ; 1.076      ;
+; 8.902 ; state.STOP_D  ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.039     ; 1.066      ;
+; 8.904 ; state.IDLE    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.035     ; 1.068      ;
+; 8.931 ; I2C_al~reg0   ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.036     ; 1.040      ;
+; 8.980 ; Sda_oen~reg0  ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.040     ; 0.987      ;
+; 9.011 ; state.RD_D    ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.959      ;
+; 9.040 ; state.RD_B    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.930      ;
+; 9.061 ; state.START_B ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.035     ; 0.911      ;
+; 9.112 ; Scl_oen~reg0  ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.858      ;
+; 9.125 ; state.STOP_D  ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.845      ;
+; 9.166 ; state.WR_B    ; state.WR_C    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.035     ; 0.806      ;
+; 9.181 ; state.STOP_B  ; state.STOP_C  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.035     ; 0.791      ;
+; 9.193 ; state.WR_D    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.777      ;
+; 9.226 ; state.START_B ; state.START_C ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.035     ; 0.746      ;
+; 9.251 ; sto_condition ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.719      ;
+; 9.264 ; state.WR_D    ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.706      ;
+; 9.269 ; cmd_stop      ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.701      ;
+; 9.273 ; state.START_F ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.697      ;
+; 9.274 ; state.START_C ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.696      ;
+; 9.305 ; state.RD_C    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.665      ;
+; 9.328 ; state.WR_C    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.642      ;
+; 9.375 ; dSCL          ; Rxd~reg0      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.595      ;
+; 9.396 ; sSCL          ; slave_wait    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.574      ;
+; 9.406 ; sSCL          ; sta_condition ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.564      ;
+; 9.406 ; state.IDLE    ; state.START_B ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.564      ;
+; 9.423 ; sSDA          ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.547      ;
+; 9.424 ; sSCL          ; sto_condition ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.546      ;
+; 9.425 ; sSCL          ; Rxd~reg0      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.545      ;
+; 9.427 ; sta_condition ; I2C_busy~reg0 ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.543      ;
+; 9.439 ; sSDA          ; Rxd~reg0      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.531      ;
+; 9.444 ; state.RD_B    ; state.RD_C    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.526      ;
+; 9.456 ; state.RD_D    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.514      ;
+; 9.462 ; I2C_al~reg0   ; sda_chk       ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.508      ;
+; 9.487 ; sSDA          ; sta_condition ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.483      ;
+; 9.495 ; sSCL          ; dSCL          ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.475      ;
+; 9.506 ; sSDA          ; dSDA          ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.464      ;
+; 9.515 ; state.RD_C    ; state.RD_D    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.455      ;
+; 9.516 ; sSDA          ; sto_condition ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.454      ;
+; 9.525 ; sda_chk       ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.445      ;
+; 9.532 ; state.START_E ; state.START_F ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.438      ;
+; 9.532 ; state.STOP_C  ; state.STOP_D  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.438      ;
+; 9.567 ; state.IDLE    ; state.STOP_B  ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.403      ;
+; 9.569 ; state.IDLE    ; state.WR_B    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.401      ;
+; 9.577 ; state.WR_C    ; state.WR_D    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.393      ;
+; 9.589 ; dSDA          ; sto_condition ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.381      ;
+; 9.590 ; state.START_C ; state.START_D ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.380      ;
+; 9.592 ; dSDA          ; sta_condition ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.378      ;
+; 9.595 ; sto_condition ; I2C_busy~reg0 ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.375      ;
+; 9.598 ; state.START_D ; state.START_E ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.372      ;
+; 9.599 ; dScl_oen      ; slave_wait    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.371      ;
+; 9.620 ; state.IDLE    ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.350      ;
+; 9.620 ; Rxd~reg0      ; Rxd~reg0      ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.350      ;
+; 9.620 ; slave_wait    ; slave_wait    ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.350      ;
+; 9.620 ; I2C_busy~reg0 ; I2C_busy~reg0 ; clk100MHz    ; clk100MHz   ; 10.000       ; -0.037     ; 0.350      ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk100MHz'                                                                      ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+; 0.186 ; I2C_busy~reg0 ; I2C_busy~reg0 ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; Rxd~reg0      ; Rxd~reg0      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; slave_wait    ; slave_wait    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; state.IDLE    ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.307      ;
+; 0.193 ; state.START_D ; state.START_E ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.314      ;
+; 0.198 ; dSDA          ; sto_condition ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.319      ;
+; 0.198 ; state.START_C ; state.START_D ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.319      ;
+; 0.198 ; dScl_oen      ; slave_wait    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.319      ;
+; 0.201 ; sto_condition ; I2C_busy~reg0 ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.322      ;
+; 0.204 ; dSDA          ; sta_condition ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.325      ;
+; 0.210 ; state.WR_C    ; state.WR_D    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.331      ;
+; 0.221 ; state.IDLE    ; state.WR_B    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.342      ;
+; 0.224 ; state.IDLE    ; state.STOP_B  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.345      ;
+; 0.252 ; sda_chk       ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.373      ;
+; 0.263 ; state.RD_C    ; state.RD_D    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.384      ;
+; 0.266 ; state.START_E ; state.START_F ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.387      ;
+; 0.267 ; state.STOP_C  ; state.STOP_D  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.388      ;
+; 0.274 ; sSDA          ; sto_condition ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.395      ;
+; 0.276 ; sSDA          ; sta_condition ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.397      ;
+; 0.282 ; sSDA          ; dSDA          ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.403      ;
+; 0.290 ; sSCL          ; dSCL          ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.411      ;
+; 0.320 ; sSCL          ; slave_wait    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.441      ;
+; 0.324 ; I2C_al~reg0   ; sda_chk       ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.445      ;
+; 0.324 ; sSDA          ; Rxd~reg0      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.445      ;
+; 0.325 ; sta_condition ; I2C_busy~reg0 ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.446      ;
+; 0.325 ; sSCL          ; Rxd~reg0      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.446      ;
+; 0.330 ; sSCL          ; sto_condition ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.451      ;
+; 0.331 ; state.RD_D    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.452      ;
+; 0.342 ; state.RD_B    ; state.RD_C    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.463      ;
+; 0.342 ; sSDA          ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.463      ;
+; 0.349 ; sSCL          ; sta_condition ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.470      ;
+; 0.383 ; dSCL          ; Rxd~reg0      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.504      ;
+; 0.393 ; state.IDLE    ; state.START_B ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.514      ;
+; 0.435 ; state.WR_C    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.556      ;
+; 0.448 ; cmd_stop      ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.569      ;
+; 0.451 ; sto_condition ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.572      ;
+; 0.458 ; state.START_F ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.579      ;
+; 0.480 ; state.RD_C    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.601      ;
+; 0.488 ; state.WR_D    ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.609      ;
+; 0.493 ; state.START_C ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.614      ;
+; 0.515 ; state.START_B ; state.START_C ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.039      ; 0.638      ;
+; 0.559 ; state.WR_D    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.680      ;
+; 0.567 ; state.STOP_B  ; state.STOP_C  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.039      ; 0.690      ;
+; 0.579 ; state.WR_B    ; state.WR_C    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.039      ; 0.702      ;
+; 0.623 ; state.STOP_D  ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.744      ;
+; 0.650 ; Scl_oen~reg0  ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.771      ;
+; 0.679 ; state.START_B ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.039      ; 0.802      ;
+; 0.700 ; state.RD_B    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.821      ;
+; 0.708 ; state.RD_D    ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 0.829      ;
+; 0.724 ; Sda_oen~reg0  ; I2C_al~reg0   ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.034      ; 0.842      ;
+; 0.769 ; state.STOP_D  ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.035      ; 0.888      ;
+; 0.769 ; I2C_al~reg0   ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.038      ; 0.891      ;
+; 0.784 ; state.WR_D    ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.035      ; 0.903      ;
+; 0.789 ; state.STOP_D  ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.035      ; 0.908      ;
+; 0.804 ; state.WR_D    ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.035      ; 0.923      ;
+; 0.812 ; Scl_oen~reg0  ; dScl_oen      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.034      ; 0.930      ;
+; 0.863 ; state.WR_B    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.039      ; 0.986      ;
+; 0.871 ; state.WR_C    ; sda_chk       ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.034      ; 0.989      ;
+; 0.874 ; state.IDLE    ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.039      ; 0.997      ;
+; 0.885 ; state.IDLE    ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.039      ; 1.008      ;
+; 0.958 ; state.IDLE    ; state.RD_B    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.039      ; 1.081      ;
+; 0.992 ; state.RD_D    ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.035      ; 1.111      ;
+; 1.012 ; state.RD_D    ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.035      ; 1.131      ;
+; 1.083 ; state.START_F ; Ack~reg0      ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.035      ; 1.202      ;
+; 1.103 ; state.START_F ; state.IDLE    ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.035      ; 1.222      ;
+; 1.141 ; I2C_al~reg0   ; Scl_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.040      ; 1.265      ;
+; 1.232 ; Sda_oen~reg0  ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.037      ; 1.353      ;
+; 1.244 ; I2C_al~reg0   ; Sda_oen~reg0  ; clk100MHz    ; clk100MHz   ; 0.000        ; 0.040      ; 1.368      ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                         ;
++------------------+-------+-------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+-------+----------+---------+---------------------+
+; Worst-case Slack ; 7.078 ; 0.186 ; N/A      ; N/A     ; 4.445               ;
+;  clk100MHz       ; 7.078 ; 0.186 ; N/A      ; N/A     ; 4.445               ;
+; Design-wide TNS  ; 0.0   ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  clk100MHz       ; 0.000 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++------------------+-------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; TimerStart    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; TimerStop     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Ack           ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Rxd           ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; I2C_busy      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; I2C_al        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Scl_o         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Scl_oen       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Sda_o         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Sda_oen       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; Enable                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Scl_i                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Rst_n                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Cmd[0]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Cmd[1]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Cmd[2]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Cmd[3]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; TimerOut                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Txd                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Sda_i                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; TimerStart    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
+; TimerStop     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
+; Ack           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
+; Rxd           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
+; I2C_busy      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
+; I2C_al        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
+; Scl_o         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
+; Scl_oen       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
+; Sda_o         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
+; Sda_oen       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.45e-09 V                   ; 2.38 V              ; -0.0609 V           ; 0.148 V                              ; 0.095 V                              ; 2.82e-10 s                  ; 2.59e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.45e-09 V                  ; 2.38 V             ; -0.0609 V          ; 0.148 V                             ; 0.095 V                             ; 2.82e-10 s                 ; 2.59e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.61e-09 V                   ; 2.38 V              ; -0.00274 V          ; 0.141 V                              ; 0.006 V                              ; 4.7e-10 s                   ; 6.02e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.61e-09 V                  ; 2.38 V             ; -0.00274 V         ; 0.141 V                             ; 0.006 V                             ; 4.7e-10 s                  ; 6.02e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; TimerStart    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
+; TimerStop     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
+; Ack           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
+; Rxd           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
+; I2C_busy      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
+; I2C_al        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
+; Scl_o         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
+; Scl_oen       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
+; Sda_o         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
+; Sda_oen       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.74e-07 V                   ; 2.36 V              ; -0.0201 V           ; 0.072 V                              ; 0.033 V                              ; 4.04e-10 s                  ; 3.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.74e-07 V                  ; 2.36 V             ; -0.0201 V          ; 0.072 V                             ; 0.033 V                             ; 4.04e-10 s                 ; 3.29e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.45e-07 V                   ; 2.35 V              ; -0.00643 V          ; 0.081 V                              ; 0.031 V                              ; 5.31e-10 s                  ; 7.59e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.45e-07 V                  ; 2.35 V             ; -0.00643 V         ; 0.081 V                             ; 0.031 V                             ; 5.31e-10 s                 ; 7.59e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; TimerStart    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; TimerStop     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; Ack           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; Rxd           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; I2C_busy      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; I2C_al        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; Scl_o         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; Scl_oen       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; Sda_o         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; Sda_oen       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------+
+; Setup Transfers                                                    ;
++------------+-----------+----------+----------+----------+----------+
+; From Clock ; To Clock  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-----------+----------+----------+----------+----------+
+; clk100MHz  ; clk100MHz ; 71       ; 0        ; 0        ; 0        ;
++------------+-----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++--------------------------------------------------------------------+
+; Hold Transfers                                                     ;
++------------+-----------+----------+----------+----------+----------+
+; From Clock ; To Clock  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-----------+----------+----------+----------+----------+
+; clk100MHz  ; clk100MHz ; 71       ; 0        ; 0        ; 0        ;
++------------+-----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 10    ; 10   ;
+; Unconstrained Input Port Paths  ; 87    ; 87   ;
+; Unconstrained Output Ports      ; 8     ; 8    ;
+; Unconstrained Output Port Paths ; 11    ; 11   ;
++---------------------------------+-------+------+
+
+
++-----------------------------------------+
+; Clock Status Summary                    ;
++--------+-----------+------+-------------+
+; Target ; Clock     ; Type ; Status      ;
++--------+-----------+------+-------------+
+; Clk    ; clk100MHz ; Base ; Constrained ;
++--------+-----------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; Cmd[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Cmd[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Cmd[2]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Cmd[3]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Enable     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Rst_n      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Scl_i      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Sda_i      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; TimerOut   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Txd        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; Ack         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; I2C_al      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; I2C_busy    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Rxd         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Scl_oen     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Sda_oen     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; TimerStart  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; TimerStop   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; Cmd[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Cmd[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Cmd[2]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Cmd[3]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Enable     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Rst_n      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Scl_i      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Sda_i      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; TimerOut   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Txd        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; Ack         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; I2C_al      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; I2C_busy    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Rxd         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Scl_oen     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Sda_oen     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; TimerStart  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; TimerStop   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Mon Apr  8 18:13:24 2024
+Info: Command: quartus_sta i2c_master_bit_ctrl -c i2c_master_bit_ctrl
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (332104): Reading SDC File: '../misc/i2c_master_bit_ctrl.sdc'
+Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning (332169): From clk100MHz (Rise) to clk100MHz (Rise) (setup and hold)
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Info (332146): Worst-case setup slack is 7.078
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     7.078               0.000 clk100MHz 
+Info (332146): Worst-case hold slack is 0.358
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.358               0.000 clk100MHz 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 4.684
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.684               0.000 clk100MHz 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning (332169): From clk100MHz (Rise) to clk100MHz (Rise) (setup and hold)
+Info (332146): Worst-case setup slack is 7.350
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     7.350               0.000 clk100MHz 
+Info (332146): Worst-case hold slack is 0.311
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.311               0.000 clk100MHz 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 4.702
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.702               0.000 clk100MHz 
+Info: Analyzing Fast 1200mV 0C Model
+Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning (332169): From clk100MHz (Rise) to clk100MHz (Rise) (setup and hold)
+Info (332146): Worst-case setup slack is 8.274
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     8.274               0.000 clk100MHz 
+Info (332146): Worst-case hold slack is 0.186
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.186               0.000 clk100MHz 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 4.445
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.445               0.000 clk100MHz 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 473 megabytes
+    Info: Processing ended: Mon Apr  8 18:13:25 2024
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
