@@ -1,115 +1,191 @@
+/************************************************************************************
+ *Controlador a nivell de bit de la UC del mestre I2C.
+ ************************************************************************************/
+
+// Inclusió de llibreries externes
 `include "../misc/timescale.v"
 `include "i2c_master_defines.v"
 
-module i2c_master_byte_ctrl #(parameter SIZE = 3)
-(
-    input               Clk,
-    input               Rst_n,
-    input               Start,
-    input               Read,
-    input               Write,
-    input               Tx_ack,
-    input               I2C_al,
-    input               SR_sout,
-    input               Bit_ack,
-    input               Bit_rxd,
-    output reg          Rx_ack,
-    output reg          I2C_done,
-    output reg          SR_load,
-    output reg          SR_shift,
-    output [3:0] reg    Bit_cmd,
-    output reg          Bit_txd
+// Definició del mòdul
+module i2c_master_byte_ctrl #(parameter SIZE = 3, NBITS = 3)
+(                                   // '*' means this module, '-->' means direction of information transfer
+    input               Clk,        // Master clock input 
+    input               Rst_n,      // Asynch active low reset
+    input               Start,      // Generate start condition
+    input               Stop,       // Generate stop condition
+    input               Read,       // Read from slave 
+    input               Write,      // Write to slave
+    input               Tx_ack,     // When master as receiver, send ACK(='0') or NACK(='1') (master regs. --> *)
+    input               I2C_al,     // I2C bus arbitration lost (bit controller --> *)
+    input               SR_sout,    // Serial output bit from shift register 
+    input               Bit_ack,    // Command complete acknowledge (bit level operation from bit controller) (bit controller --> *)
+    input               Bit_rxd,    // Received bit (from bit controller, also sent as serial input to shift register)
+    output reg          Rx_ack,     // Received acknowledge bit (ACK/NACK from slave) (* --> master regs.)
+    output reg          I2C_done,   // Command completed  (* --> master regs.)
+    output reg          SR_load,    // Load Tx/Rx data to shift register
+    output reg          SR_shift,   // Shift data one position in shift register
+    output reg [3:0]    Bit_cmd,    // Command to execute (* --> bit controller)      // Comandes definides a "i2c_master_defines.v"
+    output reg          Bit_txd     // Data to transmit (* --> bit controller)
 );
 
-reg [NSTATE-1:0]    state, next;
-// reg [SIZE-1:0]      Ticks;
-reg  en_ack, load;
-wire cnt;
+reg  [NBITS-1:0] state, next;   // Variables d'estat present i estat futur
+reg  en_ack, loadCounter;       // Senyals habilitació Ack i sortida del comptador extern
+wire counterOut;                // Sortida del comptador extern
 
-localparam  IDLE    = 4'd0,
-            START   = 4'd1,
-            STOP    = 4'd2,
-            READ    = 4'd3,
-            WRITE   = 4'd4;
+// Decodificador d'estats
+localparam  IDLE      = 4'd0, 
+            START     = 4'd1,
+            STOP      = 4'd2,
+            READ_INI  = 4'd3,
+            READ      = 4'd4,
+            WRITE_INI = 4'd5,
+            WRITE     = 4'd6;
 
-i2c_byte_state_timer state_timer #(SIZE) (
+// Instanciació del comptador extern
+i2c_byte_state_timer #(.SIZE(SIZE)) state_timer ( 
     .Clk    (Clk),
     .Rst_n  (Rst_n),
-    .Ack    (SR_shift),
-    .Load   (load),
-    .Out    (cnt)
+    .Ack    (ck_ack), // provar amb ck_ack i amb SR_shift
+    .Load   (loadCounter),
+    .Out    (counterOut)
 );
 
-assign ck_ack = ack && en_ack; // Controlem si deixem que ack passi al comptador
+assign ck_ack = Bit_ack && en_ack; // Controlem si deixem que ack passi al comptador
 
+// Lògica seqüencial per al canvi d'estat
 always @(posedge Clk or negedge Rst_n) begin
-    if (!Rst_n)     state = {NBITS{1'b0}};
-    else            state = next;
+    if (!Rst_n)     state <= {NBITS{1'b0}}; // Posem tots els bits d'estat a 0 quan es fa reset
+    else            state <= next;          // Passem a l'estat següent en cas contrari
 end
 
-always @(posedge Clk) begin
+// Lògica d'estat futur
+always @(*) begin
     case (state)
         IDLE: begin
-            if      (CR[3]) next = START;  // 7è bit dicta START
-            else if (CR[2]) next = STOP;   // 6è bit dicta STOP
-            else if (CR[1]) next = READ;   // 5è bit dicta READ
-            else if (CR[0]) next = WRITE;  // 4t bit dicta WRITE
+            if      (Start) next = START;      // 7è bit dicta START 
+            else if (Stop)  next = STOP;       // 6è bit dicta STOP 
+            else if (Read)  next = READ_INI;   // 5è bit dicta READ 
+            else if (Write) next = WRITE_INI;  // 4t bit dicta WRITE 
             else            next = IDLE;
         end
 
         START: begin
-            if (ack)        next = IDLE;
+            if(Bit_ack)     next = IDLE;
             else            next = START;
         end
 
         STOP: begin
-            if (ack)        next = IDLE;
+            if (Bit_ack)    next = IDLE;
             else            next = STOP; 
         end
 
+        READ_INI: begin
+            if (Bit_ack)    next = READ;
+            else            next = READ_INI;
+        end
+
         READ: begin
-            if (cnt)        next = IDLE;
+            if (counterOut) next = IDLE;
             else            next = READ;
         end
 
+        WRITE_INI: begin
+            if (Bit_ack)    next = WRITE;
+            else            next = WRITE_INI; 
+        end
+
         WRITE: begin
-            if (cnt)        next = IDLE;
-            else            next = WRITE; 
+            if (counterOut) next = IDLE;
+            else            next = READ;
         end
 
         default:            next = IDLE;
     endcase 
 end
 
-always @(*) begin
-    case (state)
-        IDLE: begin
-            en_ack = 1'b0; // Deshabilitem ack al counter
-    
-        end
-        READ: begin
-            // Això ens estalvia bits
-            if (cnt && ack)     load <= 1'b1;
-            else                load <= 1'b0;
+// Lògica de sortida
+always @(posedge Clk or negedge Rst_n) begin
+    if(!Rst_n) begin
+        Rx_ack   <= 1'b0;
+        Bit_txd  <= 1'b0;
+        Bit_cmd  <= `I2C_CMD_NOP;
+        I2C_done <= 1'b0;
+        SR_load  <= 1'b0;
+        SR_shift <= 1'b0;
+    end else if(I2C_al) begin
+        Rx_ack   <= 1'b0;
+        Bit_txd  <= 1'b0;
+        Bit_cmd  <= `I2C_CMD_NOP;
+        I2C_done <= 1'b0;
+        SR_load  <= 1'b0;
+        SR_shift <= 1'b0;
+    end else
+        case (state)
+            IDLE: begin
+                en_ack <= 1'b0; // Deshabilitem el comptador
 
-            en_ack = 1'b1; // Habilitem ack al counter
+                // Rx_ack   <= Rx_ack;
+                // Bit_txd  <= Bit_txd;
+                // Bit_cmd  <= `I2C_CMD_NOP;
+                // I2C_done <= 1'b1;
+                // SR_load  <= 1'b0;
+                // SR_shift <= 1'b0;
+            end
 
-            // Comandes
+            START: begin
+                en_ack  <= 1'b0; // Habilitem el comptador
+                Bit_cmd <= `I2C_CMD_START; // Enviem la comanda de START
 
-        end
-        WRITE: begin
-            if (cnt && ack)     load <= 1'b1;
-            else                load <= 1'b0;
+                // Rx_ack   <= Rx_ack; 
+                // Bit_txd  <= Bit_txd;
+                // Bit_cmd  <= `I2C_CMD_NOP;
+                // I2C_done <= 1'b0;
+                // SR_load  <= 1'b0; 
+                // SR_shift <= 1'b0;
+            end
 
-            en_ack = 1'b1; // Habilitem ack al counter
+            READ_INI: begin   // Lectura primer bit i habilitació del ack al counter
+                // Això ens estalvia bits
+                if (counterOut && Bit_ack)  loadCounter <= 1'b1; // Carreguem el comptador si el comptador ha arribat a 0 i rebem un Ack
+                else                        loadCounter <= 1'b0;
 
-            // Comandes
+                // en_ack   <= 1'b1;            // Habilitem el comptador
+                // Bit_cmd  <= `I2C_CMD_READ;   // Enviem comanda de lectura
+                // SR_shift <= Bit_rxd;         // Passem en sèrie al shift register el bit rebut
+            end
 
-        end
-        default: begin
+            READ: begin
+                // if (Tx_ack)     Bit_txd <= 1'b0; // Envia ACK si s'han rebut correctament les dades de l'esclau
+                // else            Bit_txd <= 1'b1; // Envia NACK si no s'han rebut correctament les dades de l'esclau
+            end
             
-        end
-    endcase
+            WRITE_INI: begin
+                if (counterOut && Bit_ack)  loadCounter <= 1'b1;
+                else                        loadCounter <= 1'b0;
+
+                // en_ack   <= 1'b1;            // Habilitem ack al counter
+                // Bit_cmd  <= `I2C_CMD_WRITE;  // Enviem comanda d'escriptura
+                // Bit_txd  <= SR_sout;         // Passem en sèrie al shift register el bit a escriure
+                // SR_shift <= 1'b1;            // Fem desplaçament de dades al shift register
+            end
+
+            WRITE: begin
+                // Bit_txd  <= SR_sout;    // Passem en sèrie al shift register el bit a escriure
+                // SR_shift <= 1'b1;       // Fem desplaçament de dades al shift register
+            end
+            
+            default: begin
+                loadCounter <= 1'b0;
+                en_ack      <= 1'b0;
+
+                // Rx_ack   <= Rx_ack;
+                // Bit_txd  <= Bit_txd;
+                // Bit_cmd  <= `I2C_CMD_NOP;
+                // I2C_done <= I2C_done;
+                // SR_load  <= 1'b0;
+                // SR_shift <= 1'b0;
+            end
+        endcase
 end
 
 endmodule
