@@ -102,6 +102,14 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	i2c_master_top
 
+} {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/tb/tb_i2c_master_top.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/tb/tb_i2c_master_top.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_i2c_master_top
+-- Compiling module delay
+
+Top level modules:
+	tb_i2c_master_top
+
 } {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/shiftreg.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/shiftreg.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module shiftreg

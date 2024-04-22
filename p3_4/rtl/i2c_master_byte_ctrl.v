@@ -158,16 +158,9 @@ always @(posedge Clk or negedge Rst_n) begin
                 en_ack  <= 1'b0; // Habilitem el comptador
                 SR_load <= 1; // Aquí carreguem les dades al SHR SEMPRE (tant en lectura com en escriptura)
 
-                if (Bit_ack && Read) begin
-                    Bit_cmd = `I2C_CMD_READ;
-                    SR_load <= 1'b0; 
-                end
-                else if (Bit_ack && Write) begin
-                    Bit_cmd = `I2C_CMD_WRITE;
-                    SR_load <= 1'b1;
-                end
-                else
-                    Bit_cmd = `I2C_CMD_START;
+                if (Bit_ack && Read)        Bit_cmd = `I2C_CMD_READ;
+                else if (Bit_ack && Write)  Bit_cmd = `I2C_CMD_WRITE;
+                else                        Bit_cmd = `I2C_CMD_START;
             end
 
             READ_A: begin
@@ -232,7 +225,7 @@ always @(posedge Clk or negedge Rst_n) begin
                     Rx_ack <= 1'b1;
                     
                 end else if (Write) begin
-                    Rx_ack <= Bit_rxd;
+                    Bit_txd <= Tx_ack;
                 
                 end else begin
                     
