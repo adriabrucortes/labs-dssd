@@ -138,6 +138,7 @@ always @(posedge Clk or negedge Rst_n) begin
             IDLE: begin
                 en_ack <= 1'b0; // Deshabilitem el comptador
                 I2C_done <= 1'b0;
+                loadCounter <= 1'b1;
 
                 if      (Start) Bit_cmd <= `I2C_CMD_START;
                 else if (Read) begin
@@ -150,15 +151,14 @@ always @(posedge Clk or negedge Rst_n) begin
                 end
                 else if (Stop)  Bit_cmd <= `I2C_CMD_STOP;
                 else            Bit_cmd <= `I2C_CMD_NOP; 
-
-                loadCounter <= 1'b1;
             end
 
             START: begin
                 loadCounter <= 1'b1;
                 en_ack  <= 1'b0; // Habilitem el comptador
+                SR_load <= 1; // Aquí carreguem les dades al SHR SEMPRE (tant en lectura com en escriptura)
 
-                if      (Bit_ack && Read) begin
+                if (Bit_ack && Read) begin
                     Bit_cmd = `I2C_CMD_READ;
                     SR_load <= 1'b0; 
                 end
@@ -166,14 +166,12 @@ always @(posedge Clk or negedge Rst_n) begin
                     Bit_cmd = `I2C_CMD_WRITE;
                     SR_load <= 1'b1;
                 end
-                else    Bit_cmd = `I2C_CMD_START;
-
-                SR_load <= 1; // Aquí carreguem les dades al SHR SEMPRE (tant en lectura com en escriptura)
+                else
+                    Bit_cmd = `I2C_CMD_START;
             end
 
             READ_A: begin
-                if (Bit_ack)                loadCounter <= 1'b1;        
-                else                        loadCounter <= 1'b0;
+                loadCounter <= 1'b0;
 
                 SR_load <= 1'b0;
                 en_ack  <= 1'b1;
@@ -221,13 +219,14 @@ always @(posedge Clk or negedge Rst_n) begin
 
                 I2C_done <= 1'b1;
 
-                if (Bit_ack)                Bit_cmd <= `I2C_CMD_NOP;
-                else                        Bit_cmd <= `I2C_CMD_STOP;
+                if (Bit_ack)        Bit_cmd <= `I2C_CMD_NOP;
+                else                Bit_cmd <= `I2C_CMD_STOP;
             end
 
             ACK: begin
                 I2C_done <= 1'b1;
                 SR_load <= 1'b0;
+                loadCounter <= 1'b0;
 
                 if (Read) begin
                     Rx_ack <= 1'b1;
