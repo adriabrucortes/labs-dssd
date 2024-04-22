@@ -614,3 +614,6 @@ run -all
 # ** Note: $stop    : C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/tb/tb_i2c_master_top.v(366)
 #    Time: 53057 ns  Iteration: 0  Instance: /tb_i2c_master_top
 # Break in Module tb_i2c_master_top at C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/tb/tb_i2c_master_top.v line 366
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/sim/wave.do
+# End time: 13:19:25 on Apr 22,2024, Elapsed time: 1:19:03
+# Errors: 1, Warnings: 1
