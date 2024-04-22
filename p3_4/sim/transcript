@@ -1,144 +1,20 @@
 # Compile of i2c_bit_timer.v was successful.
 # Compile of i2c_byte_state_timer.v was successful.
 # Compile of i2c_master_bit_ctrl.v was successful.
-# Compile of i2c_master_byte_ctrl.v failed with 1 errors.
-# Compile of i2c_master_defines.v was successful.
-# Compile of i2c_master_regs.v was successful.
-# Compile of i2c_master_top.v was successful.
-# Compile of shiftreg.v was successful.
-# Compile of tb_i2c_master_top.v was successful.
-# 9 compiles, 1 failed with 1 error.
-# Compile of i2c_bit_timer.v was successful.
-# Compile of i2c_byte_state_timer.v was successful.
-# Compile of i2c_master_bit_ctrl.v was successful.
 # Compile of i2c_master_byte_ctrl.v was successful.
 # Compile of i2c_master_defines.v was successful.
 # Compile of i2c_master_regs.v was successful.
 # Compile of i2c_master_top.v was successful.
 # Compile of shiftreg.v was successful.
-# Compile of tb_i2c_master_top.v was successful.
-# 9 compiles, 0 failed with no errors.
-vsim -gui work.i2c_master_byte_ctrl
-# vsim -gui work.i2c_master_byte_ctrl 
-# Start time: 23:04:05 on Apr 21,2024
-# Loading work.i2c_master_byte_ctrl
-# Loading work.i2c_byte_state_timer
-run -all
-add wave -position insertpoint  \
-sim:/i2c_master_byte_ctrl/SIZE \
-sim:/i2c_master_byte_ctrl/NBITS \
-sim:/i2c_master_byte_ctrl/IDLE \
-sim:/i2c_master_byte_ctrl/START \
-sim:/i2c_master_byte_ctrl/STOP \
-sim:/i2c_master_byte_ctrl/READ_A \
-sim:/i2c_master_byte_ctrl/READ \
-sim:/i2c_master_byte_ctrl/WRITE_A \
-sim:/i2c_master_byte_ctrl/WRITE \
-sim:/i2c_master_byte_ctrl/ACK \
-sim:/i2c_master_byte_ctrl/Clk \
-sim:/i2c_master_byte_ctrl/Rst_n \
-sim:/i2c_master_byte_ctrl/Start \
-sim:/i2c_master_byte_ctrl/Stop \
-sim:/i2c_master_byte_ctrl/Read \
-sim:/i2c_master_byte_ctrl/Write \
-sim:/i2c_master_byte_ctrl/Tx_ack \
-sim:/i2c_master_byte_ctrl/I2C_al \
-sim:/i2c_master_byte_ctrl/SR_sout \
-sim:/i2c_master_byte_ctrl/Bit_ack \
-sim:/i2c_master_byte_ctrl/Bit_rxd \
-sim:/i2c_master_byte_ctrl/Rx_ack \
-sim:/i2c_master_byte_ctrl/I2C_done \
-sim:/i2c_master_byte_ctrl/SR_load \
-sim:/i2c_master_byte_ctrl/SR_shift \
-sim:/i2c_master_byte_ctrl/Bit_cmd \
-sim:/i2c_master_byte_ctrl/Bit_txd \
-sim:/i2c_master_byte_ctrl/state \
-sim:/i2c_master_byte_ctrl/next \
-sim:/i2c_master_byte_ctrl/en_ack \
-sim:/i2c_master_byte_ctrl/loadCounter \
-sim:/i2c_master_byte_ctrl/counterOut \
-sim:/i2c_master_byte_ctrl/ck_ack
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-run -all
-restart -f
-run -all
-# A time value could not be extracted from the current line
-vsim -gui work.tb_i2c_master_top
-# End time: 23:17:56 on Apr 21,2024, Elapsed time: 0:13:51
-# Errors: 0, Warnings: 1
-# vsim -gui work.tb_i2c_master_top 
-# Start time: 23:17:56 on Apr 21,2024
-# Loading work.tb_i2c_master_top
-# ** Error: (vsim-3033) Instantiation of 'dbus_master_model' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_i2c_master_top File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/tb/tb_i2c_master_top.v Line: 71
-#         Searched libraries:
-#             C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/sim/work
-# Loading work.i2c_master_top
-# Loading work.i2c_master_regs
-# Loading work.i2c_master_byte_ctrl
-# Loading work.i2c_byte_state_timer
-# Loading work.i2c_master_bit_ctrl
-# Loading work.shiftreg
-# Loading work.i2c_bit_timer
-# ** Error: (vsim-3033) Instantiation of 'i2c_slave_model' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_i2c_master_top File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/tb/tb_i2c_master_top.v Line: 105
-#         Searched libraries:
-#             C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/sim/work
-# Loading work.delay
-# Error loading design
-# End time: 23:17:57 on Apr 21,2024, Elapsed time: 0:00:01
-# Errors: 2, Warnings: 1
-# Compile of i2c_bit_timer.v was successful.
-# Compile of i2c_byte_state_timer.v was successful.
-# Compile of i2c_master_bit_ctrl.v was successful.
-# Compile of i2c_master_byte_ctrl.v was successful.
-# Compile of i2c_master_defines.v was successful.
-# Compile of i2c_master_regs.v was successful.
-# Compile of i2c_master_top.v was successful.
-# Compile of shiftreg.v was successful.
-# Compile of tb_i2c_master_top.v was successful.
-# Compile of i2c_slave_model.v was successful.
-# Compile of sys_model.v was successful.
-# Compile of timescale.v was successful.
-# 12 compiles, 0 failed with no errors.
-vsim -gui work.tb_i2c_master_top
-# vsim -gui work.tb_i2c_master_top 
-# Start time: 23:18:41 on Apr 21,2024
-# Loading work.tb_i2c_master_top
-# ** Error: (vsim-3033) Instantiation of 'dbus_master_model' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_i2c_master_top File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/tb/tb_i2c_master_top.v Line: 71
-#         Searched libraries:
-#             C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/sim/work
-# Loading work.i2c_master_top
-# Loading work.i2c_master_regs
-# Loading work.i2c_master_byte_ctrl
-# Loading work.i2c_byte_state_timer
-# Loading work.i2c_master_bit_ctrl
-# Loading work.shiftreg
-# Loading work.i2c_bit_timer
-# Loading work.i2c_slave_model
-# Loading work.delay
-# Error loading design
-# End time: 23:18:41 on Apr 21,2024, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 3
-# Compile of i2c_bit_timer.v was successful.
-# Compile of i2c_byte_state_timer.v was successful.
-# Compile of i2c_master_bit_ctrl.v was successful.
-# Compile of i2c_master_byte_ctrl.v was successful.
-# Compile of i2c_master_defines.v was successful.
-# Compile of i2c_master_regs.v was successful.
-# Compile of i2c_master_top.v was successful.
-# Compile of shiftreg.v was successful.
-# Compile of tb_i2c_master_top.v was successful.
-# Compile of i2c_slave_model.v was successful.
-# Compile of sys_model.v was successful.
-# Compile of timescale.v was successful.
 # Compile of dbus_master_model.v was successful.
+# Compile of i2c_slave_model.v was successful.
+# Compile of sys_model.v was successful.
+# Compile of timescale.v was successful.
+# Compile of tb_i2c_master_top.v was successful.
 # 13 compiles, 0 failed with no errors.
 vsim -gui work.tb_i2c_master_top
 # vsim -gui work.tb_i2c_master_top 
-# Start time: 23:21:13 on Apr 21,2024
+# Start time: 09:21:58 on Apr 22,2024
 # Loading work.tb_i2c_master_top
 # Loading work.dbus_master_model
 # Loading work.i2c_master_top
@@ -150,6 +26,7 @@ vsim -gui work.tb_i2c_master_top
 # Loading work.i2c_bit_timer
 # Loading work.i2c_slave_model
 # Loading work.delay
+# WARNING: No extended dataflow license exists
 add wave -position insertpoint  \
 sim:/tb_i2c_master_top/DWIDTH \
 sim:/tb_i2c_master_top/AWIDTH \
@@ -176,16 +53,172 @@ sim:/tb_i2c_master_top/vExpected \
 sim:/tb_i2c_master_top/vObtained \
 sim:/tb_i2c_master_top/q \
 sim:/tb_i2c_master_top/qq
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: adria  Hostname: OLAWENAH-PC  ProcessID: 6364
+#           Attempting to use alternate WLF file "./wlftvvhtkj".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftvvhtkj
 add wave -position insertpoint  \
-sim:/tb_i2c_master_top/u_dbus0/DATA_WIDTH \
-sim:/tb_i2c_master_top/u_dbus0/ADDR_WIDTH \
+sim:/tb_i2c_master_top/u_dut0/DWIDTH \
+sim:/tb_i2c_master_top/u_dut0/AWIDTH \
+sim:/tb_i2c_master_top/u_dut0/Clk \
+sim:/tb_i2c_master_top/u_dut0/Rst_n \
+sim:/tb_i2c_master_top/u_dut0/Addr \
+sim:/tb_i2c_master_top/u_dut0/DataIn \
+sim:/tb_i2c_master_top/u_dut0/DataOut \
+sim:/tb_i2c_master_top/u_dut0/Wr \
+sim:/tb_i2c_master_top/u_dut0/Int \
+sim:/tb_i2c_master_top/u_dut0/SclPadIn \
+sim:/tb_i2c_master_top/u_dut0/SclPadOut \
+sim:/tb_i2c_master_top/u_dut0/SclPadEn \
+sim:/tb_i2c_master_top/u_dut0/SdaPadIn \
+sim:/tb_i2c_master_top/u_dut0/SdaPadOut \
+sim:/tb_i2c_master_top/u_dut0/SdaPadEn \
+sim:/tb_i2c_master_top/u_dut0/start \
+sim:/tb_i2c_master_top/u_dut0/stop \
+sim:/tb_i2c_master_top/u_dut0/write \
+sim:/tb_i2c_master_top/u_dut0/read \
+sim:/tb_i2c_master_top/u_dut0/tx_ack \
+sim:/tb_i2c_master_top/u_dut0/rx_ack \
+sim:/tb_i2c_master_top/u_dut0/tx_data \
+sim:/tb_i2c_master_top/u_dut0/rx_data \
+sim:/tb_i2c_master_top/u_dut0/prescale \
+sim:/tb_i2c_master_top/u_dut0/i2c_busy \
+sim:/tb_i2c_master_top/u_dut0/i2c_done \
+sim:/tb_i2c_master_top/u_dut0/i2c_en \
+sim:/tb_i2c_master_top/u_dut0/i2c_al \
+sim:/tb_i2c_master_top/u_dut0/bit_cmd \
+sim:/tb_i2c_master_top/u_dut0/bit_ack \
+sim:/tb_i2c_master_top/u_dut0/bit_txd \
+sim:/tb_i2c_master_top/u_dut0/bit_rxd \
+sim:/tb_i2c_master_top/u_dut0/sr_load \
+sim:/tb_i2c_master_top/u_dut0/sr_shift \
+sim:/tb_i2c_master_top/u_dut0/sr_sout \
+sim:/tb_i2c_master_top/u_dut0/timerStart \
+sim:/tb_i2c_master_top/u_dut0/timerStop \
+sim:/tb_i2c_master_top/u_dut0/timerOut
+run -all
+# 
+# status:    0.00 ns Testbench started
+# 
+# 
+# [Info-    0.00 ns] Reset
+# status: 1297.00 ns done reset
+# status: 1405.00 ns programmed registers
+# status: 1707.00 ns verified registers
+# status: 1725.00 ns core enabled
+# status: 1725.00 ns Write Access
+# status: 1765.00 ns generate 'start', write cmd 20 (slave address+write)
+add wave -position insertpoint  \
+sim:/tb_i2c_master_top/u_dut0/i_byte/SIZE \
+sim:/tb_i2c_master_top/u_dut0/i_byte/NBITS \
+sim:/tb_i2c_master_top/u_dut0/i_byte/IDLE \
+sim:/tb_i2c_master_top/u_dut0/i_byte/START \
+sim:/tb_i2c_master_top/u_dut0/i_byte/STOP \
+sim:/tb_i2c_master_top/u_dut0/i_byte/READ_A \
+sim:/tb_i2c_master_top/u_dut0/i_byte/READ \
+sim:/tb_i2c_master_top/u_dut0/i_byte/WRITE_A \
+sim:/tb_i2c_master_top/u_dut0/i_byte/WRITE \
+sim:/tb_i2c_master_top/u_dut0/i_byte/ACK \
+sim:/tb_i2c_master_top/u_dut0/i_byte/Clk \
+sim:/tb_i2c_master_top/u_dut0/i_byte/Rst_n \
+sim:/tb_i2c_master_top/u_dut0/i_byte/Start \
+sim:/tb_i2c_master_top/u_dut0/i_byte/Stop \
+sim:/tb_i2c_master_top/u_dut0/i_byte/Read \
+sim:/tb_i2c_master_top/u_dut0/i_byte/Write \
+sim:/tb_i2c_master_top/u_dut0/i_byte/Tx_ack \
+sim:/tb_i2c_master_top/u_dut0/i_byte/I2C_al \
+sim:/tb_i2c_master_top/u_dut0/i_byte/SR_sout \
+sim:/tb_i2c_master_top/u_dut0/i_byte/Bit_ack \
+sim:/tb_i2c_master_top/u_dut0/i_byte/Bit_rxd \
+sim:/tb_i2c_master_top/u_dut0/i_byte/Rx_ack \
+sim:/tb_i2c_master_top/u_dut0/i_byte/I2C_done \
+sim:/tb_i2c_master_top/u_dut0/i_byte/SR_load \
+sim:/tb_i2c_master_top/u_dut0/i_byte/SR_shift \
+sim:/tb_i2c_master_top/u_dut0/i_byte/Bit_cmd \
+sim:/tb_i2c_master_top/u_dut0/i_byte/Bit_txd \
+sim:/tb_i2c_master_top/u_dut0/i_byte/state \
+sim:/tb_i2c_master_top/u_dut0/i_byte/next \
+sim:/tb_i2c_master_top/u_dut0/i_byte/en_ack \
+sim:/tb_i2c_master_top/u_dut0/i_byte/loadCounter \
+sim:/tb_i2c_master_top/u_dut0/i_byte/counterOut \
+sim:/tb_i2c_master_top/u_dut0/i_byte/ck_ack
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+# 
+# status:    0.00 ns Testbench started
+# 
+# 
+# [Info-    0.00 ns] Reset
+# status: 1297.00 ns done reset
+# status: 1405.00 ns programmed registers
+# status: 1707.00 ns verified registers
+# status: 1725.00 ns core enabled
+# status: 1725.00 ns Write Access
+# status: 1765.00 ns generate 'start', write cmd 20 (slave address+write)
+add wave -position insertpoint  \
 sim:/tb_i2c_master_top/u_dbus0/Clk \
 sim:/tb_i2c_master_top/u_dbus0/Rst_n \
 sim:/tb_i2c_master_top/u_dbus0/Addr \
 sim:/tb_i2c_master_top/u_dbus0/Dout \
 sim:/tb_i2c_master_top/u_dbus0/Din \
 sim:/tb_i2c_master_top/u_dbus0/Wr
+add wave -position insertpoint  \
+sim:/tb_i2c_master_top/u_dut0/start \
+sim:/tb_i2c_master_top/u_dut0/stop \
+sim:/tb_i2c_master_top/u_dut0/write \
+sim:/tb_i2c_master_top/u_dut0/read \
+sim:/tb_i2c_master_top/u_dut0/tx_ack \
+sim:/tb_i2c_master_top/u_dut0/rx_ack \
+sim:/tb_i2c_master_top/u_dut0/tx_data \
+sim:/tb_i2c_master_top/u_dut0/rx_data \
+sim:/tb_i2c_master_top/u_dut0/prescale \
+sim:/tb_i2c_master_top/u_dut0/i2c_busy \
+sim:/tb_i2c_master_top/u_dut0/i2c_done \
+sim:/tb_i2c_master_top/u_dut0/i2c_en \
+sim:/tb_i2c_master_top/u_dut0/i2c_al \
+sim:/tb_i2c_master_top/u_dut0/bit_cmd \
+sim:/tb_i2c_master_top/u_dut0/bit_ack \
+sim:/tb_i2c_master_top/u_dut0/bit_txd \
+sim:/tb_i2c_master_top/u_dut0/bit_rxd \
+sim:/tb_i2c_master_top/u_dut0/sr_load \
+sim:/tb_i2c_master_top/u_dut0/sr_shift \
+sim:/tb_i2c_master_top/u_dut0/sr_sout \
+sim:/tb_i2c_master_top/u_dut0/timerStart \
+sim:/tb_i2c_master_top/u_dut0/timerStop \
+sim:/tb_i2c_master_top/u_dut0/timerOut
+add wave -position insertpoint  \
+sim:/tb_i2c_master_top/u_dut0/i_byte/Start \
+sim:/tb_i2c_master_top/u_dut0/i_byte/Stop \
+sim:/tb_i2c_master_top/u_dut0/i_byte/Read \
+sim:/tb_i2c_master_top/u_dut0/i_byte/Write \
+sim:/tb_i2c_master_top/u_dut0/i_byte/Tx_ack \
+sim:/tb_i2c_master_top/u_dut0/i_byte/I2C_al \
+sim:/tb_i2c_master_top/u_dut0/i_byte/SR_sout \
+sim:/tb_i2c_master_top/u_dut0/i_byte/Bit_ack \
+sim:/tb_i2c_master_top/u_dut0/i_byte/Bit_rxd \
+sim:/tb_i2c_master_top/u_dut0/i_byte/Rx_ack \
+sim:/tb_i2c_master_top/u_dut0/i_byte/I2C_done \
+sim:/tb_i2c_master_top/u_dut0/i_byte/SR_load \
+sim:/tb_i2c_master_top/u_dut0/i_byte/SR_shift \
+sim:/tb_i2c_master_top/u_dut0/i_byte/Bit_cmd \
+sim:/tb_i2c_master_top/u_dut0/i_byte/Bit_txd \
+sim:/tb_i2c_master_top/u_dut0/i_byte/state \
+sim:/tb_i2c_master_top/u_dut0/i_byte/next \
+sim:/tb_i2c_master_top/u_dut0/i_byte/en_ack \
+sim:/tb_i2c_master_top/u_dut0/i_byte/loadCounter \
+sim:/tb_i2c_master_top/u_dut0/i_byte/counterOut \
+sim:/tb_i2c_master_top/u_dut0/i_byte/ck_ack
 run -all
+restart -f
+run -all
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
 # 
 # status:    0.00 ns Testbench started
 # 
@@ -198,8 +231,10 @@ run -all
 # status: 1725.00 ns Write Access
 # status: 1765.00 ns generate 'start', write cmd 20 (slave address+write)
 restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 run -all
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
 # 
 # status:    0.00 ns Testbench started
 # 
@@ -211,4 +246,573 @@ run -all
 # status: 1725.00 ns core enabled
 # status: 1725.00 ns Write Access
 # status: 1765.00 ns generate 'start', write cmd 20 (slave address+write)
-# WARNING: No extended dataflow license exists
+# Compile of i2c_bit_timer.v was successful.
+# Compile of i2c_byte_state_timer.v was successful.
+# Compile of i2c_master_bit_ctrl.v was successful.
+# Compile of i2c_master_byte_ctrl.v was successful.
+# Compile of i2c_master_defines.v was successful.
+# Compile of i2c_master_regs.v was successful.
+# Compile of i2c_master_top.v was successful.
+# Compile of shiftreg.v was successful.
+# Compile of dbus_master_model.v was successful.
+# Compile of i2c_slave_model.v was successful.
+# Compile of sys_model.v was successful.
+# Compile of timescale.v was successful.
+# Compile of tb_i2c_master_top.v was successful.
+# 13 compiles, 0 failed with no errors.
+restart -f
+# Loading work.tb_i2c_master_top
+# Loading work.dbus_master_model
+# Loading work.i2c_master_top
+# Loading work.i2c_master_regs
+# Loading work.i2c_master_byte_ctrl
+# Loading work.i2c_byte_state_timer
+# Loading work.i2c_master_bit_ctrl
+# Loading work.shiftreg
+# Loading work.i2c_bit_timer
+# Loading work.i2c_slave_model
+# Loading work.delay
+run -all
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+# 
+# status:    0.00 ns Testbench started
+# 
+# 
+# [Info-    0.00 ns] Reset
+# status: 1297.00 ns done reset
+# status: 1405.00 ns programmed registers
+# status: 1707.00 ns verified registers
+# status: 1725.00 ns core enabled
+# status: 1725.00 ns Write Access
+# status: 1765.00 ns generate 'start', write cmd 20 (slave address+write)
+# status: 1805.00 ns tip==0
+# status: 1845.00 ns write slave memory address 01
+# status: 1865.00 ns tip==0
+# status: 1905.00 ns write data a5
+# status: 2206.00 ns clock streching starts
+# status: 3306.00 ns clock streching ends
+# status: 3325.00 ns tip==0
+# status: 3365.00 ns write slave memory address 02
+# status: 3385.00 ns tip==0
+# status: 3425.00 ns write next data 5a, generate 'stop'
+# ** Error: $setup( posedge Scl:3306 ns, negedge Sda &&& Scl:3465 ns, 160 ns );
+#    Time: 3465 ns  Iteration: 3  Process: /tb_i2c_master_top/u_slave0/#Setup# File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/i2c_slave_model.v Line: 270
+# Compile of i2c_bit_timer.v was successful.
+# Compile of i2c_byte_state_timer.v was successful.
+# Compile of i2c_master_bit_ctrl.v was successful.
+# Compile of i2c_master_byte_ctrl.v failed with 2 errors.
+# Compile of i2c_master_defines.v was successful.
+# Compile of i2c_master_regs.v was successful.
+# Compile of i2c_master_top.v was successful.
+# Compile of shiftreg.v was successful.
+# Compile of dbus_master_model.v was successful.
+# Compile of i2c_slave_model.v was successful.
+# Compile of sys_model.v was successful.
+# Compile of timescale.v was successful.
+# Compile of tb_i2c_master_top.v was successful.
+# 13 compiles, 1 failed with 2 errors.
+# Compile of i2c_bit_timer.v was successful.
+# Compile of i2c_byte_state_timer.v was successful.
+# Compile of i2c_master_bit_ctrl.v was successful.
+# Compile of i2c_master_byte_ctrl.v was successful.
+# Compile of i2c_master_defines.v was successful.
+# Compile of i2c_master_regs.v was successful.
+# Compile of i2c_master_top.v was successful.
+# Compile of shiftreg.v was successful.
+# Compile of dbus_master_model.v was successful.
+# Compile of i2c_slave_model.v was successful.
+# Compile of sys_model.v was successful.
+# Compile of timescale.v was successful.
+# Compile of tb_i2c_master_top.v was successful.
+# 13 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_i2c_master_top
+# Loading work.dbus_master_model
+# Loading work.i2c_master_top
+# Loading work.i2c_master_regs
+# Loading work.i2c_master_byte_ctrl
+# Loading work.i2c_byte_state_timer
+# Loading work.i2c_master_bit_ctrl
+# Loading work.shiftreg
+# Loading work.i2c_bit_timer
+# Loading work.i2c_slave_model
+# Loading work.delay
+run -continue
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+# 
+# status:    0.00 ns Testbench started
+# 
+# 
+# [Info-    0.00 ns] Reset
+# status: 1297.00 ns done reset
+# status: 1405.00 ns programmed registers
+# status: 1707.00 ns verified registers
+# status: 1725.00 ns core enabled
+# status: 1725.00 ns Write Access
+# status: 1765.00 ns generate 'start', write cmd 20 (slave address+write)
+# status: 1805.00 ns tip==0
+# status: 1845.00 ns write slave memory address 01
+# status: 1865.00 ns tip==0
+# status: 1905.00 ns write data a5
+# status: 2206.00 ns clock streching starts
+# status: 3306.00 ns clock streching ends
+# status: 3325.00 ns tip==0
+# status: 3365.00 ns write slave memory address 02
+# status: 3385.00 ns tip==0
+# status: 3425.00 ns write next data 5a, generate 'stop'
+# ** Error: $setup( posedge Scl:3306 ns, negedge Sda &&& Scl:3465 ns, 160 ns );
+#    Time: 3465 ns  Iteration: 3  Process: /tb_i2c_master_top/u_slave0/#Setup# File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/i2c_slave_model.v Line: 270
+# Compile of i2c_bit_timer.v was successful.
+# Compile of i2c_byte_state_timer.v was successful.
+# Compile of i2c_master_bit_ctrl.v was successful.
+# Compile of i2c_master_byte_ctrl.v was successful.
+# Compile of i2c_master_defines.v was successful.
+# Compile of i2c_master_regs.v was successful.
+# Compile of i2c_master_top.v was successful.
+# Compile of shiftreg.v was successful.
+# Compile of dbus_master_model.v was successful.
+# Compile of i2c_slave_model.v was successful.
+# Compile of sys_model.v was successful.
+# Compile of timescale.v was successful.
+# Compile of tb_i2c_master_top.v was successful.
+# 13 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_i2c_master_top
+# Loading work.dbus_master_model
+# Loading work.i2c_master_top
+# Loading work.i2c_master_regs
+# Loading work.i2c_master_byte_ctrl
+# Loading work.i2c_byte_state_timer
+# Loading work.i2c_master_bit_ctrl
+# Loading work.shiftreg
+# Loading work.i2c_bit_timer
+# Loading work.i2c_slave_model
+# Loading work.delay
+run -all
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+# 
+# status:    0.00 ns Testbench started
+# 
+# 
+# [Info-    0.00 ns] Reset
+# status: 1297.00 ns done reset
+# status: 1405.00 ns programmed registers
+# status: 1707.00 ns verified registers
+# status: 1725.00 ns core enabled
+# status: 1725.00 ns Write Access
+# status: 1765.00 ns generate 'start', write cmd 20 (slave address+write)
+restart -f
+run -all
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+# 
+# status:    0.00 ns Testbench started
+# 
+# 
+# [Info-    0.00 ns] Reset
+# status: 1297.00 ns done reset
+# status: 1405.00 ns programmed registers
+# status: 1707.00 ns verified registers
+# status: 1725.00 ns core enabled
+# status: 1725.00 ns Write Access
+# status: 1765.00 ns generate 'start', write cmd 20 (slave address+write)
+# Compile of i2c_bit_timer.v was successful.
+# Compile of i2c_byte_state_timer.v was successful.
+# Compile of i2c_master_bit_ctrl.v was successful.
+# Compile of i2c_master_byte_ctrl.v was successful.
+# Compile of i2c_master_defines.v was successful.
+# Compile of i2c_master_regs.v was successful.
+# Compile of i2c_master_top.v was successful.
+# Compile of shiftreg.v was successful.
+# Compile of dbus_master_model.v was successful.
+# Compile of i2c_slave_model.v was successful.
+# Compile of sys_model.v was successful.
+# Compile of timescale.v was successful.
+# Compile of tb_i2c_master_top.v was successful.
+# 13 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_i2c_master_top
+# Loading work.dbus_master_model
+# Loading work.i2c_master_top
+# Loading work.i2c_master_regs
+# Loading work.i2c_master_byte_ctrl
+# Loading work.i2c_byte_state_timer
+# Loading work.i2c_master_bit_ctrl
+# Loading work.shiftreg
+# Loading work.i2c_bit_timer
+# Loading work.i2c_slave_model
+# Loading work.delay
+run -all
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+# 
+# status:    0.00 ns Testbench started
+# 
+# 
+# [Info-    0.00 ns] Reset
+# status: 1297.00 ns done reset
+# status: 1405.00 ns programmed registers
+# status: 1707.00 ns verified registers
+# status: 1725.00 ns core enabled
+# status: 1725.00 ns Write Access
+# status: 1765.00 ns generate 'start', write cmd 20 (slave address+write)
+# Compile of i2c_bit_timer.v was successful.
+# Compile of i2c_byte_state_timer.v was successful.
+# Compile of i2c_master_bit_ctrl.v was successful.
+# Compile of i2c_master_byte_ctrl.v was successful.
+# Compile of i2c_master_defines.v was successful.
+# Compile of i2c_master_regs.v was successful.
+# Compile of i2c_master_top.v was successful.
+# Compile of shiftreg.v was successful.
+# Compile of dbus_master_model.v was successful.
+# Compile of i2c_slave_model.v was successful.
+# Compile of sys_model.v was successful.
+# Compile of timescale.v was successful.
+# Compile of tb_i2c_master_top.v was successful.
+# 13 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_i2c_master_top
+# Loading work.dbus_master_model
+# Loading work.i2c_master_top
+# Loading work.i2c_master_regs
+# Loading work.i2c_master_byte_ctrl
+# Loading work.i2c_byte_state_timer
+# Loading work.i2c_master_bit_ctrl
+# Loading work.shiftreg
+# Loading work.i2c_bit_timer
+# Loading work.i2c_slave_model
+# Loading work.delay
+run -all
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+# 
+# status:    0.00 ns Testbench started
+# 
+# 
+# [Info-    0.00 ns] Reset
+# status: 1297.00 ns done reset
+# status: 1405.00 ns programmed registers
+# status: 1707.00 ns verified registers
+# status: 1725.00 ns core enabled
+# status: 1725.00 ns Write Access
+# status: 1765.00 ns generate 'start', write cmd 20 (slave address+write)
+# status: 4805.00 ns tip==0
+# status: 4845.00 ns write slave memory address 01
+# status: 7445.00 ns tip==0
+# status: 7485.00 ns write data a5
+# status: 7485.00 ns clock streching starts
+# status: 8585.00 ns clock streching ends
+# ** Error: $width( posedge Scl:8585 ns, :8735 ns, 160 ns );
+#    Time: 8735 ns  Iteration: 3  Process: /tb_i2c_master_top/u_slave0/#Width# File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/i2c_slave_model.v Line: 268
+# status: 11015.00 ns tip==0
+# status: 11055.00 ns write slave memory address 02
+# status: 13655.00 ns tip==0
+# status: 13695.00 ns write next data 5a, generate 'stop'
+# Compile of i2c_bit_timer.v was successful.
+# Compile of i2c_byte_state_timer.v was successful.
+# Compile of i2c_master_bit_ctrl.v was successful.
+# Compile of i2c_master_byte_ctrl.v was successful.
+# Compile of i2c_master_defines.v was successful.
+# Compile of i2c_master_regs.v was successful.
+# Compile of i2c_master_top.v was successful.
+# Compile of shiftreg.v was successful.
+# Compile of dbus_master_model.v was successful.
+# Compile of i2c_slave_model.v was successful.
+# Compile of sys_model.v was successful.
+# Compile of timescale.v was successful.
+# Compile of tb_i2c_master_top.v was successful.
+# 13 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_i2c_master_top
+# Loading work.dbus_master_model
+# Loading work.i2c_master_top
+# Loading work.i2c_master_regs
+# Loading work.i2c_master_byte_ctrl
+# Loading work.i2c_byte_state_timer
+# Loading work.i2c_master_bit_ctrl
+# Loading work.shiftreg
+# Loading work.i2c_bit_timer
+# Loading work.i2c_slave_model
+# Loading work.delay
+run -all
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+# 
+# status:    0.00 ns Testbench started
+# 
+# 
+# [Info-    0.00 ns] Reset
+# status: 1297.00 ns done reset
+# status: 1405.00 ns programmed registers
+# status: 1707.00 ns verified registers
+# status: 1725.00 ns core enabled
+# status: 1725.00 ns Write Access
+# status: 1765.00 ns generate 'start', write cmd 20 (slave address+write)
+# status: 4805.00 ns tip==0
+# status: 4845.00 ns write slave memory address 01
+# status: 7445.00 ns tip==0
+# status: 7485.00 ns write data a5
+# status: 7485.00 ns clock streching starts
+# status: 8585.00 ns clock streching ends
+# ** Error: $width( posedge Scl:8585 ns, :8735 ns, 160 ns );
+#    Time: 8735 ns  Iteration: 3  Process: /tb_i2c_master_top/u_slave0/#Width# File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/i2c_slave_model.v Line: 268
+# status: 11015.00 ns tip==0
+# status: 11055.00 ns write slave memory address 02
+# status: 13655.00 ns tip==0
+# status: 13695.00 ns write next data 5a, generate 'stop'
+# Compile of i2c_bit_timer.v was successful.
+# Compile of i2c_byte_state_timer.v was successful.
+# Compile of i2c_master_bit_ctrl.v was successful.
+# Compile of i2c_master_byte_ctrl.v was successful.
+# Compile of i2c_master_defines.v was successful.
+# Compile of i2c_master_regs.v was successful.
+# Compile of i2c_master_top.v was successful.
+# Compile of shiftreg.v was successful.
+# Compile of dbus_master_model.v was successful.
+# Compile of i2c_slave_model.v was successful.
+# Compile of sys_model.v was successful.
+# Compile of timescale.v was successful.
+# Compile of tb_i2c_master_top.v was successful.
+# 13 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_i2c_master_top
+# Loading work.dbus_master_model
+# Loading work.i2c_master_top
+# Loading work.i2c_master_regs
+# Loading work.i2c_master_byte_ctrl
+# Loading work.i2c_byte_state_timer
+# Loading work.i2c_master_bit_ctrl
+# Loading work.shiftreg
+# Loading work.i2c_bit_timer
+# Loading work.i2c_slave_model
+# Loading work.delay
+run -all
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+# 
+# status:    0.00 ns Testbench started
+# 
+# 
+# [Info-    0.00 ns] Reset
+# status: 1297.00 ns done reset
+# status: 1405.00 ns programmed registers
+# status: 1707.00 ns verified registers
+# status: 1725.00 ns core enabled
+# status: 1725.00 ns Write Access
+# status: 1765.00 ns generate 'start', write cmd 20 (slave address+write)
+# status: 4805.00 ns tip==0
+# status: 4845.00 ns write slave memory address 01
+# status: 7445.00 ns tip==0
+# status: 7485.00 ns write data a5
+# status: 7485.00 ns clock streching starts
+# status: 8585.00 ns clock streching ends
+# ** Error: $width( posedge Scl:8585 ns, :8735 ns, 160 ns );
+#    Time: 8735 ns  Iteration: 3  Process: /tb_i2c_master_top/u_slave0/#Width# File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/i2c_slave_model.v Line: 268
+# status: 11015.00 ns tip==0
+# status: 11055.00 ns write slave memory address 02
+# status: 13655.00 ns tip==0
+# status: 13695.00 ns write next data 5a, generate 'stop'
+# Compile of i2c_bit_timer.v was successful.
+# Compile of i2c_byte_state_timer.v was successful.
+# Compile of i2c_master_bit_ctrl.v was successful.
+# Compile of i2c_master_byte_ctrl.v was successful.
+# Compile of i2c_master_defines.v was successful.
+# Compile of i2c_master_regs.v was successful.
+# Compile of i2c_master_top.v was successful.
+# Compile of shiftreg.v was successful.
+# Compile of dbus_master_model.v was successful.
+# Compile of i2c_slave_model.v was successful.
+# Compile of sys_model.v was successful.
+# Compile of timescale.v was successful.
+# Compile of tb_i2c_master_top.v was successful.
+# 13 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_i2c_master_top
+# Loading work.dbus_master_model
+# Loading work.i2c_master_top
+# Loading work.i2c_master_regs
+# Loading work.i2c_master_byte_ctrl
+# Loading work.i2c_byte_state_timer
+# Loading work.i2c_master_bit_ctrl
+# Loading work.shiftreg
+# Loading work.i2c_bit_timer
+# Loading work.i2c_slave_model
+# Loading work.delay
+run -all
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+# 
+# status:    0.00 ns Testbench started
+# 
+# 
+# [Info-    0.00 ns] Reset
+# status: 1297.00 ns done reset
+# status: 1405.00 ns programmed registers
+# status: 1707.00 ns verified registers
+# status: 1725.00 ns core enabled
+# status: 1725.00 ns Write Access
+# status: 1765.00 ns generate 'start', write cmd 20 (slave address+write)
+# status: 4805.00 ns tip==0
+# status: 4845.00 ns write slave memory address 01
+# status: 7445.00 ns tip==0
+# status: 7485.00 ns write data a5
+# status: 7485.00 ns clock streching starts
+# status: 8585.00 ns clock streching ends
+# ** Error: $width( posedge Scl:8585 ns, :8735 ns, 160 ns );
+#    Time: 8735 ns  Iteration: 3  Process: /tb_i2c_master_top/u_slave0/#Width# File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/i2c_slave_model.v Line: 268
+# status: 11015.00 ns tip==0
+# status: 11055.00 ns write slave memory address 02
+# status: 13655.00 ns tip==0
+# status: 13695.00 ns write next data 5a, generate 'stop'
+# status: 16615.00 ns tip==0, busy==0
+# status: 16615.00 ns Read Access
+# status: 16655.00 ns generate 'start', write cmd 20 (slave address+write)
+# status: 19735.00 ns tip==0
+# status: 19775.00 ns write slave address 01
+# status: 22375.00 ns tip==0
+# status: 22415.00 ns generate 'repeated start', write cmd 21 (slave address+read)
+# status: 25495.00 ns tip==0
+# status: 25515.00 ns read + ack
+# status: 28375.00 ns tip==0
+# 
+# ERROR: Expected a5, received 21 at time 28395.00 ns
+# status: 28415.00 ns read + ack
+# status: 31335.00 ns tip==0
+# 
+# ERROR: Expected 5a, received 21 at time 31355.00 ns
+# status: 31375.00 ns read + ack
+# status: 34295.00 ns tip==0
+# status: 34315.00 ns received 21 from 3rd read address
+# status: 34335.00 ns read + nack
+# status: 37255.00 ns tip==0
+# status: 37275.00 ns received 21 from 4th read address
+# status: 37315.00 ns generate 'start', write cmd 20 (slave address+write). Check invalid address
+# status: 40375.00 ns tip==0
+# status: 40415.00 ns write slave memory address 10
+# status: 43015.00 ns tip==0
+# status: 43015.00 ns Check for nack
+# 
+# ERROR: Expected NACK, received ACK
+# 
+# status: 43035.00 ns generate 'stop'
+# status: 43055.00 ns tip==0
+# 
+# 
+# status: 53057.00 ns Testbench done
+# ** Note: $stop    : C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/tb/tb_i2c_master_top.v(366)
+#    Time: 53057 ns  Iteration: 0  Instance: /tb_i2c_master_top
+# Break in Module tb_i2c_master_top at C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/tb/tb_i2c_master_top.v line 366
+# Compile of i2c_bit_timer.v was successful.
+# Compile of i2c_byte_state_timer.v was successful.
+# Compile of i2c_master_bit_ctrl.v was successful.
+# Compile of i2c_master_byte_ctrl.v was successful.
+# Compile of i2c_master_defines.v was successful.
+# Compile of i2c_master_regs.v was successful.
+# Compile of i2c_master_top.v was successful.
+# Compile of shiftreg.v was successful.
+# Compile of dbus_master_model.v was successful.
+# Compile of i2c_slave_model.v was successful.
+# Compile of sys_model.v was successful.
+# Compile of timescale.v was successful.
+# Compile of tb_i2c_master_top.v was successful.
+# 13 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_i2c_master_top
+# Loading work.dbus_master_model
+# Loading work.i2c_master_top
+# Loading work.i2c_master_regs
+# Loading work.i2c_master_byte_ctrl
+# Loading work.i2c_byte_state_timer
+# Loading work.i2c_master_bit_ctrl
+# Loading work.shiftreg
+# Loading work.i2c_bit_timer
+# Loading work.i2c_slave_model
+# Loading work.delay
+run -all
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+# 
+# status:    0.00 ns Testbench started
+# 
+# 
+# [Info-    0.00 ns] Reset
+# status: 1297.00 ns done reset
+# status: 1405.00 ns programmed registers
+# status: 1707.00 ns verified registers
+# status: 1725.00 ns core enabled
+# status: 1725.00 ns Write Access
+# status: 1765.00 ns generate 'start', write cmd 20 (slave address+write)
+# status: 4805.00 ns tip==0
+# status: 4845.00 ns write slave memory address 01
+# status: 7445.00 ns tip==0
+# status: 7485.00 ns write data a5
+# status: 7485.00 ns clock streching starts
+# status: 8585.00 ns clock streching ends
+# ** Error: $width( posedge Scl:8585 ns, :8735 ns, 160 ns );
+#    Time: 8735 ns  Iteration: 3  Process: /tb_i2c_master_top/u_slave0/#Width# File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/i2c_slave_model.v Line: 268
+# status: 11015.00 ns tip==0
+# status: 11055.00 ns write slave memory address 02
+# status: 13655.00 ns tip==0
+# status: 13695.00 ns write next data 5a, generate 'stop'
+# status: 16615.00 ns tip==0, busy==0
+# status: 16615.00 ns Read Access
+# status: 16655.00 ns generate 'start', write cmd 20 (slave address+write)
+# status: 19735.00 ns tip==0
+# status: 19775.00 ns write slave address 01
+# status: 22375.00 ns tip==0
+# status: 22415.00 ns generate 'repeated start', write cmd 21 (slave address+read)
+# status: 25495.00 ns tip==0
+# status: 25515.00 ns read + ack
+# status: 28375.00 ns tip==0
+# 
+# ERROR: Expected a5, received 21 at time 28395.00 ns
+# status: 28415.00 ns read + ack
+# status: 31335.00 ns tip==0
+# 
+# ERROR: Expected 5a, received 21 at time 31355.00 ns
+# status: 31375.00 ns read + ack
+# status: 34295.00 ns tip==0
+# status: 34315.00 ns received 21 from 3rd read address
+# status: 34335.00 ns read + nack
+# status: 37255.00 ns tip==0
+# status: 37275.00 ns received 21 from 4th read address
+# status: 37315.00 ns generate 'start', write cmd 20 (slave address+write). Check invalid address
+# status: 40375.00 ns tip==0
+# status: 40415.00 ns write slave memory address 10
+# status: 43015.00 ns tip==0
+# status: 43015.00 ns Check for nack
+# 
+# ERROR: Expected NACK, received ACK
+# 
+# status: 43035.00 ns generate 'stop'
+# status: 43055.00 ns tip==0
+# 
+# 
+# status: 53057.00 ns Testbench done
+# ** Note: $stop    : C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/tb/tb_i2c_master_top.v(366)
+#    Time: 53057 ns  Iteration: 0  Instance: /tb_i2c_master_top
+# Break in Module tb_i2c_master_top at C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/tb/tb_i2c_master_top.v line 366
+# A time value could not be extracted from the current line
+# End time: 10:41:17 on Apr 22,2024, Elapsed time: 1:19:19
+# Errors: 1, Warnings: 1
