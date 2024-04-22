@@ -1,23 +1,40 @@
-/********1*********2*********3*********4*********5*********6*********7*********8
-* File : i2c_master_bit_ctrl.v
-*_______________________________________________________________________________
-*
-* Revision history
-*
-* Name          Date        Observations
-* ------------------------------------------------------------------------------
-* -            15/06/2023   First version.
-* ------------------------------------------------------------------------------
-*_______________________________________________________________________________
-*
-* Description
-* Bit Command Control
-*_______________________________________________________________________________
+/////////////////////////////////////
+// Bit controller section
+/////////////////////////////////////
+//
+// Translate simple commands into SCL/SDA transitions
+// Each command has 5 states, A/B/C/D/idle
+//
+// start:	  SCL	~~~~~~\____
+//          SDA	~~~~\______
+//		          x|A|B|C|D|i
+//
+// repstart	SCL ____/~~~\__
+//	        SDA __/~~~\____
+//		          x|A|B|C|D|i
+//
+// stop	    SCL	____/~~~~~~
+//	        SDA XX\___/~~~~
+//	            x|A|B|C|D|i
+//
+//- write   SCL ____/~~~\__
+//          SDA XX========X
+//              x|A|B|C|D|i
+//
+//- read    SCL ____/~~~\__
+//          SDA XXXX=====XX
+//              x|A|B|C|D|i
+//
 
-* (c) Copyright Universitat de Barcelona, 2023
-*
-*********1*********2*********3*********4*********5*********6*********7*********/
-
+// Timing:     Normal mode      Fast mode
+///////////////////////////////////////////////////////////////////////
+// Fscl        100KHz           400KHz
+// Th_scl      4.0us            0.6us   High period of SCL
+// Tl_scl      4.7us            1.3us   Low period of SCL
+// Tsu:sta     4.7us            0.6us   setup time for a repeated start condition
+// Tsu:sto     4.0us            0.6us   setup time for a stop conditon
+// Tbuf        4.7us            1.3us   Bus free time between a stop and start condition
+//
 `include "../misc/timescale.v"
 `include "i2c_master_defines.v"
 
@@ -101,8 +118,8 @@ module i2c_master_bit_ctrl (
       sta_condition <= 1'b0;
       sto_condition <= 1'b0;
     end else begin
-      sta_condition <= ~sSDA &  dSDA &  sSCL; // SCL NEEDS TO BE HIGH, NOT LOW
-      sto_condition <=  sSDA & ~dSDA &  sSCL;
+      sta_condition <= ~sSDA &  dSDA & sSCL;
+      sto_condition <=  sSDA & ~dSDA & sSCL;
     end
 
 
@@ -227,7 +244,7 @@ module i2c_master_bit_ctrl (
 
         START_B : begin
           Scl_oen <= 1'b1; // keep SCL high
-          Sda_oen <= 1'b1; // keep SDA high AQUI HI HAVIA ERROR
+          Sda_oen <= 1'b1; // keep SDA high
           sda_chk <= 1'b0; // don't check SDA output
         end
         START_C : begin
@@ -236,12 +253,12 @@ module i2c_master_bit_ctrl (
           sda_chk <= 1'b0; // don't check SDA output
         end
         START_D : begin
-          Scl_oen <= 1'b1; // keep SCL high
+          Scl_oen <= 1'b1; // set SCL low
           Sda_oen <= 1'b0; // set SDA low
           sda_chk <= 1'b0; // don't check SDA output
         end
         START_E : begin
-          Scl_oen <= 1'b1; // keep SCL high
+          Scl_oen <= 1'b1; // keep SCL low
           Sda_oen <= 1'b0; // keep SDA low
           sda_chk <= 1'b0; // don't check SDA output
         end

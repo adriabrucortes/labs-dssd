@@ -63,48 +63,50 @@ end
 always @(*) begin
     case (state)
         IDLE: begin
-            if      (Start) next = START;      // 7è bit dicta START 
-            else if  (Stop) next = STOP;       // 6è bit dicta STOP 
-            else if  (Read) next = READ_INI;   // 5è bit dicta READ 
-            else if (Write) next = WRITE_INI;  // 4t bit dicta WRITE 
-            else            next = IDLE;
+            if      (Start)                 next = START;       // 7è bit dicta START 
+            else if (Read)                  next = READ_A;      // 5è bit dicta READ 
+            else if (Write)                 next = WRITE_A;     // 4t bit dicta WRITE
+            else if (Stop)                  next = STOP;        // 6è bit dicta STOP  
+            else                            next = IDLE;
         end
 
         START: begin
-            if (Bit_ack || Stop) next = IDLE;
-            else                 next = START;
+            if      (Bit_ack && Read)       next = READ_A;
+            else if (Bit_ack && Write)      next = WRITE_A;
+            else                            next = START;
         end
 
         STOP: begin
-            if (Bit_ack) next = IDLE;
-            else         next = STOP; 
+            if (Bit_ack)                    next = IDLE;
+            else                            next = STOP; 
         end
 
-        READ_INI: begin
-            if         (Stop) next = IDLE;
-            else if (Bit_ack) next = READ;
-            else              next = READ_INI;
+        READ_A: begin
+            if (Bit_ack)                    next = READ;
+            else                            next = READ_A;
         end
 
         READ: begin
-            if            (Stop) next = IDLE;
-            else if (counterOut) next = IDLE;
-            else                 next = READ;
+            if (Bit_ack & counterOut)       next = ACK;
+            else                            next = READ;
         end
 
-        WRITE_INI: begin
-            if         (Stop) next = IDLE;
-            else if (Bit_ack) next = WRITE;
-            else              next = WRITE_INI; 
+        WRITE_A: begin
+            if (Bit_ack)                    next = WRITE;
+            else                            next = WRITE_A;
         end
 
         WRITE: begin
-            if            (Stop) next = IDLE;
-            else if (counterOut) next = IDLE;
-            else                 next = READ;
+            if (Bit_ack & counterOut)       next = ACK;
+            else                            next = READ;
         end
 
-        default:                 next = IDLE;
+        ACK: begin
+            if (Bit_ack & Stop)             next = STOP;
+            else                            next = IDLE;
+        end
+
+        default:                            next = IDLE;
     endcase 
 end
 
@@ -128,87 +130,104 @@ always @(posedge Clk or negedge Rst_n) begin
         I2C_done    <= 1'b1;
         SR_load     <= 1'b0;
         SR_shift    <= 1'b0;
-    end else
+    end else begin
         case (state)
             IDLE: begin
                 en_ack <= 1'b0; // Deshabilitem el comptador
-                Bit_cmd  <= `I2C_CMD_NOP;
-                Rx_ack   <= Rx_ack;
-                Bit_txd  <= Bit_txd;
-                I2C_done <= 1'b1;
-                SR_load  <= 1'b0;
-                SR_shift <= 1'b0;
+
+                if      (Start) Bit_cmd <= `I2C_CMD_START;
+                else if (Read)  Bit_cmd <= `I2C_CMD_READ;
+                else if (Write) Bit_cmd <= `I2C_CMD_WRITE;
+                else if (Stop)  Bit_cmd <= `I2C_CMD_STOP;
+                else            Bit_cmd <= `I2C_CMD_NOP; 
+
+                loadCounter <= 1'b1;
+                I2C_done <= 1'b0;
             end
 
             START: begin
                 loadCounter <= 1'b1;
                 en_ack  <= 1'b0; // Habilitem el comptador
                 Bit_cmd <= `I2C_CMD_START; // Enviem la comanda de START
-                Rx_ack   <= Rx_ack; 
-                Bit_txd  <= Bit_txd;
-                I2C_done <= 1'b0;
-                SR_load  <= 1'b0; 
-                SR_shift <= 1'b0;
+
+                SR_load <= 1; // Aquí carreguem les dades al SHR SEMPRE (tant en lectura com en escriptura)
             end
 
-            READ_INI: begin   // Lectura primer bit i habilitació del ack al counter
-                // Això ens estalvia bits
-                Bit_cmd  <= `I2C_CMD_READ;   // Enviem comanda de lectura
-                if (counterOut && Bit_ack)  loadCounter <= 1'b1; // Carreguem el comptador si el comptador ha arribat a 0 i rebem un Ack
+            READ_A: begin
+                if (Bit_ack)                loadCounter <= 1'b1;        
                 else                        loadCounter <= 1'b0;
-                en_ack   <= 1'b1;            // Habilitem el comptador
-                SR_shift <= Bit_rxd;         // Passem en sèrie al shift register el bit rebut
+
+                en_ack  <= 1'b1;
+                Bit_cmd <= `I2C_CMD_READ;
+                Bit_txd  <= Tx_ack;     // Passem en sèrie al shift register el bit a escriure
+                SR_shift <= 1'b1;       // Fem desplaçament de dades al shift register
             end
 
             READ: begin
-                Bit_cmd  <= `I2C_CMD_READ;
-                en_ack   <= en_ack;
-                SR_shift <= 1'b1;
-                if (Tx_ack)     Bit_txd <= 1'b0; // Envia ACK si s'han rebut correctament les dades de l'esclau
-                else            Bit_txd <= 1'b1; // Envia NACK si no s'han rebut correctament les dades de l'esclau
+                loadCounter <= 1'b0;
+
+                // L'últim cop q passem per aquest estat posem mode escriptura per enviar ACK
+                if (counterOut & Bit_ack)   Bit_cmd <= `I2C_CMD_WRITE;
+                else                        Bit_cmd <= `I2C_CMD_READ;
             end
-            
-            WRITE_INI: begin
-                Bit_cmd  <= `I2C_CMD_WRITE;  // Enviem comanda d'escriptura
-                if (counterOut && Bit_ack)  loadCounter <= 1'b1;
+
+            WRITE_A: begin
+                if (Bit_ack)                loadCounter <= 1'b1;        
                 else                        loadCounter <= 1'b0;
-                en_ack   <= 1'b1;            // Habilitem ack al counter
-                Bit_txd  <= SR_sout;         // Passem en sèrie al shift register el bit a escriure
-                SR_shift <= 1'b1;            // Fem desplaçament de dades al shift register
+
+                en_ack  <= 1'b1;
+                Bit_cmd <= `I2C_CMD_WRITE;
+                Bit_txd  <= SR_sout;    // Passem en sèrie al shift register el bit a escriure
+                SR_shift <= 1'b1;       // Fem desplaçament de dades al shift register
             end
 
             WRITE: begin
-                en_ack   <= en_ack;
-                Bit_cmd  <= `I2C_CMD_WRITE;
+                loadCounter <= 1'b0;
+                en_ack      <= 1'b1;
+
+                // L'últim cop q passem per aquest estat posem mode lectura per enviar ACK
+                if (counterOut & Bit_ack)   Bit_cmd <= `I2C_CMD_WRITE;
+                else                        Bit_cmd <= `I2C_CMD_READ;
+                
                 Bit_txd  <= SR_sout;    // Passem en sèrie al shift register el bit a escriure
                 SR_shift <= 1'b1;       // Fem desplaçament de dades al shift register
             end
             
-            default: begin
-                Bit_cmd  <= `I2C_CMD_NOP;
+            STOP: begin
                 loadCounter <= 1'b0;
                 en_ack      <= 1'b0;
-                Rx_ack   <= Rx_ack;
-                Bit_txd  <= Bit_txd;
-                I2C_done <= I2C_done;
-                SR_load  <= 1'b0;
-                SR_shift <= 1'b0;
+
+                I2C_done <= 1'b1;
+
+                // Rx_ack   <= Rx_ack;
+                // Bit_txd  <= Bit_txd;
+                // Bit_cmd  <= `I2C_CMD_NOP;
+                // I2C_done <= I2C_done;
+                // SR_load  <= 1'b0;
+                // SR_shift <= 1'b0;
             end
 
             ACK: begin
-                if  (Read) begin
+                if (Read) begin
                     Rx_ack <= 1'b1;
                     
-                end
-                else if (Write) begin
-                    
+                end else if (Write) begin
+                    Rx_ack <= Bit_rxd;
+                
                 end else begin
-                    Bit_cmd <= `I2C_CMD_NOP;
+                    
                 end
 
-                if stop
+                if (Stop) begin
+                    Bit_cmd <= `I2C_CMD_STOP;
+
+                end else begin
+                    Bit_cmd <= `I2C_CMD_NOP;
+
+                end
             end
         endcase
+    end
 end
 
 endmodule

@@ -1,0 +1,214 @@
+# Compile of i2c_bit_timer.v was successful.
+# Compile of i2c_byte_state_timer.v was successful.
+# Compile of i2c_master_bit_ctrl.v was successful.
+# Compile of i2c_master_byte_ctrl.v failed with 1 errors.
+# Compile of i2c_master_defines.v was successful.
+# Compile of i2c_master_regs.v was successful.
+# Compile of i2c_master_top.v was successful.
+# Compile of shiftreg.v was successful.
+# Compile of tb_i2c_master_top.v was successful.
+# 9 compiles, 1 failed with 1 error.
+# Compile of i2c_bit_timer.v was successful.
+# Compile of i2c_byte_state_timer.v was successful.
+# Compile of i2c_master_bit_ctrl.v was successful.
+# Compile of i2c_master_byte_ctrl.v was successful.
+# Compile of i2c_master_defines.v was successful.
+# Compile of i2c_master_regs.v was successful.
+# Compile of i2c_master_top.v was successful.
+# Compile of shiftreg.v was successful.
+# Compile of tb_i2c_master_top.v was successful.
+# 9 compiles, 0 failed with no errors.
+vsim -gui work.i2c_master_byte_ctrl
+# vsim -gui work.i2c_master_byte_ctrl 
+# Start time: 23:04:05 on Apr 21,2024
+# Loading work.i2c_master_byte_ctrl
+# Loading work.i2c_byte_state_timer
+run -all
+add wave -position insertpoint  \
+sim:/i2c_master_byte_ctrl/SIZE \
+sim:/i2c_master_byte_ctrl/NBITS \
+sim:/i2c_master_byte_ctrl/IDLE \
+sim:/i2c_master_byte_ctrl/START \
+sim:/i2c_master_byte_ctrl/STOP \
+sim:/i2c_master_byte_ctrl/READ_A \
+sim:/i2c_master_byte_ctrl/READ \
+sim:/i2c_master_byte_ctrl/WRITE_A \
+sim:/i2c_master_byte_ctrl/WRITE \
+sim:/i2c_master_byte_ctrl/ACK \
+sim:/i2c_master_byte_ctrl/Clk \
+sim:/i2c_master_byte_ctrl/Rst_n \
+sim:/i2c_master_byte_ctrl/Start \
+sim:/i2c_master_byte_ctrl/Stop \
+sim:/i2c_master_byte_ctrl/Read \
+sim:/i2c_master_byte_ctrl/Write \
+sim:/i2c_master_byte_ctrl/Tx_ack \
+sim:/i2c_master_byte_ctrl/I2C_al \
+sim:/i2c_master_byte_ctrl/SR_sout \
+sim:/i2c_master_byte_ctrl/Bit_ack \
+sim:/i2c_master_byte_ctrl/Bit_rxd \
+sim:/i2c_master_byte_ctrl/Rx_ack \
+sim:/i2c_master_byte_ctrl/I2C_done \
+sim:/i2c_master_byte_ctrl/SR_load \
+sim:/i2c_master_byte_ctrl/SR_shift \
+sim:/i2c_master_byte_ctrl/Bit_cmd \
+sim:/i2c_master_byte_ctrl/Bit_txd \
+sim:/i2c_master_byte_ctrl/state \
+sim:/i2c_master_byte_ctrl/next \
+sim:/i2c_master_byte_ctrl/en_ack \
+sim:/i2c_master_byte_ctrl/loadCounter \
+sim:/i2c_master_byte_ctrl/counterOut \
+sim:/i2c_master_byte_ctrl/ck_ack
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+restart -f
+run -all
+# A time value could not be extracted from the current line
+vsim -gui work.tb_i2c_master_top
+# End time: 23:17:56 on Apr 21,2024, Elapsed time: 0:13:51
+# Errors: 0, Warnings: 1
+# vsim -gui work.tb_i2c_master_top 
+# Start time: 23:17:56 on Apr 21,2024
+# Loading work.tb_i2c_master_top
+# ** Error: (vsim-3033) Instantiation of 'dbus_master_model' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_i2c_master_top File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/tb/tb_i2c_master_top.v Line: 71
+#         Searched libraries:
+#             C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/sim/work
+# Loading work.i2c_master_top
+# Loading work.i2c_master_regs
+# Loading work.i2c_master_byte_ctrl
+# Loading work.i2c_byte_state_timer
+# Loading work.i2c_master_bit_ctrl
+# Loading work.shiftreg
+# Loading work.i2c_bit_timer
+# ** Error: (vsim-3033) Instantiation of 'i2c_slave_model' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_i2c_master_top File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/tb/tb_i2c_master_top.v Line: 105
+#         Searched libraries:
+#             C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/sim/work
+# Loading work.delay
+# Error loading design
+# End time: 23:17:57 on Apr 21,2024, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 1
+# Compile of i2c_bit_timer.v was successful.
+# Compile of i2c_byte_state_timer.v was successful.
+# Compile of i2c_master_bit_ctrl.v was successful.
+# Compile of i2c_master_byte_ctrl.v was successful.
+# Compile of i2c_master_defines.v was successful.
+# Compile of i2c_master_regs.v was successful.
+# Compile of i2c_master_top.v was successful.
+# Compile of shiftreg.v was successful.
+# Compile of tb_i2c_master_top.v was successful.
+# Compile of i2c_slave_model.v was successful.
+# Compile of sys_model.v was successful.
+# Compile of timescale.v was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.tb_i2c_master_top
+# vsim -gui work.tb_i2c_master_top 
+# Start time: 23:18:41 on Apr 21,2024
+# Loading work.tb_i2c_master_top
+# ** Error: (vsim-3033) Instantiation of 'dbus_master_model' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_i2c_master_top File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/tb/tb_i2c_master_top.v Line: 71
+#         Searched libraries:
+#             C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/sim/work
+# Loading work.i2c_master_top
+# Loading work.i2c_master_regs
+# Loading work.i2c_master_byte_ctrl
+# Loading work.i2c_byte_state_timer
+# Loading work.i2c_master_bit_ctrl
+# Loading work.shiftreg
+# Loading work.i2c_bit_timer
+# Loading work.i2c_slave_model
+# Loading work.delay
+# Error loading design
+# End time: 23:18:41 on Apr 21,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 3
+# Compile of i2c_bit_timer.v was successful.
+# Compile of i2c_byte_state_timer.v was successful.
+# Compile of i2c_master_bit_ctrl.v was successful.
+# Compile of i2c_master_byte_ctrl.v was successful.
+# Compile of i2c_master_defines.v was successful.
+# Compile of i2c_master_regs.v was successful.
+# Compile of i2c_master_top.v was successful.
+# Compile of shiftreg.v was successful.
+# Compile of tb_i2c_master_top.v was successful.
+# Compile of i2c_slave_model.v was successful.
+# Compile of sys_model.v was successful.
+# Compile of timescale.v was successful.
+# Compile of dbus_master_model.v was successful.
+# 13 compiles, 0 failed with no errors.
+vsim -gui work.tb_i2c_master_top
+# vsim -gui work.tb_i2c_master_top 
+# Start time: 23:21:13 on Apr 21,2024
+# Loading work.tb_i2c_master_top
+# Loading work.dbus_master_model
+# Loading work.i2c_master_top
+# Loading work.i2c_master_regs
+# Loading work.i2c_master_byte_ctrl
+# Loading work.i2c_byte_state_timer
+# Loading work.i2c_master_bit_ctrl
+# Loading work.shiftreg
+# Loading work.i2c_bit_timer
+# Loading work.i2c_slave_model
+# Loading work.delay
+add wave -position insertpoint  \
+sim:/tb_i2c_master_top/DWIDTH \
+sim:/tb_i2c_master_top/AWIDTH \
+sim:/tb_i2c_master_top/RD \
+sim:/tb_i2c_master_top/WR \
+sim:/tb_i2c_master_top/SADR \
+sim:/tb_i2c_master_top/WR_BURST \
+sim:/tb_i2c_master_top/RD_BURST \
+sim:/tb_i2c_master_top/clk \
+sim:/tb_i2c_master_top/rst_n \
+sim:/tb_i2c_master_top/bus_addr \
+sim:/tb_i2c_master_top/bus_din \
+sim:/tb_i2c_master_top/bus_dout \
+sim:/tb_i2c_master_top/bus_wr \
+sim:/tb_i2c_master_top/scl \
+sim:/tb_i2c_master_top/scl0_o \
+sim:/tb_i2c_master_top/scl0_oen \
+sim:/tb_i2c_master_top/sda \
+sim:/tb_i2c_master_top/sda0_o \
+sim:/tb_i2c_master_top/sda0_oen \
+sim:/tb_i2c_master_top/i2c0_int \
+sim:/tb_i2c_master_top/errors \
+sim:/tb_i2c_master_top/vExpected \
+sim:/tb_i2c_master_top/vObtained \
+sim:/tb_i2c_master_top/q \
+sim:/tb_i2c_master_top/qq
+add wave -position insertpoint  \
+sim:/tb_i2c_master_top/u_dbus0/DATA_WIDTH \
+sim:/tb_i2c_master_top/u_dbus0/ADDR_WIDTH \
+sim:/tb_i2c_master_top/u_dbus0/Clk \
+sim:/tb_i2c_master_top/u_dbus0/Rst_n \
+sim:/tb_i2c_master_top/u_dbus0/Addr \
+sim:/tb_i2c_master_top/u_dbus0/Dout \
+sim:/tb_i2c_master_top/u_dbus0/Din \
+sim:/tb_i2c_master_top/u_dbus0/Wr
+run -all
+# 
+# status:    0.00 ns Testbench started
+# 
+# 
+# [Info-    0.00 ns] Reset
+# status: 1297.00 ns done reset
+# status: 1405.00 ns programmed registers
+# status: 1707.00 ns verified registers
+# status: 1725.00 ns core enabled
+# status: 1725.00 ns Write Access
+# status: 1765.00 ns generate 'start', write cmd 20 (slave address+write)
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# 
+# status:    0.00 ns Testbench started
+# 
+# 
+# [Info-    0.00 ns] Reset
+# status: 1297.00 ns done reset
+# status: 1405.00 ns programmed registers
+# status: 1707.00 ns verified registers
+# status: 1725.00 ns core enabled
+# status: 1725.00 ns Write Access
+# status: 1765.00 ns generate 'start', write cmd 20 (slave address+write)
+# WARNING: No extended dataflow license exists
