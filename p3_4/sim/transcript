@@ -1,6 +1,21 @@
-vsim -gui work.tb_i2c_master_top
-# vsim -gui work.tb_i2c_master_top 
-# Start time: 17:13:28 on Apr 28,2024
+# Loading project i2c_master_byte_ctrl
+# Compile of dbus_master_model.v was successful.
+# Compile of i2c_slave_model.v was successful.
+# Compile of sys_model.v was successful.
+# Compile of timescale.v was successful.
+# Compile of i2c_bit_timer.v was successful.
+# Compile of i2c_byte_state_timer.v was successful.
+# Compile of i2c_master_bit_ctrl.v was successful.
+# Compile of i2c_master_byte_ctrl.v was successful.
+# Compile of i2c_master_defines.v was successful.
+# Compile of i2c_master_regs.v was successful.
+# Compile of i2c_master_top.v was successful.
+# Compile of shiftreg.v was successful.
+# Compile of tb_i2c_master_top.v was successful.
+# 13 compiles, 0 failed with no errors.
+vsim work.tb_i2c_master_top
+# vsim work.tb_i2c_master_top 
+# Start time: 00:12:19 on Apr 29,2024
 # Loading work.tb_i2c_master_top
 # Loading work.dbus_master_model
 # Loading work.i2c_master_top
@@ -12,7 +27,7 @@ vsim -gui work.tb_i2c_master_top
 # Loading work.i2c_bit_timer
 # Loading work.i2c_slave_model
 # Loading work.delay
-# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/tb_i2c_master_top/*
 run -all
 # 
 # status:    0.00 ns Testbench started
@@ -32,7 +47,7 @@ run -all
 # status: 8125.00 ns clock streching starts
 # status: 9225.00 ns clock streching ends
 # ** Error: $width( posedge Scl:9225 ns, :9375 ns, 160 ns );
-#    Time: 9375 ns  Iteration: 4  Process: /tb_i2c_master_top/u_slave0/#Width# File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/i2c_slave_model.v Line: 268
+#    Time: 9375 ns  Iteration: 4  Process: /tb_i2c_master_top/u_slave0/#Width# File: /home/aidar/Documents/labs-dssd/p3_4/misc/i2c_slave_model.v Line: 268
 # status: 11975.00 ns tip==0
 # status: 12015.00 ns write slave memory address 02
 # status: 14935.00 ns tip==0
@@ -67,8 +82,10 @@ run -all
 # 
 # 
 # status: 56257.00 ns Testbench done
-# ** Note: $stop    : C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/tb/tb_i2c_master_top.v(366)
+# ** Note: $stop    : /home/aidar/Documents/labs-dssd/p3_4/tb/tb_i2c_master_top.v(366)
 #    Time: 56257 ns  Iteration: 0  Instance: /tb_i2c_master_top
-# Break in Module tb_i2c_master_top at C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/tb/tb_i2c_master_top.v line 366
-# End time: 17:14:00 on Apr 28,2024, Elapsed time: 0:00:32
-# Errors: 1, Warnings: 1
+# Break in Module tb_i2c_master_top at /home/aidar/Documents/labs-dssd/p3_4/tb/tb_i2c_master_top.v line 366
+quit -sim
+# End time: 00:12:57 on Apr 29,2024, Elapsed time: 0:00:38
+# Errors: 1, Warnings: 2
+quit

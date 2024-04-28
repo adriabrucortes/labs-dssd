@@ -52,6 +52,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "Bit_rxd",
+					"strict" : false
+				},
+				{
 					"name" : "Rst_n",
 					"strict" : false
 				},

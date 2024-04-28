@@ -1,0 +1,50 @@
+# do i2c_master_byte_ctrl_run_msim_gate_verilog.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Copying /home/aidar/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+. {i2c_master_byte_ctrl_min_1200mv_0c_fast.vo}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:16:02 on Apr 29,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." i2c_master_byte_ctrl_min_1200mv_0c_fast.vo 
+# -- Compiling module i2c_master_byte_ctrl
+# -- Compiling module hard_block
+# 
+# Top level modules:
+# 	i2c_master_byte_ctrl
+# End time: 00:16:02 on Apr 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+/home/aidar/Documents/labs-dssd/p3_4/syn/../tb {/home/aidar/Documents/labs-dssd/p3_4/syn/../tb/tb_i2c_master_top_(4netlist).v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:16:02 on Apr 29,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/aidar/Documents/labs-dssd/p3_4/syn/../tb" /home/aidar/Documents/labs-dssd/p3_4/syn/../tb/tb_i2c_master_top_(4netlist).v 
+# -- Compiling module tb_i2c_master_top
+# -- Compiling module delay
+# 
+# Top level modules:
+# 	tb_i2c_master_top
+# End time: 00:16:02 on Apr 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  tb_i2c_master_top_(4netlist)
+# vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" tb_i2c_master_top_(4netlist) 
+# Start time: 00:16:02 on Apr 29,2024
+# ** Error: (vsim-3170) Could not find 'tb_i2c_master_top_(4netlist)'.
+#         Searched libraries:
+#             /home/aidar/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
+#             /home/aidar/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cycloneive
+#             /home/aidar/Documents/labs-dssd/p3_4/syn/simulation/modelsim/gate_work
+#             /home/aidar/Documents/labs-dssd/p3_4/syn/simulation/modelsim/gate_work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./i2c_master_byte_ctrl_run_msim_gate_verilog.do PAUSED at line 12
+# End time: 00:16:06 on Apr 29,2024, Elapsed time: 0:00:04
+# Errors: 1, Warnings: 0

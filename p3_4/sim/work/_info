@@ -1,6 +1,7 @@
 m255
 K4
 z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
 !s11f vlog 2020.1 2020.02, Feb 28 2020
 13
 !s112 1.1
@@ -10,278 +11,278 @@ z2
 cModel Technology
 dC:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/sim
 vdbus_master_model
-Z0 !s110 1713797300
+Z0 !s110 1714342312
 !i10b 1
 !s100 Jj_iiVAUDA8eiBG]KmfVE0
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IAQl?Ro8b^EMelNzNaRS1N3
+I8Y5c:29YPDgK]V5bPDNW_0
 Z2 VDg1SIo80bB@j0V0VzS_@n1
-Z3 dC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/sim
-Z4 w1713770043
-8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/dbus_master_model.v
-FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/dbus_master_model.v
-!i122 470
+Z3 d/home/aidar/Documents/labs-dssd/p3_4/sim
+Z4 w1714323371
+8/home/aidar/Documents/labs-dssd/p3_4/misc/dbus_master_model.v
+F/home/aidar/Documents/labs-dssd/p3_4/misc/dbus_master_model.v
+!i122 577
 L0 24 45
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1713797300.000000
-!s107 ../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/dbus_master_model.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/dbus_master_model.v|
+!s108 1714342311.000000
+!s107 ../misc/timescale.v|/home/aidar/Documents/labs-dssd/p3_4/misc/dbus_master_model.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/aidar/Documents/labs-dssd/p3_4/misc/dbus_master_model.v|
 !i113 1
-Z7 o-work work
-Z8 tCvgOpt 0
+Z6 o-work work
+Z7 tCvgOpt 0
 vdelay
-Z9 !s110 1713797301
+R0
 !i10b 1
 !s100 iWB_;mLH?bLM6Q_aW6]?z0
 R1
-IR6<f3gRNF_@4]o`kK@f3J1
+IV][a4NOe8HQh7]4]O1TVS2
 R2
 R3
-Z10 w1713789783
-Z11 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/tb/tb_i2c_master_top.v
-Z12 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/tb/tb_i2c_master_top.v
-!i122 473
+Z8 w1714341125
+Z9 8/home/aidar/Documents/labs-dssd/p3_4/tb/tb_i2c_master_top.v
+Z10 F/home/aidar/Documents/labs-dssd/p3_4/tb/tb_i2c_master_top.v
+!i122 587
 L0 439 10
 R5
 r1
 !s85 0
 31
-R6
-!s107 ../rtl/i2c_master_defines.v|../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/tb/tb_i2c_master_top.v|
-Z13 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/tb/tb_i2c_master_top.v|
+Z11 !s108 1714342312.000000
+!s107 ../rtl/i2c_master_defines.v|../misc/timescale.v|/home/aidar/Documents/labs-dssd/p3_4/tb/tb_i2c_master_top.v|
+Z12 !s90 -reportprogress|300|-work|work|-stats=none|/home/aidar/Documents/labs-dssd/p3_4/tb/tb_i2c_master_top.v|
 !i113 1
+R6
 R7
-R8
 vi2c_bit_timer
-Z14 !s110 1713797299
+R0
 !i10b 1
 !s100 B8S@VEQ@jnGnX4gQaL3NL1
 R1
-IKVfK51z5Z5LEMNiQPCodA1
+IZ5J:1i=Yj4fkF@CQC^9:b0
 R2
 R3
-w1710750858
-8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_bit_timer.v
-FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_bit_timer.v
-!i122 463
+Z13 w1714323335
+8/home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_bit_timer.v
+F/home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_bit_timer.v
+!i122 580
 L0 1 34
 R5
 r1
 !s85 0
 31
-Z15 !s108 1713797299.000000
-!s107 C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_bit_timer.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_bit_timer.v|
+R11
+!s107 /home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_bit_timer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_bit_timer.v|
 !i113 1
+R6
 R7
-R8
 vi2c_byte_state_timer
-R14
+R0
 !i10b 1
 !s100 C:18fW@eZ2<;7_X:hBOe71
 R1
-I=Z0SVePJfJbc2]3=F9K<80
+Ia?]9?7A;m?Bik_bOSCm=I2
 R2
 R3
-w1713258543
-8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_byte_state_timer.v
-FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_byte_state_timer.v
-!i122 464
+R4
+8/home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_byte_state_timer.v
+F/home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_byte_state_timer.v
+!i122 581
 L0 9 29
 R5
 r1
 !s85 0
 31
-R15
-!s107 ../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_byte_state_timer.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_byte_state_timer.v|
+R11
+!s107 ../misc/timescale.v|/home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_byte_state_timer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_byte_state_timer.v|
 !i113 1
+R6
 R7
-R8
 vi2c_master_bit_ctrl
-R14
+R0
 !i10b 1
 !s100 X7jZN40JHVkJ;MzB?hN[W0
 R1
-Ig9DY>4:RO4FC92cEm=;PC2
+I;<I_0=?DbhcO:OEagM1QF3
 R2
 R3
 R4
-8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_master_bit_ctrl.v
-FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_master_bit_ctrl.v
-!i122 465
+8/home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_bit_ctrl.v
+F/home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_bit_ctrl.v
+!i122 582
 L0 41 295
 R5
 r1
 !s85 0
 31
-R15
-!s107 C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p3_4\rtl\i2c_master_defines.v|../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_master_bit_ctrl.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_master_bit_ctrl.v|
+R11
+!s107 /home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_defines.v|../misc/timescale.v|/home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_bit_ctrl.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_bit_ctrl.v|
 !i113 1
+R6
 R7
-R8
 vi2c_master_byte_ctrl
-R14
+R0
 !i10b 1
-!s100 cABh5zJWE=fV^C?T@[:zP1
+!s100 Yd9Pz[OU16kaV8[;lg_?Q0
 R1
-IeEHjeKb8S3^J[fNaMIFT93
+I]iz4Zg4iUYL8IRiGb]>1A1
 R2
 R3
-w1713797295
-8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_master_byte_ctrl.v
-FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_master_byte_ctrl.v
-!i122 466
+w1714342130
+8/home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_byte_ctrl.v
+F/home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_byte_ctrl.v
+!i122 583
 L0 10 242
 R5
 r1
 !s85 0
 31
-R15
-!s107 C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p3_4\rtl\i2c_master_defines.v|../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_master_byte_ctrl.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_master_byte_ctrl.v|
+R11
+!s107 /home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_defines.v|../misc/timescale.v|/home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_byte_ctrl.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_byte_ctrl.v|
 !i113 1
+R6
 R7
-R8
 vi2c_master_regs
-R14
+R0
 !i10b 1
 !s100 PXK=b>Ao;L]o4[FdNAJgc2
 R1
-IjD2`2oTOenk[cjNW1JNHX0
+IlHEX[l=iAQ8Sh[QZk]VPZ2
 R2
 R3
-Z16 w1712055705
-8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_master_regs.v
-FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_master_regs.v
-!i122 467
+R13
+8/home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_regs.v
+F/home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_regs.v
+!i122 584
 L0 106 155
 R5
 r1
 !s85 0
 31
-R15
-!s107 C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p3_4\rtl\i2c_master_defines.v|../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_master_regs.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_master_regs.v|
+R11
+!s107 /home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_defines.v|../misc/timescale.v|/home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_regs.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_regs.v|
 !i113 1
+R6
 R7
-R8
 vi2c_master_top
 R0
 !i10b 1
-!s100 P3;A]25KE[TjMAV6j`Li[0
+!s100 SSdaCBRMG94@WgOe=SGF71
 R1
-ITkSF2@<`MfKCZ`eiNf:NK1
+IEK<`WE4h=]eW:<UMJKHl91
 R2
 R3
-Z17 w1713258263
-8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_master_top.v
-FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_master_top.v
-!i122 468
+w1714341314
+8/home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_top.v
+F/home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_top.v
+!i122 585
 L0 23 123
 R5
 r1
 !s85 0
 31
-R6
-!s107 C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p3_4\rtl\i2c_master_defines.v|../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_master_top.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_master_top.v|
+R11
+!s107 /home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_defines.v|../misc/timescale.v|/home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_top.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_top.v|
 !i113 1
+R6
 R7
-R8
 vi2c_slave_model
 R0
 !i10b 1
 !s100 Mk6ob=TKoKXbFl3:jG6P[3
 R1
-Ik2SFb@z>758mIUKO9DmMM2
+I?c<HFh>GJb=cRbf[[RFQU2
 R2
 R3
-w1705865622
-8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/i2c_slave_model.v
-FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/i2c_slave_model.v
-!i122 471
+R13
+8/home/aidar/Documents/labs-dssd/p3_4/misc/i2c_slave_model.v
+F/home/aidar/Documents/labs-dssd/p3_4/misc/i2c_slave_model.v
+!i122 578
 L0 4 274
 R5
 r1
 !s85 0
 31
-R6
-!s107 C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p3_4\misc\timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/i2c_slave_model.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/i2c_slave_model.v|
+R11
+!s107 /home/aidar/Documents/labs-dssd/p3_4/misc/timescale.v|/home/aidar/Documents/labs-dssd/p3_4/misc/i2c_slave_model.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/aidar/Documents/labs-dssd/p3_4/misc/i2c_slave_model.v|
 !i113 1
+R6
 R7
-R8
 vshiftreg
 R0
 !i10b 1
 !s100 YPFfg5L@ghEQ=aYX>Nb7M1
 R1
-I<@4D?EMV4M5BzI?>BoTYC0
+I>7348>DY2i1?V=LYB6^@51
 R2
 R3
-R17
-8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/shiftreg.v
-FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/shiftreg.v
-!i122 469
+R13
+8/home/aidar/Documents/labs-dssd/p3_4/rtl/shiftreg.v
+F/home/aidar/Documents/labs-dssd/p3_4/rtl/shiftreg.v
+!i122 586
 L0 22 28
 R5
 r1
 !s85 0
 31
-R6
-!s107 ../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/shiftreg.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/shiftreg.v|
+R11
+!s107 ../misc/timescale.v|/home/aidar/Documents/labs-dssd/p3_4/rtl/shiftreg.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/aidar/Documents/labs-dssd/p3_4/rtl/shiftreg.v|
 !i113 1
+R6
 R7
-R8
 vsys_model
 R0
 !i10b 1
 !s100 >O8bZHHS93Id4mQQL;LRf3
 R1
-IN5ONB1O49nJEA;@F>?>jU0
+IHKU6R`Ine^Ohl:BhcF:fY3
 R2
 R3
-R16
-8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/sys_model.v
-FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/sys_model.v
-!i122 472
+R13
+8/home/aidar/Documents/labs-dssd/p3_4/misc/sys_model.v
+F/home/aidar/Documents/labs-dssd/p3_4/misc/sys_model.v
+!i122 579
 L0 23 38
 R5
 r1
 !s85 0
 31
-R6
-!s107 ../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/sys_model.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/sys_model.v|
+R11
+!s107 ../misc/timescale.v|/home/aidar/Documents/labs-dssd/p3_4/misc/sys_model.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/aidar/Documents/labs-dssd/p3_4/misc/sys_model.v|
 !i113 1
+R6
 R7
-R8
 vtb_i2c_master_top
-R9
+R0
 !i10b 1
 !s100 e9<Q2ceHn]7=fi]ORG_LD1
 R1
-IhOzaLF_JOFg4QJO4P9][C1
+I_7JSKgPVbYY^1M7H0XmO_1
 R2
 R3
+R8
+R9
 R10
-R11
-R12
-!i122 473
+!i122 587
 L0 24 414
 R5
 r1
 !s85 0
 31
-R6
-Z18 !s107 ../rtl/i2c_master_defines.v|../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/tb/tb_i2c_master_top.v|
-R13
+R11
+Z14 !s107 ../rtl/i2c_master_defines.v|../misc/timescale.v|/home/aidar/Documents/labs-dssd/p3_4/tb/tb_i2c_master_top.v|
+R12
 !i113 1
+R6
 R7
-R8
