@@ -124,7 +124,7 @@ always @(posedge Clk or negedge Rst_n) begin
         Bit_txd     <= 1'b0;
         I2C_done    <= 1'b1;
         SR_load     <= 1'b0;
-        SR_shift_en <= 1'b0;
+        SR_shift    <= 1'b0;
     end else if(I2C_al) begin
         en_ack      <= 1'b0;
         loadCounter <= 1'b0;
@@ -133,14 +133,14 @@ always @(posedge Clk or negedge Rst_n) begin
         Bit_txd     <= 1'b0;
         I2C_done    <= 1'b1;
         SR_load     <= 1'b0;
-        SR_shift_en <= 1'b0;
+        SR_shift    <= 1'b0;
     end else begin
         case (state)
             IDLE: begin
                 en_ack <= 1'b0; // Deshabilitem el comptador
                 I2C_done <= 1'b0;
                 loadCounter <= 1'b1;
-                SR_shift_en <= 1'b0;
+                SR_shift <= 1'b0;
 
                 if      (Start) Bit_cmd <= `I2C_CMD_START;
                 else if (Read) begin
@@ -218,7 +218,7 @@ always @(posedge Clk or negedge Rst_n) begin
                 loadCounter <= 1'b1;
                 en_ack      <= 1'b0;
                 SR_load <= 1'b0;
-                SR_shift_en <= 1'b0;
+                SR_shift <= 1'b0;
                 I2C_done <= 1'b1;
 
                 if (Bit_ack)        Bit_cmd <= `I2C_CMD_NOP;
@@ -228,7 +228,7 @@ always @(posedge Clk or negedge Rst_n) begin
             ACK: begin
                 SR_load <= 1'b0;
                 loadCounter <= 1'b0;
-                SR_shift_en <= 1'b0;
+                SR_shift <= 1'b0;
 
                 if (Bit_ack) begin
                     I2C_done <= 1'b1;
