@@ -1,0 +1,41 @@
+C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/tb/tb_i2c_master_top_(4netlist).v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/tb/tb_i2c_master_top_(4netlist).v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_i2c_master_top
+-- Compiling module delay
+
+Top level modules:
+	tb_i2c_master_top
+
+} {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/dbus_master_model.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/dbus_master_model.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module dbus_master_model
+
+Top level modules:
+	dbus_master_model
+
+} {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/syn/simulation/modelsim/i2c_master_top.vo {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/syn/simulation/modelsim/i2c_master_top.vo
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module i2c_master_top
+-- Compiling module hard_block
+
+Top level modules:
+	i2c_master_top
+
+} {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/timescale.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/timescale.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+
+} {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/sys_model.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/sys_model.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module sys_model
+
+Top level modules:
+	sys_model
+
+} {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/i2c_slave_model.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/i2c_slave_model.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module i2c_slave_model
+
+Top level modules:
+	i2c_slave_model
+
+} {} {}}

@@ -1,48 +1,22 @@
-C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/rtl/i2c_master_defines.v {1 {vlog -work work -stats=none C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/rtl/i2c_master_defines.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-
-} {} {}} /home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_top.v {1 {vlog -work work -stats=none /home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_top.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module i2c_master_top
-
-Top level modules:
-	i2c_master_top
-
-} {} {}} /home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_bit_ctrl.v {1 {vlog -work work -stats=none /home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_bit_ctrl.v
+C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_master_bit_ctrl.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_master_bit_ctrl.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module i2c_master_bit_ctrl
 
 Top level modules:
 	i2c_master_bit_ctrl
 
-} {} {}} /home/aidar/Documents/labs-dssd/p3_4/misc/dbus_master_model.v {1 {vlog -work work -stats=none /home/aidar/Documents/labs-dssd/p3_4/misc/dbus_master_model.v
+} {} {}} C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/rtl/i2c_master_defines.v {1 {vlog -work work -stats=none C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/rtl/i2c_master_defines.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module dbus_master_model
 
-Top level modules:
-	dbus_master_model
-
-} {} {}} /home/aidar/Documents/labs-dssd/p3_4/tb/tb_i2c_master_top.v {1 {vlog -work work -stats=none /home/aidar/Documents/labs-dssd/p3_4/tb/tb_i2c_master_top.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module tb_i2c_master_top
--- Compiling module delay
-
-Top level modules:
-	tb_i2c_master_top
-
-} {} {}} /home/aidar/Documents/labs-dssd/p3_4/rtl/shiftreg.v {1 {vlog -work work -stats=none /home/aidar/Documents/labs-dssd/p3_4/rtl/shiftreg.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module shiftreg
-
-Top level modules:
-	shiftreg
-
-} {} {}} /home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_bit_timer.v {1 {vlog -work work -stats=none /home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_bit_timer.v
+} {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_bit_timer.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_bit_timer.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module i2c_bit_timer
 
 Top level modules:
 	i2c_bit_timer
+
+} {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_master_defines.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_master_defines.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 
 } {} {}} C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/misc/timescale.v {1 {vlog -work work -stats=none C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/misc/timescale.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -75,20 +49,22 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	i2c_master_top
 
-} {} {}} C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/tb/tb_i2c_master_top.v {1 {vlog -work work -stats=none C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/tb/tb_i2c_master_top.v
+} {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/timescale.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/timescale.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module tb_i2c_master_top
--- Compiling module delay
+
+} {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/sys_model.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/sys_model.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module sys_model
 
 Top level modules:
-	tb_i2c_master_top
+	sys_model
 
-} {} {}} C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/rtl/shiftreg.v {1 {vlog -work work -stats=none C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/rtl/shiftreg.v
+} {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_byte_state_timer.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_byte_state_timer.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module shiftreg
+-- Compiling module i2c_byte_state_timer
 
 Top level modules:
-	shiftreg
+	i2c_byte_state_timer
 
 } {} {}} C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/rtl/i2c_bit_timer.v {1 {vlog -work work -stats=none C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/rtl/i2c_bit_timer.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -97,19 +73,51 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	i2c_bit_timer
 
-} {} {}} /home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_byte_ctrl.v {1 {vlog -work work -stats=none /home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_byte_ctrl.v
+} {} {}} C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/rtl/shiftreg.v {1 {vlog -work work -stats=none C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/rtl/shiftreg.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module i2c_master_byte_ctrl
+-- Compiling module shiftreg
 
 Top level modules:
-	i2c_master_byte_ctrl
+	shiftreg
 
-} {} {}} /home/aidar/Documents/labs-dssd/p3_4/misc/i2c_slave_model.v {1 {vlog -work work -stats=none /home/aidar/Documents/labs-dssd/p3_4/misc/i2c_slave_model.v
+} {} {}} C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/tb/tb_i2c_master_top.v {1 {vlog -work work -stats=none C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/tb/tb_i2c_master_top.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_i2c_master_top
+-- Compiling module delay
+
+Top level modules:
+	tb_i2c_master_top
+
+} {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/tb/tb_i2c_master_top_4netlist.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/tb/tb_i2c_master_top_4netlist.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module i2c_slave_model
+-- Compiling module dbus_master_model
+-- Compiling module tb_i2c_master_top
+-- Compiling module delay
 
 Top level modules:
-	i2c_slave_model
+	tb_i2c_master_top
+
+} {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/dbus_master_model.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/dbus_master_model.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module dbus_master_model
+
+Top level modules:
+	dbus_master_model
+
+} {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_master_top.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_master_top.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module i2c_master_top
+
+Top level modules:
+	i2c_master_top
+
+} {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/shiftreg.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/shiftreg.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module shiftreg
+
+Top level modules:
+	shiftreg
 
 } {} {}} C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/rtl/i2c_master_byte_ctrl.v {1 {vlog -work work -stats=none C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/rtl/i2c_master_byte_ctrl.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -125,31 +133,25 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	i2c_slave_model
 
-} {} {}} /home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_defines.v {1 {vlog -work work -stats=none /home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_defines.v
+} {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_master_byte_ctrl.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_master_byte_ctrl.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-
-} {} {}} /home/aidar/Documents/labs-dssd/p3_4/misc/sys_model.v {1 {vlog -work work -stats=none /home/aidar/Documents/labs-dssd/p3_4/misc/sys_model.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module sys_model
+-- Compiling module i2c_master_byte_ctrl
 
 Top level modules:
-	sys_model
+	i2c_master_byte_ctrl
 
-} {} {}} /home/aidar/Documents/labs-dssd/p3_4/misc/timescale.v {1 {vlog -work work -stats=none /home/aidar/Documents/labs-dssd/p3_4/misc/timescale.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-
-} {} {}} /home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_byte_state_timer.v {1 {vlog -work work -stats=none /home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_byte_state_timer.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module i2c_byte_state_timer
-
-Top level modules:
-	i2c_byte_state_timer
-
-} {} {}} /home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_regs.v {1 {vlog -work work -stats=none /home/aidar/Documents/labs-dssd/p3_4/rtl/i2c_master_regs.v
+} {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_master_regs.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_master_regs.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module i2c_master_regs
 
 Top level modules:
 	i2c_master_regs
+
+} {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/i2c_slave_model.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/i2c_slave_model.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module i2c_slave_model
+
+Top level modules:
+	i2c_slave_model
 
 } {} {}}
