@@ -1,5 +1,5 @@
 Analysis & Synthesis report for i2c_master_top
-Mon Apr 29 09:48:29 2024
+Mon Apr 29 22:45:16 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -54,7 +54,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Apr 29 09:48:29 2024       ;
+; Analysis & Synthesis Status        ; Successful - Mon Apr 29 22:45:16 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; i2c_master_top                              ;
 ; Top-level Entity Name              ; i2c_master_top                              ;
@@ -432,7 +432,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Apr 29 09:48:17 2024
+    Info: Processing started: Mon Apr 29 22:45:03 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off i2c_master_top -c i2c_master_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
@@ -483,10 +483,10 @@ Info (21057): Implemented 222 device resources after synthesis - the final resou
     Info (21059): Implemented 13 output pins
     Info (21061): Implemented 193 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4820 megabytes
-    Info: Processing ended: Mon Apr 29 09:48:29 2024
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Peak virtual memory: 4812 megabytes
+    Info: Processing ended: Mon Apr 29 22:45:16 2024
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:14
 
 
 +------------------------------------------+

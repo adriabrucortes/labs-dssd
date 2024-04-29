@@ -1,5 +1,5 @@
 Timing Analyzer report for i2c_master_top
-Mon Apr 29 09:48:44 2024
+Mon Apr 29 22:45:38 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -109,7 +109,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.7%      ;
+;     Processor 2            ;   1.8%      ;
 ;     Processors 3-10        ;   0.6%      ;
 +----------------------------+-------------+
 
@@ -119,7 +119,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------+--------+--------------------------+
 ; SDC File Path                   ; Status ; Read at                  ;
 +---------------------------------+--------+--------------------------+
-; ../sdc/i2c_master_byte_ctrl.sdc ; OK     ; Mon Apr 29 09:48:42 2024 ;
+; ../sdc/i2c_master_byte_ctrl.sdc ; OK     ; Mon Apr 29 22:45:37 2024 ;
 +---------------------------------+--------+--------------------------+
 
 
@@ -1819,7 +1819,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Apr 29 09:48:42 2024
+    Info: Processing started: Mon Apr 29 22:45:36 2024
 Info: Command: quartus_sta i2c_master_top -c i2c_master_top
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1918,7 +1918,7 @@ Info (332101): Design is fully constrained for setup requirements
 Info (332101): Design is fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 19 warnings
     Info: Peak virtual memory: 4859 megabytes
-    Info: Processing ended: Mon Apr 29 09:48:44 2024
+    Info: Processing ended: Mon Apr 29 22:45:38 2024
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 

@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/syn/simulation/modelsim
 vdbus_master_model
-Z1 !s110 1714376935
+Z1 !s110 1714423555
 !i10b 1
 !s100 UH37lJa342dBon>Mz;zcZ0
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -26,7 +26,7 @@ Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1714376934.000000
+Z5 !s108 1714423555.000000
 !s107 C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/dbus_master_model.v|C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p3_4\misc\timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/i2c_slave_model.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/syn/../tb/../rtl/i2c_master_defines.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/syn/../tb/../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/syn/../tb/tb_i2c_master_top_4netlist.v|
 Z6 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/syn/../tb|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/syn/../tb/tb_i2c_master_top_4netlist.v|
 !i113 1
@@ -58,16 +58,16 @@ R7
 R8
 R9
 vhard_block
-Z14 !s110 1714376934
+R1
 !i10b 1
 !s100 @nU4KzN:ajeFOWj^@B`CU0
 R2
 I5fjdZcoAW0[FgYZc:ACTE3
 R3
 R0
-Z15 w1714376926
-Z16 8i2c_master_top.vo
-Z17 Fi2c_master_top.vo
+Z14 w1714423541
+Z15 8i2c_master_top.vo
+Z16 Fi2c_master_top.vo
 !i122 0
 L0 5652 34
 R4
@@ -75,23 +75,23 @@ r1
 !s85 0
 31
 R5
-Z18 !s107 i2c_master_top.vo|
-Z19 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|i2c_master_top.vo|
+Z17 !s107 i2c_master_top.vo|
+Z18 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|i2c_master_top.vo|
 !i113 1
 R7
-Z20 !s92 -vlog01compat -work work +incdir+.
+Z19 !s92 -vlog01compat -work work +incdir+.
 R9
 vi2c_master_top
-R14
+R1
 !i10b 1
 !s100 _5@Q34=bfW;_g8@jDb?c_1
 R2
 ICd1knU`nTinB;6=2R621n1
 R3
 R0
+R14
 R15
 R16
-R17
 !i122 0
 L0 32 5619
 R4
@@ -99,11 +99,11 @@ r1
 !s85 0
 31
 R5
+R17
 R18
-R19
 !i113 1
 R7
-R20
+R19
 R9
 vi2c_slave_model
 R1

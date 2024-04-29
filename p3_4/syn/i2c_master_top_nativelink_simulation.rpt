@@ -17,7 +17,7 @@ Sim dir               :  simulation\modelsim
 
 Info: Starting NativeLink simulation with ModelSim-Altera software
 Sourced NativeLink script c:/intelfpga_lite/20.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
-Warning: File i2c_master_top_run_msim_gate_verilog.do already exists - backing up current file as i2c_master_top_run_msim_gate_verilog.do.bak8
+Warning: File i2c_master_top_run_msim_gate_verilog.do already exists - backing up current file as i2c_master_top_run_msim_gate_verilog.do.bak9
 Probing transcript
 ModelSim-Altera Info: # Reading pref.tcl
 ModelSim-Altera Info: # ERROR: No extended dataflow license exists
@@ -34,19 +34,19 @@ ModelSim-Altera Info: # Modifying modelsim.ini
 ModelSim-Altera Info: # 
 ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+. {i2c_master_top.vo}
 ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-ModelSim-Altera Info: # Start time: 09:48:54 on Apr 29,2024
+ModelSim-Altera Info: # Start time: 22:45:55 on Apr 29,2024
 ModelSim-Altera Info: # vlog -reportprogress 300 -vlog01compat -work work "+incdir+." i2c_master_top.vo 
 ModelSim-Altera Info: # -- Compiling module i2c_master_top
 ModelSim-Altera Info: # -- Compiling module hard_block
 ModelSim-Altera Info: # 
 ModelSim-Altera Info: # Top level modules:
 ModelSim-Altera Info: # 	i2c_master_top
-ModelSim-Altera Info: # End time: 09:48:54 on Apr 29,2024, Elapsed time: 0:00:00
+ModelSim-Altera Info: # End time: 22:45:55 on Apr 29,2024, Elapsed time: 0:00:00
 ModelSim-Altera Info: # Errors: 0, Warnings: 0
 ModelSim-Altera Info: # 
 ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/syn/../tb {C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/syn/../tb/tb_i2c_master_top_4netlist.v}
 ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-ModelSim-Altera Info: # Start time: 09:48:54 on Apr 29,2024
+ModelSim-Altera Info: # Start time: 22:45:55 on Apr 29,2024
 ModelSim-Altera Info: # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/syn/../tb" C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/syn/../tb/tb_i2c_master_top_4netlist.v 
 ModelSim-Altera Info: # -- Compiling module i2c_slave_model
 ModelSim-Altera Info: # -- Compiling module dbus_master_model
@@ -55,12 +55,12 @@ ModelSim-Altera Info: # -- Compiling module delay
 ModelSim-Altera Info: # 
 ModelSim-Altera Info: # Top level modules:
 ModelSim-Altera Info: # 	tb_i2c_master_top
-ModelSim-Altera Info: # End time: 09:48:55 on Apr 29,2024, Elapsed time: 0:00:01
+ModelSim-Altera Info: # End time: 22:45:55 on Apr 29,2024, Elapsed time: 0:00:00
 ModelSim-Altera Info: # Errors: 0, Warnings: 0
 ModelSim-Altera Info: # 
 ModelSim-Altera Info: # vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  tb_i2c_master_top
 ModelSim-Altera Info: # vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" tb_i2c_master_top 
-ModelSim-Altera Info: # Start time: 09:48:55 on Apr 29,2024
+ModelSim-Altera Info: # Start time: 22:45:55 on Apr 29,2024
 ModelSim-Altera Info: # Loading work.tb_i2c_master_top
 ModelSim-Altera Info: # Loading work.dbus_master_model
 ModelSim-Altera Info: # Loading work.i2c_master_top
@@ -128,7 +128,12 @@ ModelSim-Altera Info: # status: 30655.00 ns read + ack
 ModelSim-Altera Info: # status: 33495.00 ns tip==0
 ModelSim-Altera Info: # status: 33515.00 ns received 5a
 ModelSim-Altera Info: # status: 33555.00 ns generate 'start', write cmd 20 (slave address+write). Check invalid address
-ModelSim-Altera Info: # End time: 09:50:37 on Apr 29,2024, Elapsed time: 0:01:42
+ModelSim-Altera Info: add wave -position insertpoint  \
+ModelSim-Altera Info: sim:/tb_i2c_master_top/clk \
+ModelSim-Altera Info: sim:/tb_i2c_master_top/rst_n \
+ModelSim-Altera Info: sim:/tb_i2c_master_top/scl \
+ModelSim-Altera Info: sim:/tb_i2c_master_top/sda
+ModelSim-Altera Info: # End time: 23:51:02 on Apr 29,2024, Elapsed time: 1:05:07
 ModelSim-Altera Info: # Errors: 2, Warnings: 0
 Error: Errors encountered while running modelsim do file
 Error: NativeLink simulation flow was NOT successful

@@ -13,19 +13,19 @@
 # 
 # vlog -vlog01compat -work work +incdir+. {i2c_master_top.vo}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:48:54 on Apr 29,2024
+# Start time: 22:45:55 on Apr 29,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+." i2c_master_top.vo 
 # -- Compiling module i2c_master_top
 # -- Compiling module hard_block
 # 
 # Top level modules:
 # 	i2c_master_top
-# End time: 09:48:54 on Apr 29,2024, Elapsed time: 0:00:00
+# End time: 22:45:55 on Apr 29,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/syn/../tb {C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/syn/../tb/tb_i2c_master_top_4netlist.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:48:54 on Apr 29,2024
+# Start time: 22:45:55 on Apr 29,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/syn/../tb" C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/syn/../tb/tb_i2c_master_top_4netlist.v 
 # -- Compiling module i2c_slave_model
 # -- Compiling module dbus_master_model
@@ -34,12 +34,12 @@
 # 
 # Top level modules:
 # 	tb_i2c_master_top
-# End time: 09:48:55 on Apr 29,2024, Elapsed time: 0:00:01
+# End time: 22:45:55 on Apr 29,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  tb_i2c_master_top
 # vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" tb_i2c_master_top 
-# Start time: 09:48:55 on Apr 29,2024
+# Start time: 22:45:55 on Apr 29,2024
 # Loading work.tb_i2c_master_top
 # Loading work.dbus_master_model
 # Loading work.i2c_master_top
@@ -107,5 +107,10 @@
 # status: 33495.00 ns tip==0
 # status: 33515.00 ns received 5a
 # status: 33555.00 ns generate 'start', write cmd 20 (slave address+write). Check invalid address
-# End time: 09:50:37 on Apr 29,2024, Elapsed time: 0:01:42
+add wave -position insertpoint  \
+sim:/tb_i2c_master_top/clk \
+sim:/tb_i2c_master_top/rst_n \
+sim:/tb_i2c_master_top/scl \
+sim:/tb_i2c_master_top/sda
+# End time: 23:51:02 on Apr 29,2024, Elapsed time: 1:05:07
 # Errors: 2, Warnings: 0
