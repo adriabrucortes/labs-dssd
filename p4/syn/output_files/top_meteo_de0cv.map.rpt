@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_meteo_de0cv
-Sun May 05 20:19:23 2024
+Sun May 05 21:24:04 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -77,14 +77,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun May 05 20:19:22 2024       ;
+; Analysis & Synthesis Status     ; Successful - Sun May 05 21:24:04 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; top_meteo_de0cv                             ;
 ; Top-level Entity Name           ; top_meteo_de0cv                             ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 153                                         ;
-; Total pins                      ; 11                                          ;
+; Total registers                 ; 193                                         ;
+; Total pins                      ; 17                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 66                                          ;
@@ -264,31 +264,31 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                                                                                  ;
-+---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-; Resource                                    ; Usage                                                                                                                          ;
-+---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 3499                                                                                                                           ;
-;                                             ;                                                                                                                                ;
-; Combinational ALUT usage for logic          ; 6885                                                                                                                           ;
-;     -- 7 input functions                    ; 4                                                                                                                              ;
-;     -- 6 input functions                    ; 105                                                                                                                            ;
-;     -- 5 input functions                    ; 1108                                                                                                                           ;
-;     -- 4 input functions                    ; 2074                                                                                                                           ;
-;     -- <=3 input functions                  ; 3594                                                                                                                           ;
-;                                             ;                                                                                                                                ;
-; Dedicated logic registers                   ; 153                                                                                                                            ;
-;                                             ;                                                                                                                                ;
-; I/O pins                                    ; 11                                                                                                                             ;
-;                                             ;                                                                                                                                ;
-; Total DSP Blocks                            ; 66                                                                                                                             ;
-;                                             ;                                                                                                                                ;
-; Maximum fan-out node                        ; bme280_compensation:i_comp|lpm_divide:Div0|lpm_divide_5ro:auto_generated|abs_divider_edg:divider|alt_u_div_c3f:divider|op_59~1 ;
-; Maximum fan-out                             ; 159                                                                                                                            ;
-; Total fan-out                               ; 27162                                                                                                                          ;
-; Average fan-out                             ; 3.81                                                                                                                           ;
-+---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                  ;
++---------------------------------------------+--------------------------------+
+; Resource                                    ; Usage                          ;
++---------------------------------------------+--------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 3546                           ;
+;                                             ;                                ;
+; Combinational ALUT usage for logic          ; 6952                           ;
+;     -- 7 input functions                    ; 4                              ;
+;     -- 6 input functions                    ; 131                            ;
+;     -- 5 input functions                    ; 1110                           ;
+;     -- 4 input functions                    ; 2082                           ;
+;     -- <=3 input functions                  ; 3625                           ;
+;                                             ;                                ;
+; Dedicated logic registers                   ; 193                            ;
+;                                             ;                                ;
+; I/O pins                                    ; 17                             ;
+;                                             ;                                ;
+; Total DSP Blocks                            ; 66                             ;
+;                                             ;                                ;
+; Maximum fan-out node                        ; digital_por:pwr_on_reset|Rst_n ;
+; Maximum fan-out                             ; 191                            ;
+; Total fan-out                               ; 27591                          ;
+; Average fan-out                             ; 3.81                           ;
++---------------------------------------------+--------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -296,8 +296,8 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node                        ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                      ; Entity Name          ; Library Name ;
 +---------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
-; |top_meteo_de0cv                                  ; 6885 (14)           ; 153 (0)                   ; 0                 ; 66         ; 11   ; 0            ; |top_meteo_de0cv                                                                                                                                                         ; top_meteo_de0cv      ; work         ;
-;    |bcd2seg:bcd2seg|                              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bcd2seg:bcd2seg                                                                                                                                         ; bcd2seg              ; work         ;
+; |top_meteo_de0cv                                  ; 6952 (14)           ; 193 (0)                   ; 0                 ; 66         ; 17   ; 0            ; |top_meteo_de0cv                                                                                                                                                         ; top_meteo_de0cv      ; work         ;
+;    |bcd2seg:bcd2seg|                              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bcd2seg:bcd2seg                                                                                                                                         ; bcd2seg              ; work         ;
 ;    |bin2bcd:bin2bcd_hum|                          ; 27 (27)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bin2bcd:bin2bcd_hum                                                                                                                                     ; bin2bcd              ; work         ;
 ;    |bin2bcd:bin2bcd_press|                        ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bin2bcd:bin2bcd_press                                                                                                                                   ; bin2bcd              ; work         ;
 ;    |bin2bcd:bin2bcd_temp|                         ; 242 (242)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bin2bcd:bin2bcd_temp                                                                                                                                    ; bin2bcd              ; work         ;
@@ -315,16 +315,17 @@ https://fpgasoftware.intel.com/eula.
 ;                |mpar_add:sub_par_add|             ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; mpar_add             ; work         ;
 ;                   |lpm_add_sub:adder[0]|          ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; lpm_add_sub          ; work         ;
 ;                      |add_sub_1dh:auto_generated| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_1dh:auto_generated ; add_sub_1dh          ; work         ;
-;    |bme280_i2c_ctrl:i_ctrl|                       ; 37 (37)             ; 22 (22)                   ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_i2c_ctrl:i_ctrl                                                                                                                                  ; bme280_i2c_ctrl      ; work         ;
+;    |bme280_i2c_ctrl:i_ctrl|                       ; 44 (44)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_i2c_ctrl:i_ctrl                                                                                                                                  ; bme280_i2c_ctrl      ; work         ;
 ;    |bme280_reader:i_reader|                       ; 109 (109)           ; 66 (66)                   ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_reader:i_reader                                                                                                                                  ; bme280_reader        ; work         ;
 ;    |digital_por:pwr_on_reset|                     ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|digital_por:pwr_on_reset                                                                                                                                ; digital_por          ; work         ;
 ;    |gray_timer:gtimer|                            ; 17 (17)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|gray_timer:gtimer                                                                                                                                       ; gray_timer           ; work         ;
-;    |i2c_master_top:i2c_master|                    ; 44 (0)              ; 52 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|i2c_master_top:i2c_master                                                                                                                               ; i2c_master_top       ; work         ;
-;       |i2c_master_bit_ctrl:i_bit|                 ; 23 (23)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit                                                                                                     ; i2c_master_bit_ctrl  ; work         ;
-;       |i2c_master_byte_ctrl:i_byte|               ; 18 (14)             ; 15 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte                                                                                                   ; i2c_master_byte_ctrl ; work         ;
+;    |i2c_master_top:i2c_master|                    ; 98 (0)              ; 86 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|i2c_master_top:i2c_master                                                                                                                               ; i2c_master_top       ; work         ;
+;       |i2c_bit_timer:i_timer|                     ; 21 (21)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_bit_timer:i_timer                                                                                                         ; i2c_bit_timer        ; work         ;
+;       |i2c_master_bit_ctrl:i_bit|                 ; 24 (24)             ; 29 (29)                   ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit                                                                                                     ; i2c_master_bit_ctrl  ; work         ;
+;       |i2c_master_byte_ctrl:i_byte|               ; 30 (26)             ; 16 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte                                                                                                   ; i2c_master_byte_ctrl ; work         ;
 ;          |i2c_byte_state_timer:state_timer|       ; 4 (4)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte|i2c_byte_state_timer:state_timer                                                                  ; i2c_byte_state_timer ; work         ;
-;       |i2c_master_regs:i_regs|                    ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_regs:i_regs                                                                                                        ; i2c_master_regs      ; work         ;
-;       |shiftreg:i_sr|                             ; 1 (1)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|i2c_master_top:i2c_master|shiftreg:i_sr                                                                                                                 ; shiftreg             ; work         ;
+;       |i2c_master_regs:i_regs|                    ; 14 (14)             ; 24 (24)                   ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_regs:i_regs                                                                                                        ; i2c_master_regs      ; work         ;
+;       |shiftreg:i_sr|                             ; 9 (9)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|i2c_master_top:i2c_master|shiftreg:i_sr                                                                                                                 ; shiftreg             ; work         ;
 ;    |sync_reg:sync|                                ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|sync_reg:sync                                                                                                                                           ; sync_reg             ; work         ;
 +---------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -432,96 +433,72 @@ Encoding Type:  One-Hot
 +---------------+------------+------------+------------+------------+------------+------------+--------------+--------------+--------------+---------------+---------------+---------------+---------------+---------------+------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                   ;
-+----------------------------------------------------------------+---------------------------------------------------------------------+
-; Register name                                                  ; Reason for Removal                                                  ;
-+----------------------------------------------------------------+---------------------------------------------------------------------+
-; i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte|state[3] ; Stuck at GND due to stuck port data_in                              ;
-; i2c_master_top:i2c_master|i2c_master_regs:i_regs|cr[0]         ; Lost fanout                                                         ;
-; i2c_master_top:i2c_master|i2c_master_regs:i_regs|irq_flag      ; Lost fanout                                                         ;
-; bme280_reader:i_reader|DigH5[0]                                ; Stuck at GND due to stuck port data_in                              ;
-; bme280_reader:i_reader|TempBin[3,5..11,13..19]                 ; Stuck at GND due to stuck port data_in                              ;
-; bme280_reader:i_reader|PressBin[0..3,5..11,13..19]             ; Stuck at GND due to stuck port data_in                              ;
-; bme280_reader:i_reader|HumBin[1..7,9..15]                      ; Stuck at GND due to stuck port data_in                              ;
-; bme280_reader:i_reader|DigT1[1..7,9..15]                       ; Stuck at GND due to stuck port data_in                              ;
-; bme280_reader:i_reader|DigT2[11..15]                           ; Stuck at GND due to stuck port data_in                              ;
-; bme280_reader:i_reader|DigT3[1..7,9..15]                       ; Stuck at GND due to stuck port data_in                              ;
-; bme280_reader:i_reader|DigP1[1..7,9..15]                       ; Stuck at GND due to stuck port data_in                              ;
-; bme280_reader:i_reader|DigP2[1..7,9..15]                       ; Stuck at GND due to stuck port data_in                              ;
-; bme280_reader:i_reader|DigP3[1..7,9..15]                       ; Stuck at GND due to stuck port data_in                              ;
-; bme280_reader:i_reader|DigP4[1..7,9..15]                       ; Stuck at GND due to stuck port data_in                              ;
-; bme280_reader:i_reader|DigP6[1..7,9..15]                       ; Stuck at GND due to stuck port data_in                              ;
-; bme280_reader:i_reader|DigP7[1..7,9..15]                       ; Stuck at GND due to stuck port data_in                              ;
-; bme280_reader:i_reader|DigP8[1..7,9..15]                       ; Stuck at GND due to stuck port data_in                              ;
-; bme280_reader:i_reader|DigP9[1..7,9..15]                       ; Stuck at GND due to stuck port data_in                              ;
-; bme280_reader:i_reader|DigH1[1..7]                             ; Stuck at GND due to stuck port data_in                              ;
-; bme280_reader:i_reader|DigH3[1..7]                             ; Stuck at GND due to stuck port data_in                              ;
-; bme280_reader:i_reader|DigH6[1..7]                             ; Stuck at GND due to stuck port data_in                              ;
-; bme280_reader:i_reader|DigH2[1..7,9..15]                       ; Stuck at GND due to stuck port data_in                              ;
-; bme280_reader:i_reader|DigH4[1..3,5..11]                       ; Stuck at GND due to stuck port data_in                              ;
-; bme280_reader:i_reader|DigH5[1..3,5..15]                       ; Stuck at GND due to stuck port data_in                              ;
-; i2c_master_top:i2c_master|i2c_master_regs:i_regs|prer[1..7]    ; Stuck at GND due to stuck port data_in                              ;
-; i2c_master_top:i2c_master|i2c_master_regs:i_regs|ctr[7]        ; Stuck at GND due to stuck port data_in                              ;
-; i2c_master_top:i2c_master|i2c_master_regs:i_regs|cr[4..7]      ; Stuck at GND due to stuck port data_in                              ;
-; i2c_master_top:i2c_master|i2c_bit_timer:i_timer|cnt[1..7]      ; Stuck at GND due to stuck port data_in                              ;
-; i2c_master_top:i2c_master|i2c_bit_timer:i_timer|cnt[0]         ; Lost fanout                                                         ;
-; i2c_master_top:i2c_master|i2c_master_regs:i_regs|cr[3]         ; Lost fanout                                                         ;
-; i2c_master_top:i2c_master|i2c_master_regs:i_regs|txr[0..6]     ; Merged with i2c_master_top:i2c_master|i2c_master_regs:i_regs|txr[7] ;
-; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|dScl_oen   ; Lost fanout                                                         ;
-; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|slave_wait ; Lost fanout                                                         ;
-; i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte|I2C_done ; Lost fanout                                                         ;
-; i2c_master_top:i2c_master|i2c_master_regs:i_regs|txr[7]        ; Stuck at GND due to stuck port data_in                              ;
-; bme280_reader:i_reader|last~7                                  ; Lost fanout                                                         ;
-; bme280_reader:i_reader|last~8                                  ; Lost fanout                                                         ;
-; bme280_reader:i_reader|last~9                                  ; Lost fanout                                                         ;
-; bme280_reader:i_reader|last~10                                 ; Lost fanout                                                         ;
-; bme280_reader:i_reader|state~4                                 ; Lost fanout                                                         ;
-; bme280_reader:i_reader|state~5                                 ; Lost fanout                                                         ;
-; bme280_reader:i_reader|state~6                                 ; Lost fanout                                                         ;
-; bme280_reader:i_reader|state~7                                 ; Lost fanout                                                         ;
-; bme280_i2c_ctrl:i_ctrl|state~4                                 ; Lost fanout                                                         ;
-; bme280_i2c_ctrl:i_ctrl|state~5                                 ; Lost fanout                                                         ;
-; bme280_i2c_ctrl:i_ctrl|state~6                                 ; Lost fanout                                                         ;
-; bme280_i2c_ctrl:i_ctrl|state~7                                 ; Lost fanout                                                         ;
-; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|state~4    ; Lost fanout                                                         ;
-; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|state~5    ; Lost fanout                                                         ;
-; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|state~6    ; Lost fanout                                                         ;
-; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|state~7    ; Lost fanout                                                         ;
-; bme280_reader:i_reader|last.WAIT_1S                            ; Merged with bme280_reader:i_reader|last.ERROR                       ;
-; bme280_reader:i_reader|last.WAIT_END                           ; Merged with bme280_reader:i_reader|last.ERROR                       ;
-; bme280_reader:i_reader|state.IDLE                              ; Merged with bme280_i2c_ctrl:i_ctrl|state.SET_PRER                   ;
-; i2c_master_top:i2c_master|i2c_bit_timer:i_timer|Out            ; Merged with bme280_i2c_ctrl:i_ctrl|state.SET_PRER                   ;
-; bme280_reader:i_reader|last.ERROR                              ; Stuck at GND due to stuck port data_in                              ;
-; Total Number of Removed Registers = 308                        ;                                                                     ;
-+----------------------------------------------------------------+---------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                 ;
++----------------------------------------------------------------+---------------------------------------------------+
+; Register name                                                  ; Reason for Removal                                ;
++----------------------------------------------------------------+---------------------------------------------------+
+; bme280_i2c_ctrl:i_ctrl|Dbus_do[1]                              ; Stuck at GND due to stuck port data_in            ;
+; i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte|state[3] ; Stuck at GND due to stuck port data_in            ;
+; bme280_reader:i_reader|DigH5[0]                                ; Stuck at GND due to stuck port data_in            ;
+; bme280_reader:i_reader|TempBin[3,5..11,13..19]                 ; Stuck at GND due to stuck port data_in            ;
+; bme280_reader:i_reader|PressBin[0..3,5..11,13..19]             ; Stuck at GND due to stuck port data_in            ;
+; bme280_reader:i_reader|HumBin[1..7,9..15]                      ; Stuck at GND due to stuck port data_in            ;
+; bme280_reader:i_reader|DigT1[1..7,9..15]                       ; Stuck at GND due to stuck port data_in            ;
+; bme280_reader:i_reader|DigT2[11..15]                           ; Stuck at GND due to stuck port data_in            ;
+; bme280_reader:i_reader|DigT3[1..7,9..15]                       ; Stuck at GND due to stuck port data_in            ;
+; bme280_reader:i_reader|DigP1[1..7,9..15]                       ; Stuck at GND due to stuck port data_in            ;
+; bme280_reader:i_reader|DigP2[1..7,9..15]                       ; Stuck at GND due to stuck port data_in            ;
+; bme280_reader:i_reader|DigP3[1..7,9..15]                       ; Stuck at GND due to stuck port data_in            ;
+; bme280_reader:i_reader|DigP4[1..7,9..15]                       ; Stuck at GND due to stuck port data_in            ;
+; bme280_reader:i_reader|DigP6[1..7,9..15]                       ; Stuck at GND due to stuck port data_in            ;
+; bme280_reader:i_reader|DigP7[1..7,9..15]                       ; Stuck at GND due to stuck port data_in            ;
+; bme280_reader:i_reader|DigP8[1..7,9..15]                       ; Stuck at GND due to stuck port data_in            ;
+; bme280_reader:i_reader|DigP9[1..7,9..15]                       ; Stuck at GND due to stuck port data_in            ;
+; bme280_reader:i_reader|DigH1[1..7]                             ; Stuck at GND due to stuck port data_in            ;
+; bme280_reader:i_reader|DigH3[1..7]                             ; Stuck at GND due to stuck port data_in            ;
+; bme280_reader:i_reader|DigH6[1..7]                             ; Stuck at GND due to stuck port data_in            ;
+; bme280_reader:i_reader|DigH2[1..7,9..15]                       ; Stuck at GND due to stuck port data_in            ;
+; bme280_reader:i_reader|DigH4[1..3,5..11]                       ; Stuck at GND due to stuck port data_in            ;
+; bme280_reader:i_reader|DigH5[1..3,5..15]                       ; Stuck at GND due to stuck port data_in            ;
+; i2c_master_top:i2c_master|i2c_master_regs:i_regs|prer[1]       ; Stuck at GND due to stuck port data_in            ;
+; i2c_master_top:i2c_master|i2c_master_regs:i_regs|ctr[1]        ; Stuck at GND due to stuck port data_in            ;
+; i2c_master_top:i2c_master|i2c_master_regs:i_regs|txr[1]        ; Stuck at GND due to stuck port data_in            ;
+; i2c_master_top:i2c_master|i2c_master_regs:i_regs|cr[1]         ; Stuck at GND due to stuck port data_in            ;
+; bme280_reader:i_reader|last~7                                  ; Lost fanout                                       ;
+; bme280_reader:i_reader|last~8                                  ; Lost fanout                                       ;
+; bme280_reader:i_reader|last~9                                  ; Lost fanout                                       ;
+; bme280_reader:i_reader|last~10                                 ; Lost fanout                                       ;
+; bme280_reader:i_reader|state~4                                 ; Lost fanout                                       ;
+; bme280_reader:i_reader|state~5                                 ; Lost fanout                                       ;
+; bme280_reader:i_reader|state~6                                 ; Lost fanout                                       ;
+; bme280_reader:i_reader|state~7                                 ; Lost fanout                                       ;
+; bme280_i2c_ctrl:i_ctrl|state~4                                 ; Lost fanout                                       ;
+; bme280_i2c_ctrl:i_ctrl|state~5                                 ; Lost fanout                                       ;
+; bme280_i2c_ctrl:i_ctrl|state~6                                 ; Lost fanout                                       ;
+; bme280_i2c_ctrl:i_ctrl|state~7                                 ; Lost fanout                                       ;
+; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|state~4    ; Lost fanout                                       ;
+; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|state~5    ; Lost fanout                                       ;
+; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|state~6    ; Lost fanout                                       ;
+; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|state~7    ; Lost fanout                                       ;
+; bme280_reader:i_reader|last.WAIT_1S                            ; Merged with bme280_reader:i_reader|last.ERROR     ;
+; bme280_reader:i_reader|last.WAIT_END                           ; Merged with bme280_reader:i_reader|last.ERROR     ;
+; bme280_reader:i_reader|state.IDLE                              ; Merged with bme280_i2c_ctrl:i_ctrl|state.SET_PRER ;
+; bme280_reader:i_reader|last.ERROR                              ; Stuck at GND due to stuck port data_in            ;
+; Total Number of Removed Registers = 278                        ;                                                   ;
++----------------------------------------------------------------+---------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                 ;
-+----------------------------------------------------------------+---------------------------+----------------------------------------------------------------+
-; Register name                                                  ; Reason for Removal        ; Registers Removed due to This Register                         ;
-+----------------------------------------------------------------+---------------------------+----------------------------------------------------------------+
-; i2c_master_top:i2c_master|i2c_master_regs:i_regs|prer[7]       ; Stuck at GND              ; i2c_master_top:i2c_master|i2c_bit_timer:i_timer|cnt[7],        ;
-;                                                                ; due to stuck port data_in ; i2c_master_top:i2c_master|i2c_bit_timer:i_timer|cnt[0],        ;
-;                                                                ;                           ; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|slave_wait ;
-; i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte|state[3] ; Stuck at GND              ; i2c_master_top:i2c_master|i2c_master_regs:i_regs|cr[3]         ;
-;                                                                ; due to stuck port data_in ;                                                                ;
-; i2c_master_top:i2c_master|i2c_master_regs:i_regs|prer[6]       ; Stuck at GND              ; i2c_master_top:i2c_master|i2c_bit_timer:i_timer|cnt[6]         ;
-;                                                                ; due to stuck port data_in ;                                                                ;
-; i2c_master_top:i2c_master|i2c_master_regs:i_regs|prer[5]       ; Stuck at GND              ; i2c_master_top:i2c_master|i2c_bit_timer:i_timer|cnt[5]         ;
-;                                                                ; due to stuck port data_in ;                                                                ;
-; i2c_master_top:i2c_master|i2c_master_regs:i_regs|prer[4]       ; Stuck at GND              ; i2c_master_top:i2c_master|i2c_bit_timer:i_timer|cnt[4]         ;
-;                                                                ; due to stuck port data_in ;                                                                ;
-; i2c_master_top:i2c_master|i2c_master_regs:i_regs|prer[3]       ; Stuck at GND              ; i2c_master_top:i2c_master|i2c_bit_timer:i_timer|cnt[3]         ;
-;                                                                ; due to stuck port data_in ;                                                                ;
-; i2c_master_top:i2c_master|i2c_master_regs:i_regs|prer[2]       ; Stuck at GND              ; i2c_master_top:i2c_master|i2c_bit_timer:i_timer|cnt[2]         ;
-;                                                                ; due to stuck port data_in ;                                                                ;
-; i2c_master_top:i2c_master|i2c_master_regs:i_regs|prer[1]       ; Stuck at GND              ; i2c_master_top:i2c_master|i2c_bit_timer:i_timer|cnt[1]         ;
-;                                                                ; due to stuck port data_in ;                                                                ;
-; i2c_master_top:i2c_master|i2c_master_regs:i_regs|cr[7]         ; Stuck at GND              ; i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte|I2C_done ;
-;                                                                ; due to stuck port data_in ;                                                                ;
-+----------------------------------------------------------------+---------------------------+----------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                               ;
++-----------------------------------+---------------------------+-----------------------------------------------------------+
+; Register name                     ; Reason for Removal        ; Registers Removed due to This Register                    ;
++-----------------------------------+---------------------------+-----------------------------------------------------------+
+; bme280_i2c_ctrl:i_ctrl|Dbus_do[1] ; Stuck at GND              ; i2c_master_top:i2c_master|i2c_master_regs:i_regs|prer[1], ;
+;                                   ; due to stuck port data_in ; i2c_master_top:i2c_master|i2c_master_regs:i_regs|ctr[1],  ;
+;                                   ;                           ; i2c_master_top:i2c_master|i2c_master_regs:i_regs|txr[1],  ;
+;                                   ;                           ; i2c_master_top:i2c_master|i2c_master_regs:i_regs|cr[1]    ;
++-----------------------------------+---------------------------+-----------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -529,32 +506,34 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 153   ;
-; Number of registers using Synchronous Clear  ; 10    ;
+; Total registers                              ; 193   ;
+; Number of registers using Synchronous Clear  ; 8     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 153   ;
+; Number of registers using Asynchronous Clear ; 193   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 35    ;
+; Number of registers using Clock Enable       ; 60    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------+
-; Inverted Register Statistics                                          ;
-+-------------------------------------------------------------+---------+
-; Inverted Register                                           ; Fan out ;
-+-------------------------------------------------------------+---------+
-; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|Scl_oen ; 2       ;
-; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|Sda_oen ; 4       ;
-; bme280_i2c_ctrl:i_ctrl|last[1]                              ; 14      ;
-; bme280_reader:i_reader|I2CC_rdwr                            ; 14      ;
-; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|sSDA    ; 4       ;
-; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|sSCL    ; 3       ;
-; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|dSDA    ; 1       ;
-; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|Rxd     ; 2       ;
-; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|dSCL    ; 1       ;
-; Total number of inverted registers = 9                      ;         ;
-+-------------------------------------------------------------+---------+
++--------------------------------------------------------------------------+
+; Inverted Register Statistics                                             ;
++----------------------------------------------------------------+---------+
+; Inverted Register                                              ; Fan out ;
++----------------------------------------------------------------+---------+
+; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|Scl_oen    ; 5       ;
+; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|Sda_oen    ; 4       ;
+; bme280_i2c_ctrl:i_ctrl|last[1]                                 ; 14      ;
+; bme280_reader:i_reader|I2CC_rdwr                               ; 14      ;
+; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|sSDA       ; 4       ;
+; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|sSCL       ; 6       ;
+; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|dSCL       ; 3       ;
+; i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte|I2C_done ; 3       ;
+; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|Rxd        ; 2       ;
+; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|dSDA       ; 1       ;
+; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|dScl_oen   ; 1       ;
+; Total number of inverted registers = 11                        ;         ;
++----------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -563,10 +542,12 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------+
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|sda_chk                                   ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte|i2c_byte_state_timer:state_timer|Cnt[1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |top_meteo_de0cv|i2c_master_top:i2c_master|shiftreg:i_sr|register[7]                                           ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |top_meteo_de0cv|i2c_master_top:i2c_master|shiftreg:i_sr|register[2]                                           ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_regs:i_regs|cr[5]                                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte|i2c_byte_state_timer:state_timer|Cnt[0] ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_bit_timer:i_timer|cnt[7]                                        ;
 ; 11:1               ; 5 bits    ; 35 LEs        ; 10 LEs               ; 25 LEs                 ; Yes        ; |top_meteo_de0cv|bme280_reader:i_reader|byteCnt[4]                                                             ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_meteo_de0cv|bme280_reader:i_reader|next.RD_ID                                                             ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_meteo_de0cv|bme280_reader:i_reader|next.MEASURE                                                           ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |top_meteo_de0cv|bme280_reader:i_reader|next.RESET                                                             ;
 ; 7:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |top_meteo_de0cv|var_o[3]                                                                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------+
@@ -785,14 +766,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+-------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "bcd2seg:bcd2seg"                                                                                                                                                                   ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                                                            ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Bcd  ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; Seg  ; Output ; Warning  ; Output or bidir port (7 bits) is wider than the port expression (1 bits) it drives; bit(s) "Seg[6..1]" have no fanouts                                                             ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bcd2seg:bcd2seg"                                                                                                                                                                  ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Bcd  ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -863,30 +843,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "bme280_i2c_ctrl:i_ctrl"                                                                                                                               ;
-+-----------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                                                                                          ;
-+-----------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Dbus_addr ; Output ; Warning  ; Output or bidir port (3 bits) is wider than the port expression (1 bits) it drives; bit(s) "Dbus_addr[2..1]" have no fanouts                     ;
-; Dbus_di   ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "Dbus_di[7..1]" will be connected to GND.  ;
-; Dbus_do   ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (1 bits) it drives; bit(s) "Dbus_do[7..1]" have no fanouts                       ;
-; I2C_addr  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "I2C_addr[7..1]" will be connected to GND. ;
-; I2C_txd   ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "I2C_txd[7..1]" will be connected to GND.  ;
-; I2C_rxd   ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (1 bits) it drives; bit(s) "I2C_rxd[7..1]" have no fanouts                       ;
-+-----------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bme280_i2c_ctrl:i_ctrl"                                                                                                                                                                 ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Dbus_addr ; Output ; Warning  ; Output or bidir port (3 bits) is smaller than the port expression (64 bits) it drives.  The 61 most-significant bit(s) in the port expression will be connected to GND.            ;
+; Dbus_di   ; Input  ; Warning  ; Input port expression (64 bits) is wider than the input port (8 bits) it drives.  The 56 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; Dbus_do   ; Output ; Warning  ; Output or bidir port (8 bits) is smaller than the port expression (64 bits) it drives.  The 56 most-significant bit(s) in the port expression will be connected to GND.            ;
+; I2C_addr  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "I2C_addr[7..1]" will be connected to GND.                                   ;
+; I2C_txd   ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "I2C_txd[7..1]" will be connected to GND.                                    ;
+; I2C_rxd   ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (1 bits) it drives; bit(s) "I2C_rxd[7..1]" have no fanouts                                                         ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "i2c_master_top:i2c_master"                                                                                                                        ;
-+---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                                                        ;
-+---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Addr    ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "Addr[2..1]" will be connected to GND.   ;
-; DataIn  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "DataIn[7..1]" will be connected to GND. ;
-; DataOut ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (1 bits) it drives; bit(s) "DataOut[7..1]" have no fanouts                     ;
-; Int     ; Output ; Info     ; Explicitly unconnected                                                                                                                         ;
-+---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "i2c_master_top:i2c_master"                                                                                                                                                            ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                                                            ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Addr    ; Input  ; Warning  ; Input port expression (64 bits) is wider than the input port (3 bits) it drives.  The 61 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; DataIn  ; Input  ; Warning  ; Input port expression (64 bits) is wider than the input port (8 bits) it drives.  The 56 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; DataOut ; Output ; Warning  ; Output or bidir port (8 bits) is smaller than the port expression (64 bits) it drives.  The 56 most-significant bit(s) in the port expression will be connected to GND.            ;
+; Int     ; Output ; Info     ; Explicitly unconnected                                                                                                                                                             ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -894,28 +874,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 153                         ;
-;     CLR               ; 118                         ;
-;     ENA CLR           ; 25                          ;
-;     ENA CLR SCLR      ; 10                          ;
+; arriav_ff             ; 193                         ;
+;     CLR               ; 127                         ;
+;     CLR SCLR          ; 6                           ;
+;     ENA CLR           ; 58                          ;
+;     ENA CLR SCLR      ; 2                           ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 6885                        ;
-;     arith             ; 2960                        ;
+; arriav_lcell_comb     ; 6953                        ;
+;     arith             ; 2968                        ;
 ;         0 data inputs ; 137                         ;
-;         1 data inputs ; 315                         ;
+;         1 data inputs ; 323                         ;
 ;         2 data inputs ; 413                         ;
 ;         3 data inputs ; 308                         ;
 ;         4 data inputs ; 831                         ;
 ;         5 data inputs ; 956                         ;
 ;     extend            ; 4                           ;
 ;         7 data inputs ; 4                           ;
-;     normal            ; 3280                        ;
+;     normal            ; 3340                        ;
 ;         1 data inputs ; 5                           ;
-;         2 data inputs ; 1606                        ;
-;         3 data inputs ; 199                         ;
-;         4 data inputs ; 1213                        ;
-;         5 data inputs ; 152                         ;
-;         6 data inputs ; 105                         ;
+;         2 data inputs ; 1616                        ;
+;         3 data inputs ; 213                         ;
+;         4 data inputs ; 1221                        ;
+;         5 data inputs ; 154                         ;
+;         6 data inputs ; 131                         ;
 ;     shared            ; 641                         ;
 ;         0 data inputs ; 4                           ;
 ;         1 data inputs ; 27                          ;
@@ -923,10 +904,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         3 data inputs ; 242                         ;
 ;         4 data inputs ; 30                          ;
 ; arriav_mac            ; 66                          ;
-; boundary_port         ; 11                          ;
+; boundary_port         ; 17                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 318.10                      ;
-; Average LUT depth     ; 219.04                      ;
+; Max LUT depth         ; 319.10                      ;
+; Average LUT depth     ; 218.03                      ;
 +-----------------------+-----------------------------+
 
 
@@ -935,7 +916,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:17     ;
+; Top            ; 00:00:14     ;
 +----------------+--------------+
 
 
@@ -945,7 +926,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun May 05 20:18:57 2024
+    Info: Processing started: Sun May 05 21:23:42 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_meteo_de0cv -c top_meteo_de0cv
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -3580,6 +3561,179 @@ Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "DigH6[9]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 31
     Warning (12110): Net "DigH6[8]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 31
 Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "DataIn[63]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[62]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[61]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[60]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[59]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[58]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[57]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[56]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[55]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[54]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[53]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[52]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[51]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[50]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[49]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[48]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[47]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[46]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[45]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[44]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[43]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[42]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[41]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[40]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[39]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[38]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[37]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[36]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[35]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[34]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[33]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[32]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[31]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[30]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[29]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[28]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[27]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[26]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[25]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[24]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[23]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[22]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[21]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[20]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[19]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[18]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[17]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[16]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[15]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[14]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[13]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[12]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[11]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[10]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[9]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[8]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[63]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[62]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[61]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[60]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[59]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[58]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[57]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[56]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[55]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[54]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[53]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[52]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[51]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[50]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[49]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[48]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[47]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[46]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[45]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[44]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[43]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[42]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[41]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[40]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[39]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[38]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[37]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[36]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[35]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[34]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[33]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[32]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[31]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[30]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[29]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[28]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[27]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[26]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[25]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[24]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[23]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[22]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[21]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[20]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[19]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[18]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[17]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[16]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[15]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[14]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[13]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[12]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[11]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[10]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[9]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[8]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "dbus_addr[63]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[62]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[61]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[60]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[59]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[58]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[57]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[56]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[55]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[54]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[53]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[52]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[51]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[50]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[49]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[48]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[47]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[46]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[45]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[44]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[43]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[42]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[41]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[40]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[39]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[38]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[37]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[36]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[35]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[34]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[33]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[32]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[31]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[30]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[29]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[28]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[27]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[26]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[25]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[24]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[23]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[22]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[21]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[20]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[19]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[18]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[17]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[16]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[15]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[14]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[13]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[12]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[11]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[10]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[9]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[8]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[7]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[6]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[5]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[4]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[3]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
     Warning (12110): Net "TempBin[31]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 28
     Warning (12110): Net "TempBin[30]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 28
     Warning (12110): Net "TempBin[29]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 28
@@ -4221,6 +4375,179 @@ Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "DigH6[9]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 31
     Warning (12110): Net "DigH6[8]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 31
 Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "DataIn[63]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[62]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[61]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[60]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[59]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[58]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[57]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[56]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[55]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[54]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[53]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[52]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[51]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[50]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[49]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[48]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[47]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[46]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[45]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[44]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[43]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[42]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[41]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[40]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[39]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[38]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[37]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[36]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[35]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[34]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[33]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[32]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[31]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[30]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[29]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[28]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[27]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[26]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[25]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[24]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[23]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[22]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[21]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[20]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[19]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[18]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[17]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[16]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[15]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[14]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[13]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[12]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[11]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[10]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[9]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataIn[8]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[63]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[62]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[61]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[60]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[59]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[58]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[57]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[56]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[55]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[54]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[53]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[52]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[51]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[50]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[49]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[48]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[47]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[46]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[45]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[44]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[43]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[42]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[41]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[40]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[39]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[38]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[37]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[36]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[35]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[34]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[33]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[32]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[31]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[30]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[29]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[28]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[27]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[26]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[25]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[24]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[23]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[22]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[21]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[20]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[19]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[18]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[17]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[16]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[15]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[14]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[13]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[12]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[11]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[10]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[9]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "DataOut[8]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 21
+    Warning (12110): Net "dbus_addr[63]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[62]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[61]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[60]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[59]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[58]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[57]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[56]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[55]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[54]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[53]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[52]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[51]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[50]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[49]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[48]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[47]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[46]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[45]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[44]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[43]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[42]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[41]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[40]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[39]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[38]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[37]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[36]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[35]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[34]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[33]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[32]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[31]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[30]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[29]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[28]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[27]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[26]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[25]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[24]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[23]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[22]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[21]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[20]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[19]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[18]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[17]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[16]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[15]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[14]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[13]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[12]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[11]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[10]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[9]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[8]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[7]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[6]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[5]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[4]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
+    Warning (12110): Net "dbus_addr[3]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 24
     Warning (12110): Net "TempBin[31]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 28
     Warning (12110): Net "TempBin[30]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 28
     Warning (12110): Net "TempBin[29]" is missing source, defaulting to GND File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 28
@@ -4903,21 +5230,21 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/add_
 Info (12131): Elaborated megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0|altshift:external_latency_ffs", which is child of megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
 Warning (12241): 8 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 23 registers lost all their fanouts during netlist optimizations.
+Info (17049): 16 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/output_files/top_meteo_de0cv.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 6988 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 7072 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 2 output pins
+    Info (21059): Implemented 8 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 6911 logic cells
+    Info (21061): Implemented 6989 logic cells
     Info (21062): Implemented 66 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3850 warnings
-    Info: Peak virtual memory: 4992 megabytes
-    Info: Processing ended: Sun May 05 20:19:23 2024
-    Info: Elapsed time: 00:00:26
-    Info: Total CPU time (on all processors): 00:00:19
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4196 warnings
+    Info: Peak virtual memory: 4954 megabytes
+    Info: Processing ended: Sun May 05 21:24:04 2024
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:17
 
 
 +------------------------------------------+

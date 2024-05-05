@@ -37,8 +37,8 @@ module tb_i2c_master_top(); // module name (same as the file)
 	reg  rst_n; // system asynchronous reset. ative low
 
   // system data bus signals
-	wire [AWIDTH-1:0] bus_addr;
-	wire [DWIDTH-1:0] bus_din;
+  wire [AWIDTH-1:0] bus_addr;
+  wire [DWIDTH-1:0] bus_din;
   wire [DWIDTH-1:0] bus_dout;
   wire              bus_wr;
 

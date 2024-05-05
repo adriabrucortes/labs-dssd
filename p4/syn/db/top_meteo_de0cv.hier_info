@@ -102,7 +102,13 @@ sel[2] => var_o.OUTPUTSELECT
 sel[2] => var_o.OUTPUTSELECT
 sel[2] => var_o.OUTPUTSELECT
 ErrorFlag <= bme280_reader:i_reader.ErrorFlag
-seg <= bcd2seg:bcd2seg.Seg
+seg[0] <= bcd2seg:bcd2seg.Seg
+seg[1] <= bcd2seg:bcd2seg.Seg
+seg[2] <= bcd2seg:bcd2seg.Seg
+seg[3] <= bcd2seg:bcd2seg.Seg
+seg[4] <= bcd2seg:bcd2seg.Seg
+seg[5] <= bcd2seg:bcd2seg.Seg
+seg[6] <= bcd2seg:bcd2seg.Seg
 
 
 |top_meteo_de0cv|digital_por:pwr_on_reset

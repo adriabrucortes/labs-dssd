@@ -8,9 +8,9 @@ module top_meteo_de0cv(
   inout  SCL_io,
   inout  SDA_io,
   input  timerLim,
-  input [2:0] sel,
+  input  [2:0] sel,
   output ErrorFlag,
-  output seg
+  output [6:0] seg
 );
 
 
@@ -18,10 +18,10 @@ module top_meteo_de0cv(
 wire Rst_n;
 wire sclPadEn, sclPadIn, sclPadOut;
 wire sdaPadEn, sdaPadIn, sdaPadOut;
-wire DataIn, DataOut;
+wire [64-1:0] DataIn, DataOut;
 wire timerInt, timerInt_sync;
 wire dbus_wr, i2c_wr;
-wire dbus_addr;
+wire [64-1:0] dbus_addr;
 wire i2c_start, i2c_rdwr, i2c_last, i2c_addr, i2c_txd, i2c_rxd, i2c_done;
 wire TimerEn;
 
