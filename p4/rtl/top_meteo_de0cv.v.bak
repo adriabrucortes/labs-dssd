@@ -8,11 +8,11 @@ module top_meteo_de0cv(
   inout  SCL_io,
   inout  SDA_io,
   input  timerLim,
-  input [2:0] sel,
-  output ErrorFlag,
-  output seg
 );
 
+// Interface
+wire [2:0] sel;
+wire ErrorFlag;
 
 // Vars
 wire Rst_n;
@@ -36,8 +36,8 @@ wire [32-1:0] Hum, Hum_o;
 wire [32-1:0] var_o;
 
 // Connections
-assign SCL_io = sclPadEn ? 1'bz : sclPadOut;
-assign SDA_io = sdaPadEn ? 1'bz : sdaPadOut;
+assign SCL_io = sclPadEn ? 1’bz : sclPadOut;
+assign SDA_io = sdaPadEn ? 1’bz : sdaPadOut;
 assign sclPadIn = SCL_io;
 assign sdaPadIn = SDA_io;
 
@@ -77,7 +77,7 @@ bme280_i2c_ctrl i_ctrl (
   .I2C_addr         (i2c_addr),
   .I2C_txd          (i2c_txd),
   .I2C_rxd          (i2c_rxd),
-  .I2C_done         (i2c_done)
+  .I2C_done         (i2c_done), 
 );
 
 sync_reg sync (
@@ -106,7 +106,7 @@ bme280_reader i_reader (
   .I2CC_done        (i2c_done),
   .TempBin          (TempBin),
   .PressBin         (PressBin),
-  .HumBin           (HumBin),
+  .HumBin           (HumBin)
   .TimerEn          (TimerEn),
   .TimerInt         (timerInt_sync),
   .ErrorFlag        (ErrorFlag),
@@ -133,7 +133,7 @@ bme280_reader i_reader (
 bme280_compensation i_comp (
   .TempBin          (TempBin),
   .PressBin         (PressBin),
-  .HumBin           (HumBin),
+  .HumBin           (HumBin)
   .DigT1            (DigT1),
   .DigT2            (DigT2),
   .DigT3            (DigT3),
@@ -151,7 +151,7 @@ bme280_compensation i_comp (
   .DigH3            (DigH3),
   .DigH4            (DigH4),
   .DigH5            (DigH5),
-  .DigH6            (DigH6),
+  .DigH6            (DigH6)
   .Temp             (Temp),
   .Press            (Press),
   .Hum              (Hum)
@@ -175,11 +175,11 @@ bin2bcd bin2bcd_hum (
 assign var_o =  (sel[0] == 1'b1) ? Temp_o   :
                 (sel[1] == 1'b1) ? Press_o  :
                 (sel[2] == 1'b1) ? Hum_o    :
-                {32{1'b0}};
+                
 
 bcd2seg bcd2seg (
-  .Bcd              (var_o),
-  .Seg              (seg)
+  .Bcd              (),
+  .Seg              ()
 );
 
 endmodule

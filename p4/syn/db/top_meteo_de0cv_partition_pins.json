@@ -1,0 +1,53 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ErrorFlag",
+					"strict" : false
+				},
+				{
+					"name" : "seg",
+					"strict" : false
+				},
+				{
+					"name" : "SCL_io",
+					"strict" : false
+				},
+				{
+					"name" : "SDA_io",
+					"strict" : false
+				},
+				{
+					"name" : "sel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Clk_i",
+					"strict" : false
+				},
+				{
+					"name" : "Rst_n_i",
+					"strict" : false
+				},
+				{
+					"name" : "timerLim",
+					"strict" : false
+				},
+				{
+					"name" : "Clk_slow_i",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

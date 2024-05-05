@@ -1,5 +1,5 @@
 `include "../misc/timescale.v"
-`include "./i2c_master/i2c_master_defines.v"
+`include "i2c_master_defines.v"
 
 module bme280_i2c_ctrl #(
   parameter DWIDTH = 8,      // bus data size
