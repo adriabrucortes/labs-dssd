@@ -3,193 +3,242 @@
 
 module top_meteo_de0cv (
   input  Clk_i,
-  input  Clk_slow_i,
   input  Rst_n_i,
+  input  [3-1:0] Sel_i,
   inout  SCL_io,
   inout  SDA_io,
-  input  [2:0] sel,
-  output ErrorFlag,
-  output [6:0] seg
+  output ErrFlag_o,
+  output reg [7-1:0] Dec0_o, Dec1_o, Dec2_o, Dec3_o, Dec4_o, Dec5_o
 );
 
-wire [32-1:0] timerLim;
+// Params
+localparam SLAVE_ADDR = 7'b111_0110;
+localparam DWIDTH = 8;
+localparam AWIDTH = 3;
+localparam TIMERLIM = 32'd1000000;
 
-// Vars
+// Clks & Rsts
+wire clk100MHz, clk1MHz;
 wire Rst_n, Rst_n_slow;
+
+// SDA i SCL
 wire sclPadEn, sclPadIn, sclPadOut;
 wire sdaPadEn, sdaPadIn, sdaPadOut;
-wire [8-1:0] DataIn, DataOut;
-wire timerInt, timerInt_sync;
-wire dbus_wr, i2c_wr;
-wire [3-1:0] dbus_addr;
-wire i2c_start, i2c_rdwr, i2c_last, i2c_done;
-wire [8-1:0] i2c_addr, i2c_txd, i2c_rxd;
-wire TimerEn;
 
-wire [20-1:0] TempBin, PressBin;
-wire [16-1:0] HumBin;
-wire [16-1:0] DigT1, DigT2, DigT3;
-wire [16-1:0] DigP1, DigP2, DigP3, DigP4, DigP5, DigP6, DigP7, DigP8, DigP9;
-wire [8-1:0]  DigH1, DigH3, DigH6;
-wire [16-1:0] DigH2, DigH4, DigH5;
-
-wire [32-1:0] Press, Temp, Hum; 
-wire [42-1:0] Temp_o, Press_o, Hum_o;
-wire [32-1:0] var_o;
-
-// Connections
 assign SCL_io = sclPadEn ? 1'bz : sclPadOut;
 assign SDA_io = sdaPadEn ? 1'bz : sdaPadOut;
 assign sclPadIn = SCL_io;
 assign sdaPadIn = SDA_io;
 
-assign timerLim = 32'd1000000; // 10^6 polsos per a fer 1 segon a 1MHz
+// Misc connections
+wire i2c_int;
+wire [AWIDTH-1:0] dbus_addr;
+wire [DWIDTH-1:0] dbus_di, dbus_do;
+wire dbus_wr;
+wire i2cc_start, i2cc_rdwr, i2cc_last, i2cc_done;
+wire [DWIDTH-1:0] i2cc_addr, i2cc_txd, i2cc_rxd;
+wire timerEn, timerInt, TimerInt_sync;
+
+wire [20-1:0] tempBin, pressBin;
+wire [16-1:0] humBin;
+wire [16-1:0] digT1, digT2, digT3;
+wire [16-1:0] digP1, digP2, digP3, digP4, digP5, digP6, digP7, digP8, digP9;
+wire [ 8-1:0]  digH1, digH3, digH6;
+wire [16-1:0] digH2, digH4, digH5;
+wire [32-1:0] temp, press, hum;
+
+wire [(32+(32-4)/3):0] t_bcd, p_bcd, h_bcd;
+wire [ 7-1:0] t_bcd5, t_bcd4, t_bcd3, t_bcd2, t_bcd1, t_bcd0;
+wire [ 7-1:0] p_bcd5, p_bcd4, p_bcd3, p_bcd2, p_bcd1, p_bcd0;
+wire [ 7-1:0] h_bcd5, h_bcd4, h_bcd3, h_bcd2, h_bcd1, h_bcd0;
+
+// Selector
+always @(*) begin
+  casex(Sel_i)
+    3'bxx1 : begin
+      Dec0_o = t_bcd0;
+      Dec1_o = t_bcd1;
+      Dec2_o = t_bcd2;
+      Dec3_o = t_bcd3;
+      Dec4_o = t_bcd4;
+      Dec5_o = t_bcd5;
+    end
+    3'bx10 : begin
+      Dec0_o = p_bcd0;
+      Dec1_o = p_bcd1;
+      Dec2_o = p_bcd2;
+      Dec3_o = p_bcd3;
+      Dec4_o = p_bcd4;
+      Dec5_o = p_bcd5;
+    end
+    3'b100 : begin
+      Dec0_o = h_bcd0;
+      Dec1_o = h_bcd1;
+      Dec2_o = h_bcd2;
+      Dec3_o = h_bcd3;
+      Dec4_o = h_bcd4;
+      Dec5_o = h_bcd5;
+    end
+  endcase
+end
 
 // Instances
-digital_por pwr_on_reset_fast (
-  .Clk              (Clk_i),
+pll_cv pll(
+  .refclk           (Clk_i),
+  .rst              (1'b0),
+  .outclk_0         (clk100MHz),
+  .outclk_1         (clk1MHz)
+);
+
+digital_por por_100MHz (
+  .Clk              (clk100MHz),
   .Asyncrst_n       (Rst_n_i),
   .Rst_n            (Rst_n)
 );
 
-digital_por pwr_on_reset_slow (
-  .Clk              (Clk_i),
+digital_por por_1MHz (
+  .Clk              (clk1MHz),
   .Asyncrst_n       (Rst_n_i),
   .Rst_n            (Rst_n_slow)
 );
 
-i2c_master_top i2c_master (
-  .Clk              (Clk_i),
+i2c_master_top #(.DWIDTH(DWIDTH),
+                 .AWIDTH(AWIDTH)
+) i2c_master (
+  .Clk              (clk100MHz),
   .Rst_n            (Rst_n),
   .Addr             (dbus_addr),
-  .DataIn           (DataOut),
-  .DataOut          (DataIn),
+  .DataIn           (dbus_di),
+  .DataOut          (dbus_do),
   .Wr               (dbus_wr),
-  .Int              (),
-  .SclPadIn         (sclPadIn),
-  .SclPadOut        (sclPadOut),
-  .SclPadEn         (sclPadEn),
-  .SdaPadIn         (sdaPadIn),
-  .SdaPadOut        (sdaPadOut),
-  .SdaPadEn         (sdaPadEn)
+  .Int              (i2c_int),
+  .SclPadIn         (SCL_io),
+  .SclPadOut        (SclPadOut),
+  .SclPadEn         (SclPadEn),
+  .SdaPadIn         (SDA_io),
+  .SdaPadOut        (SdaPadOut),
+  .SdaPadEn         (SdaPadEn)
 );
 
-bme280_i2c_ctrl i_ctrl (
-  .Clk              (Clk_i),
+bme280_i2c_ctrl #(.DWIDTH(DWIDTH),
+                  .AWIDTH(AWIDTH),
+                  .SLADDR(SLAVE_ADDR)
+) bme280_i2c_ctrl (
+  .Clk              (clk100MHz),
   .Rst_n            (Rst_n),
   .Dbus_addr        (dbus_addr),
-  .Dbus_di          (DataIn),
-  .Dbus_do          (DataOut),
+  .Dbus_di          (dbus_do),
+  .Dbus_do          (dbus_di),
   .Dbus_wr          (dbus_wr),
-  .I2C_start        (i2c_start),
-  .I2C_rdwr         (i2c_rdwr),
-  .I2C_last         (i2c_last),
-  .I2C_addr         (i2c_addr),
-  .I2C_txd          (i2c_txd),
-  .I2C_rxd          (i2c_rxd),
-  .I2C_done         (i2c_done)
+  .I2C_start        (i2cc_start),
+  .I2C_rdwr         (i2cc_rdwr),
+  .I2C_last         (i2cc_last),
+  .I2C_addr         (i2cc_addr),
+  .I2C_txd          (i2cc_txd),
+  .I2C_rxd          (i2cc_rxd),
+  .I2C_done         (i2cc_done)
 );
 
-sync_reg sync (
-  .Clk              (Clk_i),
+sync_reg #(.NSTAGES(2)) sync (
+  .Clk              (clk100MHz),
   .Rst_n            (Rst_n),
-  .In               (timerInt),
-  .Out              (timerInt_sync)
+  .In               (TimerInt_sync),
+  .Out              (timerInt)
 );
 
 gray_timer #(.SIZE(32)) gtimer (
-  .Clk              (Clk_slow_i & TimerEn),
-  .Rst_n            (Rst_n_slow),
-  .Limit            (timerLim),
-  .Int              (timerInt)
+  .Clk              (clk1MHz),
+  .Rst_n            (Rst_n_slow & timerEn),
+  .Limit            (TIMERLIM),
+  .Int              (TimerInt_sync)
 );
 
-bme280_reader i_reader (
-  .Clk              (Clk_i),
+bme280_reader #(.DWIDTH(DWIDTH)) i_reader (
+  .Clk              (clk100MHz),
   .Rst_n            (Rst_n),
-  .I2CC_start       (i2c_start),
-  .I2CC_rdwr        (i2c_rdwr),
-  .I2CC_last        (i2c_last),
-  .I2CC_addr        (i2c_addr),
-  .I2CC_txd         (i2c_txd),
-  .I2CC_rxd         (i2c_rxd),
-  .I2CC_done        (i2c_done),
-  .TempBin          (TempBin),
-  .PressBin         (PressBin),
-  .HumBin           (HumBin),
-  .TimerEn          (TimerEn),
-  .TimerInt         (timerInt_sync),
-  .ErrorFlag        (ErrorFlag),
-  .DigT1            (DigT1),
-  .DigT2            (DigT2),
-  .DigT3            (DigT3),
-  .DigP1            (DigP1),
-  .DigP2            (DigP2),
-  .DigP3            (DigP3),
-  .DigP4            (DigP4),
-  .DigP5            (DigP5),
-  .DigP6            (DigP6),
-  .DigP7            (DigP7),
-  .DigP8            (DigP8),
-  .DigP9            (DigP9),
-  .DigH1            (DigH1),
-  .DigH2            (DigH2),
-  .DigH3            (DigH3),
-  .DigH4            (DigH4),
-  .DigH5            (DigH5),
-  .DigH6            (DigH6)
+  .I2CC_start       (i2cc_start),
+  .I2CC_rdwr        (i2cc_rdwr),
+  .I2CC_last        (i2cc_last),
+  .I2CC_addr        (i2cc_addr),
+  .I2CC_txd         (i2cc_txd),
+  .I2CC_rxd         (i2cc_rxd),
+  .I2CC_done        (i2cc_done),
+  .TempBin          (tempBin),
+  .PressBin         (pressBin),
+  .HumBin           (humBin),
+  .TimerEn          (timerEn),
+  .TimerInt         (timerInt),
+  .ErrorFlag        (ErrFlag_o),
+  .DigT1            (digT1),
+  .DigT2            (digT2),
+  .DigT3            (digT3),
+  .DigP1            (digP1),
+  .DigP2            (digP2),
+  .DigP3            (digP3),
+  .DigP4            (digP4),
+  .DigP5            (digP5),
+  .DigP6            (digP6),
+  .DigP7            (digP7),
+  .DigP8            (digP8),
+  .DigP9            (digP9),
+  .DigH1            (digH1),
+  .DigH2            (digH2),
+  .DigH3            (digH3),
+  .DigH4            (digH4),
+  .DigH5            (digH5),
+  .DigH6            (digH6)
 );
 
 bme280_compensation i_comp (
-  .TempBin          (TempBin),
-  .PressBin         (PressBin),
-  .HumBin           (HumBin),
-  .DigT1            (DigT1),
-  .DigT2            (DigT2),
-  .DigT3            (DigT3),
-  .DigP1            (DigP1),
-  .DigP2            (DigP2),
-  .DigP3            (DigP3),
-  .DigP4            (DigP4),
-  .DigP5            (DigP5),
-  .DigP6            (DigP6),
-  .DigP7            (DigP7),
-  .DigP8            (DigP8),
-  .DigP9            (DigP9),
-  .DigH1            (DigH1),
-  .DigH2            (DigH2),
-  .DigH3            (DigH3),
-  .DigH4            (DigH4),
-  .DigH5            (DigH5),
-  .DigH6            (DigH6),
-  .Temp             (Temp),
-  .Press            (Press),
-  .Hum              (Hum)
+  .TempBin          (tempBin),
+  .PressBin         (pressBin),
+  .HumBin           (humBin),
+  .DigT1            (digT1),
+  .DigT2            (digT2),
+  .DigT3            (digT3),
+  .DigP1            (digP1),
+  .DigP2            (digP2),
+  .DigP3            (digP3),
+  .DigP4            (digP4),
+  .DigP5            (digP5),
+  .DigP6            (digP6),
+  .DigP7            (digP7),
+  .DigP8            (digP8),
+  .DigP9            (digP9),
+  .DigH1            (digH1),
+  .DigH2            (digH2),
+  .DigH3            (digH3),
+  .DigH4            (digH4),
+  .DigH5            (digH5),
+  .DigH6            (digH6),
+  .Temp             (temp),
+  .Press            (press),
+  .Hum              (hum)
 );
 
-bin2bcd bin2bcd_temp (
-  .Bin              (Temp),
-  .Bcd              (Temp_o)
-);
+bin2bcd #(.W(32)) i_t_bcd (temp, t_bcd);
+bin2bcd #(.W(32)) i_p_bcd (press, p_bcd);
+bin2bcd #(.W(32)) i_h_bcd (hum, h_bcd);
 
-bin2bcd bin2bcd_press (
-  .Bin              (Press),
-  .Bcd              (Press_o)
-);
+bcd2seg i_t_bcd0 (t_bcd[ 3: 0], t_bcd0);
+bcd2seg i_t_bcd1 (t_bcd[ 7: 4], t_bcd1);
+bcd2seg i_t_bcd2 (t_bcd[11: 8], t_bcd2);
+bcd2seg i_t_bcd3 (t_bcd[15:12], t_bcd3);
+bcd2seg i_t_bcd4 (t_bcd[19:16], t_bcd4);
+bcd2seg i_t_bcd5 (t_bcd[23:20], t_bcd5);
 
-bin2bcd bin2bcd_hum (
-  .Bin              (Hum),
-  .Bcd              (Hum_o)
-);
+bcd2seg i_p_bcd0 (p_bcd[ 3: 0], p_bcd0);
+bcd2seg i_p_bcd1 (p_bcd[ 7: 4], p_bcd1);
+bcd2seg i_p_bcd2 (p_bcd[11: 8], p_bcd2);
+bcd2seg i_p_bcd3 (p_bcd[15:12], p_bcd3);
+bcd2seg i_p_bcd4 (p_bcd[19:16], p_bcd4);
+bcd2seg i_p_bcd5 (p_bcd[23:20], p_bcd5);
 
-assign var_o =  (sel[0] == 1'b1) ? Temp_o   :
-                (sel[1] == 1'b1) ? Press_o  :
-                (sel[2] == 1'b1) ? Hum_o    :
-                {32{1'b0}};
-
-bcd2seg bcd2seg (
-  .Bcd              (var_o),
-  .Seg              (seg)
-);
+bcd2seg i_h_bcd0 (h_bcd[ 3: 0], h_bcd0);
+bcd2seg i_h_bcd1 (h_bcd[ 7: 4], h_bcd1);
+bcd2seg i_h_bcd2 (h_bcd[11: 8], h_bcd2);
+bcd2seg i_h_bcd3 (h_bcd[15:12], h_bcd3);
+bcd2seg i_h_bcd4 (h_bcd[19:16], h_bcd4);
+bcd2seg i_h_bcd5 (h_bcd[23:20], h_bcd5);
 
 endmodule
