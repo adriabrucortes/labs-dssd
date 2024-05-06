@@ -49,6 +49,23 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	i2c_master_top
 
+} {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_byte_state_timer.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_byte_state_timer.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module i2c_byte_state_timer
+
+Top level modules:
+	i2c_byte_state_timer
+
+} {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/sys_model.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/sys_model.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module sys_model
+
+Top level modules:
+	sys_model
+
+} {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/timescale.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/timescale.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+
 } {} {}} C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/tb/tb_i2c_master_top.v {1 {vlog -work work -stats=none C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p3_4/tb/tb_i2c_master_top.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module tb_i2c_master_top
@@ -71,32 +88,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	i2c_bit_timer
 
-} {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/timescale.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/timescale.v
+} {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/dbus_master_model.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/dbus_master_model.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-
-} {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/sys_model.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/sys_model.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module sys_model
-
-Top level modules:
-	sys_model
-
-} {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_byte_state_timer.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_byte_state_timer.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module i2c_byte_state_timer
-
-Top level modules:
-	i2c_byte_state_timer
-
-} {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/tb/tb_i2c_master_top_4netlist.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/tb/tb_i2c_master_top_4netlist.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module i2c_slave_model
 -- Compiling module dbus_master_model
--- Compiling module tb_i2c_master_top
--- Compiling module delay
 
 Top level modules:
-	tb_i2c_master_top
+	dbus_master_model
 
 } {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_master_top.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/i2c_master_top.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -104,13 +101,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 
 Top level modules:
 	i2c_master_top
-
-} {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/dbus_master_model.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/dbus_master_model.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module dbus_master_model
-
-Top level modules:
-	dbus_master_model
 
 } {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/shiftreg.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/rtl/shiftreg.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020

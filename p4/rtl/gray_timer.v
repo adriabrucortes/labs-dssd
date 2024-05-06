@@ -24,9 +24,7 @@
 
 `include "../misc/timescale.v"
 
-module gray_timer (Clk, Rst_n, Limit, Int);
-
-parameter SIZE = 8;
+module gray_timer #(parameter SIZE = 8) (Clk, Rst_n, Limit, Int);
 
 input            Clk;             // Clock reference for the timer
 input            Rst_n;           // Resets the timer. Active low
