@@ -29,7 +29,7 @@ state.GET_DATA 0 0 1 0 0 0 0 0 0 0 0 1
 state.MEASURE 0 1 0 0 0 0 0 0 0 0 0 1 
 state.ERROR 1 0 0 0 0 0 0 0 0 0 0 1 
 
-State Machine - |top_meteo_de0cv|bme280_i2c_ctrl:i_ctrl|state
+State Machine - |top_meteo_de0cv|bme280_i2c_ctrl:bme280_i2c_ctrl|state
 Name state.GET_DATA state.RD_DATA state.RD_SADDR state.WR_DATA state.WR_RADDR state.SET_TXR state.CHECK_TIP state.WR_SADDR state.IDLE state.EN_I2C state.SET_PRER 
 state.SET_PRER 0 0 0 0 0 0 0 0 0 0 0 
 state.EN_I2C 0 0 0 0 0 0 0 0 0 1 1 

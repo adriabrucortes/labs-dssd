@@ -16,22 +16,21 @@ sys_model #(
   .Rst_n            (rst_n)
 );
 
-pll_cv pll (
-  .refclk           (clk),
-  .rst              (rst_n),
-  .outclk_0         (clk),
-  .outclk_1         (clk_slw)
-);
-
 top_meteo_de0cv DUT (
   .Clk_i            (clk),
-  .Clk_slow_i       (clk_slw),
   .Rst_n_i          (rst_n),
   .SCL_io           (scl),
   .SDA_io           (sda),
-  .sel              (sel),
-  .ErrorFlag        (errorFlag),
-  .seg              ()
+  .Sel_i            (sel),
+  .ErrFlag_o        (errorFlag),
+  .SlaveAddr_LSb_o  (),
+  .Enable_i2c_o     (),
+  .Dec0_o           (),
+  .Dec1_o           (),
+  .Dec2_o           (),
+  .Dec3_o           (),
+  .Dec4_o           (),
+  .Dec5_o           ()
 );
 
 i2c_slave_model i2c_slave (

@@ -7,6 +7,8 @@ module top_meteo_de0cv (
   input  [3-1:0] Sel_i,
   inout  SCL_io,
   inout  SDA_io,
+  output SlaveAddr_LSb_o,
+  output Enable_i2c_o,
   output ErrFlag_o,
   output reg [7-1:0] Dec0_o, Dec1_o, Dec2_o, Dec3_o, Dec4_o, Dec5_o
 );
@@ -29,6 +31,10 @@ assign SCL_io = sclPadEn ? 1'bz : sclPadOut;
 assign SDA_io = sdaPadEn ? 1'bz : sdaPadOut;
 assign sclPadIn = SCL_io;
 assign sdaPadIn = SDA_io;
+
+// Arbitrary outputs
+assign SlaveAddr_LSb_o = 1'b0;
+assign Enable_i2c_o = 1'b1;
 
 // Misc connections
 wire i2c_int;

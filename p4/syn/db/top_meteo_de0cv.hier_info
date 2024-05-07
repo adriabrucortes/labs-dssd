@@ -1,117 +1,386 @@
 |top_meteo_de0cv
-Clk_i => Clk_i.IN5
-Clk_slow_i => comb.IN1
-Rst_n_i => Rst_n_i.IN1
-SCL_io <> SCL_io
-SDA_io <> SDA_io
-timerLim => timerLim.IN1
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[0] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[1] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-sel[2] => var_o.OUTPUTSELECT
-ErrorFlag <= bme280_reader:i_reader.ErrorFlag
-seg[0] <= bcd2seg:bcd2seg.Seg
-seg[1] <= bcd2seg:bcd2seg.Seg
-seg[2] <= bcd2seg:bcd2seg.Seg
-seg[3] <= bcd2seg:bcd2seg.Seg
-seg[4] <= bcd2seg:bcd2seg.Seg
-seg[5] <= bcd2seg:bcd2seg.Seg
-seg[6] <= bcd2seg:bcd2seg.Seg
+Clk_i => Clk_i.IN1
+Rst_n_i => Rst_n_i.IN2
+Sel_i[0] => Mux0.IN3
+Sel_i[0] => Mux1.IN3
+Sel_i[0] => Mux2.IN3
+Sel_i[0] => Mux3.IN3
+Sel_i[0] => Mux4.IN3
+Sel_i[0] => Mux5.IN3
+Sel_i[0] => Mux6.IN3
+Sel_i[0] => Mux7.IN3
+Sel_i[0] => Mux8.IN3
+Sel_i[0] => Mux9.IN3
+Sel_i[0] => Mux10.IN3
+Sel_i[0] => Mux11.IN3
+Sel_i[0] => Mux12.IN3
+Sel_i[0] => Mux13.IN3
+Sel_i[0] => Mux14.IN3
+Sel_i[0] => Mux15.IN3
+Sel_i[0] => Mux16.IN3
+Sel_i[0] => Mux17.IN3
+Sel_i[0] => Mux18.IN3
+Sel_i[0] => Mux19.IN3
+Sel_i[0] => Mux20.IN3
+Sel_i[0] => Mux21.IN3
+Sel_i[0] => Mux22.IN3
+Sel_i[0] => Mux23.IN3
+Sel_i[0] => Mux24.IN3
+Sel_i[0] => Mux25.IN3
+Sel_i[0] => Mux26.IN3
+Sel_i[0] => Mux27.IN3
+Sel_i[0] => Mux28.IN3
+Sel_i[0] => Mux29.IN3
+Sel_i[0] => Mux30.IN3
+Sel_i[0] => Mux31.IN3
+Sel_i[0] => Mux32.IN3
+Sel_i[0] => Mux33.IN3
+Sel_i[0] => Mux34.IN3
+Sel_i[0] => Mux35.IN3
+Sel_i[0] => Mux36.IN3
+Sel_i[0] => Mux37.IN3
+Sel_i[0] => Mux38.IN3
+Sel_i[0] => Mux39.IN3
+Sel_i[0] => Mux40.IN3
+Sel_i[0] => Mux41.IN3
+Sel_i[0] => Mux42.IN10
+Sel_i[1] => Mux0.IN2
+Sel_i[1] => Mux1.IN2
+Sel_i[1] => Mux2.IN2
+Sel_i[1] => Mux3.IN2
+Sel_i[1] => Mux4.IN2
+Sel_i[1] => Mux5.IN2
+Sel_i[1] => Mux6.IN2
+Sel_i[1] => Mux7.IN2
+Sel_i[1] => Mux8.IN2
+Sel_i[1] => Mux9.IN2
+Sel_i[1] => Mux10.IN2
+Sel_i[1] => Mux11.IN2
+Sel_i[1] => Mux12.IN2
+Sel_i[1] => Mux13.IN2
+Sel_i[1] => Mux14.IN2
+Sel_i[1] => Mux15.IN2
+Sel_i[1] => Mux16.IN2
+Sel_i[1] => Mux17.IN2
+Sel_i[1] => Mux18.IN2
+Sel_i[1] => Mux19.IN2
+Sel_i[1] => Mux20.IN2
+Sel_i[1] => Mux21.IN2
+Sel_i[1] => Mux22.IN2
+Sel_i[1] => Mux23.IN2
+Sel_i[1] => Mux24.IN2
+Sel_i[1] => Mux25.IN2
+Sel_i[1] => Mux26.IN2
+Sel_i[1] => Mux27.IN2
+Sel_i[1] => Mux28.IN2
+Sel_i[1] => Mux29.IN2
+Sel_i[1] => Mux30.IN2
+Sel_i[1] => Mux31.IN2
+Sel_i[1] => Mux32.IN2
+Sel_i[1] => Mux33.IN2
+Sel_i[1] => Mux34.IN2
+Sel_i[1] => Mux35.IN2
+Sel_i[1] => Mux36.IN2
+Sel_i[1] => Mux37.IN2
+Sel_i[1] => Mux38.IN2
+Sel_i[1] => Mux39.IN2
+Sel_i[1] => Mux40.IN2
+Sel_i[1] => Mux41.IN2
+Sel_i[1] => Mux42.IN9
+Sel_i[2] => Mux0.IN1
+Sel_i[2] => Mux1.IN1
+Sel_i[2] => Mux2.IN1
+Sel_i[2] => Mux3.IN1
+Sel_i[2] => Mux4.IN1
+Sel_i[2] => Mux5.IN1
+Sel_i[2] => Mux6.IN1
+Sel_i[2] => Mux7.IN1
+Sel_i[2] => Mux8.IN1
+Sel_i[2] => Mux9.IN1
+Sel_i[2] => Mux10.IN1
+Sel_i[2] => Mux11.IN1
+Sel_i[2] => Mux12.IN1
+Sel_i[2] => Mux13.IN1
+Sel_i[2] => Mux14.IN1
+Sel_i[2] => Mux15.IN1
+Sel_i[2] => Mux16.IN1
+Sel_i[2] => Mux17.IN1
+Sel_i[2] => Mux18.IN1
+Sel_i[2] => Mux19.IN1
+Sel_i[2] => Mux20.IN1
+Sel_i[2] => Mux21.IN1
+Sel_i[2] => Mux22.IN1
+Sel_i[2] => Mux23.IN1
+Sel_i[2] => Mux24.IN1
+Sel_i[2] => Mux25.IN1
+Sel_i[2] => Mux26.IN1
+Sel_i[2] => Mux27.IN1
+Sel_i[2] => Mux28.IN1
+Sel_i[2] => Mux29.IN1
+Sel_i[2] => Mux30.IN1
+Sel_i[2] => Mux31.IN1
+Sel_i[2] => Mux32.IN1
+Sel_i[2] => Mux33.IN1
+Sel_i[2] => Mux34.IN1
+Sel_i[2] => Mux35.IN1
+Sel_i[2] => Mux36.IN1
+Sel_i[2] => Mux37.IN1
+Sel_i[2] => Mux38.IN1
+Sel_i[2] => Mux39.IN1
+Sel_i[2] => Mux40.IN1
+Sel_i[2] => Mux41.IN1
+Sel_i[2] => Mux42.IN8
+SCL_io <> <GND>
+SCL_io <> i2c_master_top:i2c_master.SclPadIn
+SDA_io <> <GND>
+SDA_io <> i2c_master_top:i2c_master.SdaPadIn
+SlaveAddr_LSb_o <= <GND>
+Enable_i2c_o <= <VCC>
+ErrFlag_o <= bme280_reader:i_reader.ErrorFlag
+Dec0_o[0] <= Dec0_o[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec0_o[1] <= Dec0_o[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec0_o[2] <= Dec0_o[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec0_o[3] <= Dec0_o[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec0_o[4] <= Dec0_o[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec0_o[5] <= Dec0_o[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec0_o[6] <= Dec0_o[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec1_o[0] <= Dec1_o[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec1_o[1] <= Dec1_o[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec1_o[2] <= Dec1_o[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec1_o[3] <= Dec1_o[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec1_o[4] <= Dec1_o[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec1_o[5] <= Dec1_o[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec1_o[6] <= Dec1_o[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec2_o[0] <= Dec2_o[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec2_o[1] <= Dec2_o[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec2_o[2] <= Dec2_o[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec2_o[3] <= Dec2_o[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec2_o[4] <= Dec2_o[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec2_o[5] <= Dec2_o[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec2_o[6] <= Dec2_o[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec3_o[0] <= Dec3_o[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec3_o[1] <= Dec3_o[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec3_o[2] <= Dec3_o[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec3_o[3] <= Dec3_o[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec3_o[4] <= Dec3_o[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec3_o[5] <= Dec3_o[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec3_o[6] <= Dec3_o[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec4_o[0] <= Dec4_o[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec4_o[1] <= Dec4_o[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec4_o[2] <= Dec4_o[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec4_o[3] <= Dec4_o[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec4_o[4] <= Dec4_o[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec4_o[5] <= Dec4_o[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec4_o[6] <= Dec4_o[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec5_o[0] <= Dec5_o[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec5_o[1] <= Dec5_o[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec5_o[2] <= Dec5_o[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec5_o[3] <= Dec5_o[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec5_o[4] <= Dec5_o[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec5_o[5] <= Dec5_o[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Dec5_o[6] <= Dec5_o[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top_meteo_de0cv|digital_por:pwr_on_reset
+|top_meteo_de0cv|pll_cv:pll
+refclk => refclk.IN1
+rst => rst.IN1
+outclk_0 <= pll_cv_0002:pll_cv_inst.outclk_0
+outclk_1 <= pll_cv_0002:pll_cv_inst.outclk_1
+
+
+|top_meteo_de0cv|pll_cv:pll|pll_cv_0002:pll_cv_inst
+refclk => refclk.IN1
+rst => rst.IN1
+outclk_0 <= altera_pll:altera_pll_i.outclk
+outclk_1 <= altera_pll:altera_pll_i.outclk
+locked <= altera_pll:altera_pll_i.locked
+
+
+|top_meteo_de0cv|pll_cv:pll|pll_cv_0002:pll_cv_inst|altera_pll:altera_pll_i
+refclk => general[0].gpll.I_REFCLK
+refclk => general[1].gpll.I_REFCLK
+refclk1 => ~NO_FANOUT~
+fbclk => ~NO_FANOUT~
+rst => general[0].gpll.I_RST
+rst => general[1].gpll.I_RST
+phase_en => ~NO_FANOUT~
+updn => ~NO_FANOUT~
+num_phase_shifts[0] => ~NO_FANOUT~
+num_phase_shifts[1] => ~NO_FANOUT~
+num_phase_shifts[2] => ~NO_FANOUT~
+scanclk => ~NO_FANOUT~
+cntsel[0] => ~NO_FANOUT~
+cntsel[1] => ~NO_FANOUT~
+cntsel[2] => ~NO_FANOUT~
+cntsel[3] => ~NO_FANOUT~
+cntsel[4] => ~NO_FANOUT~
+reconfig_to_pll[0] => ~NO_FANOUT~
+reconfig_to_pll[1] => ~NO_FANOUT~
+reconfig_to_pll[2] => ~NO_FANOUT~
+reconfig_to_pll[3] => ~NO_FANOUT~
+reconfig_to_pll[4] => ~NO_FANOUT~
+reconfig_to_pll[5] => ~NO_FANOUT~
+reconfig_to_pll[6] => ~NO_FANOUT~
+reconfig_to_pll[7] => ~NO_FANOUT~
+reconfig_to_pll[8] => ~NO_FANOUT~
+reconfig_to_pll[9] => ~NO_FANOUT~
+reconfig_to_pll[10] => ~NO_FANOUT~
+reconfig_to_pll[11] => ~NO_FANOUT~
+reconfig_to_pll[12] => ~NO_FANOUT~
+reconfig_to_pll[13] => ~NO_FANOUT~
+reconfig_to_pll[14] => ~NO_FANOUT~
+reconfig_to_pll[15] => ~NO_FANOUT~
+reconfig_to_pll[16] => ~NO_FANOUT~
+reconfig_to_pll[17] => ~NO_FANOUT~
+reconfig_to_pll[18] => ~NO_FANOUT~
+reconfig_to_pll[19] => ~NO_FANOUT~
+reconfig_to_pll[20] => ~NO_FANOUT~
+reconfig_to_pll[21] => ~NO_FANOUT~
+reconfig_to_pll[22] => ~NO_FANOUT~
+reconfig_to_pll[23] => ~NO_FANOUT~
+reconfig_to_pll[24] => ~NO_FANOUT~
+reconfig_to_pll[25] => ~NO_FANOUT~
+reconfig_to_pll[26] => ~NO_FANOUT~
+reconfig_to_pll[27] => ~NO_FANOUT~
+reconfig_to_pll[28] => ~NO_FANOUT~
+reconfig_to_pll[29] => ~NO_FANOUT~
+reconfig_to_pll[30] => ~NO_FANOUT~
+reconfig_to_pll[31] => ~NO_FANOUT~
+reconfig_to_pll[32] => ~NO_FANOUT~
+reconfig_to_pll[33] => ~NO_FANOUT~
+reconfig_to_pll[34] => ~NO_FANOUT~
+reconfig_to_pll[35] => ~NO_FANOUT~
+reconfig_to_pll[36] => ~NO_FANOUT~
+reconfig_to_pll[37] => ~NO_FANOUT~
+reconfig_to_pll[38] => ~NO_FANOUT~
+reconfig_to_pll[39] => ~NO_FANOUT~
+reconfig_to_pll[40] => ~NO_FANOUT~
+reconfig_to_pll[41] => ~NO_FANOUT~
+reconfig_to_pll[42] => ~NO_FANOUT~
+reconfig_to_pll[43] => ~NO_FANOUT~
+reconfig_to_pll[44] => ~NO_FANOUT~
+reconfig_to_pll[45] => ~NO_FANOUT~
+reconfig_to_pll[46] => ~NO_FANOUT~
+reconfig_to_pll[47] => ~NO_FANOUT~
+reconfig_to_pll[48] => ~NO_FANOUT~
+reconfig_to_pll[49] => ~NO_FANOUT~
+reconfig_to_pll[50] => ~NO_FANOUT~
+reconfig_to_pll[51] => ~NO_FANOUT~
+reconfig_to_pll[52] => ~NO_FANOUT~
+reconfig_to_pll[53] => ~NO_FANOUT~
+reconfig_to_pll[54] => ~NO_FANOUT~
+reconfig_to_pll[55] => ~NO_FANOUT~
+reconfig_to_pll[56] => ~NO_FANOUT~
+reconfig_to_pll[57] => ~NO_FANOUT~
+reconfig_to_pll[58] => ~NO_FANOUT~
+reconfig_to_pll[59] => ~NO_FANOUT~
+reconfig_to_pll[60] => ~NO_FANOUT~
+reconfig_to_pll[61] => ~NO_FANOUT~
+reconfig_to_pll[62] => ~NO_FANOUT~
+reconfig_to_pll[63] => ~NO_FANOUT~
+extswitch => ~NO_FANOUT~
+adjpllin => ~NO_FANOUT~
+cclk => ~NO_FANOUT~
+outclk[0] <= general[0].gpll.O_OUTCLK
+outclk[1] <= general[1].gpll.O_OUTCLK
+fboutclk <= general[0].gpll.O_FBOUTCLK
+locked <= general[0].gpll.LOCKED
+phase_done <= <GND>
+reconfig_from_pll[0] <= <GND>
+reconfig_from_pll[1] <= <GND>
+reconfig_from_pll[2] <= <GND>
+reconfig_from_pll[3] <= <GND>
+reconfig_from_pll[4] <= <GND>
+reconfig_from_pll[5] <= <GND>
+reconfig_from_pll[6] <= <GND>
+reconfig_from_pll[7] <= <GND>
+reconfig_from_pll[8] <= <GND>
+reconfig_from_pll[9] <= <GND>
+reconfig_from_pll[10] <= <GND>
+reconfig_from_pll[11] <= <GND>
+reconfig_from_pll[12] <= <GND>
+reconfig_from_pll[13] <= <GND>
+reconfig_from_pll[14] <= <GND>
+reconfig_from_pll[15] <= <GND>
+reconfig_from_pll[16] <= <GND>
+reconfig_from_pll[17] <= <GND>
+reconfig_from_pll[18] <= <GND>
+reconfig_from_pll[19] <= <GND>
+reconfig_from_pll[20] <= <GND>
+reconfig_from_pll[21] <= <GND>
+reconfig_from_pll[22] <= <GND>
+reconfig_from_pll[23] <= <GND>
+reconfig_from_pll[24] <= <GND>
+reconfig_from_pll[25] <= <GND>
+reconfig_from_pll[26] <= <GND>
+reconfig_from_pll[27] <= <GND>
+reconfig_from_pll[28] <= <GND>
+reconfig_from_pll[29] <= <GND>
+reconfig_from_pll[30] <= <GND>
+reconfig_from_pll[31] <= <GND>
+reconfig_from_pll[32] <= <GND>
+reconfig_from_pll[33] <= <GND>
+reconfig_from_pll[34] <= <GND>
+reconfig_from_pll[35] <= <GND>
+reconfig_from_pll[36] <= <GND>
+reconfig_from_pll[37] <= <GND>
+reconfig_from_pll[38] <= <GND>
+reconfig_from_pll[39] <= <GND>
+reconfig_from_pll[40] <= <GND>
+reconfig_from_pll[41] <= <GND>
+reconfig_from_pll[42] <= <GND>
+reconfig_from_pll[43] <= <GND>
+reconfig_from_pll[44] <= <GND>
+reconfig_from_pll[45] <= <GND>
+reconfig_from_pll[46] <= <GND>
+reconfig_from_pll[47] <= <GND>
+reconfig_from_pll[48] <= <GND>
+reconfig_from_pll[49] <= <GND>
+reconfig_from_pll[50] <= <GND>
+reconfig_from_pll[51] <= <GND>
+reconfig_from_pll[52] <= <GND>
+reconfig_from_pll[53] <= <GND>
+reconfig_from_pll[54] <= <GND>
+reconfig_from_pll[55] <= <GND>
+reconfig_from_pll[56] <= <GND>
+reconfig_from_pll[57] <= <GND>
+reconfig_from_pll[58] <= <GND>
+reconfig_from_pll[59] <= <GND>
+reconfig_from_pll[60] <= <GND>
+reconfig_from_pll[61] <= <GND>
+reconfig_from_pll[62] <= <GND>
+reconfig_from_pll[63] <= <GND>
+activeclk <= <GND>
+clkbad[0] <= <GND>
+clkbad[1] <= <GND>
+phout[0] <= <GND>
+phout[1] <= <GND>
+phout[2] <= <GND>
+phout[3] <= <GND>
+phout[4] <= <GND>
+phout[5] <= <GND>
+phout[6] <= <GND>
+phout[7] <= <GND>
+lvds_clk[0] <= <GND>
+lvds_clk[1] <= <GND>
+loaden[0] <= <GND>
+loaden[1] <= <GND>
+extclk_out[0] <= <GND>
+extclk_out[1] <= <GND>
+cascade_out[0] <= <GND>
+cascade_out[1] <= <GND>
+zdbfbclk <> <GND>
+
+
+|top_meteo_de0cv|digital_por:por_100MHz
+Clk => rff1.CLK
+Clk => Rst_n~reg0.CLK
+Asyncrst_n => rff1.ACLR
+Asyncrst_n => Rst_n~reg0.ACLR
+Rst_n <= Rst_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_meteo_de0cv|digital_por:por_1MHz
 Clk => rff1.CLK
 Clk => Rst_n~reg0.CLK
 Asyncrst_n => rff1.ACLR
@@ -667,7 +936,7 @@ Ticks[7] => cnt.DATAB
 Out <= Out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top_meteo_de0cv|bme280_i2c_ctrl:i_ctrl
+|top_meteo_de0cv|bme280_i2c_ctrl:bme280_i2c_ctrl
 Clk => I2C_done~reg0.CLK
 Clk => I2C_rxd[0]~reg0.CLK
 Clk => I2C_rxd[1]~reg0.CLK
@@ -798,6 +1067,30 @@ Clk => gray_code[4].CLK
 Clk => gray_code[5].CLK
 Clk => gray_code[6].CLK
 Clk => gray_code[7].CLK
+Clk => gray_code[8].CLK
+Clk => gray_code[9].CLK
+Clk => gray_code[10].CLK
+Clk => gray_code[11].CLK
+Clk => gray_code[12].CLK
+Clk => gray_code[13].CLK
+Clk => gray_code[14].CLK
+Clk => gray_code[15].CLK
+Clk => gray_code[16].CLK
+Clk => gray_code[17].CLK
+Clk => gray_code[18].CLK
+Clk => gray_code[19].CLK
+Clk => gray_code[20].CLK
+Clk => gray_code[21].CLK
+Clk => gray_code[22].CLK
+Clk => gray_code[23].CLK
+Clk => gray_code[24].CLK
+Clk => gray_code[25].CLK
+Clk => gray_code[26].CLK
+Clk => gray_code[27].CLK
+Clk => gray_code[28].CLK
+Clk => gray_code[29].CLK
+Clk => gray_code[30].CLK
+Clk => gray_code[31].CLK
 Rst_n => Int~reg0.ACLR
 Rst_n => gray_code[0].ACLR
 Rst_n => gray_code[1].ACLR
@@ -807,6 +1100,30 @@ Rst_n => gray_code[4].ACLR
 Rst_n => gray_code[5].ACLR
 Rst_n => gray_code[6].ACLR
 Rst_n => gray_code[7].ACLR
+Rst_n => gray_code[8].ACLR
+Rst_n => gray_code[9].ACLR
+Rst_n => gray_code[10].ACLR
+Rst_n => gray_code[11].ACLR
+Rst_n => gray_code[12].ACLR
+Rst_n => gray_code[13].ACLR
+Rst_n => gray_code[14].ACLR
+Rst_n => gray_code[15].ACLR
+Rst_n => gray_code[16].ACLR
+Rst_n => gray_code[17].ACLR
+Rst_n => gray_code[18].ACLR
+Rst_n => gray_code[19].ACLR
+Rst_n => gray_code[20].ACLR
+Rst_n => gray_code[21].ACLR
+Rst_n => gray_code[22].ACLR
+Rst_n => gray_code[23].ACLR
+Rst_n => gray_code[24].ACLR
+Rst_n => gray_code[25].ACLR
+Rst_n => gray_code[26].ACLR
+Rst_n => gray_code[27].ACLR
+Rst_n => gray_code[28].ACLR
+Rst_n => gray_code[29].ACLR
+Rst_n => gray_code[30].ACLR
+Rst_n => gray_code[31].ACLR
 Limit[0] => gray_code_comp[0].IN0
 Limit[1] => gray_code_comp[0].IN1
 Limit[1] => gray_code_comp[1].IN0
@@ -820,8 +1137,56 @@ Limit[5] => gray_code_comp[4].IN1
 Limit[5] => gray_code_comp[5].IN0
 Limit[6] => gray_code_comp[5].IN1
 Limit[6] => gray_code_comp[6].IN0
-Limit[7] => Equal0.IN8
 Limit[7] => gray_code_comp[6].IN1
+Limit[7] => gray_code_comp[7].IN0
+Limit[8] => gray_code_comp[7].IN1
+Limit[8] => gray_code_comp[8].IN0
+Limit[9] => gray_code_comp[8].IN1
+Limit[9] => gray_code_comp[9].IN0
+Limit[10] => gray_code_comp[9].IN1
+Limit[10] => gray_code_comp[10].IN0
+Limit[11] => gray_code_comp[10].IN1
+Limit[11] => gray_code_comp[11].IN0
+Limit[12] => gray_code_comp[11].IN1
+Limit[12] => gray_code_comp[12].IN0
+Limit[13] => gray_code_comp[12].IN1
+Limit[13] => gray_code_comp[13].IN0
+Limit[14] => gray_code_comp[13].IN1
+Limit[14] => gray_code_comp[14].IN0
+Limit[15] => gray_code_comp[14].IN1
+Limit[15] => gray_code_comp[15].IN0
+Limit[16] => gray_code_comp[15].IN1
+Limit[16] => gray_code_comp[16].IN0
+Limit[17] => gray_code_comp[16].IN1
+Limit[17] => gray_code_comp[17].IN0
+Limit[18] => gray_code_comp[17].IN1
+Limit[18] => gray_code_comp[18].IN0
+Limit[19] => gray_code_comp[18].IN1
+Limit[19] => gray_code_comp[19].IN0
+Limit[20] => gray_code_comp[19].IN1
+Limit[20] => gray_code_comp[20].IN0
+Limit[21] => gray_code_comp[20].IN1
+Limit[21] => gray_code_comp[21].IN0
+Limit[22] => gray_code_comp[21].IN1
+Limit[22] => gray_code_comp[22].IN0
+Limit[23] => gray_code_comp[22].IN1
+Limit[23] => gray_code_comp[23].IN0
+Limit[24] => gray_code_comp[23].IN1
+Limit[24] => gray_code_comp[24].IN0
+Limit[25] => gray_code_comp[24].IN1
+Limit[25] => gray_code_comp[25].IN0
+Limit[26] => gray_code_comp[25].IN1
+Limit[26] => gray_code_comp[26].IN0
+Limit[27] => gray_code_comp[26].IN1
+Limit[27] => gray_code_comp[27].IN0
+Limit[28] => gray_code_comp[27].IN1
+Limit[28] => gray_code_comp[28].IN0
+Limit[29] => gray_code_comp[28].IN1
+Limit[29] => gray_code_comp[29].IN0
+Limit[30] => gray_code_comp[29].IN1
+Limit[30] => gray_code_comp[30].IN0
+Limit[31] => Equal0.IN32
+Limit[31] => gray_code_comp[30].IN1
 Int <= Int~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -3677,7 +4042,7 @@ Hum[30] <= <GND>
 Hum[31] <= <GND>
 
 
-|top_meteo_de0cv|bin2bcd:bin2bcd_temp
+|top_meteo_de0cv|bin2bcd:i_t_bcd
 Bin[0] => Bcd[0].DATAIN
 Bin[1] => LessThan145.IN8
 Bin[1] => Add145.IN8
@@ -3816,7 +4181,7 @@ Bcd[40] <= Bcd.DB_MAX_OUTPUT_PORT_TYPE
 Bcd[41] <= Bcd.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top_meteo_de0cv|bin2bcd:bin2bcd_press
+|top_meteo_de0cv|bin2bcd:i_p_bcd
 Bin[0] => Bcd[0].DATAIN
 Bin[1] => LessThan145.IN8
 Bin[1] => Add145.IN8
@@ -3955,7 +4320,7 @@ Bcd[40] <= Bcd.DB_MAX_OUTPUT_PORT_TYPE
 Bcd[41] <= Bcd.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top_meteo_de0cv|bin2bcd:bin2bcd_hum
+|top_meteo_de0cv|bin2bcd:i_h_bcd
 Bin[0] => Bcd[0].DATAIN
 Bin[1] => LessThan145.IN8
 Bin[1] => Add145.IN8
@@ -4094,7 +4459,245 @@ Bcd[40] <= Bcd.DB_MAX_OUTPUT_PORT_TYPE
 Bcd[41] <= Bcd.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top_meteo_de0cv|bcd2seg:bcd2seg
+|top_meteo_de0cv|bcd2seg:i_t_bcd0
+Bcd[0] => Decoder0.IN3
+Bcd[1] => Decoder0.IN2
+Bcd[2] => Decoder0.IN1
+Bcd[3] => Decoder0.IN0
+Seg[0] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[1] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_meteo_de0cv|bcd2seg:i_t_bcd1
+Bcd[0] => Decoder0.IN3
+Bcd[1] => Decoder0.IN2
+Bcd[2] => Decoder0.IN1
+Bcd[3] => Decoder0.IN0
+Seg[0] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[1] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_meteo_de0cv|bcd2seg:i_t_bcd2
+Bcd[0] => Decoder0.IN3
+Bcd[1] => Decoder0.IN2
+Bcd[2] => Decoder0.IN1
+Bcd[3] => Decoder0.IN0
+Seg[0] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[1] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_meteo_de0cv|bcd2seg:i_t_bcd3
+Bcd[0] => Decoder0.IN3
+Bcd[1] => Decoder0.IN2
+Bcd[2] => Decoder0.IN1
+Bcd[3] => Decoder0.IN0
+Seg[0] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[1] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_meteo_de0cv|bcd2seg:i_t_bcd4
+Bcd[0] => Decoder0.IN3
+Bcd[1] => Decoder0.IN2
+Bcd[2] => Decoder0.IN1
+Bcd[3] => Decoder0.IN0
+Seg[0] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[1] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_meteo_de0cv|bcd2seg:i_t_bcd5
+Bcd[0] => Decoder0.IN3
+Bcd[1] => Decoder0.IN2
+Bcd[2] => Decoder0.IN1
+Bcd[3] => Decoder0.IN0
+Seg[0] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[1] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_meteo_de0cv|bcd2seg:i_p_bcd0
+Bcd[0] => Decoder0.IN3
+Bcd[1] => Decoder0.IN2
+Bcd[2] => Decoder0.IN1
+Bcd[3] => Decoder0.IN0
+Seg[0] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[1] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_meteo_de0cv|bcd2seg:i_p_bcd1
+Bcd[0] => Decoder0.IN3
+Bcd[1] => Decoder0.IN2
+Bcd[2] => Decoder0.IN1
+Bcd[3] => Decoder0.IN0
+Seg[0] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[1] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_meteo_de0cv|bcd2seg:i_p_bcd2
+Bcd[0] => Decoder0.IN3
+Bcd[1] => Decoder0.IN2
+Bcd[2] => Decoder0.IN1
+Bcd[3] => Decoder0.IN0
+Seg[0] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[1] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_meteo_de0cv|bcd2seg:i_p_bcd3
+Bcd[0] => Decoder0.IN3
+Bcd[1] => Decoder0.IN2
+Bcd[2] => Decoder0.IN1
+Bcd[3] => Decoder0.IN0
+Seg[0] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[1] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_meteo_de0cv|bcd2seg:i_p_bcd4
+Bcd[0] => Decoder0.IN3
+Bcd[1] => Decoder0.IN2
+Bcd[2] => Decoder0.IN1
+Bcd[3] => Decoder0.IN0
+Seg[0] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[1] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_meteo_de0cv|bcd2seg:i_p_bcd5
+Bcd[0] => Decoder0.IN3
+Bcd[1] => Decoder0.IN2
+Bcd[2] => Decoder0.IN1
+Bcd[3] => Decoder0.IN0
+Seg[0] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[1] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_meteo_de0cv|bcd2seg:i_h_bcd0
+Bcd[0] => Decoder0.IN3
+Bcd[1] => Decoder0.IN2
+Bcd[2] => Decoder0.IN1
+Bcd[3] => Decoder0.IN0
+Seg[0] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[1] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_meteo_de0cv|bcd2seg:i_h_bcd1
+Bcd[0] => Decoder0.IN3
+Bcd[1] => Decoder0.IN2
+Bcd[2] => Decoder0.IN1
+Bcd[3] => Decoder0.IN0
+Seg[0] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[1] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_meteo_de0cv|bcd2seg:i_h_bcd2
+Bcd[0] => Decoder0.IN3
+Bcd[1] => Decoder0.IN2
+Bcd[2] => Decoder0.IN1
+Bcd[3] => Decoder0.IN0
+Seg[0] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[1] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_meteo_de0cv|bcd2seg:i_h_bcd3
+Bcd[0] => Decoder0.IN3
+Bcd[1] => Decoder0.IN2
+Bcd[2] => Decoder0.IN1
+Bcd[3] => Decoder0.IN0
+Seg[0] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[1] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_meteo_de0cv|bcd2seg:i_h_bcd4
+Bcd[0] => Decoder0.IN3
+Bcd[1] => Decoder0.IN2
+Bcd[2] => Decoder0.IN1
+Bcd[3] => Decoder0.IN0
+Seg[0] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[1] <= Seg.DB_MAX_OUTPUT_PORT_TYPE
+Seg[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_meteo_de0cv|bcd2seg:i_h_bcd5
 Bcd[0] => Decoder0.IN3
 Bcd[1] => Decoder0.IN2
 Bcd[2] => Decoder0.IN1

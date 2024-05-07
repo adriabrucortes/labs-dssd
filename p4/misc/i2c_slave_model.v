@@ -6,7 +6,7 @@ module i2c_slave_model #(
   parameter WR_BURST = 1'b1,  // 0: disabled
   parameter RD_BURST = 1'b1,  // 0: disabled
   parameter MEM_SIZE = 3,
-  parameter MEM_INIT_FILE = ""
+  parameter MEM_INIT_FILE = "bme280_regs.mem"
 )(
   input Scl,
   inout Sda

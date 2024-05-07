@@ -4,71 +4,191 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "ErrorFlag",
+					"name" : "ErrFlag_o",
 					"strict" : false
 				},
 				{
-					"name" : "seg[0]",
+					"name" : "Dec0_o[0]",
 					"strict" : false
 				},
 				{
-					"name" : "seg[1]",
+					"name" : "Dec0_o[1]",
 					"strict" : false
 				},
 				{
-					"name" : "seg[2]",
+					"name" : "Dec0_o[2]",
 					"strict" : false
 				},
 				{
-					"name" : "seg[3]",
+					"name" : "Dec0_o[3]",
 					"strict" : false
 				},
 				{
-					"name" : "seg[4]",
+					"name" : "Dec0_o[4]",
 					"strict" : false
 				},
 				{
-					"name" : "seg[5]",
+					"name" : "Dec0_o[5]",
 					"strict" : false
 				},
 				{
-					"name" : "seg[6]",
+					"name" : "Dec0_o[6]",
 					"strict" : false
 				},
 				{
-					"name" : "SCL_io",
+					"name" : "Dec1_o[0]",
 					"strict" : false
 				},
 				{
-					"name" : "SDA_io",
+					"name" : "Dec1_o[1]",
 					"strict" : false
 				},
 				{
-					"name" : "sel[0]",
+					"name" : "Dec1_o[2]",
 					"strict" : false
 				},
 				{
-					"name" : "sel[1]",
+					"name" : "Dec1_o[3]",
 					"strict" : false
 				},
 				{
-					"name" : "sel[2]",
+					"name" : "Dec1_o[4]",
 					"strict" : false
 				},
 				{
-					"name" : "Clk_i",
+					"name" : "Dec1_o[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec1_o[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec2_o[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec2_o[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec2_o[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec2_o[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec2_o[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec2_o[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec2_o[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec3_o[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec3_o[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec3_o[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec3_o[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec3_o[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec3_o[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec3_o[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec4_o[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec4_o[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec4_o[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec4_o[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec4_o[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec4_o[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec4_o[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec5_o[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec5_o[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec5_o[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec5_o[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec5_o[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec5_o[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec5_o[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Sel_i[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Sel_i[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Sel_i[2]",
 					"strict" : false
 				},
 				{
 					"name" : "Rst_n_i",
-					"strict" : false
-				},
-				{
-					"name" : "timerLim",
-					"strict" : false
-				},
-				{
-					"name" : "Clk_slow_i",
 					"strict" : false
 				}
 			]
