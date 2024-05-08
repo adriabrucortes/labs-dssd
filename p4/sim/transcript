@@ -4575,3 +4575,6 @@ run -all
 # ** Note: $stop    : C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/tb/tb_top_meteo_de0cv.v(67)
 #    Time: 100067 ns  Iteration: 0  Instance: /tb_top_meteo_de0cv
 # Break in Module tb_top_meteo_de0cv at C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/tb/tb_top_meteo_de0cv.v line 67
+quit -sim
+# End time: 13:51:25 on May 08,2024, Elapsed time: 25:59:12
+# Errors: 0, Warnings: 24

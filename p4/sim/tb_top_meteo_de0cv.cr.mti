@@ -61,6 +61,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	bin2bcd
 
+} {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module top_meteo_de0cv
+
+Top level modules:
+	top_meteo_de0cv
+
 } {} {}} C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_defines.v {1 {vlog -work work -stats=none C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_defines.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 
