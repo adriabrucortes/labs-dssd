@@ -6,7 +6,7 @@ module i2c_slave_model #(
   parameter WR_BURST = 1'b1,  // 0: disabled
   parameter RD_BURST = 1'b1,  // 0: disabled
   parameter MEM_SIZE = 3,
-  parameter MEM_INIT_FILE = "bme280_regs.mem"
+  parameter MEM_INIT_FILE = ""
 )(
   input Scl,
   inout Sda
@@ -87,8 +87,8 @@ module i2c_slave_model #(
 	always @(negedge Sda)
 	  if(Scl) begin
 	    sta   <= #1 1'b1;
-      d_sta <= #1 1'b0;
-      sto   <= #1 1'b0;
+		d_sta <= #1 1'b0;
+		sto   <= #1 1'b0;
 	    if(debug)
 	      $display("DEBUG i2c_slave; start condition detected at %t", $time);
     end else begin

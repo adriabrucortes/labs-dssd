@@ -1,5 +1,6 @@
 
 `include "../misc/timescale.v"
+`define RTL_LVL
 
 module top_meteo_de0cv (
   input  Clk_i,
@@ -14,42 +15,48 @@ module top_meteo_de0cv (
 );
 
 // Params
-localparam SLAVE_ADDR = 7'b111_0110;
 localparam DWIDTH = 8;
 localparam AWIDTH = 3;
-localparam TIMERLIM = 32'd1000000;
+localparam SLAVE_ADDR = 7'b001_0000;
+
+`ifdef RTL_LVL
+  localparam TIMERLIM = 20'd0010000;
+`else
+  localparam TIMERLIM = 20'd1000000;
+`endif
 
 // Clks & Rsts
 wire clk100MHz, clk1MHz;
 wire Rst_n, Rst_n_slow;
 
 // SDA i SCL
-wire sclPadEn, sclPadIn, sclPadOut;
-wire sdaPadEn, sdaPadIn, sdaPadOut;
+wire sclPadEn, sclPadOut;
+wire sdaPadEn, sdaPadOut;
 
 assign SCL_io = sclPadEn ? 1'bz : sclPadOut;
 assign SDA_io = sdaPadEn ? 1'bz : sdaPadOut;
-assign sclPadIn = SCL_io;
-assign sdaPadIn = SDA_io;
 
 // Arbitrary outputs
 assign SlaveAddr_LSb_o = 1'b0;
 assign Enable_i2c_o = 1'b1;
 
 // Misc connections
+wire timerEn, timerInt, TimerInt_sync;
+
 wire i2c_int;
+wire dbus_wr;
 wire [AWIDTH-1:0] dbus_addr;
 wire [DWIDTH-1:0] dbus_di, dbus_do;
-wire dbus_wr;
+
 wire i2cc_start, i2cc_rdwr, i2cc_last, i2cc_done;
-wire [DWIDTH-1:0] i2cc_addr, i2cc_txd, i2cc_rxd;
-wire timerEn, timerInt, TimerInt_sync;
+wire [DWIDTH-1:0] i2cc_addr;
+wire [DWIDTH-1:0] i2cc_txd, i2cc_rxd;
 
 wire [20-1:0] tempBin, pressBin;
 wire [16-1:0] humBin;
 wire [16-1:0] digT1, digT2, digT3;
 wire [16-1:0] digP1, digP2, digP3, digP4, digP5, digP6, digP7, digP8, digP9;
-wire [ 8-1:0]  digH1, digH3, digH6;
+wire [ 8-1:0] digH1, digH3, digH6;
 wire [16-1:0] digH2, digH4, digH5;
 wire [32-1:0] temp, press, hum;
 
@@ -89,7 +96,7 @@ always @(*) begin
 end
 
 // Instances
-pll_cv pll(
+pll_cv pll (
   .refclk           (Clk_i),
   .rst              (1'b0),
   .outclk_0         (clk100MHz),
@@ -108,8 +115,9 @@ digital_por por_1MHz (
   .Rst_n            (Rst_n_slow)
 );
 
-i2c_master_top #(.DWIDTH(DWIDTH),
-                 .AWIDTH(AWIDTH)
+i2c_master_top #(
+  .DWIDTH(DWIDTH),
+  .AWIDTH(AWIDTH)
 ) i2c_master (
   .Clk              (clk100MHz),
   .Rst_n            (Rst_n),
@@ -126,9 +134,10 @@ i2c_master_top #(.DWIDTH(DWIDTH),
   .SdaPadEn         (SdaPadEn)
 );
 
-bme280_i2c_ctrl #(.DWIDTH(DWIDTH),
-                  .AWIDTH(AWIDTH),
-                  .SLADDR(SLAVE_ADDR)
+bme280_i2c_ctrl #(
+  .DWIDTH(DWIDTH),
+  .AWIDTH(AWIDTH),
+  .SLADDR(SLAVE_ADDR)
 ) bme280_i2c_ctrl (
   .Clk              (clk100MHz),
   .Rst_n            (Rst_n),
@@ -152,7 +161,7 @@ sync_reg #(.NSTAGES(2)) sync (
   .Out              (timerInt)
 );
 
-gray_timer #(.SIZE(32)) gtimer (
+gray_timer #(.SIZE(20)) gtimer (
   .Clk              (clk1MHz),
   .Rst_n            (Rst_n_slow & timerEn),
   .Limit            (TIMERLIM),
@@ -194,6 +203,7 @@ bme280_reader #(.DWIDTH(DWIDTH)) i_reader (
   .DigH5            (digH5),
   .DigH6            (digH6)
 );
+
 
 bme280_compensation i_comp (
   .TempBin          (tempBin),

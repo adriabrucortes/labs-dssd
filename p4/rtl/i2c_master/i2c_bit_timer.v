@@ -1,34 +1,59 @@
-module i2c_bit_timer #(parameter SIZE = 8)
-(
-    input Clk, Rst_n, Start, Stop,
-    input [SIZE-1:0] Ticks,
-    output reg Out
+/********1*********2*********3*********4*********5*********6*********7*********8
+* File : timer.v
+*_______________________________________________________________________________
+*
+* Revision history
+*
+* Name          Date        Observations
+* ------------------------------------------------------------------------------
+* -            01/05/2023   First version.
+* ------------------------------------------------------------------------------
+*_______________________________________________________________________________
+*
+* Description
+* Cyclic timer based on a backwards counter.
+* It generates an interrupt pulse every N clock cycle.
+*
+*_______________________________________________________________________________
+
+* (c) Copyright Universitat de Barcelona, 2023
+*
+*********1*********2*********3*********4*********5*********6*********7*********/
+`include "../misc/timescale.v"
+
+module i2c_bit_timer #(
+  parameter SIZE = 8
+)(
+  input Clk,
+  input Rst_n,
+  input Start,
+  input Stop,
+  input [SIZE-1:0] Ticks,
+  output reg Out
 );
 
-reg [SIZE-1:0] cnt;
+  reg [SIZE-1:0] counter;
 
-// Lògica de comptador
-always @(posedge Clk or negedge Rst_n) begin
-
-    // Reset
-    if (!Rst_n)                 cnt <= {SIZE{1'b0}};
-
+  // counts the timer ticks
+  always @(posedge Clk or negedge Rst_n)
+    if(!Rst_n)
+      counter <= {SIZE{1'b0}};
+    else if(Start || ~|counter)
+      counter <= Ticks;
+    else if(Stop)
+      counter <= counter;
     else
-        if (Start)              cnt <= Ticks; // Renici forçat o auto-reinici
-        else if (Stop)          cnt <= cnt;   // Parada
-        else if (~|cnt)         cnt <= Ticks; // Start i Stop tenen prioritat respecte això
-        else                    cnt <= cnt - 1'b1; // Compta cap avall
-end
+      counter <= counter - 1'b1;
 
-// Lògica de sortida
-always @(posedge Clk or negedge Rst_n) begin
-
-    // Reset
-    if (!Rst_n)                 Out <= 1'b0;
-
+  // generats the interrupt pulse
+  always @(posedge Clk or negedge Rst_n)
+    if(!Rst_n)
+      Out <= 1'b0;
+    else if(Start || ~|counter)
+      Out <= 1'b1;
+    else if(Stop)
+      Out <= 1'b0;
     else
-        if (Start || ~|cnt)     Out <= 1'b1; // Reinici forçat o auto-reinici
-        else                    Out <= 1'b0;
-end
-    
+      Out <= 1'b0;
+
 endmodule

@@ -3,11 +3,15 @@
 
 module tb_top_meteo_de0cv();
 
-wire scl, sda, clk, clk_slw, rst_n;
+wire scl, sda, clk, rst_n;
 reg [2:0] sel;
 wire errorFlag;
 
 parameter CLK_HALFPERIOD = 5;
+
+pullup p1(scl); // pullup scl line
+pullup p2(sda); // pullup sda line
+
 sys_model #(
   .CLK_HALFPERIOD   (CLK_HALFPERIOD), // units depends on timescale
   .DELAY            (2)  // delay between clock posedge and check
@@ -33,7 +37,12 @@ top_meteo_de0cv DUT (
   .Dec5_o           ()
 );
 
-i2c_slave_model i2c_slave (
+i2c_slave_model #(
+  .MEM_INIT_FILE("../misc/bme280_regs.mem"),
+  .MEM_SIZE(256),
+  .I2C_ADDR(7'b001_0000),
+  .RD_BURST(1'b0)
+) i2c_slave (
   .Scl              (scl),
   .Sda              (sda)
 );
@@ -50,8 +59,10 @@ initial begin
   $timeformat(-9, 2, " ns", 10); // format for the time print
 
   // Initial reset
+  u_sys.reset(2); // Així ens assegurem que detecti el flanc de baixada
+  u_sys.wait_cycles(3);
   u_sys.reset(2);
-  u_sys.wait_cycles(1000);
+  u_sys.wait_cycles(10000);
 
   $stop;
 end

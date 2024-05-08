@@ -10,7 +10,7 @@ z2
 cModel Technology
 dC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/sim
 vbcd2seg
-Z0 !s110 1715071235
+Z0 !s110 1715081823
 !i10b 1
 !s100 N;IQKD;G4olG`S5]mn0iU0
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -20,18 +20,18 @@ Z3 dC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/sim
 Z4 w1705861500
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bcd2seg.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bcd2seg.v
-!i122 582
+!i122 1496
 L0 1 20
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1715071235.000000
+!s108 1715081822.000000
 !s107 C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bcd2seg.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bcd2seg.v|
 !i113 1
-Z7 o-work work
-Z8 tCvgOpt 0
+Z6 o-work work
+Z7 tCvgOpt 0
 vbin2bcd
 R0
 !i10b 1
@@ -40,21 +40,21 @@ R1
 I?0f3gNzfe`zZ2fg_iIj382
 R2
 R3
-Z9 w1714977625
+Z8 w1714977625
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bin2bcd.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bin2bcd.v
-!i122 583
+!i122 1497
 L0 2 19
 R5
 r1
 !s85 0
 31
-R6
+Z9 !s108 1715081823.000000
 !s107 C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bin2bcd.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bin2bcd.v|
 !i113 1
+R6
 R7
-R8
 vbme280_compensation
 R0
 !i10b 1
@@ -66,18 +66,18 @@ R3
 R4
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bme280_compensation.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bme280_compensation.v
-!i122 584
+!i122 1498
 L0 3 72
 R5
 r1
 !s85 0
 31
-R6
+R9
 !s107 C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bme280_compensation.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bme280_compensation.v|
 !i113 1
+R6
 R7
-R8
 vbme280_i2c_ctrl
 R0
 !i10b 1
@@ -86,21 +86,21 @@ R1
 I__=P>I7=HlZ6YnX2c=VR00
 R2
 R3
-R9
+R8
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bme280_i2c_ctrl.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bme280_i2c_ctrl.v
-!i122 585
+!i122 1499
 L0 4 173
 R5
 r1
 !s85 0
 31
-R6
+R9
 !s107 C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\.\i2c_master\i2c_master_defines.v|../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bme280_i2c_ctrl.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bme280_i2c_ctrl.v|
 !i113 1
+R6
 R7
-R8
 vbme280_reader
 R0
 !i10b 1
@@ -112,20 +112,20 @@ R3
 R4
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bme280_reader.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bme280_reader.v
-!i122 586
+!i122 1500
 L0 4 377
 R5
 r1
 !s85 0
 31
-R6
+R9
 !s107 C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\bme280_defines.v|../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bme280_reader.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bme280_reader.v|
 !i113 1
+R6
 R7
-R8
 vdigital_por
-Z10 !s110 1715071236
+R0
 !i10b 1
 !s100 26e>AYgVNz_z0_EPLPkZ41
 R1
@@ -135,20 +135,20 @@ R3
 R4
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/digital_por.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/digital_por.v
-!i122 587
+!i122 1501
 L0 14 14
 R5
 r1
 !s85 0
 31
-R6
+R9
 !s107 ../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/digital_por.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/digital_por.v|
 !i113 1
+R6
 R7
-R8
 vgray_timer
-R10
+R0
 !i10b 1
 !s100 0a7lJ];RO_Pb;Rkc21GLE0
 R1
@@ -158,20 +158,20 @@ R3
 w1714980879
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/gray_timer.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/gray_timer.v
-!i122 588
+!i122 1502
 L0 27 51
 R5
 r1
 !s85 0
 31
-Z11 !s108 1715071236.000000
+R9
 !s107 ../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/gray_timer.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/gray_timer.v|
 !i113 1
+R6
 R7
-R8
 vhex2seg
-R10
+Z10 !s110 1715081824
 !i10b 1
 !s100 CeQ5Qh3aj?cb:`_JR8Eod0
 R1
@@ -181,43 +181,43 @@ R3
 R4
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/hex2seg.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/hex2seg.v
-!i122 589
+!i122 1503
 L0 1 26
 R5
 r1
 !s85 0
 31
-R11
+R9
 !s107 C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/hex2seg.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/hex2seg.v|
 !i113 1
+R6
 R7
-R8
 vi2c_bit_timer
-Z12 !s110 1715071237
+R10
 !i10b 1
-!s100 B8S@VEQ@jnGnX4gQaL3NL1
+!s100 W`2`aCn]^=ni=GSVAm@lR1
 R1
-I`jE_V6jz8NK5ihnYX6DFe3
+IKAQF4K11;A_@@N[KM[X^_3
 R2
 R3
-w1710750858
+Z11 w1712640928
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_bit_timer.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_bit_timer.v
-!i122 592
-L0 1 34
+!i122 1506
+L0 24 36
 R5
 r1
 !s85 0
 31
-R11
-!s107 C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_bit_timer.v|
+Z12 !s108 1715081824.000000
+!s107 ../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_bit_timer.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_bit_timer.v|
 !i113 1
+R6
 R7
-R8
 vi2c_byte_state_timer
-R12
+R10
 !i10b 1
 !s100 C:18fW@eZ2<;7_X:hBOe71
 R1
@@ -227,64 +227,64 @@ R3
 w1713258543
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_byte_state_timer.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_byte_state_timer.v
-!i122 593
+!i122 1507
 L0 9 29
 R5
 r1
 !s85 0
 31
-Z13 !s108 1715071237.000000
+R12
 !s107 ../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_byte_state_timer.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_byte_state_timer.v|
 !i113 1
+R6
 R7
-R8
 vi2c_master_bit_ctrl
-R12
+R10
 !i10b 1
 !s100 X7jZN40JHVkJ;MzB?hN[W0
 R1
 I1HQ0DlSSRLO89R?3A:jZW2
 R2
 R3
-w1713770043
+w1712831212
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_bit_ctrl.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_bit_ctrl.v
-!i122 594
+!i122 1508
 L0 41 295
 R5
 r1
 !s85 0
 31
-R13
+R12
 !s107 C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\i2c_master\i2c_master_defines.v|../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_bit_ctrl.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_bit_ctrl.v|
 !i113 1
+R6
 R7
-R8
 vi2c_master_byte_ctrl
-!s110 1715071238
+R10
 !i10b 1
-!s100 _T:75j1QnhVm8;P2Tjbb?2
+!s100 6a:Z@6<VR6<8Q5diEo<1k0
 R1
-IleY5E5a=<P_Ec^4d^E6gc1
+I>Rd:2T<]@en33O7]_m<CI2
 R2
 R3
-w1714375549
+w1715075631
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_byte_ctrl.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_byte_ctrl.v
-!i122 595
-L0 10 242
+!i122 1509
+L0 4 181
 R5
 r1
 !s85 0
 31
-R13
+R12
 !s107 C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\i2c_master\i2c_master_defines.v|../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_byte_ctrl.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_byte_ctrl.v|
 !i113 1
+R6
 R7
-R8
 vi2c_master_regs
 !s110 1715070707
 !i10b 1
@@ -306,56 +306,56 @@ r1
 !s107 C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\i2c_master\i2c_master_defines.v|../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_regs.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_regs.v|
 !i113 1
+R6
 R7
-R8
 vi2c_master_top
-Z14 !s110 1715071239
+R10
 !i10b 1
-!s100 SSdaCBRMG94@WgOe=SGF71
+!s100 P3;A]25KE[TjMAV6j`Li[0
 R1
-IT0@X1i;n]HhVko8KoMCOZ2
+I:_PXLfjjzL8N5]_2I<FA11
 R2
 R3
-w1714372659
+R11
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_top.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_top.v
-!i122 596
+!i122 1510
 L0 23 123
 R5
 r1
 !s85 0
 31
-!s108 1715071238.000000
+R12
 !s107 C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\i2c_master\i2c_master_defines.v|../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_top.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_top.v|
 !i113 1
+R6
 R7
-R8
 vi2c_slave_model
-R14
+Z13 !s110 1715081825
 !i10b 1
-!s100 GXULYhP`6aX=fI:X4TZ`F2
+!s100 Mk6ob=TKoKXbFl3:jG6P[3
 R1
-IkJX9h=jaPf?O0]8ZQ3_Sz0
+IPITO5OYOk=_fmOI::HIha1
 R2
 R3
-w1715070095
+w1715076413
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/misc/i2c_slave_model.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/misc/i2c_slave_model.v
-!i122 597
+!i122 1511
 L0 4 274
 R5
 r1
 !s85 0
 31
-Z15 !s108 1715071239.000000
+R12
 !s107 C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\misc\timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/misc/i2c_slave_model.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/misc/i2c_slave_model.v|
 !i113 1
+R6
 R7
-R8
 vpll_cv
-R14
+R13
 !i10b 1
 !s100 ;4CkCA[oJ]F79j6bfmLiX1
 R1
@@ -365,41 +365,41 @@ R3
 R4
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/misc/pll_fm.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/misc/pll_fm.v
-!i122 598
+!i122 1512
 L0 3 10
 R5
 r1
 !s85 0
 31
-R15
+Z14 !s108 1715081825.000000
 !s107 ../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/misc/pll_fm.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/misc/pll_fm.v|
 !i113 1
+R6
 R7
-R8
 vshiftreg
-Z16 !s110 1715071240
+R13
 !i10b 1
 !s100 YPFfg5L@ghEQ=aYX>Nb7M1
 R1
 IS94GY49Z>?;Q671JmS@o=2
 R2
 R3
-w1715069521
+R11
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/shiftreg.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/shiftreg.v
-!i122 601
+!i122 1515
 L0 22 28
 R5
 r1
 !s85 0
 31
-Z17 !s108 1715071240.000000
+R14
 !s107 ../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/shiftreg.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/shiftreg.v|
 !i113 1
+R6
 R7
-R8
 vsync_reg
 R10
 !i10b 1
@@ -411,20 +411,20 @@ R3
 R4
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/sync_reg.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/sync_reg.v
-!i122 590
+!i122 1504
 L0 1 18
 R5
 r1
 !s85 0
 31
-R11
+R12
 !s107 C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/sync_reg.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/sync_reg.v|
 !i113 1
+R6
 R7
-R8
 vsys_model
-R14
+R13
 !i10b 1
 !s100 >O8bZHHS93Id4mQQL;LRf3
 R1
@@ -434,61 +434,61 @@ R3
 R4
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/misc/sys_model.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/misc/sys_model.v
-!i122 599
+!i122 1513
 L0 23 38
 R5
 r1
 !s85 0
 31
-R15
+R14
 !s107 ../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/misc/sys_model.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/misc/sys_model.v|
 !i113 1
+R6
 R7
-R8
 vtb_top_meteo_de0cv
-R16
+R13
 !i10b 1
-!s100 BibKmCaAQP05AXB36ihIn1
+!s100 ER9^EZ[olDK`^H>Wz9[aj3
 R1
-I9;L51k>kU`>CI61z5H:6c0
+I]I]`3Zgg9dEin>zZoUg3P1
 R2
 R3
-w1715071226
+w1715079522
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/tb/tb_top_meteo_de0cv.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/tb/tb_top_meteo_de0cv.v
-!i122 600
-L0 4 56
+!i122 1514
+L0 4 67
 R5
 r1
 !s85 0
 31
-R17
+R14
 !s107 ../rtl/i2c_master/i2c_master_defines.v|../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/tb/tb_top_meteo_de0cv.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/tb/tb_top_meteo_de0cv.v|
 !i113 1
+R6
 R7
-R8
 vtop_meteo_de0cv
 R10
 !i10b 1
-!s100 hnXz`SUBzT3081oj092822
+!s100 ?hEZO:FRho6UV0o6ckfV62
 R1
-I^l;2J7T=jBh96B03;5cmZ1
+IE<9DXo?g>Q`Y`lNJoXVE61
 R2
 R3
-w1715069669
+w1715081565
 8C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v
 FC:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v
-!i122 591
-L0 4 247
+!i122 1505
+L0 5 256
 R5
 r1
 !s85 0
 31
-R11
+R12
 !s107 ../misc/timescale.v|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v|
 !i113 1
+R6
 R7
-R8
