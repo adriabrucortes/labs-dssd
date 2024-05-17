@@ -176,6 +176,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "SCL_io",
+					"strict" : false
+				},
+				{
+					"name" : "SDA_io",
+					"strict" : false
+				},
+				{
 					"name" : "Sel_i[0]",
 					"strict" : false
 				},

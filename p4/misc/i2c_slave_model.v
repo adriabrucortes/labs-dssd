@@ -2,7 +2,7 @@
 `include "timescale.v"
 
 module i2c_slave_model #(
-  parameter I2C_ADDR = 7'b001_0000,
+  parameter I2C_ADDR = 7'b111_0110,
   parameter WR_BURST = 1'b1,  // 0: disabled
   parameter RD_BURST = 1'b1,  // 0: disabled
   parameter MEM_SIZE = 3,

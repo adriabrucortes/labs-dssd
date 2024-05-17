@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_meteo_de0cv
-Tue May 07 10:15:17 2024
+Fri May 17 18:55:31 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -19,7 +19,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  11. State Machine - |top_meteo_de0cv|bme280_reader:i_reader|state
  12. State Machine - |top_meteo_de0cv|bme280_i2c_ctrl:bme280_i2c_ctrl|state
  13. State Machine - |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|state
- 14. User-Specified and Inferred Latches
+ 14. State Machine - |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte|state
  15. Registers Removed During Synthesis
  16. General Register Statistics
  17. Inverted Register Statistics
@@ -27,27 +27,27 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  19. Parameter Settings for User Entity Instance: pll_cv:pll|pll_cv_0002:pll_cv_inst|altera_pll:altera_pll_i
  20. Parameter Settings for User Entity Instance: i2c_master_top:i2c_master
  21. Parameter Settings for User Entity Instance: i2c_master_top:i2c_master|i2c_master_regs:i_regs
- 22. Parameter Settings for User Entity Instance: i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte
- 23. Parameter Settings for User Entity Instance: i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte|i2c_byte_state_timer:state_timer
- 24. Parameter Settings for User Entity Instance: i2c_master_top:i2c_master|shiftreg:i_sr
- 25. Parameter Settings for User Entity Instance: i2c_master_top:i2c_master|i2c_bit_timer:i_timer
- 26. Parameter Settings for User Entity Instance: bme280_i2c_ctrl:bme280_i2c_ctrl
- 27. Parameter Settings for User Entity Instance: sync_reg:sync
- 28. Parameter Settings for User Entity Instance: gray_timer:gtimer
- 29. Parameter Settings for User Entity Instance: bme280_reader:i_reader
- 30. Parameter Settings for User Entity Instance: bin2bcd:i_t_bcd
- 31. Parameter Settings for User Entity Instance: bin2bcd:i_p_bcd
- 32. Parameter Settings for User Entity Instance: bin2bcd:i_h_bcd
- 33. Parameter Settings for Inferred Entity Instance: bme280_compensation:i_comp|lpm_divide:Div0
- 34. Parameter Settings for Inferred Entity Instance: bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0
- 35. lpm_mult Parameter Settings by Entity Instance
- 36. Port Connectivity Checks: "bin2bcd:i_h_bcd"
- 37. Port Connectivity Checks: "bin2bcd:i_p_bcd"
- 38. Port Connectivity Checks: "bin2bcd:i_t_bcd"
- 39. Port Connectivity Checks: "bme280_compensation:i_comp"
- 40. Port Connectivity Checks: "gray_timer:gtimer"
- 41. Port Connectivity Checks: "i2c_master_top:i2c_master"
- 42. Port Connectivity Checks: "pll_cv:pll"
+ 22. Parameter Settings for User Entity Instance: i2c_master_top:i2c_master|shiftreg:i_sr
+ 23. Parameter Settings for User Entity Instance: i2c_master_top:i2c_master|i2c_bit_timer:i_timer
+ 24. Parameter Settings for User Entity Instance: bme280_i2c_ctrl:bme280_i2c_ctrl
+ 25. Parameter Settings for User Entity Instance: sync_reg:sync
+ 26. Parameter Settings for User Entity Instance: gray_timer:gtimer
+ 27. Parameter Settings for User Entity Instance: bme280_reader:i_reader
+ 28. Parameter Settings for User Entity Instance: bin2bcd:i_t_bcd
+ 29. Parameter Settings for User Entity Instance: bin2bcd:i_p_bcd
+ 30. Parameter Settings for User Entity Instance: bin2bcd:i_h_bcd
+ 31. Parameter Settings for Inferred Entity Instance: bme280_compensation:i_comp|lpm_mult:Mult7_rtl_0
+ 32. Parameter Settings for Inferred Entity Instance: bme280_compensation:i_comp|lpm_divide:Div0
+ 33. Parameter Settings for Inferred Entity Instance: bme280_compensation:i_comp|lpm_mult:Mult8_rtl_1
+ 34. Parameter Settings for Inferred Entity Instance: bme280_compensation:i_comp|lpm_mult:Mult3_rtl_2
+ 35. Parameter Settings for Inferred Entity Instance: bme280_compensation:i_comp|lpm_mult:Mult3_rtl_3
+ 36. lpm_mult Parameter Settings by Entity Instance
+ 37. Port Connectivity Checks: "bin2bcd:i_h_bcd"
+ 38. Port Connectivity Checks: "bin2bcd:i_p_bcd"
+ 39. Port Connectivity Checks: "bin2bcd:i_t_bcd"
+ 40. Port Connectivity Checks: "bme280_compensation:i_comp"
+ 41. Port Connectivity Checks: "gray_timer:gtimer"
+ 42. Port Connectivity Checks: "i2c_master_top:i2c_master"
  43. Post-Synthesis Netlist Statistics for Top Partition
  44. Elapsed Time Per Partition
  45. Analysis & Synthesis Messages
@@ -78,17 +78,17 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue May 07 10:15:17 2024       ;
+; Analysis & Synthesis Status     ; Successful - Fri May 17 18:55:30 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; top_meteo_de0cv                             ;
 ; Top-level Entity Name           ; top_meteo_de0cv                             ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 500                                         ;
+; Total registers                 ; 489                                         ;
 ; Total pins                      ; 52                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 66                                          ;
+; Total DSP Blocks                ; 63                                          ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
@@ -198,11 +198,9 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
-;     Processor 3            ;   0.1%      ;
-;     Processor 4            ;   0.0%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processors 6-10        ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processors 4-10        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -218,7 +216,6 @@ https://fpgasoftware.intel.com/eula.
 ; ../rtl/i2c_master/i2c_master_defines.v   ; yes             ; User Verilog HDL File        ; C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_defines.v   ;         ;
 ; ../rtl/i2c_master/i2c_master_byte_ctrl.v ; yes             ; User Verilog HDL File        ; C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_byte_ctrl.v ;         ;
 ; ../rtl/i2c_master/i2c_master_bit_ctrl.v  ; yes             ; User Verilog HDL File        ; C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_bit_ctrl.v  ;         ;
-; ../rtl/i2c_master/i2c_byte_state_timer.v ; yes             ; User Verilog HDL File        ; C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_byte_state_timer.v ;         ;
 ; ../rtl/i2c_master/i2c_bit_timer.v        ; yes             ; User Verilog HDL File        ; C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_bit_timer.v        ;         ;
 ; ../rtl/top_meteo_de0cv.v                 ; yes             ; User Verilog HDL File        ; C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v                 ;         ;
 ; ../rtl/sync_reg.v                        ; yes             ; User Verilog HDL File        ; C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/sync_reg.v                        ;         ;
@@ -233,19 +230,20 @@ https://fpgasoftware.intel.com/eula.
 ; ../ips/pll_cv.v                          ; yes             ; User Wizard-Generated File   ; C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/ips/pll_cv.v                          ; pll_cv  ;
 ; ../ips/pll_cv/pll_cv_0002.v              ; yes             ; User Verilog HDL File        ; C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/ips/pll_cv/pll_cv_0002.v              ; pll_cv  ;
 ; altera_pll.v                             ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v                      ;         ;
-; lpm_divide.tdf                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                    ;         ;
-; abs_divider.inc                          ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc                   ;         ;
-; sign_div_unsign.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc               ;         ;
-; aglobal201.inc                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                    ;         ;
-; db/lpm_divide_5ro.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/syn/db/lpm_divide_5ro.tdf             ;         ;
-; db/abs_divider_edg.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/syn/db/abs_divider_edg.tdf            ;         ;
-; db/alt_u_div_c3f.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/syn/db/alt_u_div_c3f.tdf              ;         ;
-; db/lpm_abs_9p9.tdf                       ; yes             ; Auto-Generated Megafunction  ; C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/syn/db/lpm_abs_9p9.tdf                ;         ;
 ; lpm_mult.tdf                             ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf                      ;         ;
+; aglobal201.inc                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                    ;         ;
 ; lpm_add_sub.inc                          ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc                   ;         ;
 ; multcore.inc                             ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/multcore.inc                      ;         ;
 ; bypassff.inc                             ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/bypassff.inc                      ;         ;
 ; altshift.inc                             ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift.inc                      ;         ;
+; db/mult_2l01.v                           ; yes             ; Auto-Generated Megafunction  ; C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/syn/db/mult_2l01.v                    ;         ;
+; lpm_divide.tdf                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                    ;         ;
+; abs_divider.inc                          ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc                   ;         ;
+; sign_div_unsign.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc               ;         ;
+; db/lpm_divide_5ro.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/syn/db/lpm_divide_5ro.tdf             ;         ;
+; db/abs_divider_edg.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/syn/db/abs_divider_edg.tdf            ;         ;
+; db/alt_u_div_c3f.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/syn/db/alt_u_div_c3f.tdf              ;         ;
+; db/lpm_abs_9p9.tdf                       ; yes             ; Auto-Generated Megafunction  ; C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/syn/db/lpm_abs_9p9.tdf                ;         ;
 ; multcore.tdf                             ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/multcore.tdf                      ;         ;
 ; csa_add.inc                              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/csa_add.inc                       ;         ;
 ; mpar_add.inc                             ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mpar_add.inc                      ;         ;
@@ -263,6 +261,8 @@ https://fpgasoftware.intel.com/eula.
 ; db/add_sub_32h.tdf                       ; yes             ; Auto-Generated Megafunction  ; C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/syn/db/add_sub_32h.tdf                ;         ;
 ; db/add_sub_1dh.tdf                       ; yes             ; Auto-Generated Megafunction  ; C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/syn/db/add_sub_1dh.tdf                ;         ;
 ; altshift.tdf                             ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift.tdf                      ;         ;
+; db/mult_vd01.v                           ; yes             ; Auto-Generated Megafunction  ; C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/syn/db/mult_vd01.v                    ;         ;
+; db/add_sub_fug.tdf                       ; yes             ; Auto-Generated Megafunction  ; C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/syn/db/add_sub_fug.tdf                ;         ;
 +------------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------+---------+
 
 
@@ -271,28 +271,28 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                     ;
 +---------------------------------------------+---------------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 4229                                                                      ;
+; Estimate of Logic utilization (ALMs needed) ; 4261                                                                      ;
 ;                                             ;                                                                           ;
-; Combinational ALUT usage for logic          ; 8039                                                                      ;
-;     -- 7 input functions                    ; 5                                                                         ;
-;     -- 6 input functions                    ; 368                                                                       ;
-;     -- 5 input functions                    ; 1223                                                                      ;
-;     -- 4 input functions                    ; 2311                                                                      ;
-;     -- <=3 input functions                  ; 4132                                                                      ;
+; Combinational ALUT usage for logic          ; 8086                                                                      ;
+;     -- 7 input functions                    ; 4                                                                         ;
+;     -- 6 input functions                    ; 387                                                                       ;
+;     -- 5 input functions                    ; 1187                                                                      ;
+;     -- 4 input functions                    ; 2353                                                                      ;
+;     -- <=3 input functions                  ; 4155                                                                      ;
 ;                                             ;                                                                           ;
-; Dedicated logic registers                   ; 500                                                                       ;
+; Dedicated logic registers                   ; 489                                                                       ;
 ;                                             ;                                                                           ;
 ; I/O pins                                    ; 52                                                                        ;
 ;                                             ;                                                                           ;
-; Total DSP Blocks                            ; 66                                                                        ;
+; Total DSP Blocks                            ; 63                                                                        ;
 ;                                             ;                                                                           ;
 ; Total PLLs                                  ; 2                                                                         ;
 ;     -- PLLs                                 ; 2                                                                         ;
 ;                                             ;                                                                           ;
 ; Maximum fan-out node                        ; pll_cv:pll|pll_cv_0002:pll_cv_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
-; Maximum fan-out                             ; 467                                                                       ;
-; Total fan-out                               ; 33523                                                                     ;
-; Average fan-out                             ; 3.85                                                                      ;
+; Maximum fan-out                             ; 468                                                                       ;
+; Total fan-out                               ; 33624                                                                     ;
+; Average fan-out                             ; 3.84                                                                      ;
 +---------------------------------------------+---------------------------------------------------------------------------+
 
 
@@ -301,7 +301,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node                        ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                      ; Entity Name          ; Library Name ;
 +---------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
-; |top_meteo_de0cv                                  ; 8039 (111)          ; 500 (0)                   ; 0                 ; 66         ; 52   ; 0            ; |top_meteo_de0cv                                                                                                                                                         ; top_meteo_de0cv      ; work         ;
+; |top_meteo_de0cv                                  ; 8086 (70)           ; 489 (0)                   ; 0                 ; 63         ; 52   ; 0            ; |top_meteo_de0cv                                                                                                                                                         ; top_meteo_de0cv      ; work         ;
 ;    |bcd2seg:i_h_bcd0|                             ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bcd2seg:i_h_bcd0                                                                                                                                        ; bcd2seg              ; work         ;
 ;    |bcd2seg:i_h_bcd1|                             ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bcd2seg:i_h_bcd1                                                                                                                                        ; bcd2seg              ; work         ;
 ;    |bcd2seg:i_h_bcd2|                             ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bcd2seg:i_h_bcd2                                                                                                                                        ; bcd2seg              ; work         ;
@@ -319,34 +319,41 @@ https://fpgasoftware.intel.com/eula.
 ;    |bcd2seg:i_t_bcd3|                             ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bcd2seg:i_t_bcd3                                                                                                                                        ; bcd2seg              ; work         ;
 ;    |bcd2seg:i_t_bcd4|                             ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bcd2seg:i_t_bcd4                                                                                                                                        ; bcd2seg              ; work         ;
 ;    |bcd2seg:i_t_bcd5|                             ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bcd2seg:i_t_bcd5                                                                                                                                        ; bcd2seg              ; work         ;
-;    |bin2bcd:i_h_bcd|                              ; 171 (171)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bin2bcd:i_h_bcd                                                                                                                                         ; bin2bcd              ; work         ;
+;    |bin2bcd:i_h_bcd|                              ; 166 (166)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bin2bcd:i_h_bcd                                                                                                                                         ; bin2bcd              ; work         ;
 ;    |bin2bcd:i_p_bcd|                              ; 246 (246)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bin2bcd:i_p_bcd                                                                                                                                         ; bin2bcd              ; work         ;
-;    |bin2bcd:i_t_bcd|                              ; 637 (637)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bin2bcd:i_t_bcd                                                                                                                                         ; bin2bcd              ; work         ;
-;    |bme280_compensation:i_comp|                   ; 6408 (1221)         ; 0 (0)                     ; 0                 ; 66         ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp                                                                                                                              ; bme280_compensation  ; work         ;
-;       |lpm_divide:Div0|                           ; 5167 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_divide:Div0                                                                                                              ; lpm_divide           ; work         ;
-;          |lpm_divide_5ro:auto_generated|          ; 5167 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_divide:Div0|lpm_divide_5ro:auto_generated                                                                                ; lpm_divide_5ro       ; work         ;
-;             |abs_divider_edg:divider|             ; 5167 (128)          ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_divide:Div0|lpm_divide_5ro:auto_generated|abs_divider_edg:divider                                                        ; abs_divider_edg      ; work         ;
-;                |alt_u_div_c3f:divider|            ; 4975 (4975)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_divide:Div0|lpm_divide_5ro:auto_generated|abs_divider_edg:divider|alt_u_div_c3f:divider                                  ; alt_u_div_c3f        ; work         ;
+;    |bin2bcd:i_t_bcd|                              ; 635 (635)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bin2bcd:i_t_bcd                                                                                                                                         ; bin2bcd              ; work         ;
+;    |bme280_compensation:i_comp|                   ; 6528 (1250)         ; 0 (0)                     ; 0                 ; 63         ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp                                                                                                                              ; bme280_compensation  ; work         ;
+;       |lpm_divide:Div0|                           ; 5164 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_divide:Div0                                                                                                              ; lpm_divide           ; work         ;
+;          |lpm_divide_5ro:auto_generated|          ; 5164 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_divide:Div0|lpm_divide_5ro:auto_generated                                                                                ; lpm_divide_5ro       ; work         ;
+;             |abs_divider_edg:divider|             ; 5164 (128)          ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_divide:Div0|lpm_divide_5ro:auto_generated|abs_divider_edg:divider                                                        ; abs_divider_edg      ; work         ;
+;                |alt_u_div_c3f:divider|            ; 4972 (4972)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_divide:Div0|lpm_divide_5ro:auto_generated|abs_divider_edg:divider|alt_u_div_c3f:divider                                  ; alt_u_div_c3f        ; work         ;
 ;                |lpm_abs_9p9:my_abs_num|           ; 64 (64)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_divide:Div0|lpm_divide_5ro:auto_generated|abs_divider_edg:divider|lpm_abs_9p9:my_abs_num                                 ; lpm_abs_9p9          ; work         ;
-;       |lpm_mult:Mult8_rtl_0|                      ; 20 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0                                                                                                         ; lpm_mult             ; work         ;
-;          |multcore:mult_core|                     ; 20 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0|multcore:mult_core                                                                                      ; multcore             ; work         ;
-;             |mpar_add:padder|                     ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0|multcore:mult_core|mpar_add:padder                                                                      ; mpar_add             ; work         ;
-;                |lpm_add_sub:adder[0]|             ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; lpm_add_sub          ; work         ;
-;                   |add_sub_32h:auto_generated|    ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_32h:auto_generated                      ; add_sub_32h          ; work         ;
-;                |mpar_add:sub_par_add|             ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; mpar_add             ; work         ;
-;                   |lpm_add_sub:adder[0]|          ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; lpm_add_sub          ; work         ;
-;                      |add_sub_1dh:auto_generated| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_1dh:auto_generated ; add_sub_1dh          ; work         ;
+;       |lpm_mult:Mult3_rtl_2|                      ; 42 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_mult:Mult3_rtl_2                                                                                                         ; lpm_mult             ; work         ;
+;          |mult_vd01:auto_generated|               ; 42 (42)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_mult:Mult3_rtl_2|mult_vd01:auto_generated                                                                                ; mult_vd01            ; work         ;
+;       |lpm_mult:Mult3_rtl_3|                      ; 10 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_mult:Mult3_rtl_3                                                                                                         ; lpm_mult             ; work         ;
+;          |multcore:mult_core|                     ; 10 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_mult:Mult3_rtl_3|multcore:mult_core                                                                                      ; multcore             ; work         ;
+;             |lpm_add_sub:adder|                   ; 10 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_mult:Mult3_rtl_3|multcore:mult_core|lpm_add_sub:adder                                                                    ; lpm_add_sub          ; work         ;
+;                |add_sub_fug:auto_generated|       ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_mult:Mult3_rtl_3|multcore:mult_core|lpm_add_sub:adder|add_sub_fug:auto_generated                                         ; add_sub_fug          ; work         ;
+;       |lpm_mult:Mult7_rtl_0|                      ; 42 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_mult:Mult7_rtl_0                                                                                                         ; lpm_mult             ; work         ;
+;          |mult_2l01:auto_generated|               ; 42 (42)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_mult:Mult7_rtl_0|mult_2l01:auto_generated                                                                                ; mult_2l01            ; work         ;
+;       |lpm_mult:Mult8_rtl_1|                      ; 20 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_mult:Mult8_rtl_1                                                                                                         ; lpm_mult             ; work         ;
+;          |multcore:mult_core|                     ; 20 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_mult:Mult8_rtl_1|multcore:mult_core                                                                                      ; multcore             ; work         ;
+;             |mpar_add:padder|                     ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_mult:Mult8_rtl_1|multcore:mult_core|mpar_add:padder                                                                      ; mpar_add             ; work         ;
+;                |lpm_add_sub:adder[0]|             ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_mult:Mult8_rtl_1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; lpm_add_sub          ; work         ;
+;                   |add_sub_32h:auto_generated|    ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_mult:Mult8_rtl_1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_32h:auto_generated                      ; add_sub_32h          ; work         ;
+;                |mpar_add:sub_par_add|             ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_mult:Mult8_rtl_1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; mpar_add             ; work         ;
+;                   |lpm_add_sub:adder[0]|          ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_mult:Mult8_rtl_1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; lpm_add_sub          ; work         ;
+;                      |add_sub_1dh:auto_generated| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_compensation:i_comp|lpm_mult:Mult8_rtl_1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_1dh:auto_generated ; add_sub_1dh          ; work         ;
 ;    |bme280_i2c_ctrl:bme280_i2c_ctrl|              ; 55 (55)             ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_i2c_ctrl:bme280_i2c_ctrl                                                                                                                         ; bme280_i2c_ctrl      ; work         ;
 ;    |bme280_reader:i_reader|                       ; 138 (138)           ; 324 (324)                 ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_reader:i_reader                                                                                                                                  ; bme280_reader        ; work         ;
 ;    |digital_por:por_100MHz|                       ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|digital_por:por_100MHz                                                                                                                                  ; digital_por          ; work         ;
 ;    |digital_por:por_1MHz|                         ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|digital_por:por_1MHz                                                                                                                                    ; digital_por          ; work         ;
-;    |gray_timer:gtimer|                            ; 70 (70)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|gray_timer:gtimer                                                                                                                                       ; gray_timer           ; work         ;
-;    |i2c_master_top:i2c_master|                    ; 101 (0)             ; 101 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|i2c_master_top:i2c_master                                                                                                                               ; i2c_master_top       ; work         ;
+;    |gray_timer:gtimer|                            ; 43 (43)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|gray_timer:gtimer                                                                                                                                       ; gray_timer           ; work         ;
+;    |i2c_master_top:i2c_master|                    ; 103 (0)             ; 102 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|i2c_master_top:i2c_master                                                                                                                               ; i2c_master_top       ; work         ;
 ;       |i2c_bit_timer:i_timer|                     ; 12 (12)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_bit_timer:i_timer                                                                                                         ; i2c_bit_timer        ; work         ;
-;       |i2c_master_bit_ctrl:i_bit|                 ; 24 (24)             ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit                                                                                                     ; i2c_master_bit_ctrl  ; work         ;
-;       |i2c_master_byte_ctrl:i_byte|               ; 31 (27)             ; 17 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte                                                                                                   ; i2c_master_byte_ctrl ; work         ;
-;          |i2c_byte_state_timer:state_timer|       ; 4 (4)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte|i2c_byte_state_timer:state_timer                                                                  ; i2c_byte_state_timer ; work         ;
-;       |i2c_master_regs:i_regs|                    ; 33 (33)             ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_regs:i_regs                                                                                                        ; i2c_master_regs      ; work         ;
+;       |i2c_master_bit_ctrl:i_bit|                 ; 27 (27)             ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit                                                                                                     ; i2c_master_bit_ctrl  ; work         ;
+;       |i2c_master_byte_ctrl:i_byte|               ; 31 (31)             ; 18 (18)                   ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte                                                                                                   ; i2c_master_byte_ctrl ; work         ;
+;       |i2c_master_regs:i_regs|                    ; 32 (32)             ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_regs:i_regs                                                                                                        ; i2c_master_regs      ; work         ;
 ;       |shiftreg:i_sr|                             ; 1 (1)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|i2c_master_top:i2c_master|shiftreg:i_sr                                                                                                                 ; shiftreg             ; work         ;
 ;    |pll_cv:pll|                                   ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|pll_cv:pll                                                                                                                                              ; pll_cv               ; pll_cv       ;
 ;       |pll_cv_0002:pll_cv_inst|                   ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|pll_cv:pll|pll_cv_0002:pll_cv_inst                                                                                                                      ; pll_cv_0002          ; pll_cv       ;
@@ -361,14 +368,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------+-------------+
 ; Statistic                                ; Number Used ;
 +------------------------------------------+-------------+
-; Two Independent 18x18                    ; 16          ;
-; Sum of two 18x18                         ; 15          ;
-; Independent 27x27                        ; 35          ;
-; Total number of DSP blocks               ; 66          ;
+; Two Independent 18x18                    ; 12          ;
+; Sum of two 18x18                         ; 11          ;
+; Independent 27x27                        ; 40          ;
+; Total number of DSP blocks               ; 63          ;
 ;                                          ;             ;
-; Fixed Point Unsigned Multiplier          ; 69          ;
-; Fixed Point Mixed Sign Multiplier        ; 12          ;
-; Fixed Point Dedicated Output Adder Chain ; 1           ;
+; Fixed Point Unsigned Multiplier          ; 57          ;
+; Fixed Point Mixed Sign Multiplier        ; 17          ;
+; Fixed Point Dedicated Output Adder Chain ; 2           ;
 +------------------------------------------+-------------+
 
 
@@ -467,90 +474,55 @@ Encoding Type:  One-Hot
 +---------------+------------+------------+------------+------------+------------+------------+--------------+--------------+--------------+---------------+---------------+---------------+---------------+---------------+------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                ;
-+-----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
-+-----------------------------------------------------+---------------------+------------------------+
-; Dec0_o[0]$latch                                     ; Mux42               ; yes                    ;
-; Dec0_o[1]$latch                                     ; Mux42               ; yes                    ;
-; Dec0_o[2]$latch                                     ; Mux42               ; yes                    ;
-; Dec0_o[3]$latch                                     ; Mux42               ; yes                    ;
-; Dec0_o[4]$latch                                     ; Mux42               ; yes                    ;
-; Dec0_o[5]$latch                                     ; Mux42               ; yes                    ;
-; Dec0_o[6]$latch                                     ; Mux42               ; yes                    ;
-; Dec1_o[0]$latch                                     ; Mux42               ; yes                    ;
-; Dec1_o[1]$latch                                     ; Mux42               ; yes                    ;
-; Dec1_o[2]$latch                                     ; Mux42               ; yes                    ;
-; Dec1_o[3]$latch                                     ; Mux42               ; yes                    ;
-; Dec1_o[4]$latch                                     ; Mux42               ; yes                    ;
-; Dec1_o[5]$latch                                     ; Mux42               ; yes                    ;
-; Dec1_o[6]$latch                                     ; Mux42               ; yes                    ;
-; Dec2_o[0]$latch                                     ; Mux42               ; yes                    ;
-; Dec2_o[1]$latch                                     ; Mux42               ; yes                    ;
-; Dec2_o[2]$latch                                     ; Mux42               ; yes                    ;
-; Dec2_o[3]$latch                                     ; Mux42               ; yes                    ;
-; Dec2_o[4]$latch                                     ; Mux42               ; yes                    ;
-; Dec2_o[5]$latch                                     ; Mux42               ; yes                    ;
-; Dec2_o[6]$latch                                     ; Mux42               ; yes                    ;
-; Dec3_o[0]$latch                                     ; Mux42               ; yes                    ;
-; Dec3_o[1]$latch                                     ; Mux42               ; yes                    ;
-; Dec3_o[2]$latch                                     ; Mux42               ; yes                    ;
-; Dec3_o[3]$latch                                     ; Mux42               ; yes                    ;
-; Dec3_o[4]$latch                                     ; Mux42               ; yes                    ;
-; Dec3_o[5]$latch                                     ; Mux42               ; yes                    ;
-; Dec3_o[6]$latch                                     ; Mux42               ; yes                    ;
-; Dec4_o[0]$latch                                     ; Mux42               ; yes                    ;
-; Dec4_o[1]$latch                                     ; Mux42               ; yes                    ;
-; Dec4_o[2]$latch                                     ; Mux42               ; yes                    ;
-; Dec4_o[3]$latch                                     ; Mux42               ; yes                    ;
-; Dec4_o[4]$latch                                     ; Mux42               ; yes                    ;
-; Dec4_o[5]$latch                                     ; Mux42               ; yes                    ;
-; Dec4_o[6]$latch                                     ; Mux42               ; yes                    ;
-; Dec5_o[0]$latch                                     ; Mux42               ; yes                    ;
-; Dec5_o[1]$latch                                     ; Mux42               ; yes                    ;
-; Dec5_o[2]$latch                                     ; Mux42               ; yes                    ;
-; Dec5_o[3]$latch                                     ; Mux42               ; yes                    ;
-; Dec5_o[4]$latch                                     ; Mux42               ; yes                    ;
-; Dec5_o[5]$latch                                     ; Mux42               ; yes                    ;
-; Dec5_o[6]$latch                                     ; Mux42               ; yes                    ;
-; Number of user-specified and inferred latches = 42  ;                     ;                        ;
-+-----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte|state                    ;
++----------------+---------------+--------------+----------------+---------------+----------------+---------------+
+; Name           ; state.ST_STOP ; state.ST_ACK ; state.ST_WRITE ; state.ST_READ ; state.ST_START ; state.ST_IDLE ;
++----------------+---------------+--------------+----------------+---------------+----------------+---------------+
+; state.ST_IDLE  ; 0             ; 0            ; 0              ; 0             ; 0              ; 0             ;
+; state.ST_START ; 0             ; 0            ; 0              ; 0             ; 1              ; 1             ;
+; state.ST_READ  ; 0             ; 0            ; 0              ; 1             ; 0              ; 1             ;
+; state.ST_WRITE ; 0             ; 0            ; 1              ; 0             ; 0              ; 1             ;
+; state.ST_ACK   ; 0             ; 1            ; 0              ; 0             ; 0              ; 1             ;
+; state.ST_STOP  ; 1             ; 0            ; 0              ; 0             ; 0              ; 1             ;
++----------------+---------------+--------------+----------------+---------------+----------------+---------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                          ;
-+----------------------------------------------------------------+------------------------------------------------------------+
-; Register name                                                  ; Reason for Removal                                         ;
-+----------------------------------------------------------------+------------------------------------------------------------+
-; i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte|state[3] ; Stuck at GND due to stuck port data_in                     ;
-; bme280_reader:i_reader|I2CC_txd[4,7]                           ; Merged with bme280_reader:i_reader|I2CC_txd[1]             ;
-; bme280_reader:i_reader|DigH5[12..15]                           ; Merged with bme280_reader:i_reader|DigH5[11]               ;
-; bme280_reader:i_reader|I2CC_txd[6]                             ; Merged with bme280_reader:i_reader|I2CC_txd[3]             ;
-; bme280_reader:i_reader|I2CC_txd[3]                             ; Stuck at GND due to stuck port data_in                     ;
-; bme280_reader:i_reader|last~7                                  ; Lost fanout                                                ;
-; bme280_reader:i_reader|last~8                                  ; Lost fanout                                                ;
-; bme280_reader:i_reader|last~9                                  ; Lost fanout                                                ;
-; bme280_reader:i_reader|last~10                                 ; Lost fanout                                                ;
-; bme280_reader:i_reader|state~4                                 ; Lost fanout                                                ;
-; bme280_reader:i_reader|state~5                                 ; Lost fanout                                                ;
-; bme280_reader:i_reader|state~6                                 ; Lost fanout                                                ;
-; bme280_reader:i_reader|state~7                                 ; Lost fanout                                                ;
-; bme280_i2c_ctrl:bme280_i2c_ctrl|state~4                        ; Lost fanout                                                ;
-; bme280_i2c_ctrl:bme280_i2c_ctrl|state~5                        ; Lost fanout                                                ;
-; bme280_i2c_ctrl:bme280_i2c_ctrl|state~6                        ; Lost fanout                                                ;
-; bme280_i2c_ctrl:bme280_i2c_ctrl|state~7                        ; Lost fanout                                                ;
-; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|state~4    ; Lost fanout                                                ;
-; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|state~5    ; Lost fanout                                                ;
-; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|state~6    ; Lost fanout                                                ;
-; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|state~7    ; Lost fanout                                                ;
-; bme280_reader:i_reader|last.WAIT_1S                            ; Merged with bme280_reader:i_reader|last.ERROR              ;
-; bme280_reader:i_reader|last.WAIT_END                           ; Merged with bme280_reader:i_reader|last.ERROR              ;
-; bme280_reader:i_reader|state.IDLE                              ; Merged with bme280_i2c_ctrl:bme280_i2c_ctrl|state.SET_PRER ;
-; bme280_reader:i_reader|last.ERROR                              ; Stuck at GND due to stuck port data_in                     ;
-; Total Number of Removed Registers = 29                         ;                                                            ;
-+----------------------------------------------------------------+------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                         ;
++---------------------------------------------------------------+------------------------------------------------------------+
+; Register name                                                 ; Reason for Removal                                         ;
++---------------------------------------------------------------+------------------------------------------------------------+
+; bme280_reader:i_reader|DigH5[12..15]                          ; Merged with bme280_reader:i_reader|DigH5[11]               ;
+; bme280_reader:i_reader|I2CC_txd[4,7]                          ; Merged with bme280_reader:i_reader|I2CC_txd[1]             ;
+; bme280_reader:i_reader|I2CC_txd[6]                            ; Merged with bme280_reader:i_reader|I2CC_txd[3]             ;
+; bme280_reader:i_reader|I2CC_txd[3]                            ; Stuck at GND due to stuck port data_in                     ;
+; bme280_reader:i_reader|last~7                                 ; Lost fanout                                                ;
+; bme280_reader:i_reader|last~8                                 ; Lost fanout                                                ;
+; bme280_reader:i_reader|last~9                                 ; Lost fanout                                                ;
+; bme280_reader:i_reader|last~10                                ; Lost fanout                                                ;
+; bme280_reader:i_reader|state~4                                ; Lost fanout                                                ;
+; bme280_reader:i_reader|state~5                                ; Lost fanout                                                ;
+; bme280_reader:i_reader|state~6                                ; Lost fanout                                                ;
+; bme280_reader:i_reader|state~7                                ; Lost fanout                                                ;
+; bme280_i2c_ctrl:bme280_i2c_ctrl|state~4                       ; Lost fanout                                                ;
+; bme280_i2c_ctrl:bme280_i2c_ctrl|state~5                       ; Lost fanout                                                ;
+; bme280_i2c_ctrl:bme280_i2c_ctrl|state~6                       ; Lost fanout                                                ;
+; bme280_i2c_ctrl:bme280_i2c_ctrl|state~7                       ; Lost fanout                                                ;
+; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|state~4   ; Lost fanout                                                ;
+; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|state~5   ; Lost fanout                                                ;
+; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|state~6   ; Lost fanout                                                ;
+; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|state~7   ; Lost fanout                                                ;
+; i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte|state~4 ; Lost fanout                                                ;
+; i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte|state~5 ; Lost fanout                                                ;
+; i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte|state~6 ; Lost fanout                                                ;
+; bme280_reader:i_reader|last.WAIT_1S                           ; Merged with bme280_reader:i_reader|last.ERROR              ;
+; bme280_reader:i_reader|last.WAIT_END                          ; Merged with bme280_reader:i_reader|last.ERROR              ;
+; bme280_reader:i_reader|state.IDLE                             ; Merged with bme280_i2c_ctrl:bme280_i2c_ctrl|state.SET_PRER ;
+; bme280_reader:i_reader|last.ERROR                             ; Stuck at GND due to stuck port data_in                     ;
+; Total Number of Removed Registers = 31                        ;                                                            ;
++---------------------------------------------------------------+------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -558,58 +530,57 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 500   ;
-; Number of registers using Synchronous Clear  ; 10    ;
+; Total registers                              ; 489   ;
+; Number of registers using Synchronous Clear  ; 1     ;
 ; Number of registers using Synchronous Load   ; 16    ;
-; Number of registers using Asynchronous Clear ; 500   ;
+; Number of registers using Asynchronous Clear ; 489   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 366   ;
+; Number of registers using Clock Enable       ; 363   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------+
-; Inverted Register Statistics                                             ;
-+----------------------------------------------------------------+---------+
-; Inverted Register                                              ; Fan out ;
-+----------------------------------------------------------------+---------+
-; bme280_i2c_ctrl:bme280_i2c_ctrl|last[1]                        ; 21      ;
-; bme280_reader:i_reader|I2CC_rdwr                               ; 20      ;
-; i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte|I2C_done ; 3       ;
-; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|Rxd        ; 3       ;
-; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|sSDA       ; 5       ;
-; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|Sda_oen    ; 3       ;
-; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|sSCL       ; 7       ;
-; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|dSDA       ; 2       ;
-; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|dSCL       ; 3       ;
-; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|Scl_oen    ; 4       ;
-; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|dScl_oen   ; 1       ;
-; Total number of inverted registers = 11                        ;         ;
-+----------------------------------------------------------------+---------+
++------------------------------------------------------------------------+
+; Inverted Register Statistics                                           ;
++--------------------------------------------------------------+---------+
+; Inverted Register                                            ; Fan out ;
++--------------------------------------------------------------+---------+
+; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|Scl_oen  ; 5       ;
+; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|Sda_oen  ; 4       ;
+; bme280_i2c_ctrl:bme280_i2c_ctrl|last[1]                      ; 19      ;
+; bme280_reader:i_reader|I2CC_rdwr                             ; 19      ;
+; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|Rxd      ; 3       ;
+; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|sSDA     ; 5       ;
+; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|sSCL     ; 7       ;
+; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|dSCL     ; 3       ;
+; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|dSDA     ; 2       ;
+; i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|dScl_oen ; 1       ;
+; Total number of inverted registers = 10                      ;         ;
++--------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|Ack                                       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_regs:i_regs|cr[4]                                        ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |top_meteo_de0cv|i2c_master_top:i2c_master|shiftreg:i_sr|register[1]                                           ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_regs:i_regs|cr[0]                                        ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte|i2c_byte_state_timer:state_timer|Cnt[0] ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; Yes        ; |top_meteo_de0cv|bme280_i2c_ctrl:bme280_i2c_ctrl|I2C_rxd[3]                                                    ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |top_meteo_de0cv|bme280_i2c_ctrl:bme280_i2c_ctrl|I2C_rxd[5]                                                    ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_bit_timer:i_timer|cnt[7]                                        ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |top_meteo_de0cv|bme280_reader:i_reader|I2CC_txd[5]                                                            ;
-; 12:1               ; 5 bits    ; 40 LEs        ; 10 LEs               ; 30 LEs                 ; Yes        ; |top_meteo_de0cv|bme280_reader:i_reader|byteCnt[4]                                                             ;
-; 11:1               ; 2 bits    ; 14 LEs        ; 4 LEs                ; 10 LEs                 ; Yes        ; |top_meteo_de0cv|bme280_reader:i_reader|I2CC_addr[6]                                                           ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_meteo_de0cv|bme280_reader:i_reader|next.MEASURE                                                           ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_meteo_de0cv|bme280_reader:i_reader|next.RD_CAL26                                                          ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_meteo_de0cv|bme280_i2c_ctrl:bme280_i2c_ctrl|Selector9                                                     ;
-; 7:1                ; 42 bits   ; 168 LEs       ; 84 LEs               ; 84 LEs                 ; No         ; |top_meteo_de0cv|Mux18                                                                                         ;
-; 128:1              ; 3 bits    ; 255 LEs       ; 60 LEs               ; 195 LEs                ; No         ; |top_meteo_de0cv|bme280_i2c_ctrl:bme280_i2c_ctrl|Selector5                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|Ack       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_regs:i_regs|cr[7]        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte|dcnt[2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |top_meteo_de0cv|i2c_master_top:i2c_master|shiftreg:i_sr|register[5]           ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_regs:i_regs|cr[0]        ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_bit_timer:i_timer|counter[4]    ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; Yes        ; |top_meteo_de0cv|bme280_i2c_ctrl:bme280_i2c_ctrl|I2C_rxd[3]                    ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |top_meteo_de0cv|bme280_i2c_ctrl:bme280_i2c_ctrl|I2C_rxd[7]                    ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |top_meteo_de0cv|bme280_reader:i_reader|I2CC_txd[5]                            ;
+; 12:1               ; 5 bits    ; 40 LEs        ; 10 LEs               ; 30 LEs                 ; Yes        ; |top_meteo_de0cv|bme280_reader:i_reader|byteCnt[4]                             ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 4 LEs                ; 10 LEs                 ; Yes        ; |top_meteo_de0cv|bme280_reader:i_reader|I2CC_addr[6]                           ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_meteo_de0cv|bme280_reader:i_reader|next.STATUS                            ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_meteo_de0cv|bme280_reader:i_reader|next.RD_CAL26                          ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_meteo_de0cv|bme280_i2c_ctrl:bme280_i2c_ctrl|Selector9                     ;
+; 8:1                ; 42 bits   ; 210 LEs       ; 84 LEs               ; 126 LEs                ; No         ; |top_meteo_de0cv|Mux2                                                          ;
+; 128:1              ; 3 bits    ; 255 LEs       ; 60 LEs               ; 195 LEs                ; No         ; |top_meteo_de0cv|bme280_i2c_ctrl:bme280_i2c_ctrl|Selector5                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------+
@@ -881,27 +852,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte ;
-+----------------+-------+---------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------+
-; SIZE           ; 3     ; Signed Integer                                                            ;
-; NBITS          ; 4     ; Signed Integer                                                            ;
-+----------------+-------+---------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte|i2c_byte_state_timer:state_timer ;
-+----------------+-------+------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                       ;
-+----------------+-------+------------------------------------------------------------------------------------------------------------+
-; SIZE           ; 3     ; Signed Integer                                                                                             ;
-+----------------+-------+------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +--------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: i2c_master_top:i2c_master|shiftreg:i_sr ;
 +----------------+-------+-------------------------------------------------------------+
@@ -949,7 +899,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------+
 ; Parameter Name ; Value ; Type                                  ;
 +----------------+-------+---------------------------------------+
-; SIZE           ; 32    ; Signed Integer                        ;
+; SIZE           ; 20    ; Signed Integer                        ;
 +----------------+-------+---------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -994,6 +944,41 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: bme280_compensation:i_comp|lpm_mult:Mult7_rtl_0 ;
++------------------------------------------------+-----------+-------------------------------------+
+; Parameter Name                                 ; Value     ; Type                                ;
++------------------------------------------------+-----------+-------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON        ; AUTO_CARRY                          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF       ; IGNORE_CARRY                        ;
+; AUTO_CASCADE_CHAINS                            ; ON        ; AUTO_CASCADE                        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF       ; IGNORE_CASCADE                      ;
+; LPM_WIDTHA                                     ; 10        ; Untyped                             ;
+; LPM_WIDTHB                                     ; 10        ; Untyped                             ;
+; LPM_WIDTHP                                     ; 20        ; Untyped                             ;
+; LPM_WIDTHR                                     ; 20        ; Untyped                             ;
+; LPM_WIDTHS                                     ; 1         ; Untyped                             ;
+; LPM_REPRESENTATION                             ; UNSIGNED  ; Untyped                             ;
+; LPM_PIPELINE                                   ; 0         ; Untyped                             ;
+; LATENCY                                        ; 0         ; Untyped                             ;
+; INPUT_A_IS_CONSTANT                            ; NO        ; Untyped                             ;
+; INPUT_B_IS_CONSTANT                            ; NO        ; Untyped                             ;
+; USE_EAB                                        ; OFF       ; Untyped                             ;
+; MAXIMIZE_SPEED                                 ; 6         ; Untyped                             ;
+; DEVICE_FAMILY                                  ; Cyclone V ; Untyped                             ;
+; CARRY_CHAIN                                    ; MANUAL    ; Untyped                             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT       ; TECH_MAPPER_APEX20K                 ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; NO        ; Untyped                             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0         ; Untyped                             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0         ; Untyped                             ;
+; CBXI_PARAMETER                                 ; mult_2l01 ; Untyped                             ;
+; INPUT_A_FIXED_VALUE                            ; Bx        ; Untyped                             ;
+; INPUT_B_FIXED_VALUE                            ; Bx        ; Untyped                             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF       ; Untyped                             ;
++------------------------------------------------+-----------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +---------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: bme280_compensation:i_comp|lpm_divide:Div0 ;
 +------------------------+----------------+---------------------------------------------------+
@@ -1018,7 +1003,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0 ;
+; Parameter Settings for Inferred Entity Instance: bme280_compensation:i_comp|lpm_mult:Mult8_rtl_1 ;
 +------------------------------------------------+-----------+-------------------------------------+
 ; Parameter Name                                 ; Value     ; Type                                ;
 +------------------------------------------------+-----------+-------------------------------------+
@@ -1052,19 +1037,122 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: bme280_compensation:i_comp|lpm_mult:Mult3_rtl_2 ;
++------------------------------------------------+-----------+-------------------------------------+
+; Parameter Name                                 ; Value     ; Type                                ;
++------------------------------------------------+-----------+-------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON        ; AUTO_CARRY                          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF       ; IGNORE_CARRY                        ;
+; AUTO_CASCADE_CHAINS                            ; ON        ; AUTO_CASCADE                        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF       ; IGNORE_CASCADE                      ;
+; LPM_WIDTHA                                     ; 10        ; Untyped                             ;
+; LPM_WIDTHB                                     ; 10        ; Untyped                             ;
+; LPM_WIDTHP                                     ; 20        ; Untyped                             ;
+; LPM_WIDTHR                                     ; 20        ; Untyped                             ;
+; LPM_WIDTHS                                     ; 1         ; Untyped                             ;
+; LPM_REPRESENTATION                             ; SIGNED    ; Untyped                             ;
+; LPM_PIPELINE                                   ; 0         ; Untyped                             ;
+; LATENCY                                        ; 0         ; Untyped                             ;
+; INPUT_A_IS_CONSTANT                            ; NO        ; Untyped                             ;
+; INPUT_B_IS_CONSTANT                            ; NO        ; Untyped                             ;
+; USE_EAB                                        ; OFF       ; Untyped                             ;
+; MAXIMIZE_SPEED                                 ; 6         ; Untyped                             ;
+; DEVICE_FAMILY                                  ; Cyclone V ; Untyped                             ;
+; CARRY_CHAIN                                    ; MANUAL    ; Untyped                             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT       ; TECH_MAPPER_APEX20K                 ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; NO        ; Untyped                             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0         ; Untyped                             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0         ; Untyped                             ;
+; CBXI_PARAMETER                                 ; mult_vd01 ; Untyped                             ;
+; INPUT_A_FIXED_VALUE                            ; Bx        ; Untyped                             ;
+; INPUT_B_FIXED_VALUE                            ; Bx        ; Untyped                             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF       ; Untyped                             ;
++------------------------------------------------+-----------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: bme280_compensation:i_comp|lpm_mult:Mult3_rtl_3 ;
++------------------------------------------------+-----------+-------------------------------------+
+; Parameter Name                                 ; Value     ; Type                                ;
++------------------------------------------------+-----------+-------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON        ; AUTO_CARRY                          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF       ; IGNORE_CARRY                        ;
+; AUTO_CASCADE_CHAINS                            ; ON        ; AUTO_CASCADE                        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF       ; IGNORE_CASCADE                      ;
+; LPM_WIDTHA                                     ; 10        ; Untyped                             ;
+; LPM_WIDTHB                                     ; 1         ; Untyped                             ;
+; LPM_WIDTHP                                     ; 11        ; Untyped                             ;
+; LPM_WIDTHR                                     ; 11        ; Untyped                             ;
+; LPM_WIDTHS                                     ; 1         ; Untyped                             ;
+; LPM_REPRESENTATION                             ; SIGNED    ; Untyped                             ;
+; LPM_PIPELINE                                   ; 0         ; Untyped                             ;
+; LATENCY                                        ; 0         ; Untyped                             ;
+; INPUT_A_IS_CONSTANT                            ; NO        ; Untyped                             ;
+; INPUT_B_IS_CONSTANT                            ; NO        ; Untyped                             ;
+; USE_EAB                                        ; OFF       ; Untyped                             ;
+; MAXIMIZE_SPEED                                 ; 6         ; Untyped                             ;
+; DEVICE_FAMILY                                  ; Cyclone V ; Untyped                             ;
+; CARRY_CHAIN                                    ; MANUAL    ; Untyped                             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT       ; TECH_MAPPER_APEX20K                 ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; NO        ; Untyped                             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0         ; Untyped                             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0         ; Untyped                             ;
+; CBXI_PARAMETER                                 ; NOTHING   ; Untyped                             ;
+; INPUT_A_FIXED_VALUE                            ; Bx        ; Untyped                             ;
+; INPUT_B_FIXED_VALUE                            ; Bx        ; Untyped                             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF       ; Untyped                             ;
++------------------------------------------------+-----------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------------------------------------------+
 ; lpm_mult Parameter Settings by Entity Instance                                          ;
 +---------------------------------------+-------------------------------------------------+
 ; Name                                  ; Value                                           ;
 +---------------------------------------+-------------------------------------------------+
-; Number of entity instances            ; 1                                               ;
-; Entity Instance                       ; bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0 ;
+; Number of entity instances            ; 4                                               ;
+; Entity Instance                       ; bme280_compensation:i_comp|lpm_mult:Mult7_rtl_0 ;
+;     -- LPM_WIDTHA                     ; 10                                              ;
+;     -- LPM_WIDTHB                     ; 10                                              ;
+;     -- LPM_WIDTHP                     ; 20                                              ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                        ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                              ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                              ;
+;     -- USE_EAB                        ; OFF                                             ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; NO                                              ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                              ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                              ;
+; Entity Instance                       ; bme280_compensation:i_comp|lpm_mult:Mult8_rtl_1 ;
 ;     -- LPM_WIDTHA                     ; 10                                              ;
 ;     -- LPM_WIDTHB                     ; 7                                               ;
 ;     -- LPM_WIDTHP                     ; 17                                              ;
 ;     -- LPM_REPRESENTATION             ; SIGNED                                          ;
 ;     -- INPUT_A_IS_CONSTANT            ; NO                                              ;
 ;     -- INPUT_B_IS_CONSTANT            ; YES                                             ;
+;     -- USE_EAB                        ; OFF                                             ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; NO                                              ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                              ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                              ;
+; Entity Instance                       ; bme280_compensation:i_comp|lpm_mult:Mult3_rtl_2 ;
+;     -- LPM_WIDTHA                     ; 10                                              ;
+;     -- LPM_WIDTHB                     ; 10                                              ;
+;     -- LPM_WIDTHP                     ; 20                                              ;
+;     -- LPM_REPRESENTATION             ; SIGNED                                          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                              ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                              ;
+;     -- USE_EAB                        ; OFF                                             ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; NO                                              ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                              ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                              ;
+; Entity Instance                       ; bme280_compensation:i_comp|lpm_mult:Mult3_rtl_3 ;
+;     -- LPM_WIDTHA                     ; 10                                              ;
+;     -- LPM_WIDTHB                     ; 1                                               ;
+;     -- LPM_WIDTHP                     ; 11                                              ;
+;     -- LPM_REPRESENTATION             ; SIGNED                                          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                              ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                              ;
 ;     -- USE_EAB                        ; OFF                                             ;
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; NO                                              ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                              ;
@@ -1099,72 +1187,39 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "bme280_compensation:i_comp"                                                                                                                             ;
-+----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port     ; Type  ; Severity ; Details                                                                                                                                              ;
-+----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; TempBin  ; Input ; Warning  ; Input port expression (20 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "TempBin[31..20]" will be connected to GND.  ;
-; PressBin ; Input ; Warning  ; Input port expression (20 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "PressBin[31..20]" will be connected to GND. ;
-; HumBin   ; Input ; Warning  ; Input port expression (16 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "HumBin[31..16]" will be connected to GND.   ;
-; DigT1    ; Input ; Warning  ; Input port expression (16 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DigT1[31..16]" will be connected to GND.    ;
-; DigT2    ; Input ; Warning  ; Input port expression (16 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DigT2[31..16]" will be connected to GND.    ;
-; DigT3    ; Input ; Warning  ; Input port expression (16 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DigT3[31..16]" will be connected to GND.    ;
-; DigP1    ; Input ; Warning  ; Input port expression (16 bits) is smaller than the input port (64 bits) it drives.  Extra input bit(s) "DigP1[63..16]" will be connected to GND.    ;
-; DigP2    ; Input ; Warning  ; Input port expression (16 bits) is smaller than the input port (64 bits) it drives.  Extra input bit(s) "DigP2[63..16]" will be connected to GND.    ;
-; DigP3    ; Input ; Warning  ; Input port expression (16 bits) is smaller than the input port (64 bits) it drives.  Extra input bit(s) "DigP3[63..16]" will be connected to GND.    ;
-; DigP4    ; Input ; Warning  ; Input port expression (16 bits) is smaller than the input port (64 bits) it drives.  Extra input bit(s) "DigP4[63..16]" will be connected to GND.    ;
-; DigP5    ; Input ; Warning  ; Input port expression (16 bits) is smaller than the input port (64 bits) it drives.  Extra input bit(s) "DigP5[63..16]" will be connected to GND.    ;
-; DigP6    ; Input ; Warning  ; Input port expression (16 bits) is smaller than the input port (64 bits) it drives.  Extra input bit(s) "DigP6[63..16]" will be connected to GND.    ;
-; DigP7    ; Input ; Warning  ; Input port expression (16 bits) is smaller than the input port (64 bits) it drives.  Extra input bit(s) "DigP7[63..16]" will be connected to GND.    ;
-; DigP8    ; Input ; Warning  ; Input port expression (16 bits) is smaller than the input port (64 bits) it drives.  Extra input bit(s) "DigP8[63..16]" will be connected to GND.    ;
-; DigP9    ; Input ; Warning  ; Input port expression (16 bits) is smaller than the input port (64 bits) it drives.  Extra input bit(s) "DigP9[63..16]" will be connected to GND.    ;
-; DigH1    ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DigH1[31..8]" will be connected to GND.      ;
-; DigH2    ; Input ; Warning  ; Input port expression (16 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DigH2[31..16]" will be connected to GND.    ;
-; DigH3    ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DigH3[31..8]" will be connected to GND.      ;
-; DigH4    ; Input ; Warning  ; Input port expression (16 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DigH4[31..16]" will be connected to GND.    ;
-; DigH5    ; Input ; Warning  ; Input port expression (16 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DigH5[31..16]" will be connected to GND.    ;
-; DigH6    ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DigH6[31..8]" will be connected to GND.      ;
-+----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------+
+; Port Connectivity Checks: "bme280_compensation:i_comp" ;
++-----------------+-------+----------+-------------------+
+; Port            ; Type  ; Severity ; Details           ;
++-----------------+-------+----------+-------------------+
+; TempBin[31..20] ; Input ; Info     ; Stuck at GND      ;
+; DigT1[31..16]   ; Input ; Info     ; Stuck at GND      ;
+; DigP1[63..16]   ; Input ; Info     ; Stuck at GND      ;
+; DigH1[31..8]    ; Input ; Info     ; Stuck at GND      ;
+; DigH3[31..8]    ; Input ; Info     ; Stuck at GND      ;
++-----------------+-------+----------+-------------------+
 
 
-+-------------------------------------------------+
-; Port Connectivity Checks: "gray_timer:gtimer"   ;
-+---------------+-------+----------+--------------+
-; Port          ; Type  ; Severity ; Details      ;
-+---------------+-------+----------+--------------+
-; Limit[19..16] ; Input ; Info     ; Stuck at VCC ;
-; Limit[31..20] ; Input ; Info     ; Stuck at GND ;
-; Limit[13..10] ; Input ; Info     ; Stuck at GND ;
-; Limit[8..7]   ; Input ; Info     ; Stuck at GND ;
-; Limit[5..0]   ; Input ; Info     ; Stuck at GND ;
-; Limit[15]     ; Input ; Info     ; Stuck at GND ;
-; Limit[14]     ; Input ; Info     ; Stuck at VCC ;
-; Limit[9]      ; Input ; Info     ; Stuck at VCC ;
-; Limit[6]      ; Input ; Info     ; Stuck at VCC ;
-+---------------+-------+----------+--------------+
++------------------------------------------------+
+; Port Connectivity Checks: "gray_timer:gtimer"  ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; Limit[6..5]  ; Input ; Info     ; Stuck at VCC ;
+; Limit[19..7] ; Input ; Info     ; Stuck at GND ;
+; Limit[4..3]  ; Input ; Info     ; Stuck at GND ;
+; Limit[1..0]  ; Input ; Info     ; Stuck at GND ;
+; Limit[2]     ; Input ; Info     ; Stuck at VCC ;
++--------------+-------+----------+--------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "i2c_master_top:i2c_master"                                                               ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Int       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; SclPadOut ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; SclPadEn  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; SdaPadOut ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; SdaPadEn  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------+
-; Port Connectivity Checks: "pll_cv:pll" ;
-+------+-------+----------+--------------+
-; Port ; Type  ; Severity ; Details      ;
-+------+-------+----------+--------------+
-; rst  ; Input ; Info     ; Stuck at GND ;
-+------+-------+----------+--------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "i2c_master_top:i2c_master"                                                          ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Int  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -1172,43 +1227,42 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 500                         ;
-;     CLR               ; 126                         ;
-;     CLR SCLR          ; 8                           ;
-;     ENA CLR           ; 348                         ;
-;     ENA CLR SCLR      ; 2                           ;
+; arriav_ff             ; 489                         ;
+;     CLR               ; 125                         ;
+;     CLR SCLR          ; 1                           ;
+;     ENA CLR           ; 347                         ;
 ;     ENA CLR SLD       ; 16                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 8041                        ;
-;     arith             ; 3093                        ;
-;         0 data inputs ; 149                         ;
-;         1 data inputs ; 399                         ;
-;         2 data inputs ; 413                         ;
+; arriav_lcell_comb     ; 8088                        ;
+;     arith             ; 3250                        ;
+;         0 data inputs ; 147                         ;
+;         1 data inputs ; 415                         ;
+;         2 data inputs ; 508                         ;
 ;         3 data inputs ; 333                         ;
-;         4 data inputs ; 843                         ;
+;         4 data inputs ; 891                         ;
 ;         5 data inputs ; 956                         ;
-;     extend            ; 5                           ;
-;         7 data inputs ; 5                           ;
-;     normal            ; 4266                        ;
+;     extend            ; 4                           ;
+;         7 data inputs ; 4                           ;
+;     normal            ; 4203                        ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 1804                        ;
-;         3 data inputs ; 372                         ;
-;         4 data inputs ; 1449                        ;
-;         5 data inputs ; 267                         ;
-;         6 data inputs ; 368                         ;
-;     shared            ; 677                         ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 1800                        ;
+;         3 data inputs ; 318                         ;
+;         4 data inputs ; 1459                        ;
+;         5 data inputs ; 231                         ;
+;         6 data inputs ; 387                         ;
+;     shared            ; 631                         ;
 ;         0 data inputs ; 6                           ;
 ;         1 data inputs ; 32                          ;
-;         2 data inputs ; 343                         ;
-;         3 data inputs ; 277                         ;
-;         4 data inputs ; 19                          ;
-; arriav_mac            ; 66                          ;
+;         2 data inputs ; 322                         ;
+;         3 data inputs ; 268                         ;
+;         4 data inputs ; 3                           ;
+; arriav_mac            ; 63                          ;
 ; boundary_port         ; 52                          ;
 ; generic_pll           ; 2                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 321.50                      ;
-; Average LUT depth     ; 208.32                      ;
+; Max LUT depth         ; 326.30                      ;
+; Average LUT depth     ; 228.81                      ;
 +-----------------------+-----------------------------+
 
 
@@ -1217,7 +1271,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:30     ;
+; Top            ; 00:00:20     ;
 +----------------+--------------+
 
 
@@ -1227,7 +1281,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue May 07 10:14:35 2024
+    Info: Processing started: Fri May 17 18:55:03 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_meteo_de0cv -c top_meteo_de0cv
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
@@ -1245,13 +1299,13 @@ Info (12021): Found 1 design units, including 1 entities, in source file /users/
     Info (12023): Found entity 1: i2c_master_regs File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_regs.v Line: 106
 Info (12021): Found 0 design units, including 0 entities, in source file /users/hp/documents/universitat/8e/dssd/pracs/p4/rtl/i2c_master/i2c_master_defines.v
 Info (12021): Found 1 design units, including 1 entities, in source file /users/hp/documents/universitat/8e/dssd/pracs/p4/rtl/i2c_master/i2c_master_byte_ctrl.v
-    Info (12023): Found entity 1: i2c_master_byte_ctrl File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_byte_ctrl.v Line: 10
+    Info (12023): Found entity 1: i2c_master_byte_ctrl File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_byte_ctrl.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file /users/hp/documents/universitat/8e/dssd/pracs/p4/rtl/i2c_master/i2c_master_bit_ctrl.v
     Info (12023): Found entity 1: i2c_master_bit_ctrl File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_bit_ctrl.v Line: 41
 Info (12021): Found 1 design units, including 1 entities, in source file /users/hp/documents/universitat/8e/dssd/pracs/p4/rtl/i2c_master/i2c_byte_state_timer.v
     Info (12023): Found entity 1: i2c_byte_state_timer File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_byte_state_timer.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file /users/hp/documents/universitat/8e/dssd/pracs/p4/rtl/i2c_master/i2c_bit_timer.v
-    Info (12023): Found entity 1: i2c_bit_timer File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_bit_timer.v Line: 1
+    Info (12023): Found entity 1: i2c_bit_timer File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_bit_timer.v Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file /users/hp/documents/universitat/8e/dssd/pracs/p4/rtl/top_meteo_de0cv.v
     Info (12023): Found entity 1: top_meteo_de0cv File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file /users/hp/documents/universitat/8e/dssd/pracs/p4/rtl/sync_reg.v
@@ -1278,71 +1332,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file /users/
     Info (12023): Found entity 1: pll_cv File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/ips/pll_cv.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file /users/hp/documents/universitat/8e/dssd/pracs/p4/ips/pll_cv/pll_cv_0002.v
     Info (12023): Found entity 1: pll_cv_0002 File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/ips/pll_cv/pll_cv_0002.v Line: 2
-Warning (10236): Verilog HDL Implicit Net warning at top_meteo_de0cv.v(122): created implicit net for "SclPadOut" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 122
-Warning (10236): Verilog HDL Implicit Net warning at top_meteo_de0cv.v(123): created implicit net for "SclPadEn" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 123
-Warning (10236): Verilog HDL Implicit Net warning at top_meteo_de0cv.v(125): created implicit net for "SdaPadOut" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 125
-Warning (10236): Verilog HDL Implicit Net warning at top_meteo_de0cv.v(126): created implicit net for "SdaPadEn" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 126
 Info (12127): Elaborating entity "top_meteo_de0cv" for the top level hierarchy
-Warning (10858): Verilog HDL warning at top_meteo_de0cv.v(27): object sclPadEn used but never assigned File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 27
-Warning (10036): Verilog HDL or VHDL warning at top_meteo_de0cv.v(27): object "sclPadIn" assigned a value but never read File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 27
-Warning (10858): Verilog HDL warning at top_meteo_de0cv.v(27): object sclPadOut used but never assigned File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 27
-Warning (10858): Verilog HDL warning at top_meteo_de0cv.v(28): object sdaPadEn used but never assigned File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 28
-Warning (10036): Verilog HDL or VHDL warning at top_meteo_de0cv.v(28): object "sdaPadIn" assigned a value but never read File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 28
-Warning (10858): Verilog HDL warning at top_meteo_de0cv.v(28): object sdaPadOut used but never assigned File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 28
-Warning (10270): Verilog HDL Case Statement warning at top_meteo_de0cv.v(63): incomplete case statement has no default case item File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Warning (10240): Verilog HDL Always Construct warning at top_meteo_de0cv.v(63): inferring latch(es) for variable "Dec0_o", which holds its previous value in one or more paths through the always construct File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Warning (10240): Verilog HDL Always Construct warning at top_meteo_de0cv.v(63): inferring latch(es) for variable "Dec1_o", which holds its previous value in one or more paths through the always construct File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Warning (10240): Verilog HDL Always Construct warning at top_meteo_de0cv.v(63): inferring latch(es) for variable "Dec2_o", which holds its previous value in one or more paths through the always construct File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Warning (10240): Verilog HDL Always Construct warning at top_meteo_de0cv.v(63): inferring latch(es) for variable "Dec3_o", which holds its previous value in one or more paths through the always construct File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Warning (10240): Verilog HDL Always Construct warning at top_meteo_de0cv.v(63): inferring latch(es) for variable "Dec4_o", which holds its previous value in one or more paths through the always construct File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Warning (10240): Verilog HDL Always Construct warning at top_meteo_de0cv.v(63): inferring latch(es) for variable "Dec5_o", which holds its previous value in one or more paths through the always construct File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Warning (10030): Net "sclPadEn" at top_meteo_de0cv.v(27) has no driver or initial value, using a default initial value '0' File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 27
-Warning (10030): Net "sclPadOut" at top_meteo_de0cv.v(27) has no driver or initial value, using a default initial value '0' File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 27
-Warning (10030): Net "sdaPadEn" at top_meteo_de0cv.v(28) has no driver or initial value, using a default initial value '0' File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 28
-Warning (10030): Net "sdaPadOut" at top_meteo_de0cv.v(28) has no driver or initial value, using a default initial value '0' File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 28
-Info (10041): Inferred latch for "Dec5_o[0]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec5_o[1]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec5_o[2]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec5_o[3]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec5_o[4]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec5_o[5]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec5_o[6]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec4_o[0]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec4_o[1]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec4_o[2]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec4_o[3]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec4_o[4]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec4_o[5]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec4_o[6]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec3_o[0]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec3_o[1]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec3_o[2]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec3_o[3]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec3_o[4]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec3_o[5]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec3_o[6]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec2_o[0]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec2_o[1]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec2_o[2]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec2_o[3]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec2_o[4]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec2_o[5]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec2_o[6]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec1_o[0]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec1_o[1]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec1_o[2]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec1_o[3]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec1_o[4]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec1_o[5]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec1_o[6]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec0_o[0]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec0_o[1]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec0_o[2]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec0_o[3]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec0_o[4]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec0_o[5]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (10041): Inferred latch for "Dec0_o[6]" at top_meteo_de0cv.v(63) File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-Info (12128): Elaborating entity "pll_cv" for hierarchy "pll_cv:pll" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 97
+Info (12128): Elaborating entity "pll_cv" for hierarchy "pll_cv:pll" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 110
 Info (12128): Elaborating entity "pll_cv_0002" for hierarchy "pll_cv:pll|pll_cv_0002:pll_cv_inst" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/ips/pll_cv.v Line: 21
 Info (12128): Elaborating entity "altera_pll" for hierarchy "pll_cv:pll|pll_cv_0002:pll_cv_inst|altera_pll:altera_pll_i" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/ips/pll_cv/pll_cv_0002.v Line: 88
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
@@ -1408,30 +1399,46 @@ Info (12133): Instantiated megafunction "pll_cv:pll|pll_cv_0002:pll_cv_inst|alte
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
-Info (12128): Elaborating entity "digital_por" for hierarchy "digital_por:por_100MHz" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 103
-Info (12128): Elaborating entity "i2c_master_top" for hierarchy "i2c_master_top:i2c_master" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 127
+Info (12128): Elaborating entity "digital_por" for hierarchy "digital_por:por_100MHz" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 116
+Info (12128): Elaborating entity "i2c_master_top" for hierarchy "i2c_master_top:i2c_master" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 141
 Info (12128): Elaborating entity "i2c_master_regs" for hierarchy "i2c_master_top:i2c_master|i2c_master_regs:i_regs" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_top.v Line: 80
 Info (12128): Elaborating entity "i2c_master_byte_ctrl" for hierarchy "i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_top.v Line: 101
-Info (12128): Elaborating entity "i2c_byte_state_timer" for hierarchy "i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte|i2c_byte_state_timer:state_timer" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_byte_ctrl.v Line: 52
 Info (12128): Elaborating entity "i2c_master_bit_ctrl" for hierarchy "i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_top.v Line: 123
 Info (10264): Verilog HDL Case Statement information at i2c_master_bit_ctrl.v(176): all case item expressions in this case statement are onehot File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_bit_ctrl.v Line: 176
 Info (10264): Verilog HDL Case Statement information at i2c_master_bit_ctrl.v(236): all case item expressions in this case statement are onehot File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_bit_ctrl.v Line: 236
 Info (12128): Elaborating entity "shiftreg" for hierarchy "i2c_master_top:i2c_master|shiftreg:i_sr" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_top.v Line: 134
 Info (12128): Elaborating entity "i2c_bit_timer" for hierarchy "i2c_master_top:i2c_master|i2c_bit_timer:i_timer" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/i2c_master/i2c_master_top.v Line: 143
-Info (12128): Elaborating entity "bme280_i2c_ctrl" for hierarchy "bme280_i2c_ctrl:bme280_i2c_ctrl" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 146
-Info (12128): Elaborating entity "sync_reg" for hierarchy "sync_reg:sync" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 153
-Info (12128): Elaborating entity "gray_timer" for hierarchy "gray_timer:gtimer" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 160
-Info (12128): Elaborating entity "bme280_reader" for hierarchy "bme280_reader:i_reader" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 196
+Info (12128): Elaborating entity "bme280_i2c_ctrl" for hierarchy "bme280_i2c_ctrl:bme280_i2c_ctrl" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 161
+Info (12128): Elaborating entity "sync_reg" for hierarchy "sync_reg:sync" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 168
+Info (12128): Elaborating entity "gray_timer" for hierarchy "gray_timer:gtimer" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 175
+Info (12128): Elaborating entity "bme280_reader" for hierarchy "bme280_reader:i_reader" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 211
 Info (10264): Verilog HDL Case Statement information at bme280_reader.v(56): all case item expressions in this case statement are onehot File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bme280_reader.v Line: 56
 Info (10264): Verilog HDL Case Statement information at bme280_reader.v(71): all case item expressions in this case statement are onehot File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bme280_reader.v Line: 71
 Info (10264): Verilog HDL Case Statement information at bme280_reader.v(190): all case item expressions in this case statement are onehot File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bme280_reader.v Line: 190
-Info (12128): Elaborating entity "bme280_compensation" for hierarchy "bme280_compensation:i_comp" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 223
+Info (12128): Elaborating entity "bme280_compensation" for hierarchy "bme280_compensation:i_comp" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 239
 Warning (10036): Verilog HDL or VHDL warning at bme280_compensation.v(15): object "pvar22" assigned a value but never read File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bme280_compensation.v Line: 15
-Info (12128): Elaborating entity "bin2bcd" for hierarchy "bin2bcd:i_t_bcd" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 225
-Info (12128): Elaborating entity "bcd2seg" for hierarchy "bcd2seg:i_t_bcd0" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 229
-Info (278001): Inferred 2 megafunctions from design logic
+Info (12128): Elaborating entity "bin2bcd" for hierarchy "bin2bcd:i_t_bcd" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 241
+Info (12128): Elaborating entity "bcd2seg" for hierarchy "bcd2seg:i_t_bcd0" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 245
+Info (278001): Inferred 5 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "bme280_compensation:i_comp|Mult7~mult_h_mult_l_mult_hlmacmult" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bme280_compensation.v Line: 32
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "bme280_compensation:i_comp|Div0" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bme280_compensation.v Line: 34
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "bme280_compensation:i_comp|Mult8~mult_h_mult_hlmacmult" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bme280_compensation.v Line: 34
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "bme280_compensation:i_comp|Mult3~mult_h_mult_l_mult_hlmacmult" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bme280_compensation.v Line: 28
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "bme280_compensation:i_comp|Mult3~mult_l_mult_h_mult_hlmacmult" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bme280_compensation.v Line: 28
+Info (12130): Elaborated megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult7_rtl_0"
+Info (12133): Instantiated megafunction "bme280_compensation:i_comp|lpm_mult:Mult7_rtl_0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHA" = "10"
+    Info (12134): Parameter "LPM_WIDTHB" = "10"
+    Info (12134): Parameter "LPM_WIDTHP" = "20"
+    Info (12134): Parameter "LPM_WIDTHR" = "20"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+    Info (12134): Parameter "DEDICATED_MULTIPLIER_CIRCUITRY" = "NO"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_2l01.v
+    Info (12023): Found entity 1: mult_2l01 File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/syn/db/mult_2l01.v Line: 57
 Info (12130): Elaborated megafunction instantiation "bme280_compensation:i_comp|lpm_divide:Div0" File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bme280_compensation.v Line: 34
 Info (12133): Instantiated megafunction "bme280_compensation:i_comp|lpm_divide:Div0" with the following parameter: File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bme280_compensation.v Line: 34
     Info (12134): Parameter "LPM_WIDTHN" = "64"
@@ -1447,8 +1454,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alt_
     Info (12023): Found entity 1: alt_u_div_c3f File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/syn/db/alt_u_div_c3f.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_9p9.tdf
     Info (12023): Found entity 1: lpm_abs_9p9 File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/syn/db/lpm_abs_9p9.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0"
-Info (12133): Instantiated megafunction "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0" with the following parameter:
+Info (12130): Elaborated megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_1"
+Info (12133): Instantiated megafunction "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_1" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHA" = "10"
     Info (12134): Parameter "LPM_WIDTHB" = "7"
     Info (12134): Parameter "LPM_WIDTHP" = "17"
@@ -1459,131 +1466,69 @@ Info (12133): Instantiated megafunction "bme280_compensation:i_comp|lpm_mult:Mul
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
     Info (12134): Parameter "DEDICATED_MULTIPLIER_CIRCUITRY" = "NO"
-Info (12131): Elaborated megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0|multcore:mult_core", which is child of megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 309
-Info (12131): Elaborated megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/multcore.tdf Line: 229
-Info (12131): Elaborated megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
+Info (12131): Elaborated megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_1|multcore:mult_core", which is child of megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_1" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 309
+Info (12131): Elaborated megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_1|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_1" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/multcore.tdf Line: 229
+Info (12131): Elaborated megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_1" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_32h.tdf
     Info (12023): Found entity 1: add_sub_32h File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/syn/db/add_sub_32h.tdf Line: 23
-Info (12131): Elaborated megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
-Info (12131): Elaborated megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
+Info (12131): Elaborated megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_1" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
+Info (12131): Elaborated megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_1" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_1dh.tdf
     Info (12023): Found entity 1: add_sub_1dh File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/syn/db/add_sub_1dh.tdf Line: 23
-Info (12131): Elaborated megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0|altshift:external_latency_ffs", which is child of megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_0" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13032): The following tri-state nodes are fed by constants
-    Warning (13033): The pin "SCL_io" is fed by GND File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 8
-    Warning (13033): The pin "SDA_io" is fed by GND File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 9
-Info (13036): One or more bidirectional pins are fed by always-enabled (GND-fed) open-drain buffers
-    Info (13037): Fan-out of permanently enabled (GND-fed) open-drain buffer feeding bidirectional pin "SCL_io" is set to GND File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 8
-    Info (13037): Fan-out of permanently enabled (GND-fed) open-drain buffer feeding bidirectional pin "SDA_io" is set to GND File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 9
-Warning (13012): Latch Dec0_o[0]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec0_o[1]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec0_o[2]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec0_o[3]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec0_o[4]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec0_o[5]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec0_o[6]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec1_o[0]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec1_o[1]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec1_o[2]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec1_o[3]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec1_o[4]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec1_o[5]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec1_o[6]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec2_o[0]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec2_o[1]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec2_o[2]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec2_o[3]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec2_o[4]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec2_o[5]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec2_o[6]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec3_o[0]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec3_o[1]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec3_o[2]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec3_o[3]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec3_o[4]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec3_o[5]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec3_o[6]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec4_o[0]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec4_o[1]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec4_o[2]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec4_o[3]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec4_o[4]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec4_o[5]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec4_o[6]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec5_o[0]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec5_o[1]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec5_o[2]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec5_o[3]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec5_o[4]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec5_o[5]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
-Warning (13012): Latch Dec5_o[6]$latch has unsafe behavior File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sel_i[0] File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 7
+Info (12131): Elaborated megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_1|altshift:external_latency_ffs", which is child of megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult8_rtl_1" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
+Info (12130): Elaborated megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult3_rtl_2"
+Info (12133): Instantiated megafunction "bme280_compensation:i_comp|lpm_mult:Mult3_rtl_2" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHA" = "10"
+    Info (12134): Parameter "LPM_WIDTHB" = "10"
+    Info (12134): Parameter "LPM_WIDTHP" = "20"
+    Info (12134): Parameter "LPM_WIDTHR" = "20"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+    Info (12134): Parameter "DEDICATED_MULTIPLIER_CIRCUITRY" = "NO"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_vd01.v
+    Info (12023): Found entity 1: mult_vd01 File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/syn/db/mult_vd01.v Line: 61
+Info (12130): Elaborated megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult3_rtl_3"
+Info (12133): Instantiated megafunction "bme280_compensation:i_comp|lpm_mult:Mult3_rtl_3" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHA" = "10"
+    Info (12134): Parameter "LPM_WIDTHB" = "1"
+    Info (12134): Parameter "LPM_WIDTHP" = "11"
+    Info (12134): Parameter "LPM_WIDTHR" = "11"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+    Info (12134): Parameter "DEDICATED_MULTIPLIER_CIRCUITRY" = "NO"
+Info (12131): Elaborated megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult3_rtl_3|multcore:mult_core", which is child of megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult3_rtl_3" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 324
+Info (12131): Elaborated megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult3_rtl_3|multcore:mult_core|lpm_add_sub:adder", which is child of megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult3_rtl_3" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/multcore.tdf Line: 440
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_fug.tdf
+    Info (12023): Found entity 1: add_sub_fug File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/syn/db/add_sub_fug.tdf Line: 23
+Info (12131): Elaborated megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult3_rtl_3|altshift:external_latency_ffs", which is child of megafunction instantiation "bme280_compensation:i_comp|lpm_mult:Mult3_rtl_3" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
+Info (13014): Ignored 88 buffer(s)
+    Info (13019): Ignored 88 SOFT buffer(s)
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "SlaveAddr_LSb_o" is stuck at GND File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 10
     Warning (13410): Pin "Enable_i2c_o" is stuck at VCC File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/top_meteo_de0cv.v Line: 11
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 16 registers lost all their fanouts during netlist optimizations.
+Info (17049): 19 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/syn/output_files/top_meteo_de0cv.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 4 node(s), including 0 DDIO, 2 PLL, 0 transceiver and 0 LCELL
-Warning: RST port on the PLL is not properly connected on instance pll_cv:pll|pll_cv_0002:pll_cv_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v Line: 749
-    Info: Must be connected
-Warning: RST port on the PLL is not properly connected on instance pll_cv:pll|pll_cv_0002:pll_cv_inst|altera_pll:altera_pll_i|general[1].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v Line: 749
-    Info: Must be connected
-Info (21057): Implemented 8500 device resources after synthesis - the final resource count might be different
+    Info (16011): Adding 6 node(s), including 0 DDIO, 2 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 8543 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 45 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 8380 logic cells
+    Info (21061): Implemented 8426 logic cells
     Info (21065): Implemented 2 PLLs
-    Info (21062): Implemented 66 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 118 warnings
-    Info: Peak virtual memory: 4995 megabytes
-    Info: Processing ended: Tue May 07 10:15:17 2024
-    Info: Elapsed time: 00:00:42
-    Info: Total CPU time (on all processors): 00:00:28
+    Info (21062): Implemented 63 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 5000 megabytes
+    Info: Processing ended: Fri May 17 18:55:31 2024
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:11
 
 
 +------------------------------------------+

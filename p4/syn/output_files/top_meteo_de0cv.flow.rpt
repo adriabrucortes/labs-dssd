@@ -1,5 +1,5 @@
 Flow report for top_meteo_de0cv
-Tue May 07 10:15:17 2024
+Fri May 17 18:55:31 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue May 07 10:15:17 2024       ;
+; Flow Status                     ; Successful - Fri May 17 18:55:30 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; top_meteo_de0cv                             ;
 ; Top-level Entity Name           ; top_meteo_de0cv                             ;
@@ -49,11 +49,11 @@ https://fpgasoftware.intel.com/eula.
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 500                                         ;
+; Total registers                 ; 489                                         ;
 ; Total pins                      ; 52                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 66                                          ;
+; Total DSP Blocks                ; 63                                          ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/07/2024 10:14:36 ;
+; Start date & time ; 05/17/2024 18:55:03 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; top_meteo_de0cv     ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 246788414093791.171506967615160        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 246788414093791.171596490311548        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; MISC_FILE                           ; ../ips/pll_cv.cmp                      ; --            ; --          ; --         ;
@@ -100,8 +100,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:41     ; 1.0                     ; 4995 MB             ; 00:00:27                           ;
-; Total                ; 00:00:41     ; --                      ; --                  ; 00:00:27                           ;
+; Analysis & Synthesis ; 00:00:27     ; 1.0                     ; 5000 MB             ; 00:00:11                           ;
+; Total                ; 00:00:27     ; --                      ; --                  ; 00:00:11                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

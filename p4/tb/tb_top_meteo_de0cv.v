@@ -6,6 +6,9 @@ module tb_top_meteo_de0cv();
 wire scl, sda, clk, rst_n;
 reg [2:0] sel;
 wire errorFlag;
+wire Enable_i2c_o;
+wire ErrFlag_o;
+wire [7-1:0] Dec0_o, Dec1_o, Dec2_o, Dec3_o, Dec4_o, Dec5_o;
 
 parameter CLK_HALFPERIOD = 5;
 
@@ -27,21 +30,21 @@ top_meteo_de0cv DUT (
   .SDA_io           (sda),
   .Sel_i            (sel),
   .ErrFlag_o        (errorFlag),
-  .SlaveAddr_LSb_o  (),
-  .Enable_i2c_o     (),
-  .Dec0_o           (),
-  .Dec1_o           (),
-  .Dec2_o           (),
-  .Dec3_o           (),
-  .Dec4_o           (),
-  .Dec5_o           ()
+  .SlaveAddr_LSb_o  (SlaveAddr_LSb_o),
+  .Enable_i2c_o     (Enable_i2c_o),
+  .Dec0_o           (Dec0_o),
+  .Dec1_o           (Dec1_o),
+  .Dec2_o           (Dec2_o),
+  .Dec3_o           (Dec3_o),
+  .Dec4_o           (Dec4_o),
+  .Dec5_o           (Dec5_o)
 );
 
 i2c_slave_model #(
   .MEM_INIT_FILE("../misc/bme280_regs.mem"),
   .MEM_SIZE(256),
-  .I2C_ADDR(7'b001_0000),
-  .RD_BURST(1'b0)
+  .I2C_ADDR(7'b111_0110),
+  .RD_BURST(1'b1)
 ) i2c_slave (
   .Scl              (scl),
   .Sda              (sda)
@@ -62,7 +65,14 @@ initial begin
   u_sys.reset(2); // Així ens assegurem que detecti el flanc de baixada
   u_sys.wait_cycles(3);
   u_sys.reset(2);
-  u_sys.wait_cycles(10000);
+  u_sys.wait_cycles(200000);
+  //wait(DUT.timerInt);
+
+  sel = 3'b010;
+  u_sys.wait_cycles(2000);
+
+  sel = 3'b100;
+  u_sys.wait_cycles(2000);
 
   $stop;
 end

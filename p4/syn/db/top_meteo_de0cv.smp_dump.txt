@@ -60,3 +60,12 @@ state.RD_D 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1
 state.WR_B 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
 state.WR_C 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
 state.WR_D 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte|state
+Name state.ST_STOP state.ST_ACK state.ST_WRITE state.ST_READ state.ST_START state.ST_IDLE 
+state.ST_IDLE 0 0 0 0 0 0 
+state.ST_START 0 0 0 0 1 1 
+state.ST_READ 0 0 0 1 0 1 
+state.ST_WRITE 0 0 1 0 0 1 
+state.ST_ACK 0 1 0 0 0 1 
+state.ST_STOP 1 0 0 0 0 1 
