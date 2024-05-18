@@ -1,0 +1,116 @@
+# Reading pref.tcl
+# ERROR: No extended dataflow license exists
+# do i2c_master_top_run_msim_gate_verilog.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+. {i2c_master_top.vo}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:45:55 on Apr 29,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." i2c_master_top.vo 
+# -- Compiling module i2c_master_top
+# -- Compiling module hard_block
+# 
+# Top level modules:
+# 	i2c_master_top
+# End time: 22:45:55 on Apr 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/syn/../tb {C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/syn/../tb/tb_i2c_master_top_4netlist.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:45:55 on Apr 29,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/syn/../tb" C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/syn/../tb/tb_i2c_master_top_4netlist.v 
+# -- Compiling module i2c_slave_model
+# -- Compiling module dbus_master_model
+# -- Compiling module tb_i2c_master_top
+# -- Compiling module delay
+# 
+# Top level modules:
+# 	tb_i2c_master_top
+# End time: 22:45:55 on Apr 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  tb_i2c_master_top
+# vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" tb_i2c_master_top 
+# Start time: 22:45:55 on Apr 29,2024
+# Loading work.tb_i2c_master_top
+# Loading work.dbus_master_model
+# Loading work.i2c_master_top
+# Loading work.hard_block
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
+# Loading work.i2c_slave_model
+# Loading work.delay
+# SDF 2020.1 Compiler 2020.02 Feb 28 2020
+# 
+# Loading instances from i2c_master_top_v.sdo
+# Loading altera_ver.PRIM_GDFF_LOW
+# Loading timing data from i2c_master_top_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_i2c_master_top File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/syn/../tb/tb_i2c_master_top_4netlist.v
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# 
+# status:    0.00 ns Testbench started
+# 
+# 
+# [Info-    0.00 ns] Reset
+# status: 1297.00 ns done reset
+# status: 1405.00 ns programmed registers
+# status: 1707.00 ns verified registers
+# status: 1725.00 ns core enabled
+# status: 1725.00 ns Write Access
+# status: 1765.00 ns generate 'start', write cmd 20 (slave address+write)
+# status: 5125.00 ns tip==0
+# status: 5165.00 ns write slave memory address 01
+# status: 8085.00 ns tip==0
+# status: 8125.00 ns write data a5
+# status: 8125.00 ns clock streching starts
+# status: 9225.00 ns clock streching ends
+# status: 11975.00 ns tip==0
+# status: 12015.00 ns write slave memory address 02
+# status: 14855.00 ns tip==0
+# status: 14895.00 ns write next data 5a, generate 'stop'
+# ** Error: $setup( posedge Scl:17871496 ps, posedge Sda &&& Scl:18030908 ps, 160 ns );
+#    Time: 18030908 ps  Iteration: 2  Process: /tb_i2c_master_top/u_slave0/#Setup# File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/i2c_slave_model.v Line: 272
+# status: 18075.00 ns tip==0, busy==0
+# status: 18075.00 ns Read Access
+# status: 18115.00 ns generate 'start', write cmd 20 (slave address+write)
+# status: 21495.00 ns tip==0
+# status: 21535.00 ns write slave address 01
+# status: 24375.00 ns tip==0
+# status: 24415.00 ns generate 'repeated start', write cmd 21 (slave address+read)
+# ** Error: $setup( posedge Scl:24511496 ps, negedge Sda &&& Scl:24670886 ps, 160 ns );
+#    Time: 24670886 ps  Iteration: 2  Process: /tb_i2c_master_top/u_slave0/#Setup# File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/i2c_slave_model.v Line: 270
+# status: 27735.00 ns tip==0
+# status: 27755.00 ns read + ack
+# status: 30615.00 ns tip==0
+# status: 30635.00 ns received a5
+# status: 30655.00 ns read + ack
+# status: 33495.00 ns tip==0
+# status: 33515.00 ns received 5a
+# status: 33555.00 ns generate 'start', write cmd 20 (slave address+write). Check invalid address
+add wave -position insertpoint  \
+sim:/tb_i2c_master_top/clk \
+sim:/tb_i2c_master_top/rst_n \
+sim:/tb_i2c_master_top/scl \
+sim:/tb_i2c_master_top/sda
+# End time: 23:51:02 on Apr 29,2024, Elapsed time: 1:05:07
+# Errors: 2, Warnings: 0

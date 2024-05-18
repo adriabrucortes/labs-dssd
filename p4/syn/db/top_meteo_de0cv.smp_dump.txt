@@ -1,0 +1,71 @@
+
+State Machine - |top_meteo_de0cv|bme280_reader:i_reader|last
+Name last.ERROR last.MEASURE last.GET_DATA last.STATUS last.WAIT_END last.WR_CFG last.RD_CAL26 last.RD_CAL00 last.RD_ID last.RESET last.WAIT_1S last.IDLE 
+last.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 
+last.WAIT_1S 0 0 0 0 0 0 0 0 0 0 1 1 
+last.RESET 0 0 0 0 0 0 0 0 0 1 0 1 
+last.RD_ID 0 0 0 0 0 0 0 0 1 0 0 1 
+last.RD_CAL00 0 0 0 0 0 0 0 1 0 0 0 1 
+last.RD_CAL26 0 0 0 0 0 0 1 0 0 0 0 1 
+last.WR_CFG 0 0 0 0 0 1 0 0 0 0 0 1 
+last.WAIT_END 0 0 0 0 1 0 0 0 0 0 0 1 
+last.STATUS 0 0 0 1 0 0 0 0 0 0 0 1 
+last.GET_DATA 0 0 1 0 0 0 0 0 0 0 0 1 
+last.MEASURE 0 1 0 0 0 0 0 0 0 0 0 1 
+last.ERROR 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |top_meteo_de0cv|bme280_reader:i_reader|state
+Name state.ERROR state.MEASURE state.GET_DATA state.STATUS state.WAIT_END state.WR_CFG state.RD_CAL26 state.RD_CAL00 state.RD_ID state.RESET state.WAIT_1S state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 
+state.WAIT_1S 0 0 0 0 0 0 0 0 0 0 1 1 
+state.RESET 0 0 0 0 0 0 0 0 0 1 0 1 
+state.RD_ID 0 0 0 0 0 0 0 0 1 0 0 1 
+state.RD_CAL00 0 0 0 0 0 0 0 1 0 0 0 1 
+state.RD_CAL26 0 0 0 0 0 0 1 0 0 0 0 1 
+state.WR_CFG 0 0 0 0 0 1 0 0 0 0 0 1 
+state.WAIT_END 0 0 0 0 1 0 0 0 0 0 0 1 
+state.STATUS 0 0 0 1 0 0 0 0 0 0 0 1 
+state.GET_DATA 0 0 1 0 0 0 0 0 0 0 0 1 
+state.MEASURE 0 1 0 0 0 0 0 0 0 0 0 1 
+state.ERROR 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |top_meteo_de0cv|bme280_i2c_ctrl:bme280_i2c_ctrl|state
+Name state.GET_DATA state.RD_DATA state.RD_SADDR state.WR_DATA state.WR_RADDR state.SET_TXR state.CHECK_TIP state.WR_SADDR state.IDLE state.EN_I2C state.SET_PRER 
+state.SET_PRER 0 0 0 0 0 0 0 0 0 0 0 
+state.EN_I2C 0 0 0 0 0 0 0 0 0 1 1 
+state.IDLE 0 0 0 0 0 0 0 0 1 0 1 
+state.WR_SADDR 0 0 0 0 0 0 0 1 0 0 1 
+state.CHECK_TIP 0 0 0 0 0 0 1 0 0 0 1 
+state.SET_TXR 0 0 0 0 0 1 0 0 0 0 1 
+state.WR_RADDR 0 0 0 0 1 0 0 0 0 0 1 
+state.WR_DATA 0 0 0 1 0 0 0 0 0 0 1 
+state.RD_SADDR 0 0 1 0 0 0 0 0 0 0 1 
+state.RD_DATA 0 1 0 0 0 0 0 0 0 0 1 
+state.GET_DATA 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit|state
+Name state.WR_D state.WR_C state.WR_B state.RD_D state.RD_C state.RD_B state.STOP_D state.STOP_C state.STOP_B state.START_F state.START_E state.START_D state.START_C state.START_B state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.START_B 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.START_C 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.START_D 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.START_E 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.START_F 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.STOP_B 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.STOP_C 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.STOP_D 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.RD_B 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.RD_C 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.RD_D 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.WR_B 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.WR_C 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.WR_D 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte|state
+Name state.ST_STOP state.ST_ACK state.ST_WRITE state.ST_READ state.ST_START state.ST_IDLE 
+state.ST_IDLE 0 0 0 0 0 0 
+state.ST_START 0 0 0 0 1 1 
+state.ST_READ 0 0 0 1 0 1 
+state.ST_WRITE 0 0 1 0 0 1 
+state.ST_ACK 0 1 0 0 0 1 
+state.ST_STOP 1 0 0 0 0 1 

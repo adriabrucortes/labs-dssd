@@ -1,0 +1,172 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  cycloneive
+Quartus root          :  c:/intelfpga_lite/20.1/quartus/bin64/
+Quartus sim root      :  c:/intelfpga_lite/20.1/quartus/eda/sim_lib
+Simulation Tool       :  modelsim-altera
+Simulation Language   :  verilog
+Simulation Mode       :  GUI
+Sim Output File       :  i2c_master_top.vo
+Sim SDF file          :  i2c_master_top__verilog.sdo
+Sim dir               :  simulation\modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim-Altera software
+Sourced NativeLink script c:/intelfpga_lite/20.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File i2c_master_top_run_msim_gate_verilog.do already exists - backing up current file as i2c_master_top_run_msim_gate_verilog.do.bak9
+Probing transcript
+ModelSim-Altera Info: # Reading pref.tcl
+ModelSim-Altera Info: # ERROR: No extended dataflow license exists
+ModelSim-Altera Info: # do i2c_master_top_run_msim_gate_verilog.do
+ModelSim-Altera Info: # if {[file exists gate_work]} {
+ModelSim-Altera Info: # 	vdel -lib gate_work -all
+ModelSim-Altera Info: # }
+ModelSim-Altera Info: # vlib gate_work
+ModelSim-Altera Info: # vmap work gate_work
+ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+ModelSim-Altera Info: # vmap work gate_work 
+ModelSim-Altera Info: # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+ModelSim-Altera Info: # Modifying modelsim.ini
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+. {i2c_master_top.vo}
+ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim-Altera Info: # Start time: 22:45:55 on Apr 29,2024
+ModelSim-Altera Info: # vlog -reportprogress 300 -vlog01compat -work work "+incdir+." i2c_master_top.vo 
+ModelSim-Altera Info: # -- Compiling module i2c_master_top
+ModelSim-Altera Info: # -- Compiling module hard_block
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	i2c_master_top
+ModelSim-Altera Info: # End time: 22:45:55 on Apr 29,2024, Elapsed time: 0:00:00
+ModelSim-Altera Info: # Errors: 0, Warnings: 0
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/syn/../tb {C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/syn/../tb/tb_i2c_master_top_4netlist.v}
+ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim-Altera Info: # Start time: 22:45:55 on Apr 29,2024
+ModelSim-Altera Info: # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/syn/../tb" C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/syn/../tb/tb_i2c_master_top_4netlist.v 
+ModelSim-Altera Info: # -- Compiling module i2c_slave_model
+ModelSim-Altera Info: # -- Compiling module dbus_master_model
+ModelSim-Altera Info: # -- Compiling module tb_i2c_master_top
+ModelSim-Altera Info: # -- Compiling module delay
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	tb_i2c_master_top
+ModelSim-Altera Info: # End time: 22:45:55 on Apr 29,2024, Elapsed time: 0:00:00
+ModelSim-Altera Info: # Errors: 0, Warnings: 0
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  tb_i2c_master_top
+ModelSim-Altera Info: # vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" tb_i2c_master_top 
+ModelSim-Altera Info: # Start time: 22:45:55 on Apr 29,2024
+ModelSim-Altera Info: # Loading work.tb_i2c_master_top
+ModelSim-Altera Info: # Loading work.dbus_master_model
+ModelSim-Altera Info: # Loading work.i2c_master_top
+ModelSim-Altera Info: # Loading work.hard_block
+ModelSim-Altera Info: # Loading cycloneive_ver.cycloneive_io_obuf
+ModelSim-Altera Info: # Loading cycloneive_ver.cycloneive_io_ibuf
+ModelSim-Altera Info: # Loading cycloneive_ver.cycloneive_clkctrl
+ModelSim-Altera Info: # Loading cycloneive_ver.cycloneive_mux41
+ModelSim-Altera Info: # Loading cycloneive_ver.cycloneive_ena_reg
+ModelSim-Altera Info: # Loading cycloneive_ver.cycloneive_lcell_comb
+ModelSim-Altera Info: # Loading altera_ver.dffeas
+ModelSim-Altera Info: # Loading work.i2c_slave_model
+ModelSim-Altera Info: # Loading work.delay
+ModelSim-Altera Info: # SDF 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Loading instances from i2c_master_top_v.sdo
+ModelSim-Altera Info: # Loading altera_ver.PRIM_GDFF_LOW
+ModelSim-Altera Info: # Loading timing data from i2c_master_top_v.sdo
+ModelSim-Altera Info: # ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /tb_i2c_master_top File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/syn/../tb/tb_i2c_master_top_4netlist.v
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # add wave *
+ModelSim-Altera Info: # view structure
+ModelSim-Altera Info: # .main_pane.structure.interior.cs.body.struct
+ModelSim-Altera Info: # view signals
+ModelSim-Altera Info: # .main_pane.objects.interior.cs.body.tree
+ModelSim-Altera Info: # run -all
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # status:    0.00 ns Testbench started
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # [Info-    0.00 ns] Reset
+ModelSim-Altera Info: # status: 1297.00 ns done reset
+ModelSim-Altera Info: # status: 1405.00 ns programmed registers
+ModelSim-Altera Info: # status: 1707.00 ns verified registers
+ModelSim-Altera Info: # status: 1725.00 ns core enabled
+ModelSim-Altera Info: # status: 1725.00 ns Write Access
+ModelSim-Altera Info: # status: 1765.00 ns generate 'start', write cmd 20 (slave address+write)
+ModelSim-Altera Info: # status: 5125.00 ns tip==0
+ModelSim-Altera Info: # status: 5165.00 ns write slave memory address 01
+ModelSim-Altera Info: # status: 8085.00 ns tip==0
+ModelSim-Altera Info: # status: 8125.00 ns write data a5
+ModelSim-Altera Info: # status: 8125.00 ns clock streching starts
+ModelSim-Altera Info: # status: 9225.00 ns clock streching ends
+ModelSim-Altera Info: # status: 11975.00 ns tip==0
+ModelSim-Altera Info: # status: 12015.00 ns write slave memory address 02
+ModelSim-Altera Info: # status: 14855.00 ns tip==0
+ModelSim-Altera Info: # status: 14895.00 ns write next data 5a, generate 'stop'
+ModelSim-Altera Error: # ** Error: $setup( posedge Scl:17871496 ps, posedge Sda &&& Scl:18030908 ps, 160 ns );
+ModelSim-Altera Info: #    Time: 18030908 ps  Iteration: 2  Process: /tb_i2c_master_top/u_slave0/#Setup# File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/i2c_slave_model.v Line: 272
+ModelSim-Altera Info: # status: 18075.00 ns tip==0, busy==0
+ModelSim-Altera Info: # status: 18075.00 ns Read Access
+ModelSim-Altera Info: # status: 18115.00 ns generate 'start', write cmd 20 (slave address+write)
+ModelSim-Altera Info: # status: 21495.00 ns tip==0
+ModelSim-Altera Info: # status: 21535.00 ns write slave address 01
+ModelSim-Altera Info: # status: 24375.00 ns tip==0
+ModelSim-Altera Info: # status: 24415.00 ns generate 'repeated start', write cmd 21 (slave address+read)
+ModelSim-Altera Error: # ** Error: $setup( posedge Scl:24511496 ps, negedge Sda &&& Scl:24670886 ps, 160 ns );
+ModelSim-Altera Info: #    Time: 24670886 ps  Iteration: 2  Process: /tb_i2c_master_top/u_slave0/#Setup# File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p3_4/misc/i2c_slave_model.v Line: 270
+ModelSim-Altera Info: # status: 27735.00 ns tip==0
+ModelSim-Altera Info: # status: 27755.00 ns read + ack
+ModelSim-Altera Info: # status: 30615.00 ns tip==0
+ModelSim-Altera Info: # status: 30635.00 ns received a5
+ModelSim-Altera Info: # status: 30655.00 ns read + ack
+ModelSim-Altera Info: # status: 33495.00 ns tip==0
+ModelSim-Altera Info: # status: 33515.00 ns received 5a
+ModelSim-Altera Info: # status: 33555.00 ns generate 'start', write cmd 20 (slave address+write). Check invalid address
+ModelSim-Altera Info: add wave -position insertpoint  \
+ModelSim-Altera Info: sim:/tb_i2c_master_top/clk \
+ModelSim-Altera Info: sim:/tb_i2c_master_top/rst_n \
+ModelSim-Altera Info: sim:/tb_i2c_master_top/scl \
+ModelSim-Altera Info: sim:/tb_i2c_master_top/sda
+ModelSim-Altera Info: # End time: 23:51:02 on Apr 29,2024, Elapsed time: 1:05:07
+ModelSim-Altera Info: # Errors: 2, Warnings: 0
+Error: Errors encountered while running modelsim do file
+Error: NativeLink simulation flow was NOT successful
+
+
+
+================The following additional information is provided to help identify the cause of error while running nativelink scripts=================
+Nativelink TCL script failed with errorCode:  1
+Nativelink TCL script failed with errorInfo:  1
+    (procedure "launch_sim" line 1)
+    invoked from within
+"launch_sim launch_args_hash"
+    ("eval" body line 1)
+    invoked from within
+"eval launch_sim launch_args_hash"
+    invoked from within
+"if [ info exists ::errorCode ] {
+                set savedCode $::errorCode
+                set savedInfo $::errorInfo
+                error $result $..."
+    invoked from within
+"if [catch {eval launch_sim launch_args_hash} result ] {
+            set status 1
+            if [ info exists ::errorCode ] {
+                set save..."
+    (procedure "run_sim" line 74)
+    invoked from within
+"run_sim run_sim_args_hash"
+    invoked from within
+"if [ info exists ::errorCode ] {
+            set savedCode $::errorCode
+            set savedInfo $::errorInfo
+            error "$result" $savedInfo ..."
+    (procedure "run_eda_simulation_tool" line 334)
+    invoked from within
+"run_eda_simulation_tool eda_opts_hash"

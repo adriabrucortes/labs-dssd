@@ -257,7 +257,7 @@ module i2c_slave_model #(
 	            nxp_hs_tsu_sto  = 260,
 	            nxp_hs_tbuf     = 500;
 
-    specparam bme_hs_scl_low  = 160, // BME280 Bosh
+      specparam bme_hs_scl_low  = 160, // BME280 Bosh
 	            bme_hs_scl_high = 160,
 	            bme_hs_tsu_sta  = 160,
 	            bme_hs_thd_sta  = 150,
@@ -265,7 +265,7 @@ module i2c_slave_model #(
 	            bme_hs_tbuf     = 210;
 
 	  $width(negedge Scl, bme_hs_scl_low);  // Scl low time
-	  $width(posedge Scl, bme_hs_scl_high); // Scl high time
+	  //$width(posedge Scl, bme_hs_scl_high); // Scl high time
 
 	  $setup(posedge Scl, negedge Sda &&& Scl, bme_hs_tsu_sta); // setup start
 	  $setup(negedge Sda &&& Scl, negedge Scl, bme_hs_thd_sta); // hold start

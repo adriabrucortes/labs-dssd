@@ -1,0 +1,117 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "DataOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DataOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DataOut[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DataOut[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DataOut[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DataOut[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DataOut[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DataOut[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Int",
+					"strict" : false
+				},
+				{
+					"name" : "SclPadEn",
+					"strict" : false
+				},
+				{
+					"name" : "SdaPadEn",
+					"strict" : false
+				},
+				{
+					"name" : "Addr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Addr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Addr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Clk",
+					"strict" : false
+				},
+				{
+					"name" : "Rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "Wr",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SdaPadIn",
+					"strict" : false
+				},
+				{
+					"name" : "SclPadIn",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

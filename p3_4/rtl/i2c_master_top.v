@@ -22,7 +22,7 @@
 
 module i2c_master_top #(
   parameter DWIDTH = 8,      // bus data size
-  parameter AWIDTH = 8       // bus addres size
+  parameter AWIDTH = 3       // bus addres size
 )(
   // system bus i/o signals
   input  wire Clk,       // master clock input

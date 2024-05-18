@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at gray_timer.v(44): always construct contains both blocking and non-blocking assignments File: C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/gray_timer.v Line: 44

@@ -1,1 +1,0 @@
-create_clock -name clk100MHz -period 10.0 [get_ports Clk]
