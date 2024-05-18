@@ -91,12 +91,12 @@ always @(*) begin
       Dec5_o = h_bcd5;
     end
     default : begin
-      Dec0_o = {7{1'b0}};
-      Dec1_o = {7{1'b0}};
-      Dec2_o = {7{1'b0}};
-      Dec3_o = {7{1'b0}};
-      Dec4_o = {7{1'b0}};
-      Dec5_o = {7{1'b0}};
+      Dec0_o = ~(7'b1110111); // A
+      Dec1_o = ~(7'b1111000); // T
+      Dec2_o = ~(7'b1110111); // A
+      Dec3_o = ~(7'b1011110); // D
+      Dec4_o = ~(7'b0111111); // O
+      Dec5_o = ~(7'b0110111); // N
     end
   endcase
 end
