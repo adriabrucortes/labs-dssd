@@ -53,7 +53,7 @@ i2c_slave_model #(
 //___________________________________________________________________________
 // Signals and vars initialization
 initial begin
-  sel = 3'b001;
+  sel = 3'b000;
 end
 
 //___________________________________________________________________________
@@ -65,14 +65,27 @@ initial begin
   u_sys.reset(2); // Així ens assegurem que detecti el flanc de baixada
   u_sys.wait_cycles(3);
   u_sys.reset(2);
-  u_sys.wait_cycles(200000);
-  //wait(DUT.timerInt);
+  $display("Reset at %t", $time);
+  wait(DUT.timerInt);
+  u_sys.wait_cycles(20);
+  
+  sel = 3'b001;
+  wait(DUT.timerInt);
+  $display("First check at %t", $time);
+  u_sys.wait_cycles(20);
 
   sel = 3'b010;
-  u_sys.wait_cycles(2000);
+  wait(DUT.timerInt);
+  $display("Second check at %t", $time);
+  u_sys.wait_cycles(20);
 
   sel = 3'b100;
-  u_sys.wait_cycles(2000);
+  wait(DUT.timerInt);
+  $display("Third check at %t", $time);
+  u_sys.wait_cycles(20);
+
+  // Wait until next request
+  wait(DUT.timerInt);
 
   $stop;
 end

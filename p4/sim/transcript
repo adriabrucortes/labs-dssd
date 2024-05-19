@@ -1,55 +1,37 @@
-# Error opening C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bme280_compensation.v
-# Path name 'C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/rtl/bme280_compensation.v' doesn't exist.
-# Error opening C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\tb\tb_top_meteo_de0cv.v
-# Path name 'C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\tb\tb_top_meteo_de0cv.v' doesn't exist.
-# Error opening C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\bme280_i2c_ctrl.v
-# Path name 'C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\bme280_i2c_ctrl.v' doesn't exist.
-# Error opening C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\i2c_master\i2c_master_byte_ctrl.v
-# Path name 'C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\i2c_master\i2c_master_byte_ctrl.v' doesn't exist.
-# Error opening C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/sdc/top_meteo_de0cv.sdc
-# Path name 'C:/Users/HP/Documents/Universitat/8e/DSSD/pracs/p4/sdc/top_meteo_de0cv.sdc' doesn't exist.
-# Error opening C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\misc\i2c_slave_model.v
-# Path name 'C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\misc\i2c_slave_model.v' doesn't exist.
-# Error opening C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\i2c_master\i2c_master_bit_ctrl.v
-# Path name 'C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\i2c_master\i2c_master_bit_ctrl.v' doesn't exist.
-# Error opening C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\gray_timer.v
-# Path name 'C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\gray_timer.v' doesn't exist.
-# Error opening C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\i2c_master\i2c_bit_timer.v
-# Path name 'C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\i2c_master\i2c_bit_timer.v' doesn't exist.
-# Error opening C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\bin2bcd.v
-# Path name 'C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\bin2bcd.v' doesn't exist.
-# Error opening C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\top_meteo_de0cv.v
-# Path name 'C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\top_meteo_de0cv.v' doesn't exist.
-# Error opening C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\i2c_master\i2c_master_defines.v
-# Path name 'C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\i2c_master\i2c_master_defines.v' doesn't exist.
-# Error opening C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\digital_por.v
-# Path name 'C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\digital_por.v' doesn't exist.
-# Error opening C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\hex2seg.v
-# Path name 'C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\hex2seg.v' doesn't exist.
-# Error opening C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\bme280_reader.v
-# Path name 'C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\bme280_reader.v' doesn't exist.
-# Error opening C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\misc\bme280_regs.mem
-# Path name 'C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\misc\bme280_regs.mem' doesn't exist.
-# Error opening C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\misc\timescale.v
-# Path name 'C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\misc\timescale.v' doesn't exist.
-# Error opening C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\misc\sys_model.v
-# Path name 'C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\misc\sys_model.v' doesn't exist.
-# Error opening C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\i2c_master\i2c_byte_state_timer.v
-# Path name 'C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\i2c_master\i2c_byte_state_timer.v' doesn't exist.
-# Error opening C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\bcd2seg.v
-# Path name 'C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\bcd2seg.v' doesn't exist.
-# Error opening C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\sync_reg.v
-# Path name 'C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\sync_reg.v' doesn't exist.
-# Error opening C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\i2c_master\i2c_master_top.v
-# Path name 'C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\i2c_master\i2c_master_top.v' doesn't exist.
-# Error opening C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\bme280_defines.v
-# Path name 'C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\bme280_defines.v' doesn't exist.
-# Error opening C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\top_meteo_de0cv_salva.v
-# Path name 'C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\top_meteo_de0cv_salva.v' doesn't exist.
-# Error opening C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\misc\pll_fm.v
-# Path name 'C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\misc\pll_fm.v' doesn't exist.
-# Error opening C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\i2c_master\shiftreg.v
-# Path name 'C:\Users\HP\Documents\Universitat\8e\DSSD\pracs\p4\rtl\i2c_master\shiftreg.v' doesn't exist.
+# Compile of bcd2seg.v was successful.
+# Compile of bin2bcd.v was successful.
+# Compile of bme280_compensation.v was successful.
+# Compile of bme280_defines.v was successful.
+# Compile of bme280_i2c_ctrl.v was successful.
+# Compile of bme280_reader.v was successful.
+# Compile of digital_por.v was successful.
+# Compile of gray_timer.v was successful.
+# Compile of hex2seg.v was successful.
+# Compile of sync_reg.v was successful.
+# Compile of top_meteo_de0cv.v was successful.
+# Compile of i2c_slave_model.v was successful.
+# Compile of pll_fm.v was successful.
+# Compile of sys_model.v was successful.
+# Compile of timescale.v was successful.
+# Compile of tb_top_meteo_de0cv.v was successful.
+# 16 compiles, 0 failed with no errors.
+# Compile of bcd2seg.v was successful.
+# Compile of bin2bcd.v was successful.
+# Compile of bme280_compensation.v was successful.
+# Compile of bme280_defines.v was successful.
+# Compile of bme280_i2c_ctrl.v was successful.
+# Compile of bme280_reader.v was successful.
+# Compile of digital_por.v was successful.
+# Compile of gray_timer.v was successful.
+# Compile of hex2seg.v was successful.
+# Compile of sync_reg.v was successful.
+# Compile of top_meteo_de0cv.v was successful.
+# Compile of i2c_slave_model.v was successful.
+# Compile of pll_fm.v was successful.
+# Compile of sys_model.v was successful.
+# Compile of timescale.v was successful.
+# Compile of tb_top_meteo_de0cv.v failed with 5 errors.
+# 16 compiles, 1 failed with 5 errors.
 # Compile of bcd2seg.v was successful.
 # Compile of bin2bcd.v was successful.
 # Compile of bme280_compensation.v was successful.
@@ -69,7 +51,7 @@
 # 16 compiles, 0 failed with no errors.
 vsim -gui work.tb_top_meteo_de0cv
 # vsim -gui work.tb_top_meteo_de0cv 
-# Start time: 19:56:50 on May 18,2024
+# Start time: 19:31:38 on May 19,2024
 # Loading work.tb_top_meteo_de0cv
 # Loading work.sys_model
 # Loading work.top_meteo_de0cv
@@ -103,110 +85,86 @@ add wave -position end  sim:/tb_top_meteo_de0cv/Dec2_o
 add wave -position end  sim:/tb_top_meteo_de0cv/Dec3_o
 add wave -position end  sim:/tb_top_meteo_de0cv/Dec4_o
 add wave -position end  sim:/tb_top_meteo_de0cv/Dec5_o
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/Clk_i
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/Rst_n_i
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/Sel_i
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/SCL_io
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/SDA_io
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/SlaveAddr_LSb_o
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/Enable_i2c_o
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/ErrFlag_o
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/Dec0_o
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/Dec1_o
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/Dec2_o
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/Dec3_o
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/Dec4_o
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/Dec5_o
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/clk100MHz
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/clk1MHz
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/Rst_n
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/Rst_n_slow
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/scl_oen
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/scl_o
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/sda_oen
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/sda_o
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/timerEn
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/timerInt
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/TimerInt_sync
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/i2c_int
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/dbus_wr
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/dbus_addr
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/dbus_di
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/dbus_do
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/i2cc_start
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/i2cc_rdwr
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/i2cc_last
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/i2cc_done
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/i2cc_addr
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/i2cc_txd
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/i2cc_rxd
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/tempBin
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/pressBin
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/humBin
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/digT1
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/digT2
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/digT3
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/digP1
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/digP2
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/digP3
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/digP4
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/digP5
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/digP6
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/digP7
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/digP8
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/digP9
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/digH1
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/digH3
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/digH6
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/digH2
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/digH4
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/digH5
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/temp
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/press
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/hum
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/t_bcd
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/p_bcd
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/h_bcd
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/t_bcd5
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/t_bcd4
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/t_bcd3
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/t_bcd2
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/t_bcd1
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/t_bcd0
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/p_bcd5
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/p_bcd4
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/p_bcd3
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/p_bcd2
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/p_bcd1
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/p_bcd0
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/h_bcd5
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/h_bcd4
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/h_bcd3
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/h_bcd2
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/h_bcd1
-add wave -position end  sim:/tb_top_meteo_de0cv/DUT/h_bcd0
-add wave -position insertpoint  \
-sim:/tb_top_meteo_de0cv/i2c_slave/Scl \
-sim:/tb_top_meteo_de0cv/i2c_slave/Sda \
-sim:/tb_top_meteo_de0cv/i2c_slave/debug \
-sim:/tb_top_meteo_de0cv/i2c_slave/mem \
-sim:/tb_top_meteo_de0cv/i2c_slave/mem_adr \
-sim:/tb_top_meteo_de0cv/i2c_slave/mem_do \
-sim:/tb_top_meteo_de0cv/i2c_slave/sta \
-sim:/tb_top_meteo_de0cv/i2c_slave/d_sta \
-sim:/tb_top_meteo_de0cv/i2c_slave/sto \
-sim:/tb_top_meteo_de0cv/i2c_slave/sr \
-sim:/tb_top_meteo_de0cv/i2c_slave/rw \
-sim:/tb_top_meteo_de0cv/i2c_slave/my_adr \
-sim:/tb_top_meteo_de0cv/i2c_slave/i2c_reset \
-sim:/tb_top_meteo_de0cv/i2c_slave/bit_cnt \
-sim:/tb_top_meteo_de0cv/i2c_slave/acc_done \
-sim:/tb_top_meteo_de0cv/i2c_slave/ld \
-sim:/tb_top_meteo_de0cv/i2c_slave/sda_o \
-sim:/tb_top_meteo_de0cv/i2c_slave/sda_dly \
-sim:/tb_top_meteo_de0cv/i2c_slave/state \
-sim:/tb_top_meteo_de0cv/i2c_slave/tst_sto \
-sim:/tb_top_meteo_de0cv/i2c_slave/tst_sta
+add wave -position end  sim:/tb_top_meteo_de0cv/SlaveAddr_LSb_o
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: adria  Hostname: OLAWENAH-PC  ProcessID: 35888
+#           Attempting to use alternate WLF file "./wlftd1c1x6".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftd1c1x6
+run -all
+# DEBUG i2c_slave; stop condition detected at    0.00 ns
+# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_top_meteo_de0cv.v(78)
+#    Time: 67 ns  Iteration: 0  Instance: /tb_top_meteo_de0cv
+# Break in Module tb_top_meteo_de0cv at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_top_meteo_de0cv.v line 78
+# Compile of bcd2seg.v was successful.
+# Compile of bin2bcd.v was successful.
+# Compile of bme280_compensation.v was successful.
+# Compile of bme280_defines.v was successful.
+# Compile of bme280_i2c_ctrl.v was successful.
+# Compile of bme280_reader.v was successful.
+# Compile of digital_por.v was successful.
+# Compile of gray_timer.v was successful.
+# Compile of hex2seg.v was successful.
+# Compile of sync_reg.v was successful.
+# Compile of top_meteo_de0cv.v was successful.
+# Compile of i2c_slave_model.v was successful.
+# Compile of pll_fm.v was successful.
+# Compile of sys_model.v was successful.
+# Compile of timescale.v was successful.
+# Compile of tb_top_meteo_de0cv.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top_meteo_de0cv
+# Loading work.sys_model
+# Loading work.top_meteo_de0cv
+# Loading work.pll_cv
+# Loading work.digital_por
+# Loading work.bme280_i2c_ctrl
+# Loading work.sync_reg
+# Loading work.gray_timer
+# Loading work.bme280_reader
+# Loading work.bme280_compensation
+# Loading work.bin2bcd
+# Loading work.bcd2seg
+# Loading work.i2c_slave_model
+run -all
+# DEBUG i2c_slave; stop condition detected at    0.00 ns
+# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_top_meteo_de0cv.v(81)
+#    Time: 157 ns  Iteration: 0  Instance: /tb_top_meteo_de0cv
+# Break in Module tb_top_meteo_de0cv at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_top_meteo_de0cv.v line 81
+# Compile of bcd2seg.v was successful.
+# Compile of bin2bcd.v was successful.
+# Compile of bme280_compensation.v was successful.
+# Compile of bme280_defines.v was successful.
+# Compile of bme280_i2c_ctrl.v was successful.
+# Compile of bme280_reader.v was successful.
+# Compile of digital_por.v was successful.
+# Compile of gray_timer.v was successful.
+# Compile of hex2seg.v was successful.
+# Compile of sync_reg.v was successful.
+# Compile of top_meteo_de0cv.v was successful.
+# Compile of i2c_slave_model.v was successful.
+# Compile of pll_fm.v was successful.
+# Compile of sys_model.v was successful.
+# Compile of timescale.v was successful.
+# Compile of tb_top_meteo_de0cv.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top_meteo_de0cv
+# Loading work.sys_model
+# Loading work.top_meteo_de0cv
+# Loading work.pll_cv
+# Loading work.digital_por
+# Loading work.bme280_i2c_ctrl
+# Loading work.sync_reg
+# Loading work.gray_timer
+# Loading work.bme280_reader
+# Loading work.bme280_compensation
+# Loading work.bin2bcd
+# Loading work.bcd2seg
+# Loading work.i2c_slave_model
 run -all
 # DEBUG i2c_slave; stop condition detected at    0.00 ns
 # DEBUG i2c_slave; start condition detected at 104895.00 ns
@@ -313,9 +271,1404 @@ run -all
 # DEBUG i2c_slave; command byte received (read) at 2037437.00 ns
 # DEBUG i2c_slave; data block read 00 from address f3 (1)
 # DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
-# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_top_meteo_de0cv.v(77)
-#    Time: 2040067 ns  Iteration: 0  Instance: /tb_top_meteo_de0cv
-# Break in Module tb_top_meteo_de0cv at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_top_meteo_de0cv.v line 77
-add wave -position 56  sim:/tb_top_meteo_de0cv/DUT/temp
-add wave -position 57  sim:/tb_top_meteo_de0cv/DUT/press
-add wave -position 58  sim:/tb_top_meteo_de0cv/DUT/hum
+# DEBUG i2c_slave; data block read 00 from address f4 (2)
+# DEBUG i2c_slave; stop condition detected at 2064715.00 ns
+# DEBUG i2c_slave; start condition detected at 2067195.00 ns
+# DEBUG i2c_slave; command byte received (write) at 2088277.00 ns
+# DEBUG i2c_slave; address received. adr=f7, ack=1
+# DEBUG i2c_slave; start condition detected at 2115555.00 ns
+# DEBUG i2c_slave; command byte received (read) at 2136637.00 ns
+# DEBUG i2c_slave; data block read 37 from address f7 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f8 (2)
+# DEBUG i2c_slave; data block read 7b from address f9 (2)
+# DEBUG i2c_slave; data block read e7 from address fa (2)
+# DEBUG i2c_slave; data block read 00 from address fb (2)
+# DEBUG i2c_slave; data block read cc from address fc (2)
+# DEBUG i2c_slave; data block read 27 from address fd (2)
+# DEBUG i2c_slave; data block read 80 from address fe (2)
+# DEBUG i2c_slave; data block read xx from address ff (2)
+# DEBUG i2c_slave; stop condition detected at 2320155.00 ns
+# DEBUG i2c_slave; start condition detected at 2422455.00 ns
+# DEBUG i2c_slave; command byte received (write) at 2443537.00 ns
+# DEBUG i2c_slave; address received. adr=f4, ack=1
+# DEBUG i2c_slave; data block write 25 to address f4
+# DEBUG i2c_slave; stop condition detected at 2493135.00 ns
+# DEBUG i2c_slave; start condition detected at 2595435.00 ns
+# DEBUG i2c_slave; command byte received (write) at 2616517.00 ns
+# DEBUG i2c_slave; address received. adr=f3, ack=1
+# DEBUG i2c_slave; start condition detected at 2643795.00 ns
+# DEBUG i2c_slave; command byte received (read) at 2664877.00 ns
+# DEBUG i2c_slave; data block read 00 from address f3 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f4 (2)
+# DEBUG i2c_slave; stop condition detected at 2692155.00 ns
+# DEBUG i2c_slave; start condition detected at 2694635.00 ns
+# DEBUG i2c_slave; command byte received (write) at 2715717.00 ns
+# DEBUG i2c_slave; address received. adr=f7, ack=1
+# DEBUG i2c_slave; start condition detected at 2742995.00 ns
+# DEBUG i2c_slave; command byte received (read) at 2764077.00 ns
+# DEBUG i2c_slave; data block read 37 from address f7 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f8 (2)
+# DEBUG i2c_slave; data block read 7b from address f9 (2)
+# DEBUG i2c_slave; data block read e7 from address fa (2)
+# DEBUG i2c_slave; data block read 00 from address fb (2)
+# DEBUG i2c_slave; data block read cc from address fc (2)
+# DEBUG i2c_slave; data block read 27 from address fd (2)
+# DEBUG i2c_slave; data block read 80 from address fe (2)
+# DEBUG i2c_slave; data block read xx from address ff (2)
+# DEBUG i2c_slave; stop condition detected at 2947595.00 ns
+# DEBUG i2c_slave; start condition detected at 3050515.00 ns
+# DEBUG i2c_slave; command byte received (write) at 3071597.00 ns
+# DEBUG i2c_slave; address received. adr=f4, ack=1
+# DEBUG i2c_slave; data block write 25 to address f4
+# DEBUG i2c_slave; stop condition detected at 3121195.00 ns
+# DEBUG i2c_slave; start condition detected at 3223495.00 ns
+# DEBUG i2c_slave; command byte received (write) at 3244577.00 ns
+# DEBUG i2c_slave; address received. adr=f3, ack=1
+# DEBUG i2c_slave; start condition detected at 3271855.00 ns
+# DEBUG i2c_slave; command byte received (read) at 3292937.00 ns
+# DEBUG i2c_slave; data block read 00 from address f3 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f4 (2)
+# DEBUG i2c_slave; stop condition detected at 3320215.00 ns
+# DEBUG i2c_slave; start condition detected at 3322695.00 ns
+# DEBUG i2c_slave; command byte received (write) at 3343777.00 ns
+# DEBUG i2c_slave; address received. adr=f7, ack=1
+# DEBUG i2c_slave; start condition detected at 3371055.00 ns
+# DEBUG i2c_slave; command byte received (read) at 3392137.00 ns
+# DEBUG i2c_slave; data block read 37 from address f7 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f8 (2)
+# DEBUG i2c_slave; data block read 7b from address f9 (2)
+# DEBUG i2c_slave; data block read e7 from address fa (2)
+# DEBUG i2c_slave; data block read 00 from address fb (2)
+# DEBUG i2c_slave; data block read cc from address fc (2)
+# DEBUG i2c_slave; data block read 27 from address fd (2)
+# DEBUG i2c_slave; data block read 80 from address fe (2)
+# DEBUG i2c_slave; data block read xx from address ff (2)
+# DEBUG i2c_slave; stop condition detected at 3575655.00 ns
+# DEBUG i2c_slave; start condition detected at 3678575.00 ns
+# DEBUG i2c_slave; command byte received (write) at 3699657.00 ns
+# DEBUG i2c_slave; address received. adr=f4, ack=1
+# DEBUG i2c_slave; data block write 25 to address f4
+# DEBUG i2c_slave; stop condition detected at 3749255.00 ns
+# DEBUG i2c_slave; start condition detected at 3851555.00 ns
+# DEBUG i2c_slave; command byte received (write) at 3872637.00 ns
+# DEBUG i2c_slave; address received. adr=f3, ack=1
+# DEBUG i2c_slave; start condition detected at 3899915.00 ns
+# DEBUG i2c_slave; command byte received (read) at 3920997.00 ns
+# DEBUG i2c_slave; data block read 00 from address f3 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f4 (2)
+# DEBUG i2c_slave; stop condition detected at 3948275.00 ns
+# DEBUG i2c_slave; start condition detected at 3950755.00 ns
+# DEBUG i2c_slave; command byte received (write) at 3971837.00 ns
+# DEBUG i2c_slave; address received. adr=f7, ack=1
+# DEBUG i2c_slave; start condition detected at 3999115.00 ns
+# DEBUG i2c_slave; command byte received (read) at 4020197.00 ns
+# DEBUG i2c_slave; data block read 37 from address f7 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f8 (2)
+# DEBUG i2c_slave; data block read 7b from address f9 (2)
+# DEBUG i2c_slave; data block read e7 from address fa (2)
+# DEBUG i2c_slave; data block read 00 from address fb (2)
+# DEBUG i2c_slave; data block read cc from address fc (2)
+# DEBUG i2c_slave; data block read 27 from address fd (2)
+# DEBUG i2c_slave; data block read 80 from address fe (2)
+# DEBUG i2c_slave; data block read xx from address ff (2)
+# DEBUG i2c_slave; stop condition detected at 4203715.00 ns
+# DEBUG i2c_slave; start condition detected at 4306635.00 ns
+# DEBUG i2c_slave; command byte received (write) at 4327717.00 ns
+# DEBUG i2c_slave; address received. adr=f4, ack=1
+# DEBUG i2c_slave; data block write 25 to address f4
+# DEBUG i2c_slave; stop condition detected at 4377315.00 ns
+# DEBUG i2c_slave; start condition detected at 4479615.00 ns
+# DEBUG i2c_slave; command byte received (write) at 4500697.00 ns
+# DEBUG i2c_slave; address received. adr=f3, ack=1
+# DEBUG i2c_slave; start condition detected at 4527975.00 ns
+# DEBUG i2c_slave; command byte received (read) at 4549057.00 ns
+# DEBUG i2c_slave; data block read 00 from address f3 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f4 (2)
+# DEBUG i2c_slave; stop condition detected at 4576335.00 ns
+# DEBUG i2c_slave; start condition detected at 4578815.00 ns
+# DEBUG i2c_slave; command byte received (write) at 4599897.00 ns
+# DEBUG i2c_slave; address received. adr=f7, ack=1
+# DEBUG i2c_slave; start condition detected at 4627175.00 ns
+# DEBUG i2c_slave; command byte received (read) at 4648257.00 ns
+# DEBUG i2c_slave; data block read 37 from address f7 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f8 (2)
+# DEBUG i2c_slave; data block read 7b from address f9 (2)
+# DEBUG i2c_slave; data block read e7 from address fa (2)
+# DEBUG i2c_slave; data block read 00 from address fb (2)
+# DEBUG i2c_slave; data block read cc from address fc (2)
+# DEBUG i2c_slave; data block read 27 from address fd (2)
+# DEBUG i2c_slave; data block read 80 from address fe (2)
+# DEBUG i2c_slave; data block read xx from address ff (2)
+# DEBUG i2c_slave; stop condition detected at 4831775.00 ns
+# DEBUG i2c_slave; start condition detected at 4934695.00 ns
+# DEBUG i2c_slave; command byte received (write) at 4955777.00 ns
+# DEBUG i2c_slave; address received. adr=f4, ack=1
+# DEBUG i2c_slave; data block write 25 to address f4
+# DEBUG i2c_slave; stop condition detected at 5005375.00 ns
+# DEBUG i2c_slave; start condition detected at 5107675.00 ns
+# DEBUG i2c_slave; command byte received (write) at 5128757.00 ns
+# DEBUG i2c_slave; address received. adr=f3, ack=1
+# DEBUG i2c_slave; start condition detected at 5156035.00 ns
+# DEBUG i2c_slave; command byte received (read) at 5177117.00 ns
+# DEBUG i2c_slave; data block read 00 from address f3 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f4 (2)
+# DEBUG i2c_slave; stop condition detected at 5204395.00 ns
+# DEBUG i2c_slave; start condition detected at 5206875.00 ns
+# DEBUG i2c_slave; command byte received (write) at 5227957.00 ns
+# DEBUG i2c_slave; address received. adr=f7, ack=1
+# DEBUG i2c_slave; start condition detected at 5255235.00 ns
+# DEBUG i2c_slave; command byte received (read) at 5276317.00 ns
+# DEBUG i2c_slave; data block read 37 from address f7 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f8 (2)
+# DEBUG i2c_slave; data block read 7b from address f9 (2)
+# DEBUG i2c_slave; data block read e7 from address fa (2)
+# DEBUG i2c_slave; data block read 00 from address fb (2)
+# DEBUG i2c_slave; data block read cc from address fc (2)
+# DEBUG i2c_slave; data block read 27 from address fd (2)
+# DEBUG i2c_slave; data block read 80 from address fe (2)
+# DEBUG i2c_slave; data block read xx from address ff (2)
+# DEBUG i2c_slave; stop condition detected at 5459835.00 ns
+# DEBUG i2c_slave; start condition detected at 5562755.00 ns
+# DEBUG i2c_slave; command byte received (write) at 5583837.00 ns
+# DEBUG i2c_slave; address received. adr=f4, ack=1
+# DEBUG i2c_slave; data block write 25 to address f4
+# DEBUG i2c_slave; stop condition detected at 5633435.00 ns
+# DEBUG i2c_slave; start condition detected at 5735735.00 ns
+# DEBUG i2c_slave; command byte received (write) at 5756817.00 ns
+# DEBUG i2c_slave; address received. adr=f3, ack=1
+# DEBUG i2c_slave; start condition detected at 5784095.00 ns
+# DEBUG i2c_slave; command byte received (read) at 5805177.00 ns
+# DEBUG i2c_slave; data block read 00 from address f3 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f4 (2)
+# DEBUG i2c_slave; stop condition detected at 5832455.00 ns
+# DEBUG i2c_slave; start condition detected at 5834935.00 ns
+# DEBUG i2c_slave; command byte received (write) at 5856017.00 ns
+# DEBUG i2c_slave; address received. adr=f7, ack=1
+# DEBUG i2c_slave; start condition detected at 5883295.00 ns
+# DEBUG i2c_slave; command byte received (read) at 5904377.00 ns
+# DEBUG i2c_slave; data block read 37 from address f7 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f8 (2)
+# DEBUG i2c_slave; data block read 7b from address f9 (2)
+# DEBUG i2c_slave; data block read e7 from address fa (2)
+# DEBUG i2c_slave; data block read 00 from address fb (2)
+# DEBUG i2c_slave; data block read cc from address fc (2)
+# DEBUG i2c_slave; data block read 27 from address fd (2)
+# DEBUG i2c_slave; data block read 80 from address fe (2)
+# DEBUG i2c_slave; data block read xx from address ff (2)
+# DEBUG i2c_slave; stop condition detected at 6087895.00 ns
+# DEBUG i2c_slave; start condition detected at 6190815.00 ns
+# DEBUG i2c_slave; command byte received (write) at 6211897.00 ns
+# DEBUG i2c_slave; address received. adr=f4, ack=1
+# DEBUG i2c_slave; data block write 25 to address f4
+# DEBUG i2c_slave; stop condition detected at 6261495.00 ns
+# DEBUG i2c_slave; start condition detected at 6365035.00 ns
+# DEBUG i2c_slave; command byte received (write) at 6386117.00 ns
+# DEBUG i2c_slave; address received. adr=f3, ack=1
+# DEBUG i2c_slave; start condition detected at 6413395.00 ns
+# DEBUG i2c_slave; command byte received (read) at 6434477.00 ns
+# DEBUG i2c_slave; data block read 00 from address f3 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f4 (2)
+# DEBUG i2c_slave; stop condition detected at 6461755.00 ns
+# DEBUG i2c_slave; start condition detected at 6464235.00 ns
+# DEBUG i2c_slave; command byte received (write) at 6485317.00 ns
+# DEBUG i2c_slave; address received. adr=f7, ack=1
+# DEBUG i2c_slave; start condition detected at 6512595.00 ns
+# DEBUG i2c_slave; command byte received (read) at 6533677.00 ns
+# DEBUG i2c_slave; data block read 37 from address f7 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f8 (2)
+# DEBUG i2c_slave; data block read 7b from address f9 (2)
+# DEBUG i2c_slave; data block read e7 from address fa (2)
+# DEBUG i2c_slave; data block read 00 from address fb (2)
+# DEBUG i2c_slave; data block read cc from address fc (2)
+# DEBUG i2c_slave; data block read 27 from address fd (2)
+# DEBUG i2c_slave; data block read 80 from address fe (2)
+# DEBUG i2c_slave; data block read xx from address ff (2)
+# DEBUG i2c_slave; stop condition detected at 6717195.00 ns
+# DEBUG i2c_slave; start condition detected at 6819495.00 ns
+# DEBUG i2c_slave; command byte received (write) at 6840577.00 ns
+# DEBUG i2c_slave; address received. adr=f4, ack=1
+# DEBUG i2c_slave; data block write 25 to address f4
+# DEBUG i2c_slave; stop condition detected at 6890175.00 ns
+# DEBUG i2c_slave; start condition detected at 6992475.00 ns
+# DEBUG i2c_slave; command byte received (write) at 7013557.00 ns
+# DEBUG i2c_slave; address received. adr=f3, ack=1
+# DEBUG i2c_slave; start condition detected at 7040835.00 ns
+# DEBUG i2c_slave; command byte received (read) at 7061917.00 ns
+# DEBUG i2c_slave; data block read 00 from address f3 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f4 (2)
+# DEBUG i2c_slave; stop condition detected at 7089195.00 ns
+# DEBUG i2c_slave; start condition detected at 7091675.00 ns
+# DEBUG i2c_slave; command byte received (write) at 7112757.00 ns
+# DEBUG i2c_slave; address received. adr=f7, ack=1
+# DEBUG i2c_slave; start condition detected at 7140035.00 ns
+# DEBUG i2c_slave; command byte received (read) at 7161117.00 ns
+# DEBUG i2c_slave; data block read 37 from address f7 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f8 (2)
+# DEBUG i2c_slave; data block read 7b from address f9 (2)
+# DEBUG i2c_slave; data block read e7 from address fa (2)
+# DEBUG i2c_slave; data block read 00 from address fb (2)
+# DEBUG i2c_slave; data block read cc from address fc (2)
+# DEBUG i2c_slave; data block read 27 from address fd (2)
+# DEBUG i2c_slave; data block read 80 from address fe (2)
+# DEBUG i2c_slave; data block read xx from address ff (2)
+# DEBUG i2c_slave; stop condition detected at 7344635.00 ns
+# DEBUG i2c_slave; start condition detected at 7447555.00 ns
+# DEBUG i2c_slave; command byte received (write) at 7468637.00 ns
+# DEBUG i2c_slave; address received. adr=f4, ack=1
+# DEBUG i2c_slave; data block write 25 to address f4
+# DEBUG i2c_slave; stop condition detected at 7518235.00 ns
+# DEBUG i2c_slave; start condition detected at 7620535.00 ns
+# DEBUG i2c_slave; command byte received (write) at 7641617.00 ns
+# DEBUG i2c_slave; address received. adr=f3, ack=1
+# DEBUG i2c_slave; start condition detected at 7668895.00 ns
+# DEBUG i2c_slave; command byte received (read) at 7689977.00 ns
+# DEBUG i2c_slave; data block read 00 from address f3 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f4 (2)
+# DEBUG i2c_slave; stop condition detected at 7717255.00 ns
+# DEBUG i2c_slave; start condition detected at 7719735.00 ns
+# DEBUG i2c_slave; command byte received (write) at 7740817.00 ns
+# DEBUG i2c_slave; address received. adr=f7, ack=1
+# DEBUG i2c_slave; start condition detected at 7768095.00 ns
+# DEBUG i2c_slave; command byte received (read) at 7789177.00 ns
+# DEBUG i2c_slave; data block read 37 from address f7 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f8 (2)
+# DEBUG i2c_slave; data block read 7b from address f9 (2)
+# DEBUG i2c_slave; data block read e7 from address fa (2)
+# DEBUG i2c_slave; data block read 00 from address fb (2)
+# DEBUG i2c_slave; data block read cc from address fc (2)
+# DEBUG i2c_slave; data block read 27 from address fd (2)
+# DEBUG i2c_slave; data block read 80 from address fe (2)
+# DEBUG i2c_slave; data block read xx from address ff (2)
+# DEBUG i2c_slave; stop condition detected at 7972695.00 ns
+# DEBUG i2c_slave; start condition detected at 8075615.00 ns
+# DEBUG i2c_slave; command byte received (write) at 8096697.00 ns
+# DEBUG i2c_slave; address received. adr=f4, ack=1
+# DEBUG i2c_slave; data block write 25 to address f4
+# DEBUG i2c_slave; stop condition detected at 8146295.00 ns
+# DEBUG i2c_slave; start condition detected at 8248595.00 ns
+# DEBUG i2c_slave; command byte received (write) at 8269677.00 ns
+# DEBUG i2c_slave; address received. adr=f3, ack=1
+# DEBUG i2c_slave; start condition detected at 8296955.00 ns
+# DEBUG i2c_slave; command byte received (read) at 8318037.00 ns
+# DEBUG i2c_slave; data block read 00 from address f3 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f4 (2)
+# DEBUG i2c_slave; stop condition detected at 8345315.00 ns
+# DEBUG i2c_slave; start condition detected at 8347795.00 ns
+# DEBUG i2c_slave; command byte received (write) at 8368877.00 ns
+# DEBUG i2c_slave; address received. adr=f7, ack=1
+# DEBUG i2c_slave; start condition detected at 8396155.00 ns
+# DEBUG i2c_slave; command byte received (read) at 8417237.00 ns
+# DEBUG i2c_slave; data block read 37 from address f7 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f8 (2)
+# DEBUG i2c_slave; data block read 7b from address f9 (2)
+# DEBUG i2c_slave; data block read e7 from address fa (2)
+# DEBUG i2c_slave; data block read 00 from address fb (2)
+# DEBUG i2c_slave; data block read cc from address fc (2)
+# DEBUG i2c_slave; data block read 27 from address fd (2)
+# DEBUG i2c_slave; data block read 80 from address fe (2)
+# DEBUG i2c_slave; data block read xx from address ff (2)
+# DEBUG i2c_slave; stop condition detected at 8600755.00 ns
+# DEBUG i2c_slave; start condition detected at 8703675.00 ns
+# DEBUG i2c_slave; command byte received (write) at 8724757.00 ns
+# DEBUG i2c_slave; address received. adr=f4, ack=1
+# DEBUG i2c_slave; data block write 25 to address f4
+# DEBUG i2c_slave; stop condition detected at 8774355.00 ns
+# DEBUG i2c_slave; start condition detected at 8876655.00 ns
+# DEBUG i2c_slave; command byte received (write) at 8897737.00 ns
+# DEBUG i2c_slave; address received. adr=f3, ack=1
+# DEBUG i2c_slave; start condition detected at 8925015.00 ns
+# DEBUG i2c_slave; command byte received (read) at 8946097.00 ns
+# DEBUG i2c_slave; data block read 00 from address f3 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f4 (2)
+# DEBUG i2c_slave; stop condition detected at 8973375.00 ns
+# DEBUG i2c_slave; start condition detected at 8975855.00 ns
+# DEBUG i2c_slave; command byte received (write) at 8996937.00 ns
+# DEBUG i2c_slave; address received. adr=f7, ack=1
+# DEBUG i2c_slave; start condition detected at 9024215.00 ns
+# DEBUG i2c_slave; command byte received (read) at 9045297.00 ns
+# DEBUG i2c_slave; data block read 37 from address f7 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f8 (2)
+# DEBUG i2c_slave; data block read 7b from address f9 (2)
+# DEBUG i2c_slave; data block read e7 from address fa (2)
+# DEBUG i2c_slave; data block read 00 from address fb (2)
+# DEBUG i2c_slave; data block read cc from address fc (2)
+# DEBUG i2c_slave; data block read 27 from address fd (2)
+# DEBUG i2c_slave; data block read 80 from address fe (2)
+# DEBUG i2c_slave; data block read xx from address ff (2)
+# DEBUG i2c_slave; stop condition detected at 9228815.00 ns
+# DEBUG i2c_slave; start condition detected at 9331735.00 ns
+# DEBUG i2c_slave; command byte received (write) at 9352817.00 ns
+# DEBUG i2c_slave; address received. adr=f4, ack=1
+# DEBUG i2c_slave; data block write 25 to address f4
+# DEBUG i2c_slave; stop condition detected at 9402415.00 ns
+# DEBUG i2c_slave; start condition detected at 9504715.00 ns
+# DEBUG i2c_slave; command byte received (write) at 9525797.00 ns
+# DEBUG i2c_slave; address received. adr=f3, ack=1
+# DEBUG i2c_slave; start condition detected at 9553075.00 ns
+# DEBUG i2c_slave; command byte received (read) at 9574157.00 ns
+# DEBUG i2c_slave; data block read 00 from address f3 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f4 (2)
+# DEBUG i2c_slave; stop condition detected at 9601435.00 ns
+# DEBUG i2c_slave; start condition detected at 9603915.00 ns
+# DEBUG i2c_slave; command byte received (write) at 9624997.00 ns
+# DEBUG i2c_slave; address received. adr=f7, ack=1
+# DEBUG i2c_slave; start condition detected at 9652275.00 ns
+# DEBUG i2c_slave; command byte received (read) at 9673357.00 ns
+# DEBUG i2c_slave; data block read 37 from address f7 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f8 (2)
+# DEBUG i2c_slave; data block read 7b from address f9 (2)
+# DEBUG i2c_slave; data block read e7 from address fa (2)
+# DEBUG i2c_slave; data block read 00 from address fb (2)
+# DEBUG i2c_slave; data block read cc from address fc (2)
+# DEBUG i2c_slave; data block read 27 from address fd (2)
+# DEBUG i2c_slave; data block read 80 from address fe (2)
+# DEBUG i2c_slave; data block read xx from address ff (2)
+# DEBUG i2c_slave; stop condition detected at 9856875.00 ns
+# DEBUG i2c_slave; start condition detected at 9959795.00 ns
+# DEBUG i2c_slave; command byte received (write) at 9980877.00 ns
+# DEBUG i2c_slave; address received. adr=f4, ack=1
+# DEBUG i2c_slave; data block write 25 to address f4
+# DEBUG i2c_slave; stop condition detected at 10030475.00 ns
+# DEBUG i2c_slave; start condition detected at 10134015.00 ns
+# Compile of bcd2seg.v was successful.
+# Compile of bin2bcd.v was successful.
+# Compile of bme280_compensation.v was successful.
+# Compile of bme280_defines.v was successful.
+# Compile of bme280_i2c_ctrl.v was successful.
+# Compile of bme280_reader.v was successful.
+# Compile of digital_por.v was successful.
+# Compile of gray_timer.v was successful.
+# Compile of hex2seg.v was successful.
+# Compile of sync_reg.v was successful.
+# Compile of top_meteo_de0cv.v was successful.
+# Compile of i2c_slave_model.v was successful.
+# Compile of pll_fm.v was successful.
+# Compile of sys_model.v was successful.
+# Compile of timescale.v was successful.
+# Compile of tb_top_meteo_de0cv.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top_meteo_de0cv
+# Loading work.sys_model
+# Loading work.top_meteo_de0cv
+# Loading work.pll_cv
+# Loading work.digital_por
+# Loading work.bme280_i2c_ctrl
+# Loading work.sync_reg
+# Loading work.gray_timer
+# Loading work.bme280_reader
+# Loading work.bme280_compensation
+# Loading work.bin2bcd
+# Loading work.bcd2seg
+# Loading work.i2c_slave_model
+run -all
+# DEBUG i2c_slave; stop condition detected at    0.00 ns
+# DEBUG i2c_slave; start condition detected at 104895.00 ns
+# DEBUG i2c_slave; command byte received (write) at 125977.00 ns
+# DEBUG i2c_slave; address received. adr=d0, ack=1
+# DEBUG i2c_slave; start condition detected at 153255.00 ns
+# DEBUG i2c_slave; command byte received (read) at 174337.00 ns
+# DEBUG i2c_slave; data block read 60 from address d0 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read xx from address d1 (2)
+# DEBUG i2c_slave; stop condition detected at 201615.00 ns
+# DEBUG i2c_slave; start condition detected at 204095.00 ns
+# DEBUG i2c_slave; command byte received (write) at 225177.00 ns
+# DEBUG i2c_slave; address received. adr=88, ack=1
+# DEBUG i2c_slave; start condition detected at 252455.00 ns
+# DEBUG i2c_slave; command byte received (read) at 273537.00 ns
+# DEBUG i2c_slave; data block read 16 from address 88 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 6f from address 89 (2)
+# DEBUG i2c_slave; data block read 28 from address 8a (2)
+# DEBUG i2c_slave; data block read 68 from address 8b (2)
+# DEBUG i2c_slave; data block read 32 from address 8c (2)
+# DEBUG i2c_slave; data block read 00 from address 8d (2)
+# DEBUG i2c_slave; data block read 39 from address 8e (2)
+# DEBUG i2c_slave; data block read 8e from address 8f (2)
+# DEBUG i2c_slave; data block read 8b from address 90 (2)
+# DEBUG i2c_slave; data block read d6 from address 91 (2)
+# DEBUG i2c_slave; data block read d0 from address 92 (2)
+# DEBUG i2c_slave; data block read 0b from address 93 (2)
+# DEBUG i2c_slave; data block read ee from address 94 (2)
+# DEBUG i2c_slave; data block read 18 from address 95 (2)
+# DEBUG i2c_slave; data block read 18 from address 96 (2)
+# DEBUG i2c_slave; data block read 00 from address 97 (2)
+# DEBUG i2c_slave; data block read f9 from address 98 (2)
+# DEBUG i2c_slave; data block read ff from address 99 (2)
+# DEBUG i2c_slave; data block read ac from address 9a (2)
+# DEBUG i2c_slave; data block read 26 from address 9b (2)
+# DEBUG i2c_slave; data block read 0a from address 9c (2)
+# DEBUG i2c_slave; data block read d8 from address 9d (2)
+# DEBUG i2c_slave; data block read bd from address 9e (2)
+# DEBUG i2c_slave; data block read 10 from address 9f (2)
+# DEBUG i2c_slave; data block read 00 from address a0 (2)
+# DEBUG i2c_slave; data block read 4b from address a1 (2)
+# DEBUG i2c_slave; data block read xx from address a2 (2)
+# DEBUG i2c_slave; stop condition detected at 858815.00 ns
+# DEBUG i2c_slave; start condition detected at 861295.00 ns
+# DEBUG i2c_slave; command byte received (write) at 882377.00 ns
+# DEBUG i2c_slave; address received. adr=e1, ack=1
+# DEBUG i2c_slave; start condition detected at 909655.00 ns
+# DEBUG i2c_slave; command byte received (read) at 930737.00 ns
+# DEBUG i2c_slave; data block read 74 from address e1 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 01 from address e2 (2)
+# DEBUG i2c_slave; data block read 00 from address e3 (2)
+# DEBUG i2c_slave; data block read 12 from address e4 (2)
+# DEBUG i2c_slave; data block read 27 from address e5 (2)
+# DEBUG i2c_slave; data block read 03 from address e6 (2)
+# DEBUG i2c_slave; data block read 1e from address e7 (2)
+# DEBUG i2c_slave; data block read xx from address e8 (2)
+# DEBUG i2c_slave; stop condition detected at 1091935.00 ns
+# DEBUG i2c_slave; start condition detected at 1094415.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1115497.00 ns
+# DEBUG i2c_slave; address received. adr=f5, ack=1
+# DEBUG i2c_slave; data block write 04 to address f5
+# DEBUG i2c_slave; start condition detected at 1165095.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1186177.00 ns
+# DEBUG i2c_slave; address received. adr=f2, ack=1
+# DEBUG i2c_slave; data block write 01 to address f2
+# DEBUG i2c_slave; stop condition detected at 1235775.00 ns
+# DEBUG i2c_slave; start condition detected at 1338695.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1359777.00 ns
+# DEBUG i2c_slave; address received. adr=f3, ack=1
+# DEBUG i2c_slave; start condition detected at 1387055.00 ns
+# DEBUG i2c_slave; command byte received (read) at 1408137.00 ns
+# DEBUG i2c_slave; data block read 00 from address f3 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f4 (2)
+# DEBUG i2c_slave; stop condition detected at 1435415.00 ns
+# DEBUG i2c_slave; start condition detected at 1437895.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1458977.00 ns
+# DEBUG i2c_slave; address received. adr=f7, ack=1
+# DEBUG i2c_slave; start condition detected at 1486255.00 ns
+# DEBUG i2c_slave; command byte received (read) at 1507337.00 ns
+# DEBUG i2c_slave; data block read 37 from address f7 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f8 (2)
+# DEBUG i2c_slave; data block read 7b from address f9 (2)
+# DEBUG i2c_slave; data block read e7 from address fa (2)
+# DEBUG i2c_slave; data block read 00 from address fb (2)
+# DEBUG i2c_slave; data block read cc from address fc (2)
+# DEBUG i2c_slave; data block read 27 from address fd (2)
+# DEBUG i2c_slave; data block read 80 from address fe (2)
+# DEBUG i2c_slave; data block read xx from address ff (2)
+# DEBUG i2c_slave; stop condition detected at 1690855.00 ns
+# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_top_meteo_de0cv.v(81)
+#    Time: 1791717 ns  Iteration: 0  Instance: /tb_top_meteo_de0cv
+# Break in Module tb_top_meteo_de0cv at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_top_meteo_de0cv.v line 81
+# Compile of bcd2seg.v was successful.
+# Compile of bin2bcd.v was successful.
+# Compile of bme280_compensation.v was successful.
+# Compile of bme280_defines.v was successful.
+# Compile of bme280_i2c_ctrl.v was successful.
+# Compile of bme280_reader.v was successful.
+# Compile of digital_por.v was successful.
+# Compile of gray_timer.v was successful.
+# Compile of hex2seg.v was successful.
+# Compile of sync_reg.v was successful.
+# Compile of top_meteo_de0cv.v was successful.
+# Compile of i2c_slave_model.v was successful.
+# Compile of pll_fm.v was successful.
+# Compile of sys_model.v was successful.
+# Compile of timescale.v was successful.
+# Compile of tb_top_meteo_de0cv.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top_meteo_de0cv
+# Loading work.sys_model
+# Loading work.top_meteo_de0cv
+# Loading work.pll_cv
+# Loading work.digital_por
+# Loading work.bme280_i2c_ctrl
+# Loading work.sync_reg
+# Loading work.gray_timer
+# Loading work.bme280_reader
+# Loading work.bme280_compensation
+# Loading work.bin2bcd
+# Loading work.bcd2seg
+# Loading work.i2c_slave_model
+run -all
+# DEBUG i2c_slave; stop condition detected at    0.00 ns
+# Reset at   67.00 ns
+# First check at 102717.00 ns
+# DEBUG i2c_slave; start condition detected at 104895.00 ns
+# DEBUG i2c_slave; command byte received (write) at 125977.00 ns
+# DEBUG i2c_slave; address received. adr=d0, ack=1
+# DEBUG i2c_slave; start condition detected at 153255.00 ns
+# DEBUG i2c_slave; command byte received (read) at 174337.00 ns
+# DEBUG i2c_slave; data block read 60 from address d0 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read xx from address d1 (2)
+# DEBUG i2c_slave; stop condition detected at 201615.00 ns
+# DEBUG i2c_slave; start condition detected at 204095.00 ns
+# DEBUG i2c_slave; command byte received (write) at 225177.00 ns
+# DEBUG i2c_slave; address received. adr=88, ack=1
+# DEBUG i2c_slave; start condition detected at 252455.00 ns
+# DEBUG i2c_slave; command byte received (read) at 273537.00 ns
+# DEBUG i2c_slave; data block read 16 from address 88 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 6f from address 89 (2)
+# DEBUG i2c_slave; data block read 28 from address 8a (2)
+# DEBUG i2c_slave; data block read 68 from address 8b (2)
+# DEBUG i2c_slave; data block read 32 from address 8c (2)
+# DEBUG i2c_slave; data block read 00 from address 8d (2)
+# DEBUG i2c_slave; data block read 39 from address 8e (2)
+# DEBUG i2c_slave; data block read 8e from address 8f (2)
+# DEBUG i2c_slave; data block read 8b from address 90 (2)
+# DEBUG i2c_slave; data block read d6 from address 91 (2)
+# DEBUG i2c_slave; data block read d0 from address 92 (2)
+# DEBUG i2c_slave; data block read 0b from address 93 (2)
+# DEBUG i2c_slave; data block read ee from address 94 (2)
+# DEBUG i2c_slave; data block read 18 from address 95 (2)
+# DEBUG i2c_slave; data block read 18 from address 96 (2)
+# DEBUG i2c_slave; data block read 00 from address 97 (2)
+# DEBUG i2c_slave; data block read f9 from address 98 (2)
+# DEBUG i2c_slave; data block read ff from address 99 (2)
+# DEBUG i2c_slave; data block read ac from address 9a (2)
+# DEBUG i2c_slave; data block read 26 from address 9b (2)
+# DEBUG i2c_slave; data block read 0a from address 9c (2)
+# DEBUG i2c_slave; data block read d8 from address 9d (2)
+# DEBUG i2c_slave; data block read bd from address 9e (2)
+# DEBUG i2c_slave; data block read 10 from address 9f (2)
+# DEBUG i2c_slave; data block read 00 from address a0 (2)
+# DEBUG i2c_slave; data block read 4b from address a1 (2)
+# DEBUG i2c_slave; data block read xx from address a2 (2)
+# DEBUG i2c_slave; stop condition detected at 858815.00 ns
+# DEBUG i2c_slave; start condition detected at 861295.00 ns
+# DEBUG i2c_slave; command byte received (write) at 882377.00 ns
+# DEBUG i2c_slave; address received. adr=e1, ack=1
+# DEBUG i2c_slave; start condition detected at 909655.00 ns
+# DEBUG i2c_slave; command byte received (read) at 930737.00 ns
+# DEBUG i2c_slave; data block read 74 from address e1 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 01 from address e2 (2)
+# DEBUG i2c_slave; data block read 00 from address e3 (2)
+# DEBUG i2c_slave; data block read 12 from address e4 (2)
+# DEBUG i2c_slave; data block read 27 from address e5 (2)
+# DEBUG i2c_slave; data block read 03 from address e6 (2)
+# DEBUG i2c_slave; data block read 1e from address e7 (2)
+# DEBUG i2c_slave; data block read xx from address e8 (2)
+# DEBUG i2c_slave; stop condition detected at 1091935.00 ns
+# DEBUG i2c_slave; start condition detected at 1094415.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1115497.00 ns
+# DEBUG i2c_slave; address received. adr=f5, ack=1
+# DEBUG i2c_slave; data block write 04 to address f5
+# DEBUG i2c_slave; start condition detected at 1165095.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1186177.00 ns
+# DEBUG i2c_slave; address received. adr=f2, ack=1
+# DEBUG i2c_slave; data block write 01 to address f2
+# DEBUG i2c_slave; stop condition detected at 1235775.00 ns
+# Second check at 1336717.00 ns
+# DEBUG i2c_slave; start condition detected at 1338695.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1359777.00 ns
+# DEBUG i2c_slave; address received. adr=f3, ack=1
+# DEBUG i2c_slave; start condition detected at 1387055.00 ns
+# DEBUG i2c_slave; command byte received (read) at 1408137.00 ns
+# DEBUG i2c_slave; data block read 00 from address f3 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f4 (2)
+# DEBUG i2c_slave; stop condition detected at 1435415.00 ns
+# DEBUG i2c_slave; start condition detected at 1437895.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1458977.00 ns
+# DEBUG i2c_slave; address received. adr=f7, ack=1
+# DEBUG i2c_slave; start condition detected at 1486255.00 ns
+# DEBUG i2c_slave; command byte received (read) at 1507337.00 ns
+# DEBUG i2c_slave; data block read 37 from address f7 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f8 (2)
+# DEBUG i2c_slave; data block read 7b from address f9 (2)
+# DEBUG i2c_slave; data block read e7 from address fa (2)
+# DEBUG i2c_slave; data block read 00 from address fb (2)
+# DEBUG i2c_slave; data block read cc from address fc (2)
+# DEBUG i2c_slave; data block read 27 from address fd (2)
+# DEBUG i2c_slave; data block read 80 from address fe (2)
+# DEBUG i2c_slave; data block read xx from address ff (2)
+# DEBUG i2c_slave; stop condition detected at 1690855.00 ns
+# Third check at 1791717.00 ns
+# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_top_meteo_de0cv.v(85)
+#    Time: 1791717 ns  Iteration: 0  Instance: /tb_top_meteo_de0cv
+# Break in Module tb_top_meteo_de0cv at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_top_meteo_de0cv.v line 85
+add wave -position end  sim:/tb_top_meteo_de0cv/DUT/timerInt
+restart
+run -all
+# DEBUG i2c_slave; stop condition detected at    0.00 ns
+# Reset at   67.00 ns
+# First check at 102717.00 ns
+# DEBUG i2c_slave; start condition detected at 104895.00 ns
+# DEBUG i2c_slave; command byte received (write) at 125977.00 ns
+# DEBUG i2c_slave; address received. adr=d0, ack=1
+# DEBUG i2c_slave; start condition detected at 153255.00 ns
+# DEBUG i2c_slave; command byte received (read) at 174337.00 ns
+# DEBUG i2c_slave; data block read 60 from address d0 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read xx from address d1 (2)
+# DEBUG i2c_slave; stop condition detected at 201615.00 ns
+# DEBUG i2c_slave; start condition detected at 204095.00 ns
+# DEBUG i2c_slave; command byte received (write) at 225177.00 ns
+# DEBUG i2c_slave; address received. adr=88, ack=1
+# DEBUG i2c_slave; start condition detected at 252455.00 ns
+# DEBUG i2c_slave; command byte received (read) at 273537.00 ns
+# DEBUG i2c_slave; data block read 16 from address 88 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 6f from address 89 (2)
+# DEBUG i2c_slave; data block read 28 from address 8a (2)
+# DEBUG i2c_slave; data block read 68 from address 8b (2)
+# DEBUG i2c_slave; data block read 32 from address 8c (2)
+# DEBUG i2c_slave; data block read 00 from address 8d (2)
+# DEBUG i2c_slave; data block read 39 from address 8e (2)
+# DEBUG i2c_slave; data block read 8e from address 8f (2)
+# DEBUG i2c_slave; data block read 8b from address 90 (2)
+# DEBUG i2c_slave; data block read d6 from address 91 (2)
+# DEBUG i2c_slave; data block read d0 from address 92 (2)
+# DEBUG i2c_slave; data block read 0b from address 93 (2)
+# DEBUG i2c_slave; data block read ee from address 94 (2)
+# DEBUG i2c_slave; data block read 18 from address 95 (2)
+# DEBUG i2c_slave; data block read 18 from address 96 (2)
+# DEBUG i2c_slave; data block read 00 from address 97 (2)
+# DEBUG i2c_slave; data block read f9 from address 98 (2)
+# DEBUG i2c_slave; data block read ff from address 99 (2)
+# DEBUG i2c_slave; data block read ac from address 9a (2)
+# DEBUG i2c_slave; data block read 26 from address 9b (2)
+# DEBUG i2c_slave; data block read 0a from address 9c (2)
+# DEBUG i2c_slave; data block read d8 from address 9d (2)
+# DEBUG i2c_slave; data block read bd from address 9e (2)
+# DEBUG i2c_slave; data block read 10 from address 9f (2)
+# DEBUG i2c_slave; data block read 00 from address a0 (2)
+# DEBUG i2c_slave; data block read 4b from address a1 (2)
+# DEBUG i2c_slave; data block read xx from address a2 (2)
+# DEBUG i2c_slave; stop condition detected at 858815.00 ns
+# DEBUG i2c_slave; start condition detected at 861295.00 ns
+# DEBUG i2c_slave; command byte received (write) at 882377.00 ns
+# DEBUG i2c_slave; address received. adr=e1, ack=1
+# DEBUG i2c_slave; start condition detected at 909655.00 ns
+# DEBUG i2c_slave; command byte received (read) at 930737.00 ns
+# DEBUG i2c_slave; data block read 74 from address e1 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 01 from address e2 (2)
+# DEBUG i2c_slave; data block read 00 from address e3 (2)
+# DEBUG i2c_slave; data block read 12 from address e4 (2)
+# DEBUG i2c_slave; data block read 27 from address e5 (2)
+# DEBUG i2c_slave; data block read 03 from address e6 (2)
+# DEBUG i2c_slave; data block read 1e from address e7 (2)
+# DEBUG i2c_slave; data block read xx from address e8 (2)
+# DEBUG i2c_slave; stop condition detected at 1091935.00 ns
+# DEBUG i2c_slave; start condition detected at 1094415.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1115497.00 ns
+# DEBUG i2c_slave; address received. adr=f5, ack=1
+# DEBUG i2c_slave; data block write 04 to address f5
+# DEBUG i2c_slave; start condition detected at 1165095.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1186177.00 ns
+# DEBUG i2c_slave; address received. adr=f2, ack=1
+# DEBUG i2c_slave; data block write 01 to address f2
+# DEBUG i2c_slave; stop condition detected at 1235775.00 ns
+# Second check at 1336717.00 ns
+# DEBUG i2c_slave; start condition detected at 1338695.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1359777.00 ns
+# DEBUG i2c_slave; address received. adr=f3, ack=1
+# DEBUG i2c_slave; start condition detected at 1387055.00 ns
+# DEBUG i2c_slave; command byte received (read) at 1408137.00 ns
+# DEBUG i2c_slave; data block read 00 from address f3 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f4 (2)
+# DEBUG i2c_slave; stop condition detected at 1435415.00 ns
+# DEBUG i2c_slave; start condition detected at 1437895.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1458977.00 ns
+# DEBUG i2c_slave; address received. adr=f7, ack=1
+# DEBUG i2c_slave; start condition detected at 1486255.00 ns
+# DEBUG i2c_slave; command byte received (read) at 1507337.00 ns
+# DEBUG i2c_slave; data block read 37 from address f7 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f8 (2)
+# DEBUG i2c_slave; data block read 7b from address f9 (2)
+# DEBUG i2c_slave; data block read e7 from address fa (2)
+# DEBUG i2c_slave; data block read 00 from address fb (2)
+# DEBUG i2c_slave; data block read cc from address fc (2)
+# DEBUG i2c_slave; data block read 27 from address fd (2)
+# DEBUG i2c_slave; data block read 80 from address fe (2)
+# DEBUG i2c_slave; data block read xx from address ff (2)
+# DEBUG i2c_slave; stop condition detected at 1690855.00 ns
+# Third check at 1791717.00 ns
+# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_top_meteo_de0cv.v(85)
+#    Time: 1791717 ns  Iteration: 0  Instance: /tb_top_meteo_de0cv
+# Break in Module tb_top_meteo_de0cv at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_top_meteo_de0cv.v line 85
+# Compile of bcd2seg.v was successful.
+# Compile of bin2bcd.v was successful.
+# Compile of bme280_compensation.v was successful.
+# Compile of bme280_defines.v was successful.
+# Compile of bme280_i2c_ctrl.v was successful.
+# Compile of bme280_reader.v was successful.
+# Compile of digital_por.v was successful.
+# Compile of gray_timer.v was successful.
+# Compile of hex2seg.v was successful.
+# Compile of sync_reg.v was successful.
+# Compile of top_meteo_de0cv.v was successful.
+# Compile of i2c_slave_model.v was successful.
+# Compile of pll_fm.v was successful.
+# Compile of sys_model.v was successful.
+# Compile of timescale.v was successful.
+# Compile of tb_top_meteo_de0cv.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top_meteo_de0cv
+# Loading work.sys_model
+# Loading work.top_meteo_de0cv
+# Loading work.pll_cv
+# Loading work.digital_por
+# Loading work.bme280_i2c_ctrl
+# Loading work.sync_reg
+# Loading work.gray_timer
+# Loading work.bme280_reader
+# Loading work.bme280_compensation
+# Loading work.bin2bcd
+# Loading work.bcd2seg
+# Loading work.i2c_slave_model
+run -all
+# DEBUG i2c_slave; stop condition detected at    0.00 ns
+# Reset at   67.00 ns
+# First check at 102515.00 ns
+# Second check at 102515.00 ns
+# Third check at 102515.00 ns
+# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_top_meteo_de0cv.v(85)
+#    Time: 102515 ns  Iteration: 2  Instance: /tb_top_meteo_de0cv
+# Break in Module tb_top_meteo_de0cv at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_top_meteo_de0cv.v line 85
+# Compile of bcd2seg.v was successful.
+# Compile of bin2bcd.v was successful.
+# Compile of bme280_compensation.v was successful.
+# Compile of bme280_defines.v was successful.
+# Compile of bme280_i2c_ctrl.v was successful.
+# Compile of bme280_reader.v was successful.
+# Compile of digital_por.v was successful.
+# Compile of gray_timer.v was successful.
+# Compile of hex2seg.v was successful.
+# Compile of sync_reg.v was successful.
+# Compile of top_meteo_de0cv.v was successful.
+# Compile of i2c_slave_model.v was successful.
+# Compile of pll_fm.v was successful.
+# Compile of sys_model.v was successful.
+# Compile of timescale.v was successful.
+# Compile of tb_top_meteo_de0cv.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top_meteo_de0cv
+# Loading work.sys_model
+# Loading work.top_meteo_de0cv
+# Loading work.pll_cv
+# Loading work.digital_por
+# Loading work.bme280_i2c_ctrl
+# Loading work.sync_reg
+# Loading work.gray_timer
+# Loading work.bme280_reader
+# Loading work.bme280_compensation
+# Loading work.bin2bcd
+# Loading work.bcd2seg
+# Loading work.i2c_slave_model
+run -all
+# DEBUG i2c_slave; stop condition detected at    0.00 ns
+# Reset at   67.00 ns
+# First check at 102515.00 ns
+# DEBUG i2c_slave; start condition detected at 104895.00 ns
+# DEBUG i2c_slave; command byte received (write) at 125977.00 ns
+# DEBUG i2c_slave; address received. adr=d0, ack=1
+# DEBUG i2c_slave; start condition detected at 153255.00 ns
+# DEBUG i2c_slave; command byte received (read) at 174337.00 ns
+# DEBUG i2c_slave; data block read 60 from address d0 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read xx from address d1 (2)
+# DEBUG i2c_slave; stop condition detected at 201615.00 ns
+# DEBUG i2c_slave; start condition detected at 204095.00 ns
+# DEBUG i2c_slave; command byte received (write) at 225177.00 ns
+# DEBUG i2c_slave; address received. adr=88, ack=1
+# DEBUG i2c_slave; start condition detected at 252455.00 ns
+# DEBUG i2c_slave; command byte received (read) at 273537.00 ns
+# DEBUG i2c_slave; data block read 16 from address 88 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 6f from address 89 (2)
+# DEBUG i2c_slave; data block read 28 from address 8a (2)
+# DEBUG i2c_slave; data block read 68 from address 8b (2)
+# DEBUG i2c_slave; data block read 32 from address 8c (2)
+# DEBUG i2c_slave; data block read 00 from address 8d (2)
+# DEBUG i2c_slave; data block read 39 from address 8e (2)
+# DEBUG i2c_slave; data block read 8e from address 8f (2)
+# DEBUG i2c_slave; data block read 8b from address 90 (2)
+# DEBUG i2c_slave; data block read d6 from address 91 (2)
+# DEBUG i2c_slave; data block read d0 from address 92 (2)
+# DEBUG i2c_slave; data block read 0b from address 93 (2)
+# DEBUG i2c_slave; data block read ee from address 94 (2)
+# DEBUG i2c_slave; data block read 18 from address 95 (2)
+# DEBUG i2c_slave; data block read 18 from address 96 (2)
+# DEBUG i2c_slave; data block read 00 from address 97 (2)
+# DEBUG i2c_slave; data block read f9 from address 98 (2)
+# DEBUG i2c_slave; data block read ff from address 99 (2)
+# DEBUG i2c_slave; data block read ac from address 9a (2)
+# DEBUG i2c_slave; data block read 26 from address 9b (2)
+# DEBUG i2c_slave; data block read 0a from address 9c (2)
+# DEBUG i2c_slave; data block read d8 from address 9d (2)
+# DEBUG i2c_slave; data block read bd from address 9e (2)
+# DEBUG i2c_slave; data block read 10 from address 9f (2)
+# DEBUG i2c_slave; data block read 00 from address a0 (2)
+# DEBUG i2c_slave; data block read 4b from address a1 (2)
+# DEBUG i2c_slave; data block read xx from address a2 (2)
+# DEBUG i2c_slave; stop condition detected at 858815.00 ns
+# DEBUG i2c_slave; start condition detected at 861295.00 ns
+# DEBUG i2c_slave; command byte received (write) at 882377.00 ns
+# DEBUG i2c_slave; address received. adr=e1, ack=1
+# DEBUG i2c_slave; start condition detected at 909655.00 ns
+# DEBUG i2c_slave; command byte received (read) at 930737.00 ns
+# DEBUG i2c_slave; data block read 74 from address e1 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 01 from address e2 (2)
+# DEBUG i2c_slave; data block read 00 from address e3 (2)
+# DEBUG i2c_slave; data block read 12 from address e4 (2)
+# DEBUG i2c_slave; data block read 27 from address e5 (2)
+# DEBUG i2c_slave; data block read 03 from address e6 (2)
+# DEBUG i2c_slave; data block read 1e from address e7 (2)
+# DEBUG i2c_slave; data block read xx from address e8 (2)
+# DEBUG i2c_slave; stop condition detected at 1091935.00 ns
+# DEBUG i2c_slave; start condition detected at 1094415.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1115497.00 ns
+# DEBUG i2c_slave; address received. adr=f5, ack=1
+# DEBUG i2c_slave; data block write 04 to address f5
+# DEBUG i2c_slave; start condition detected at 1165095.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1186177.00 ns
+# DEBUG i2c_slave; address received. adr=f2, ack=1
+# DEBUG i2c_slave; data block write 01 to address f2
+# DEBUG i2c_slave; stop condition detected at 1235775.00 ns
+# Second check at 1336515.00 ns
+# DEBUG i2c_slave; start condition detected at 1338695.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1359777.00 ns
+# DEBUG i2c_slave; address received. adr=f3, ack=1
+# DEBUG i2c_slave; start condition detected at 1387055.00 ns
+# DEBUG i2c_slave; command byte received (read) at 1408137.00 ns
+# DEBUG i2c_slave; data block read 00 from address f3 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f4 (2)
+# DEBUG i2c_slave; stop condition detected at 1435415.00 ns
+# DEBUG i2c_slave; start condition detected at 1437895.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1458977.00 ns
+# DEBUG i2c_slave; address received. adr=f7, ack=1
+# DEBUG i2c_slave; start condition detected at 1486255.00 ns
+# DEBUG i2c_slave; command byte received (read) at 1507337.00 ns
+# DEBUG i2c_slave; data block read 37 from address f7 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f8 (2)
+# DEBUG i2c_slave; data block read 7b from address f9 (2)
+# DEBUG i2c_slave; data block read e7 from address fa (2)
+# DEBUG i2c_slave; data block read 00 from address fb (2)
+# DEBUG i2c_slave; data block read cc from address fc (2)
+# DEBUG i2c_slave; data block read 27 from address fd (2)
+# DEBUG i2c_slave; data block read 80 from address fe (2)
+# DEBUG i2c_slave; data block read xx from address ff (2)
+# DEBUG i2c_slave; stop condition detected at 1690855.00 ns
+# Third check at 1791515.00 ns
+# DEBUG i2c_slave; start condition detected at 1793775.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1814857.00 ns
+# DEBUG i2c_slave; address received. adr=f4, ack=1
+# DEBUG i2c_slave; data block write 25 to address f4
+# DEBUG i2c_slave; stop condition detected at 1864455.00 ns
+# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_top_meteo_de0cv.v(88)
+#    Time: 1965515 ns  Iteration: 2  Instance: /tb_top_meteo_de0cv
+# Break in Module tb_top_meteo_de0cv at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_top_meteo_de0cv.v line 88
+# Compile of bcd2seg.v was successful.
+# Compile of bin2bcd.v was successful.
+# Compile of bme280_compensation.v was successful.
+# Compile of bme280_defines.v was successful.
+# Compile of bme280_i2c_ctrl.v was successful.
+# Compile of bme280_reader.v was successful.
+# Compile of digital_por.v was successful.
+# Compile of gray_timer.v was successful.
+# Compile of hex2seg.v was successful.
+# Compile of sync_reg.v was successful.
+# Compile of top_meteo_de0cv.v was successful.
+# Compile of i2c_slave_model.v was successful.
+# Compile of pll_fm.v was successful.
+# Compile of sys_model.v was successful.
+# Compile of timescale.v was successful.
+# Compile of tb_top_meteo_de0cv.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top_meteo_de0cv
+# Loading work.sys_model
+# Loading work.top_meteo_de0cv
+# Loading work.pll_cv
+# Loading work.digital_por
+# Loading work.bme280_i2c_ctrl
+# Loading work.sync_reg
+# Loading work.gray_timer
+# Loading work.bme280_reader
+# Loading work.bme280_compensation
+# Loading work.bin2bcd
+# Loading work.bcd2seg
+# Loading work.i2c_slave_model
+run -all
+# DEBUG i2c_slave; stop condition detected at    0.00 ns
+# Reset at   67.00 ns
+# First check at 102515.00 ns
+# DEBUG i2c_slave; start condition detected at 104895.00 ns
+# DEBUG i2c_slave; command byte received (write) at 125977.00 ns
+# DEBUG i2c_slave; address received. adr=d0, ack=1
+# DEBUG i2c_slave; start condition detected at 153255.00 ns
+# DEBUG i2c_slave; command byte received (read) at 174337.00 ns
+# DEBUG i2c_slave; data block read 60 from address d0 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read xx from address d1 (2)
+# DEBUG i2c_slave; stop condition detected at 201615.00 ns
+# DEBUG i2c_slave; start condition detected at 204095.00 ns
+# DEBUG i2c_slave; command byte received (write) at 225177.00 ns
+# DEBUG i2c_slave; address received. adr=88, ack=1
+# DEBUG i2c_slave; start condition detected at 252455.00 ns
+# DEBUG i2c_slave; command byte received (read) at 273537.00 ns
+# DEBUG i2c_slave; data block read 16 from address 88 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 6f from address 89 (2)
+# DEBUG i2c_slave; data block read 28 from address 8a (2)
+# DEBUG i2c_slave; data block read 68 from address 8b (2)
+# DEBUG i2c_slave; data block read 32 from address 8c (2)
+# DEBUG i2c_slave; data block read 00 from address 8d (2)
+# DEBUG i2c_slave; data block read 39 from address 8e (2)
+# DEBUG i2c_slave; data block read 8e from address 8f (2)
+# DEBUG i2c_slave; data block read 8b from address 90 (2)
+# DEBUG i2c_slave; data block read d6 from address 91 (2)
+# DEBUG i2c_slave; data block read d0 from address 92 (2)
+# DEBUG i2c_slave; data block read 0b from address 93 (2)
+# DEBUG i2c_slave; data block read ee from address 94 (2)
+# DEBUG i2c_slave; data block read 18 from address 95 (2)
+# DEBUG i2c_slave; data block read 18 from address 96 (2)
+# DEBUG i2c_slave; data block read 00 from address 97 (2)
+# DEBUG i2c_slave; data block read f9 from address 98 (2)
+# DEBUG i2c_slave; data block read ff from address 99 (2)
+# DEBUG i2c_slave; data block read ac from address 9a (2)
+# DEBUG i2c_slave; data block read 26 from address 9b (2)
+# DEBUG i2c_slave; data block read 0a from address 9c (2)
+# DEBUG i2c_slave; data block read d8 from address 9d (2)
+# DEBUG i2c_slave; data block read bd from address 9e (2)
+# DEBUG i2c_slave; data block read 10 from address 9f (2)
+# DEBUG i2c_slave; data block read 00 from address a0 (2)
+# DEBUG i2c_slave; data block read 4b from address a1 (2)
+# DEBUG i2c_slave; data block read xx from address a2 (2)
+# DEBUG i2c_slave; stop condition detected at 858815.00 ns
+# DEBUG i2c_slave; start condition detected at 861295.00 ns
+# DEBUG i2c_slave; command byte received (write) at 882377.00 ns
+# DEBUG i2c_slave; address received. adr=e1, ack=1
+# DEBUG i2c_slave; start condition detected at 909655.00 ns
+# DEBUG i2c_slave; command byte received (read) at 930737.00 ns
+# DEBUG i2c_slave; data block read 74 from address e1 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 01 from address e2 (2)
+# DEBUG i2c_slave; data block read 00 from address e3 (2)
+# DEBUG i2c_slave; data block read 12 from address e4 (2)
+# DEBUG i2c_slave; data block read 27 from address e5 (2)
+# DEBUG i2c_slave; data block read 03 from address e6 (2)
+# DEBUG i2c_slave; data block read 1e from address e7 (2)
+# DEBUG i2c_slave; data block read xx from address e8 (2)
+# DEBUG i2c_slave; stop condition detected at 1091935.00 ns
+# DEBUG i2c_slave; start condition detected at 1094415.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1115497.00 ns
+# DEBUG i2c_slave; address received. adr=f5, ack=1
+# DEBUG i2c_slave; data block write 04 to address f5
+# DEBUG i2c_slave; start condition detected at 1165095.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1186177.00 ns
+# DEBUG i2c_slave; address received. adr=f2, ack=1
+# DEBUG i2c_slave; data block write 01 to address f2
+# DEBUG i2c_slave; stop condition detected at 1235775.00 ns
+# Second check at 1336515.00 ns
+# DEBUG i2c_slave; start condition detected at 1338695.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1359777.00 ns
+# DEBUG i2c_slave; address received. adr=f3, ack=1
+# DEBUG i2c_slave; start condition detected at 1387055.00 ns
+# DEBUG i2c_slave; command byte received (read) at 1408137.00 ns
+# DEBUG i2c_slave; data block read 00 from address f3 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f4 (2)
+# DEBUG i2c_slave; stop condition detected at 1435415.00 ns
+# DEBUG i2c_slave; start condition detected at 1437895.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1458977.00 ns
+# DEBUG i2c_slave; address received. adr=f7, ack=1
+# DEBUG i2c_slave; start condition detected at 1486255.00 ns
+# DEBUG i2c_slave; command byte received (read) at 1507337.00 ns
+# DEBUG i2c_slave; data block read 37 from address f7 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f8 (2)
+# DEBUG i2c_slave; data block read 7b from address f9 (2)
+# DEBUG i2c_slave; data block read e7 from address fa (2)
+# DEBUG i2c_slave; data block read 00 from address fb (2)
+# DEBUG i2c_slave; data block read cc from address fc (2)
+# DEBUG i2c_slave; data block read 27 from address fd (2)
+# DEBUG i2c_slave; data block read 80 from address fe (2)
+# DEBUG i2c_slave; data block read xx from address ff (2)
+# DEBUG i2c_slave; stop condition detected at 1690855.00 ns
+# Third check at 1791515.00 ns
+# DEBUG i2c_slave; start condition detected at 1793775.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1814857.00 ns
+# DEBUG i2c_slave; address received. adr=f4, ack=1
+# DEBUG i2c_slave; data block write 25 to address f4
+# DEBUG i2c_slave; stop condition detected at 1864455.00 ns
+# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_top_meteo_de0cv.v(89)
+#    Time: 1965515 ns  Iteration: 2  Instance: /tb_top_meteo_de0cv
+# Break in Module tb_top_meteo_de0cv at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_top_meteo_de0cv.v line 89
+# Compile of bcd2seg.v was successful.
+# Compile of bin2bcd.v was successful.
+# Compile of bme280_compensation.v was successful.
+# Compile of bme280_defines.v was successful.
+# Compile of bme280_i2c_ctrl.v was successful.
+# Compile of bme280_reader.v was successful.
+# Compile of digital_por.v was successful.
+# Compile of gray_timer.v was successful.
+# Compile of hex2seg.v was successful.
+# Compile of sync_reg.v was successful.
+# Compile of top_meteo_de0cv.v was successful.
+# Compile of i2c_slave_model.v was successful.
+# Compile of pll_fm.v was successful.
+# Compile of sys_model.v was successful.
+# Compile of timescale.v was successful.
+# Compile of tb_top_meteo_de0cv.v was successful.
+# 16 compiles, 0 failed with no errors.
+# Compile of bcd2seg.v was successful.
+# Compile of bin2bcd.v was successful.
+# Compile of bme280_compensation.v was successful.
+# Compile of bme280_defines.v was successful.
+# Compile of bme280_i2c_ctrl.v was successful.
+# Compile of bme280_reader.v was successful.
+# Compile of digital_por.v was successful.
+# Compile of gray_timer.v was successful.
+# Compile of hex2seg.v was successful.
+# Compile of sync_reg.v was successful.
+# Compile of top_meteo_de0cv.v was successful.
+# Compile of i2c_slave_model.v was successful.
+# Compile of pll_fm.v was successful.
+# Compile of sys_model.v was successful.
+# Compile of timescale.v was successful.
+# Compile of tb_top_meteo_de0cv.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top_meteo_de0cv
+# Loading work.sys_model
+# Loading work.top_meteo_de0cv
+# Loading work.pll_cv
+# Loading work.digital_por
+# Loading work.bme280_i2c_ctrl
+# Loading work.sync_reg
+# Loading work.gray_timer
+# Loading work.bme280_reader
+# Loading work.bme280_compensation
+# Loading work.bin2bcd
+# Loading work.bcd2seg
+# Loading work.i2c_slave_model
+run -all
+# DEBUG i2c_slave; stop condition detected at    0.00 ns
+# Reset at   67.00 ns
+# First check at 102515.00 ns
+# DEBUG i2c_slave; start condition detected at 104895.00 ns
+# DEBUG i2c_slave; command byte received (write) at 125977.00 ns
+# DEBUG i2c_slave; address received. adr=d0, ack=1
+# DEBUG i2c_slave; start condition detected at 153255.00 ns
+# DEBUG i2c_slave; command byte received (read) at 174337.00 ns
+# DEBUG i2c_slave; data block read 60 from address d0 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read xx from address d1 (2)
+# DEBUG i2c_slave; stop condition detected at 201615.00 ns
+# DEBUG i2c_slave; start condition detected at 204095.00 ns
+# DEBUG i2c_slave; command byte received (write) at 225177.00 ns
+# DEBUG i2c_slave; address received. adr=88, ack=1
+# DEBUG i2c_slave; start condition detected at 252455.00 ns
+# DEBUG i2c_slave; command byte received (read) at 273537.00 ns
+# DEBUG i2c_slave; data block read 16 from address 88 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 6f from address 89 (2)
+# DEBUG i2c_slave; data block read 28 from address 8a (2)
+# DEBUG i2c_slave; data block read 68 from address 8b (2)
+# DEBUG i2c_slave; data block read 32 from address 8c (2)
+# DEBUG i2c_slave; data block read 00 from address 8d (2)
+# DEBUG i2c_slave; data block read 39 from address 8e (2)
+# DEBUG i2c_slave; data block read 8e from address 8f (2)
+# DEBUG i2c_slave; data block read 8b from address 90 (2)
+# DEBUG i2c_slave; data block read d6 from address 91 (2)
+# DEBUG i2c_slave; data block read d0 from address 92 (2)
+# DEBUG i2c_slave; data block read 0b from address 93 (2)
+# DEBUG i2c_slave; data block read ee from address 94 (2)
+# DEBUG i2c_slave; data block read 18 from address 95 (2)
+# DEBUG i2c_slave; data block read 18 from address 96 (2)
+# DEBUG i2c_slave; data block read 00 from address 97 (2)
+# DEBUG i2c_slave; data block read f9 from address 98 (2)
+# DEBUG i2c_slave; data block read ff from address 99 (2)
+# DEBUG i2c_slave; data block read ac from address 9a (2)
+# DEBUG i2c_slave; data block read 26 from address 9b (2)
+# DEBUG i2c_slave; data block read 0a from address 9c (2)
+# DEBUG i2c_slave; data block read d8 from address 9d (2)
+# DEBUG i2c_slave; data block read bd from address 9e (2)
+# DEBUG i2c_slave; data block read 10 from address 9f (2)
+# DEBUG i2c_slave; data block read 00 from address a0 (2)
+# DEBUG i2c_slave; data block read 4b from address a1 (2)
+# DEBUG i2c_slave; data block read xx from address a2 (2)
+# DEBUG i2c_slave; stop condition detected at 858815.00 ns
+# DEBUG i2c_slave; start condition detected at 861295.00 ns
+# DEBUG i2c_slave; command byte received (write) at 882377.00 ns
+# DEBUG i2c_slave; address received. adr=e1, ack=1
+# DEBUG i2c_slave; start condition detected at 909655.00 ns
+# DEBUG i2c_slave; command byte received (read) at 930737.00 ns
+# DEBUG i2c_slave; data block read 74 from address e1 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 01 from address e2 (2)
+# DEBUG i2c_slave; data block read 00 from address e3 (2)
+# DEBUG i2c_slave; data block read 12 from address e4 (2)
+# DEBUG i2c_slave; data block read 27 from address e5 (2)
+# DEBUG i2c_slave; data block read 03 from address e6 (2)
+# DEBUG i2c_slave; data block read 1e from address e7 (2)
+# DEBUG i2c_slave; data block read xx from address e8 (2)
+# DEBUG i2c_slave; stop condition detected at 1091935.00 ns
+# DEBUG i2c_slave; start condition detected at 1094415.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1115497.00 ns
+# DEBUG i2c_slave; address received. adr=f5, ack=1
+# DEBUG i2c_slave; data block write 04 to address f5
+# DEBUG i2c_slave; start condition detected at 1165095.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1186177.00 ns
+# DEBUG i2c_slave; address received. adr=f2, ack=1
+# DEBUG i2c_slave; data block write 01 to address f2
+# DEBUG i2c_slave; stop condition detected at 1235775.00 ns
+# Second check at 1336515.00 ns
+# DEBUG i2c_slave; start condition detected at 1338695.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1359777.00 ns
+# DEBUG i2c_slave; address received. adr=f3, ack=1
+# DEBUG i2c_slave; start condition detected at 1387055.00 ns
+# DEBUG i2c_slave; command byte received (read) at 1408137.00 ns
+# DEBUG i2c_slave; data block read 00 from address f3 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f4 (2)
+# DEBUG i2c_slave; stop condition detected at 1435415.00 ns
+# DEBUG i2c_slave; start condition detected at 1437895.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1458977.00 ns
+# DEBUG i2c_slave; address received. adr=f7, ack=1
+# DEBUG i2c_slave; start condition detected at 1486255.00 ns
+# DEBUG i2c_slave; command byte received (read) at 1507337.00 ns
+# DEBUG i2c_slave; data block read 37 from address f7 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f8 (2)
+# DEBUG i2c_slave; data block read 7b from address f9 (2)
+# DEBUG i2c_slave; data block read e7 from address fa (2)
+# DEBUG i2c_slave; data block read 00 from address fb (2)
+# DEBUG i2c_slave; data block read cc from address fc (2)
+# DEBUG i2c_slave; data block read 27 from address fd (2)
+# DEBUG i2c_slave; data block read 80 from address fe (2)
+# DEBUG i2c_slave; data block read xx from address ff (2)
+# DEBUG i2c_slave; stop condition detected at 1690855.00 ns
+# Third check at 1791515.00 ns
+# DEBUG i2c_slave; start condition detected at 1793775.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1814857.00 ns
+# DEBUG i2c_slave; address received. adr=f4, ack=1
+# DEBUG i2c_slave; data block write 25 to address f4
+# DEBUG i2c_slave; stop condition detected at 1864455.00 ns
+# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_top_meteo_de0cv.v(89)
+#    Time: 1965515 ns  Iteration: 2  Instance: /tb_top_meteo_de0cv
+# Break in Module tb_top_meteo_de0cv at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_top_meteo_de0cv.v line 89
+# Compile of bcd2seg.v was successful.
+# Compile of bin2bcd.v was successful.
+# Compile of bme280_compensation.v was successful.
+# Compile of bme280_defines.v was successful.
+# Compile of bme280_i2c_ctrl.v was successful.
+# Compile of bme280_reader.v was successful.
+# Compile of digital_por.v was successful.
+# Compile of gray_timer.v was successful.
+# Compile of hex2seg.v was successful.
+# Compile of sync_reg.v was successful.
+# Compile of top_meteo_de0cv.v was successful.
+# Compile of i2c_slave_model.v was successful.
+# Compile of pll_fm.v was successful.
+# Compile of sys_model.v was successful.
+# Compile of timescale.v was successful.
+# Compile of tb_top_meteo_de0cv.v was successful.
+# 16 compiles, 0 failed with no errors.
+# Compile of bcd2seg.v was successful.
+# Compile of bin2bcd.v was successful.
+# Compile of bme280_compensation.v was successful.
+# Compile of bme280_defines.v was successful.
+# Compile of bme280_i2c_ctrl.v was successful.
+# Compile of bme280_reader.v was successful.
+# Compile of digital_por.v was successful.
+# Compile of gray_timer.v was successful.
+# Compile of hex2seg.v was successful.
+# Compile of sync_reg.v was successful.
+# Compile of top_meteo_de0cv.v was successful.
+# Compile of i2c_slave_model.v was successful.
+# Compile of pll_fm.v was successful.
+# Compile of sys_model.v was successful.
+# Compile of timescale.v was successful.
+# Compile of tb_top_meteo_de0cv.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top_meteo_de0cv
+# Loading work.sys_model
+# Loading work.top_meteo_de0cv
+# Loading work.pll_cv
+# Loading work.digital_por
+# Loading work.bme280_i2c_ctrl
+# Loading work.sync_reg
+# Loading work.gray_timer
+# Loading work.bme280_reader
+# Loading work.bme280_compensation
+# Loading work.bin2bcd
+# Loading work.bcd2seg
+# Loading work.i2c_slave_model
+run -all
+# DEBUG i2c_slave; stop condition detected at    0.00 ns
+# Reset at   67.00 ns
+# DEBUG i2c_slave; start condition detected at 104895.00 ns
+# DEBUG i2c_slave; command byte received (write) at 125977.00 ns
+# DEBUG i2c_slave; address received. adr=d0, ack=1
+# DEBUG i2c_slave; start condition detected at 153255.00 ns
+# DEBUG i2c_slave; command byte received (read) at 174337.00 ns
+# DEBUG i2c_slave; data block read 60 from address d0 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read xx from address d1 (2)
+# DEBUG i2c_slave; stop condition detected at 201615.00 ns
+# DEBUG i2c_slave; start condition detected at 204095.00 ns
+# DEBUG i2c_slave; command byte received (write) at 225177.00 ns
+# DEBUG i2c_slave; address received. adr=88, ack=1
+# DEBUG i2c_slave; start condition detected at 252455.00 ns
+# DEBUG i2c_slave; command byte received (read) at 273537.00 ns
+# DEBUG i2c_slave; data block read 16 from address 88 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 6f from address 89 (2)
+# DEBUG i2c_slave; data block read 28 from address 8a (2)
+# DEBUG i2c_slave; data block read 68 from address 8b (2)
+# DEBUG i2c_slave; data block read 32 from address 8c (2)
+# DEBUG i2c_slave; data block read 00 from address 8d (2)
+# DEBUG i2c_slave; data block read 39 from address 8e (2)
+# DEBUG i2c_slave; data block read 8e from address 8f (2)
+# DEBUG i2c_slave; data block read 8b from address 90 (2)
+# DEBUG i2c_slave; data block read d6 from address 91 (2)
+# DEBUG i2c_slave; data block read d0 from address 92 (2)
+# DEBUG i2c_slave; data block read 0b from address 93 (2)
+# DEBUG i2c_slave; data block read ee from address 94 (2)
+# DEBUG i2c_slave; data block read 18 from address 95 (2)
+# DEBUG i2c_slave; data block read 18 from address 96 (2)
+# DEBUG i2c_slave; data block read 00 from address 97 (2)
+# DEBUG i2c_slave; data block read f9 from address 98 (2)
+# DEBUG i2c_slave; data block read ff from address 99 (2)
+# DEBUG i2c_slave; data block read ac from address 9a (2)
+# DEBUG i2c_slave; data block read 26 from address 9b (2)
+# DEBUG i2c_slave; data block read 0a from address 9c (2)
+# DEBUG i2c_slave; data block read d8 from address 9d (2)
+# DEBUG i2c_slave; data block read bd from address 9e (2)
+# DEBUG i2c_slave; data block read 10 from address 9f (2)
+# DEBUG i2c_slave; data block read 00 from address a0 (2)
+# DEBUG i2c_slave; data block read 4b from address a1 (2)
+# DEBUG i2c_slave; data block read xx from address a2 (2)
+# DEBUG i2c_slave; stop condition detected at 858815.00 ns
+# DEBUG i2c_slave; start condition detected at 861295.00 ns
+# DEBUG i2c_slave; command byte received (write) at 882377.00 ns
+# DEBUG i2c_slave; address received. adr=e1, ack=1
+# DEBUG i2c_slave; start condition detected at 909655.00 ns
+# DEBUG i2c_slave; command byte received (read) at 930737.00 ns
+# DEBUG i2c_slave; data block read 74 from address e1 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 01 from address e2 (2)
+# DEBUG i2c_slave; data block read 00 from address e3 (2)
+# DEBUG i2c_slave; data block read 12 from address e4 (2)
+# DEBUG i2c_slave; data block read 27 from address e5 (2)
+# DEBUG i2c_slave; data block read 03 from address e6 (2)
+# DEBUG i2c_slave; data block read 1e from address e7 (2)
+# DEBUG i2c_slave; data block read xx from address e8 (2)
+# DEBUG i2c_slave; stop condition detected at 1091935.00 ns
+# DEBUG i2c_slave; start condition detected at 1094415.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1115497.00 ns
+# DEBUG i2c_slave; address received. adr=f5, ack=1
+# DEBUG i2c_slave; data block write 04 to address f5
+# DEBUG i2c_slave; start condition detected at 1165095.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1186177.00 ns
+# DEBUG i2c_slave; address received. adr=f2, ack=1
+# DEBUG i2c_slave; data block write 01 to address f2
+# DEBUG i2c_slave; stop condition detected at 1235775.00 ns
+# First check at 1336515.00 ns
+# DEBUG i2c_slave; start condition detected at 1338695.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1359777.00 ns
+# DEBUG i2c_slave; address received. adr=f3, ack=1
+# DEBUG i2c_slave; start condition detected at 1387055.00 ns
+# DEBUG i2c_slave; command byte received (read) at 1408137.00 ns
+# DEBUG i2c_slave; data block read 00 from address f3 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f4 (2)
+# DEBUG i2c_slave; stop condition detected at 1435415.00 ns
+# DEBUG i2c_slave; start condition detected at 1437895.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1458977.00 ns
+# DEBUG i2c_slave; address received. adr=f7, ack=1
+# DEBUG i2c_slave; start condition detected at 1486255.00 ns
+# DEBUG i2c_slave; command byte received (read) at 1507337.00 ns
+# DEBUG i2c_slave; data block read 37 from address f7 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f8 (2)
+# DEBUG i2c_slave; data block read 7b from address f9 (2)
+# DEBUG i2c_slave; data block read e7 from address fa (2)
+# DEBUG i2c_slave; data block read 00 from address fb (2)
+# DEBUG i2c_slave; data block read cc from address fc (2)
+# DEBUG i2c_slave; data block read 27 from address fd (2)
+# DEBUG i2c_slave; data block read 80 from address fe (2)
+# DEBUG i2c_slave; data block read xx from address ff (2)
+# DEBUG i2c_slave; stop condition detected at 1690855.00 ns
+# Second check at 1791515.00 ns
+# DEBUG i2c_slave; start condition detected at 1793775.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1814857.00 ns
+# DEBUG i2c_slave; address received. adr=f4, ack=1
+# DEBUG i2c_slave; data block write 25 to address f4
+# DEBUG i2c_slave; stop condition detected at 1864455.00 ns
+# Third check at 1965515.00 ns
+# DEBUG i2c_slave; start condition detected at 1967995.00 ns
+# DEBUG i2c_slave; command byte received (write) at 1989077.00 ns
+# DEBUG i2c_slave; address received. adr=f3, ack=1
+# DEBUG i2c_slave; start condition detected at 2016355.00 ns
+# DEBUG i2c_slave; command byte received (read) at 2037437.00 ns
+# DEBUG i2c_slave; data block read 00 from address f3 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f4 (2)
+# DEBUG i2c_slave; stop condition detected at 2064715.00 ns
+# DEBUG i2c_slave; start condition detected at 2067195.00 ns
+# DEBUG i2c_slave; command byte received (write) at 2088277.00 ns
+# DEBUG i2c_slave; address received. adr=f7, ack=1
+# DEBUG i2c_slave; start condition detected at 2115555.00 ns
+# DEBUG i2c_slave; command byte received (read) at 2136637.00 ns
+# DEBUG i2c_slave; data block read 37 from address f7 (1)
+# DEBUG i2c_slave; memcheck [0]=xx, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read 00 from address f8 (2)
+# DEBUG i2c_slave; data block read 7b from address f9 (2)
+# DEBUG i2c_slave; data block read e7 from address fa (2)
+# DEBUG i2c_slave; data block read 00 from address fb (2)
+# DEBUG i2c_slave; data block read cc from address fc (2)
+# DEBUG i2c_slave; data block read 27 from address fd (2)
+# DEBUG i2c_slave; data block read 80 from address fe (2)
+# DEBUG i2c_slave; data block read xx from address ff (2)
+# DEBUG i2c_slave; stop condition detected at 2320155.00 ns
+# ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_top_meteo_de0cv.v(90)
+#    Time: 2420515 ns  Iteration: 2  Instance: /tb_top_meteo_de0cv
+# Break in Module tb_top_meteo_de0cv at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_top_meteo_de0cv.v line 90

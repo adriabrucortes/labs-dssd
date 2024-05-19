@@ -40,13 +40,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	bme280_compensation
 
-} {} {}} C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_top_meteo_de0cv.v {1 {vlog -work work -stats=none C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_top_meteo_de0cv.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module tb_top_meteo_de0cv
-
-Top level modules:
-	tb_top_meteo_de0cv
-
 } {} {}} C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/bme280_i2c_ctrl.v {1 {vlog -work work -stats=none C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/bme280_i2c_ctrl.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module bme280_i2c_ctrl
@@ -80,6 +73,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 
 Top level modules:
 	bin2bcd
+
+} {} {}} C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v {1 {vlog -work work -stats=none C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module top_meteo_de0cv
+
+Top level modules:
+	top_meteo_de0cv
 
 } {} {}} C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/hex2seg.v {1 {vlog -work work -stats=none C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/hex2seg.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
