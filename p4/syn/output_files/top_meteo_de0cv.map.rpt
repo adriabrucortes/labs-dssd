@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_meteo_de0cv
-Mon May 20 19:13:35 2024
+Tue May 21 01:01:16 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon May 20 19:13:34 2024       ;
+; Analysis & Synthesis Status     ; Successful - Tue May 21 01:01:16 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; top_meteo_de0cv                             ;
 ; Top-level Entity Name           ; top_meteo_de0cv                             ;
@@ -202,8 +202,8 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 3            ;   0.1%      ;
 ;     Processor 4            ;   0.1%      ;
 ;     Processor 5            ;   0.1%      ;
-;     Processor 6            ;   0.1%      ;
-;     Processor 7            ;   0.1%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
 ;     Processor 8            ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -277,12 +277,12 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------------------------------------------------------------------+
 ; Estimate of Logic utilization (ALMs needed) ; 4264                                                                      ;
 ;                                             ;                                                                           ;
-; Combinational ALUT usage for logic          ; 8087                                                                      ;
+; Combinational ALUT usage for logic          ; 8086                                                                      ;
 ;     -- 7 input functions                    ; 6                                                                         ;
 ;     -- 6 input functions                    ; 390                                                                       ;
-;     -- 5 input functions                    ; 1188                                                                      ;
-;     -- 4 input functions                    ; 2336                                                                      ;
-;     -- <=3 input functions                  ; 4167                                                                      ;
+;     -- 5 input functions                    ; 1187                                                                      ;
+;     -- 4 input functions                    ; 2337                                                                      ;
+;     -- <=3 input functions                  ; 4166                                                                      ;
 ;                                             ;                                                                           ;
 ; Dedicated logic registers                   ; 489                                                                       ;
 ;                                             ;                                                                           ;
@@ -295,7 +295,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                                                                           ;
 ; Maximum fan-out node                        ; pll_cv:pll|pll_cv_0002:pll_cv_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
 ; Maximum fan-out                             ; 468                                                                       ;
-; Total fan-out                               ; 33625                                                                     ;
+; Total fan-out                               ; 33622                                                                     ;
 ; Average fan-out                             ; 3.84                                                                      ;
 +---------------------------------------------+---------------------------------------------------------------------------+
 
@@ -305,7 +305,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node                        ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                      ; Entity Name          ; Library Name ;
 +---------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
-; |top_meteo_de0cv                                  ; 8087 (68)           ; 489 (0)                   ; 0                 ; 63         ; 52   ; 0            ; |top_meteo_de0cv                                                                                                                                                         ; top_meteo_de0cv      ; work         ;
+; |top_meteo_de0cv                                  ; 8086 (68)           ; 489 (0)                   ; 0                 ; 63         ; 52   ; 0            ; |top_meteo_de0cv                                                                                                                                                         ; top_meteo_de0cv      ; work         ;
 ;    |bcd2seg:i_h_bcd0|                             ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bcd2seg:i_h_bcd0                                                                                                                                        ; bcd2seg              ; work         ;
 ;    |bcd2seg:i_h_bcd1|                             ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bcd2seg:i_h_bcd1                                                                                                                                        ; bcd2seg              ; work         ;
 ;    |bcd2seg:i_h_bcd2|                             ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bcd2seg:i_h_bcd2                                                                                                                                        ; bcd2seg              ; work         ;
@@ -352,7 +352,7 @@ https://fpgasoftware.intel.com/eula.
 ;    |bme280_reader:i_reader|                       ; 138 (138)           ; 324 (324)                 ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|bme280_reader:i_reader                                                                                                                                  ; bme280_reader        ; work         ;
 ;    |digital_por:por_100MHz|                       ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|digital_por:por_100MHz                                                                                                                                  ; digital_por          ; work         ;
 ;    |digital_por:por_1MHz|                         ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|digital_por:por_1MHz                                                                                                                                    ; digital_por          ; work         ;
-;    |gray_timer:gtimer|                            ; 43 (43)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|gray_timer:gtimer                                                                                                                                       ; gray_timer           ; work         ;
+;    |gray_timer:gtimer|                            ; 42 (42)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|gray_timer:gtimer                                                                                                                                       ; gray_timer           ; work         ;
 ;    |i2c_master_top:i2c_master|                    ; 103 (0)             ; 102 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|i2c_master_top:i2c_master                                                                                                                               ; i2c_master_top       ; work         ;
 ;       |i2c_bit_timer:i_timer|                     ; 12 (12)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_bit_timer:i_timer                                                                                                         ; i2c_bit_timer        ; work         ;
 ;       |i2c_master_bit_ctrl:i_bit|                 ; 27 (27)             ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |top_meteo_de0cv|i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit                                                                                                     ; i2c_master_bit_ctrl  ; work         ;
@@ -1204,17 +1204,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------+-------+----------+-------------------+
 
 
-+------------------------------------------------+
-; Port Connectivity Checks: "gray_timer:gtimer"  ;
-+--------------+-------+----------+--------------+
-; Port         ; Type  ; Severity ; Details      ;
-+--------------+-------+----------+--------------+
-; Limit[6..5]  ; Input ; Info     ; Stuck at VCC ;
-; Limit[19..7] ; Input ; Info     ; Stuck at GND ;
-; Limit[4..3]  ; Input ; Info     ; Stuck at GND ;
-; Limit[1..0]  ; Input ; Info     ; Stuck at GND ;
-; Limit[2]     ; Input ; Info     ; Stuck at VCC ;
-+--------------+-------+----------+--------------+
++-------------------------------------------------+
+; Port Connectivity Checks: "gray_timer:gtimer"   ;
++---------------+-------+----------+--------------+
+; Port          ; Type  ; Severity ; Details      ;
++---------------+-------+----------+--------------+
+; Limit[19..16] ; Input ; Info     ; Stuck at VCC ;
+; Limit[13..10] ; Input ; Info     ; Stuck at GND ;
+; Limit[8..7]   ; Input ; Info     ; Stuck at GND ;
+; Limit[5..0]   ; Input ; Info     ; Stuck at GND ;
+; Limit[15]     ; Input ; Info     ; Stuck at GND ;
+; Limit[14]     ; Input ; Info     ; Stuck at VCC ;
+; Limit[9]      ; Input ; Info     ; Stuck at VCC ;
+; Limit[6]      ; Input ; Info     ; Stuck at VCC ;
++---------------+-------+----------+--------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -1237,7 +1240,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA CLR           ; 347                         ;
 ;     ENA CLR SLD       ; 16                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 8089                        ;
+; arriav_lcell_comb     ; 8088                        ;
 ;     arith             ; 3250                        ;
 ;         0 data inputs ; 147                         ;
 ;         1 data inputs ; 415                         ;
@@ -1247,13 +1250,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         5 data inputs ; 956                         ;
 ;     extend            ; 6                           ;
 ;         7 data inputs ; 6                           ;
-;     normal            ; 4202                        ;
+;     normal            ; 4201                        ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 6                           ;
-;         2 data inputs ; 1804                        ;
+;         2 data inputs ; 1803                        ;
 ;         3 data inputs ; 326                         ;
-;         4 data inputs ; 1442                        ;
-;         5 data inputs ; 232                         ;
+;         4 data inputs ; 1443                        ;
+;         5 data inputs ; 231                         ;
 ;         6 data inputs ; 390                         ;
 ;     shared            ; 631                         ;
 ;         0 data inputs ; 6                           ;
@@ -1266,7 +1269,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; generic_pll           ; 2                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 326.30                      ;
-; Average LUT depth     ; 228.78                      ;
+; Average LUT depth     ; 228.79                      ;
 +-----------------------+-----------------------------+
 
 
@@ -1285,7 +1288,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon May 20 19:13:04 2024
+    Info: Processing started: Tue May 21 01:00:46 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_meteo_de0cv -c top_meteo_de0cv
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -1521,17 +1524,17 @@ Info (17049): 19 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/syn/output_files/top_meteo_de0cv.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 6 node(s), including 0 DDIO, 2 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 8544 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 8543 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 45 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 8427 logic cells
+    Info (21061): Implemented 8426 logic cells
     Info (21065): Implemented 2 PLLs
     Info (21062): Implemented 63 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 5012 megabytes
-    Info: Processing ended: Mon May 20 19:13:35 2024
-    Info: Elapsed time: 00:00:31
+    Info: Peak virtual memory: 4995 megabytes
+    Info: Processing ended: Tue May 21 01:01:16 2024
+    Info: Elapsed time: 00:00:30
     Info: Total CPU time (on all processors): 00:00:24
 
 
