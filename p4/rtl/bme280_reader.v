@@ -44,31 +44,33 @@ module bme280_reader #(
              MEASURE  = 4'd10,
              ERROR    = 4'd11;
 
+  // Transició d'estat
   always @(posedge Clk or negedge Rst_n)
     if(!Rst_n) state <= IDLE;
     else       state <= next;
 
+  // Màquina d'estats
   always @(*)
     case(state)
-      IDLE    : next = WAIT_1S;
+      IDLE    : next = WAIT_1S; // Estat inicial, esperar 1 segon
 
-      WAIT_1S : if(TimerInt)
-                  case(last)
-                    IDLE, RESET : next = RD_ID;
-                    STATUS  : next = GET_DATA;
-                    GET_DATA: next = MEASURE;
-                    default : next = STATUS;
+      WAIT_1S : if(TimerInt) // Si el temporitzador ha acabat
+                  case(last) // Decidir el següent estat basat en l'últim estat
+                    IDLE, RESET : next = RD_ID; // Llegir ID
+                    STATUS  : next = GET_DATA; // Obtenir dades
+                    GET_DATA: next = MEASURE; // Mesurar
+                    default : next = STATUS; // Estat per defecte
                   endcase
-                else next = WAIT_1S;
+                else next = WAIT_1S; // Si no, continuar esperant
 
-      RESET   : next = WAIT_END;
-      RD_ID   : next = WAIT_END;
-      RD_CAL00: next = WAIT_END;
-      RD_CAL26: next = WAIT_END;
-      WR_CFG  : next = WAIT_END;
+      RESET   : next = WAIT_END; // Estat de reset, esperar final
+      RD_ID   : next = WAIT_END; // Estat de lectura d'ID, esperar final
+      RD_CAL00: next = WAIT_END; // Estat de lectura de calibració 00, esperar final
+      RD_CAL26: next = WAIT_END; // Estat de lectura de calibració 26, esperar final
+      WR_CFG  : next = WAIT_END; // Estat d'escriptura de configuració, esperar final
 
-      WAIT_END: if(I2CC_done)
-                  case(last)
+      WAIT_END: if(I2CC_done) // Si la transferència I2C ha acabat
+                  case(last) // Decidir el següent estat basat en l'últim estat
                     RESET    : if(byteCnt==5'd3)   next = ERROR;
                                else                next = WAIT_1S;
                     RD_ID    : if(I2CC_rxd==8'h60) next = RD_CAL00;
@@ -88,16 +90,18 @@ module bme280_reader #(
                   endcase
                 else next = WAIT_END;
 
-      STATUS  : next = WAIT_END;
-      GET_DATA: next = WAIT_END;
-      MEASURE : next = WAIT_END;
+      STATUS  : next = WAIT_END; // Estat de status, esperar final
+      GET_DATA: next = WAIT_END; // Estat d'obtenció de dades, esperar final
+      MEASURE : next = WAIT_END; // Estat de mesura, esperar final
 
-      ERROR   : next = ERROR;
-      default : next = ERROR;
+      ERROR   : next = ERROR; // Estat d'error, romandre en error
+      default : next = ERROR; // Estat per defecte, error
     endcase
 
+  // Bloc sempre per inicialitzar els registres en reset i actualitzar segons l'estat
   always @(posedge Clk or negedge Rst_n)
     if(!Rst_n) begin
+      // Inicialització de registres en reset
       TimerEn    <= 1'b0;
       byteCnt    <= 5'd0;
       ErrorFlag  <= 1'b0;
@@ -114,7 +118,9 @@ module bme280_reader #(
       {DigP1,DigP2,DigP3,DigP4,DigP5,DigP6,DigP7,DigP8,DigP9} <= {9{16'd0}};
       {DigH1,DigH3,DigH6} <= {3{8'd0}};
       {DigH2,DigH4,DigH5} <= {3{16'd0}};
+
     end else begin
+      // Actualització dels registres
       TimerEn    <= 1'b0;
       byteCnt    <= byteCnt;
       ErrorFlag  <= 1'b0;
@@ -137,7 +143,7 @@ module bme280_reader #(
         end
 
         WAIT_1S : begin
-          TimerEn <= 1'b1;
+          TimerEn <= 1'b1; // Activar temporitzador
         end
 
         RESET : begin
@@ -248,6 +254,8 @@ module bme280_reader #(
                                 end
                          default : ;
                        endcase
+
+            // Configura el sensor
             WR_CFG   : case(byteCnt)
                          5'd0 : begin
                                   I2CC_last <= 1'b1;
@@ -261,6 +269,8 @@ module bme280_reader #(
                                 end
                          default : ;
                        endcase
+
+            // Status del sensor
             STATUS   : begin
                          byteCnt <= 5'd0;
                          if(~I2CC_rxd[3]) begin
@@ -268,6 +278,8 @@ module bme280_reader #(
                            I2CC_addr  <= `BME_PRESS_MSB;
                          end
                        end
+
+            // Obtenció de dades
             GET_DATA : case(byteCnt)
                          5'd0 : PressBin <= {I2CC_rxd       , PressBin[11:0]};
                          5'd1 : PressBin <= {PressBin[19:12], I2CC_rxd      ,PressBin[3:0]};
@@ -290,6 +302,7 @@ module bme280_reader #(
           endcase
         end
 
+        // Estat del sensor
         STATUS : begin
           last       <= state;
           I2CC_start <= 1'b1;
@@ -299,6 +312,7 @@ module bme280_reader #(
           I2CC_txd   <= 8'b0000_0000;
         end
 
+        // Lectura de les dades del sensor
         GET_DATA : begin
           last       <= state;
           I2CC_start <= 1'b1;
@@ -308,6 +322,7 @@ module bme280_reader #(
           I2CC_txd <= 8'b0000_0000;
         end
 
+        // Comanda de mesura al sensor
         MEASURE :  begin
           last       <= state;
           I2CC_start <= 1'b1;

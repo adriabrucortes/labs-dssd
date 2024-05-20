@@ -20,7 +20,7 @@
 
 create_clock -name clk50MHz -period 20.0 [get_ports Clk_i]
 derive_pll_clocks -create_base_clocks
-set_clock_groups -asynchronous -group [get_clocks {clk50MHz}] -group [get_clocks {i_PLL|pll_cv_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -group [get_clocks {{i_PLL|pll_cv_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}}]
+set_clock_groups -asynchronous -group [get_clocks {clk50MHz}] -group [get_clocks {i_pll|pll_cv_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] -group [get_clocks {{i_pll|pll_cv_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}}]
 
 set_input_delay -clock clk50MHz 7.0 [all_inputs]
 set_output_delay -clock clk50MHz 5.0 [all_outputs]

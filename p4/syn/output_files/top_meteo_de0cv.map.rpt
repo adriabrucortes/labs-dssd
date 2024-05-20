@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_meteo_de0cv
-Sat May 18 21:06:04 2024
+Mon May 20 19:13:35 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat May 18 21:06:04 2024       ;
+; Analysis & Synthesis Status     ; Successful - Mon May 20 19:13:34 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; top_meteo_de0cv                             ;
 ; Top-level Entity Name           ; top_meteo_de0cv                             ;
@@ -198,12 +198,12 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
-;     Processor 7            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
+;     Processor 5            ;   0.1%      ;
+;     Processor 6            ;   0.1%      ;
+;     Processor 7            ;   0.1%      ;
 ;     Processor 8            ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -1285,7 +1285,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat May 18 21:05:33 2024
+    Info: Processing started: Mon May 20 19:13:04 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_meteo_de0cv -c top_meteo_de0cv
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -1337,7 +1337,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file /users/
 Info (12021): Found 1 design units, including 1 entities, in source file /users/adria/documents/universitat/8e/dssd/labs-dssd/p4/ips/pll_cv/pll_cv_0002.v
     Info (12023): Found entity 1: pll_cv_0002 File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/ips/pll_cv/pll_cv_0002.v Line: 2
 Info (12127): Elaborating entity "top_meteo_de0cv" for the top level hierarchy
-Info (12128): Elaborating entity "pll_cv" for hierarchy "pll_cv:pll" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 110
+Info (12128): Elaborating entity "pll_cv" for hierarchy "pll_cv:pll" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 111
 Info (12128): Elaborating entity "pll_cv_0002" for hierarchy "pll_cv:pll|pll_cv_0002:pll_cv_inst" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/ips/pll_cv.v Line: 21
 Info (12128): Elaborating entity "altera_pll" for hierarchy "pll_cv:pll|pll_cv_0002:pll_cv_inst|altera_pll:altera_pll_i" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/ips/pll_cv/pll_cv_0002.v Line: 88
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
@@ -1403,8 +1403,8 @@ Info (12133): Instantiated megafunction "pll_cv:pll|pll_cv_0002:pll_cv_inst|alte
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
-Info (12128): Elaborating entity "digital_por" for hierarchy "digital_por:por_100MHz" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 116
-Info (12128): Elaborating entity "i2c_master_top" for hierarchy "i2c_master_top:i2c_master" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 141
+Info (12128): Elaborating entity "digital_por" for hierarchy "digital_por:por_100MHz" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 118
+Info (12128): Elaborating entity "i2c_master_top" for hierarchy "i2c_master_top:i2c_master" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 145
 Info (12128): Elaborating entity "i2c_master_regs" for hierarchy "i2c_master_top:i2c_master|i2c_master_regs:i_regs" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/i2c_master/i2c_master_top.v Line: 80
 Info (12128): Elaborating entity "i2c_master_byte_ctrl" for hierarchy "i2c_master_top:i2c_master|i2c_master_byte_ctrl:i_byte" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/i2c_master/i2c_master_top.v Line: 101
 Info (12128): Elaborating entity "i2c_master_bit_ctrl" for hierarchy "i2c_master_top:i2c_master|i2c_master_bit_ctrl:i_bit" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/i2c_master/i2c_master_top.v Line: 123
@@ -1412,17 +1412,17 @@ Info (10264): Verilog HDL Case Statement information at i2c_master_bit_ctrl.v(17
 Info (10264): Verilog HDL Case Statement information at i2c_master_bit_ctrl.v(236): all case item expressions in this case statement are onehot File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/i2c_master/i2c_master_bit_ctrl.v Line: 236
 Info (12128): Elaborating entity "shiftreg" for hierarchy "i2c_master_top:i2c_master|shiftreg:i_sr" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/i2c_master/i2c_master_top.v Line: 134
 Info (12128): Elaborating entity "i2c_bit_timer" for hierarchy "i2c_master_top:i2c_master|i2c_bit_timer:i_timer" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/i2c_master/i2c_master_top.v Line: 143
-Info (12128): Elaborating entity "bme280_i2c_ctrl" for hierarchy "bme280_i2c_ctrl:bme280_i2c_ctrl" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 161
-Info (12128): Elaborating entity "sync_reg" for hierarchy "sync_reg:sync" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 168
-Info (12128): Elaborating entity "gray_timer" for hierarchy "gray_timer:gtimer" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 175
-Info (12128): Elaborating entity "bme280_reader" for hierarchy "bme280_reader:i_reader" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 211
-Info (10264): Verilog HDL Case Statement information at bme280_reader.v(56): all case item expressions in this case statement are onehot File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/bme280_reader.v Line: 56
-Info (10264): Verilog HDL Case Statement information at bme280_reader.v(71): all case item expressions in this case statement are onehot File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/bme280_reader.v Line: 71
-Info (10264): Verilog HDL Case Statement information at bme280_reader.v(190): all case item expressions in this case statement are onehot File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/bme280_reader.v Line: 190
-Info (12128): Elaborating entity "bme280_compensation" for hierarchy "bme280_compensation:i_comp" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 239
+Info (12128): Elaborating entity "bme280_i2c_ctrl" for hierarchy "bme280_i2c_ctrl:bme280_i2c_ctrl" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 166
+Info (12128): Elaborating entity "sync_reg" for hierarchy "sync_reg:sync" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 174
+Info (12128): Elaborating entity "gray_timer" for hierarchy "gray_timer:gtimer" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 182
+Info (12128): Elaborating entity "bme280_reader" for hierarchy "bme280_reader:i_reader" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 219
+Info (10264): Verilog HDL Case Statement information at bme280_reader.v(58): all case item expressions in this case statement are onehot File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/bme280_reader.v Line: 58
+Info (10264): Verilog HDL Case Statement information at bme280_reader.v(73): all case item expressions in this case statement are onehot File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/bme280_reader.v Line: 73
+Info (10264): Verilog HDL Case Statement information at bme280_reader.v(196): all case item expressions in this case statement are onehot File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/bme280_reader.v Line: 196
+Info (12128): Elaborating entity "bme280_compensation" for hierarchy "bme280_compensation:i_comp" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 247
 Warning (10036): Verilog HDL or VHDL warning at bme280_compensation.v(15): object "pvar22" assigned a value but never read File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/bme280_compensation.v Line: 15
-Info (12128): Elaborating entity "bin2bcd" for hierarchy "bin2bcd:i_t_bcd" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 241
-Info (12128): Elaborating entity "bcd2seg" for hierarchy "bcd2seg:i_t_bcd0" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 245
+Info (12128): Elaborating entity "bin2bcd" for hierarchy "bin2bcd:i_t_bcd" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 250
+Info (12128): Elaborating entity "bcd2seg" for hierarchy "bcd2seg:i_t_bcd0" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/top_meteo_de0cv.v Line: 255
 Info (278001): Inferred 5 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "bme280_compensation:i_comp|Mult7~mult_h_mult_l_mult_hlmacmult" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/bme280_compensation.v Line: 32
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "bme280_compensation:i_comp|Div0" File: C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/rtl/bme280_compensation.v Line: 34
@@ -1529,10 +1529,10 @@ Info (21057): Implemented 8544 device resources after synthesis - the final reso
     Info (21065): Implemented 2 PLLs
     Info (21062): Implemented 63 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4988 megabytes
-    Info: Processing ended: Sat May 18 21:06:04 2024
+    Info: Peak virtual memory: 5012 megabytes
+    Info: Processing ended: Mon May 20 19:13:35 2024
     Info: Elapsed time: 00:00:31
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Total CPU time (on all processors): 00:00:24
 
 
 +------------------------------------------+

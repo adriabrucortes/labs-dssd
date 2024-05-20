@@ -63,7 +63,7 @@ wire [ 7-1:0] t_bcd5, t_bcd4, t_bcd3, t_bcd2, t_bcd1, t_bcd0;
 wire [ 7-1:0] p_bcd5, p_bcd4, p_bcd3, p_bcd2, p_bcd1, p_bcd0;
 wire [ 7-1:0] h_bcd5, h_bcd4, h_bcd3, h_bcd2, h_bcd1, h_bcd0;
 
-// Selector
+// Selector d'output pels 7 segments
 always @(*) begin
   casex(Sel_i)
     3'bxx1 : begin
@@ -102,6 +102,7 @@ always @(*) begin
 end
 
 // Instances
+// Instanciació del PLL
 pll_cv pll (
   .refclk           (Clk_i),
   .rst              (~Rst_n_i),
@@ -109,18 +110,21 @@ pll_cv pll (
   .outclk_1         (clk1MHz)
 );
 
+// Instanciació del Power on Reset a 100MHz
 digital_por por_100MHz (
   .Clk              (clk100MHz),
   .Asyncrst_n       (Rst_n_i),
   .Rst_n            (Rst_n)
 );
 
+// Instanciació del Power on Reset a 1MHz
 digital_por por_1MHz (
   .Clk              (clk1MHz),
   .Asyncrst_n       (Rst_n_i),
   .Rst_n            (Rst_n_slow)
 );
 
+// Instanciació del mòdul I2C
 i2c_master_top #(
   .DWIDTH(DWIDTH),
   .AWIDTH(AWIDTH)
@@ -140,6 +144,7 @@ i2c_master_top #(
   .SdaPadEn         (sda_oen)
 );
 
+// Instanciació del controlador I2C del sensor 
 bme280_i2c_ctrl #(
   .DWIDTH(DWIDTH),
   .AWIDTH(AWIDTH),
@@ -160,6 +165,7 @@ bme280_i2c_ctrl #(
   .I2C_done         (i2cc_done)
 );
 
+// Sincronitzador entre els dos dominis de rellotge
 sync_reg #(.NSTAGES(2)) sync (
   .Clk              (clk100MHz),
   .Rst_n            (Rst_n),
@@ -167,6 +173,7 @@ sync_reg #(.NSTAGES(2)) sync (
   .Out              (timerInt)
 );
 
+// Temporitzador en codificació "Gray"
 gray_timer #(.SIZE(20)) gtimer (
   .Clk              (clk1MHz),
   .Rst_n            (Rst_n_slow & timerEn),
@@ -174,6 +181,7 @@ gray_timer #(.SIZE(20)) gtimer (
   .Int              (TimerInt_sync)
 );
 
+// Lector del sensor de temperatura
 bme280_reader #(.DWIDTH(DWIDTH)) i_reader (
   .Clk              (clk100MHz),
   .Rst_n            (Rst_n),
@@ -210,7 +218,7 @@ bme280_reader #(.DWIDTH(DWIDTH)) i_reader (
   .DigH6            (digH6)
 );
 
-
+// Mòdul per adaptació i compensació de les mesures rebudes
 bme280_compensation i_comp(
   .TempBin          ({             12'd0,  tempBin}),
   .PressBin         ({{12{pressBin[19]}}, pressBin}),
@@ -238,10 +246,12 @@ bme280_compensation i_comp(
   .Hum              (hum)
 );
 
+// Conversor de binari a BCD
 bin2bcd #(.W(32)) i_t_bcd (temp, t_bcd);
 bin2bcd #(.W(32)) i_p_bcd (press, p_bcd);
 bin2bcd #(.W(32)) i_h_bcd (hum, h_bcd);
 
+// Conversors de BCD a codificació compatible amb els 7 segments
 bcd2seg i_t_bcd0 (t_bcd[ 3: 0], t_bcd0);
 bcd2seg i_t_bcd1 (t_bcd[ 7: 4], t_bcd1);
 bcd2seg i_t_bcd2 (t_bcd[11: 8], t_bcd2);

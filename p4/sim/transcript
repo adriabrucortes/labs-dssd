@@ -1672,3 +1672,5 @@ run -all
 # ** Note: $stop    : C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_top_meteo_de0cv.v(90)
 #    Time: 2420515 ns  Iteration: 2  Instance: /tb_top_meteo_de0cv
 # Break in Module tb_top_meteo_de0cv at C:/Users/adria/Documents/Universitat/8e/DSSD/labs-dssd/p4/tb/tb_top_meteo_de0cv.v line 90
+# End time: 20:42:18 on May 19,2024, Elapsed time: 1:10:40
+# Errors: 0, Warnings: 1
