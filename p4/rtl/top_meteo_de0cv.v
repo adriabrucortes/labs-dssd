@@ -1,5 +1,5 @@
 `include "../misc/timescale.v"
-`define RTL_LVL
+`define GATE_LVL
 
 module top_meteo_de0cv (
   input  Clk_i,
